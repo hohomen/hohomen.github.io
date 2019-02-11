@@ -6,36 +6,108 @@
     <description>Recent content on Blog of beginner</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>안녕</title>
-      <link>/post/test2/</link>
-      <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
+      <title>(ant) build.xml 작성법</title>
+      <link>/post/build/</link>
+      <pubDate>Tue, 29 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/test2/</guid>
-      <description>Hi every body</description>
+      <guid>/post/build/</guid>
+      <description>자바를 이용해 자료구조를 공부하면서 빌드 도구인 &amp;nbsp;ant를 사용할 일이 생겼다.
+여기에 &amp;nbsp;ant를 사용한다면 필수적으로 알아야할 build.xml 문서 작성에 대한 정리를 하고자 한다.
+빌드 시작 명령어인&amp;nbsp;
+&amp;gt;ant  가 실행되면&amp;nbsp; ant는 기본적으로 현재 작업 디렉터리에서 build.xml이라는 빌드 파일을 찾아 실행한다. (완성된 build.xml문서는 페이지 아래에 정리해 두었다.) 이제 그 내부 작성을 단계적으로 따라가보자.
+&amp;lt;?xml version=&amp;quot;1.0&amp;quot;&amp;gt; (xml 문서 선언)  1.프로젝트 정의하기 &amp;lt;project name=&amp;quot;dms&amp;quot; default=&amp;quot;compile&amp;quot; basedir=&amp;quot;.&amp;quot;&amp;gt;  name: 프로젝트 이름 default: 명령줄에서 매게 변수 없이 ant를 입력할 때 엔트가 빌드프로세스에서 컴파일 단계를 실행해야 한다는 뜻이다.</description>
     </item>
     
     <item>
-      <title></title>
+      <title>About</title>
       <link>/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
-      <description>About Name : 최동호
-Birth : 02.02생
-Email : earomatic@naver.com
+      <description>지식, 기술에 대한 호기심이 많다.
+ 소통력과 생산성을 갖춘 개발자로 성장하는 것이 꿈이다.
+ Information Name : 최동호
+Birth : 1990.02.02
+Email : donyinstance@gmail.com
 Github : https://github.com/hohomen
-경력 대학교(2019년 2월 졸업 예정)
-성적우수장학금(2016년 1학기)
+Education and Awards 동양미래대학교 컴퓨터정보학과(2019년 2월 졸업 예정)
 성적우수장학금(2018년 1학기)
-ICT 경진대회 장려상
-프로젝트 Dykelly
-Writing</description>
+성적우수장학금(2016년 1학기)
+스마트 ICT 경진대회 장려상(2018)
+Project Cafe de cultura
+Docking</description>
+    </item>
+    
+    <item>
+      <title>Git 기초(버전관리)</title>
+      <link>/post/test/</link>
+      <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/test/</guid>
+      <description>아래 내용은 생활코딩 Git(CUI환경) 강의를 정리한 내용입니다.
+Git 설치에서 시작하여 기초적인 명령들을 활용하는 내용을 정리하였습니다.
+1.Git을 다운 받고 설치한다. https://git-scm.com/
+2.Git Bash(윈도우를 리눅스 명령어로 관리) 파일을 실행한다.
+프로젝트 파일을 만듭시다.
+(나의 pwd는 /c/Users/DongHo/ 이었다.)
+$mkdir projectN
+프로젝트 디렉토리로 들어갑니다. cd projectN
+현재 디렉토리를 git의 (버전) 저장소로 만듭니다. $git init
+그러면 파란색 글씨로 .git/(버전관리를 하게되면 여러가지 정보가 저장되는 곳이다.) 폴더가 생성된 것을 확인할 수 있다.
+버전과 변화 버전은 의미있는 변화를 의미한다.</description>
+    </item>
+    
+    <item>
+      <title>cafe de cultura</title>
+      <link>/project/cafe-de-cultura/</link>
+      <pubDate>Fri, 23 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/project/cafe-de-cultura/</guid>
+      <description>개요 동호회,&amp;nbsp; 동창회,&amp;nbsp; 가족&amp;nbsp; 등의&amp;nbsp; 구룹간의&amp;nbsp; 소통&amp;nbsp; 증진을&amp;nbsp; 위한&amp;nbsp; 애플리케이션
+프로젝트 정보 프로젝트명:&amp;nbsp; dykelly 졸업작품 프로젝트로 진행
+수행기간: 2018년 06월 ~2018년 10월
+프로젝트 인원 4명
+나의 기여도: 35%
+담당역활: 서버 구축, DB설계, 대화창, 구룹 선택 기능, 새소식(ajax적용)
+개발환경 언어
+HTML5,&amp;ensp; CSS,&amp;ensp; JavaScript(jQuery),&amp;ensp; jAVA
+기술
+Bootstrap,&amp;ensp; Ajax,&amp;ensp; JSON,&amp;ensp; JSP(model1, model2혼용 개발)
+도구
+Eclipse(Neon),&amp;ensp; MY-SQL,&amp;ensp; Android Studio
+서버
+AWS(Ubuntu Linux),&amp;ensp; Tomcat8(WAS)
+프로젝트 url
+프로젝트 소개 url</description>
+    </item>
+    
+    <item>
+      <title>Docking</title>
+      <link>/project/docking/</link>
+      <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/project/docking/</guid>
+      <description>What is Docking? 졸업작품으로&amp;nbsp; 진행했던&amp;nbsp; 프로젝트입니다.
+동호회,&amp;nbsp; 동창회,&amp;nbsp; 가족&amp;nbsp; 등의&amp;nbsp; 구룹간의&amp;nbsp; 소통&amp;nbsp; 증진을&amp;nbsp; 목적으로&amp;nbsp; 개발한&amp;nbsp; 웹&amp;nbsp; 애플리케이션입니다.
+그러면 여기에 어떤 기능이 있는 지 등이 설명이 없는 거다.
+Information 수행기간:&amp;nbsp; 2018년 06월 ~2018년 10월
+프로젝트 인원:&amp;nbsp; 4명
+기여도:&amp;nbsp; 35%
+담당역활:&amp;nbsp; 서버 구축,&amp;nbsp; DB설계,&amp;nbsp; 기능 구현(대화창,&amp;nbsp; 구룹 선택,&amp;nbsp; 새소식)
+Develop environment 언어
+HTML5,&amp;ensp; CSS,&amp;ensp; JavaScript(jQuery),&amp;ensp; jAVA8
+사용 기술
+Bootstrap,&amp;ensp; Ajax,&amp;ensp; JSON,&amp;ensp; JSP(model1, model2혼용 개발)
+도구
+Eclipse(Neon),&amp;ensp; MY-SQL,&amp;ensp; Android Studio
+서버
+AWS(Ubuntu Linux),&amp;ensp; Tomcat8(WAS)</description>
     </item>
     
   </channel>

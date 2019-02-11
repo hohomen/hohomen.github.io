@@ -11,9 +11,18 @@
     
     
     <item>
-      <title>Tech</title>
+      <title>Git</title>
+      <link>/categories/git/</link>
+      <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tech</title>
       <link>/categories/tech/</link>
-      <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 29 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>/categories/tech/</guid>
       <description></description>

@@ -2478,7 +2478,10 @@
 		@media screen and (max-width: 1680px) {
 
 			#wrapper {
-				padding: 3em;
+				padding-top: 3em;
+                padding-right: 3em;
+                padding-bottom: 3em;
+                padding-left: 1em;
 			}
 
 		}
@@ -2513,7 +2516,7 @@
 /* Sidebar */
 
 	#sidebar {
-		margin-right: 3em;
+		margin-right: 1em;
 		min-width: 18em;
 		width: 22em;
 	}

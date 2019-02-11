@@ -10,10 +10,14 @@
              "@type": "WebPage",
              "@id": "/"
         },
-        "articleSection" : "",
-        "name" : "Blog of beginner",
-        "headline" : "Blog of beginner",
-        "description" : "",
+        "articleSection" : "post",
+        "name" : "(ant) build.xml 작성법",
+        "headline" : "(ant) build.xml 작성법",
+        "description" : "자바를 이용해 자료구조를 공부하면서 빌드 도구인 &nbsp;ant를 사용할 일이 생겼다.
+여기에 &nbsp;ant를 사용한다면 필수적으로 알아야할 build.xml 문서 작성에 대한 정리를 하고자 한다.
+빌드 시작 명령어인&nbsp;
+&gt;ant  가 실행되면&nbsp; ant는 기본적으로 현재 작업 디렉터리에서 build.xml이라는 빌드 파일을 찾아 실행한다. (완성된 build.xml문서는 페이지 아래에 정리해 두었다.) 이제 그 내부 작성을 단계적으로 따라가보자.
+&lt;?xml version=&quot;1.0&quot;&gt; (xml 문서 선언)  1.프로젝트 정의하기 &lt;project name=&quot;dms&quot; default=&quot;compile&quot; basedir=&quot;.&quot;&gt;  name: 프로젝트 이름 default: 명령줄에서 매게 변수 없이 ant를 입력할 때 엔트가 빌드프로세스에서 컴파일 단계를 실행해야 한다는 뜻이다.",
         "inLanguage" : "en",
         "author" : "",
         "creator" : "",
@@ -23,14 +27,14 @@
         "copyrightYear" : "2019",
         "datePublished": "2019-01-29 00:00:00 &#43;0000 UTC",
         "dateModified" : "2019-01-29 00:00:00 &#43;0000 UTC",
-        "url" : "/",
-        "wordCount" : "0",
+        "url" : "/post/build/",
+        "wordCount" : "452",
         "keywords" : [ "Blog" ]
     }
     </script>
         
             
-                <title>Blog of beginner</title>
+                <title>(ant) build.xml 작성법</title>
             
         
 
@@ -41,6 +45,8 @@
 
 
         
+            <meta name="author" content="     &#34;&#34;">
+        
         
             
                 <meta name="description" content="HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador. Powered by Hugo">
@@ -48,24 +54,44 @@
         
 
         <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Blog of beginner"/>
-<meta name="twitter:description" content="HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador. Powered by Hugo"/>
+<meta name="twitter:title" content="(ant) build.xml 작성법"/>
+<meta name="twitter:description" content="자바를 이용해 자료구조를 공부하면서 빌드 도구인 &nbsp;ant를 사용할 일이 생겼다.
+여기에 &nbsp;ant를 사용한다면 필수적으로 알아야할 build.xml 문서 작성에 대한 정리를 하고자 한다.
+빌드 시작 명령어인&nbsp;
+&gt;ant  가 실행되면&nbsp; ant는 기본적으로 현재 작업 디렉터리에서 build.xml이라는 빌드 파일을 찾아 실행한다. (완성된 build.xml문서는 페이지 아래에 정리해 두었다.) 이제 그 내부 작성을 단계적으로 따라가보자.
+&lt;?xml version=&quot;1.0&quot;&gt; (xml 문서 선언)  1.프로젝트 정의하기 &lt;project name=&quot;dms&quot; default=&quot;compile&quot; basedir=&quot;.&quot;&gt;  name: 프로젝트 이름 default: 명령줄에서 매게 변수 없이 ant를 입력할 때 엔트가 빌드프로세스에서 컴파일 단계를 실행해야 한다는 뜻이다."/>
 <meta name="twitter:site" content="@example"/>
 
-        <meta property="og:title" content="Blog of beginner" />
-<meta property="og:description" content="HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador. Powered by Hugo" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="/" />
-<meta property="og:updated_time" content="2019-01-29T00:00:00&#43;00:00"/>
+        <meta property="og:title" content="(ant) build.xml 작성법" />
+<meta property="og:description" content="자바를 이용해 자료구조를 공부하면서 빌드 도구인 &nbsp;ant를 사용할 일이 생겼다.
+여기에 &nbsp;ant를 사용한다면 필수적으로 알아야할 build.xml 문서 작성에 대한 정리를 하고자 한다.
+빌드 시작 명령어인&nbsp;
+&gt;ant  가 실행되면&nbsp; ant는 기본적으로 현재 작업 디렉터리에서 build.xml이라는 빌드 파일을 찾아 실행한다. (완성된 build.xml문서는 페이지 아래에 정리해 두었다.) 이제 그 내부 작성을 단계적으로 따라가보자.
+&lt;?xml version=&quot;1.0&quot;&gt; (xml 문서 선언)  1.프로젝트 정의하기 &lt;project name=&quot;dms&quot; default=&quot;compile&quot; basedir=&quot;.&quot;&gt;  name: 프로젝트 이름 default: 명령줄에서 매게 변수 없이 ant를 입력할 때 엔트가 빌드프로세스에서 컴파일 단계를 실행해야 한다는 뜻이다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/build/" /><meta property="article:published_time" content="2019-01-29T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2019-01-29T00:00:00&#43;00:00"/>
 
         <meta property="og:image" content="//images/logo.png">
         <meta property="og:image:type" content="image/png">
         <meta property="og:image:width" content="512">
         <meta property="og:image:height" content="512">
         
-<meta itemprop="name" content="Blog of beginner">
-<meta itemprop="description" content="HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador. Powered by Hugo">
+<meta itemprop="name" content="(ant) build.xml 작성법">
+<meta itemprop="description" content="자바를 이용해 자료구조를 공부하면서 빌드 도구인 &nbsp;ant를 사용할 일이 생겼다.
+여기에 &nbsp;ant를 사용한다면 필수적으로 알아야할 build.xml 문서 작성에 대한 정리를 하고자 한다.
+빌드 시작 명령어인&nbsp;
+&gt;ant  가 실행되면&nbsp; ant는 기본적으로 현재 작업 디렉터리에서 build.xml이라는 빌드 파일을 찾아 실행한다. (완성된 build.xml문서는 페이지 아래에 정리해 두었다.) 이제 그 내부 작성을 단계적으로 따라가보자.
+&lt;?xml version=&quot;1.0&quot;&gt; (xml 문서 선언)  1.프로젝트 정의하기 &lt;project name=&quot;dms&quot; default=&quot;compile&quot; basedir=&quot;.&quot;&gt;  name: 프로젝트 이름 default: 명령줄에서 매게 변수 없이 ant를 입력할 때 엔트가 빌드프로세스에서 컴파일 단계를 실행해야 한다는 뜻이다.">
 
+
+<meta itemprop="datePublished" content="2019-01-29T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-01-29T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="452">
+
+
+
+<meta itemprop="keywords" content="" />
 
         
 
@@ -283,14 +309,52 @@
         
 </section>
 
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </ul>
+    </section>
+</section>
+
     
     <div id="main">
         
-            <article class="post">
+        
+        <article class="post">
   <header>
     <div class="title">
         
-            <h2><a href="/post/build/">(ant) build.xml 작성법</a></h2>
+            <h1><a href="/post/build/">(ant) build.xml 작성법</a></h1>
+            
         
         
     </div>
@@ -529,44 +593,6 @@ basedir: 속성값을 &lsquo;.&lsquo;으로 해주면, 이 빌드 파일에서 �
 </ul>
 
 
-
-            <section id="share-menu">
-    <section id="social-share-nav">
-        <ul class="links">
-            <header>
-                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
-            </header>
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </ul>
-    </section>
-</section>
-
-        
     </div>
     
 <section id="sidebar">

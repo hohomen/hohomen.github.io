@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tech on Blog of beginner</title>
+    <title>tech on Blog of beginner</title>
     <link>/categories/tech/</link>
-    <description>Recent content in Tech on Blog of beginner</description>
+    <description>Recent content in tech on Blog of beginner</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/tech/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>안녕</title>
-      <link>/post/test2/</link>
-      <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
+      <title>(ant) build.xml 작성법</title>
+      <link>/post/build/</link>
+      <pubDate>Tue, 29 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/test2/</guid>
-      <description>Hi every body</description>
+      <guid>/post/build/</guid>
+      <description>자바를 이용해 자료구조를 공부하면서 빌드 도구인 &amp;nbsp;ant를 사용할 일이 생겼다.
+여기에 &amp;nbsp;ant를 사용한다면 필수적으로 알아야할 build.xml 문서 작성에 대한 정리를 하고자 한다.
+빌드 시작 명령어인&amp;nbsp;
+&amp;gt;ant  가 실행되면&amp;nbsp; ant는 기본적으로 현재 작업 디렉터리에서 build.xml이라는 빌드 파일을 찾아 실행한다. (완성된 build.xml문서는 페이지 아래에 정리해 두었다.) 이제 그 내부 작성을 단계적으로 따라가보자.
+&amp;lt;?xml version=&amp;quot;1.0&amp;quot;&amp;gt; (xml 문서 선언)  1.프로젝트 정의하기 &amp;lt;project name=&amp;quot;dms&amp;quot; default=&amp;quot;compile&amp;quot; basedir=&amp;quot;.&amp;quot;&amp;gt;  name: 프로젝트 이름 default: 명령줄에서 매게 변수 없이 ant를 입력할 때 엔트가 빌드프로세스에서 컴파일 단계를 실행해야 한다는 뜻이다.</description>
     </item>
     
   </channel>
