@@ -1,30 +1,58 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Blog of beginner</title>
+    <title>Categories on Dony&#39;s blog</title>
     <link>/categories/</link>
-    <description>Recent content in Categories on Blog of beginner</description>
+    <description>Recent content in Categories on Dony&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Sat, 02 Feb 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Git</title>
-      <link>/categories/git/</link>
-      <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
+      <title>Book</title>
+      <link>/categories/book/</link>
+      <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>/categories/git/</guid>
+      <guid>/categories/book/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>tech</title>
-      <link>/categories/tech/</link>
+      <title>CSS</title>
+      <link>/categories/css/</link>
+      <pubDate>Wed, 20 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Debuging</title>
+      <link>/categories/debuging/</link>
+      <pubDate>Fri, 22 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/debuging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JavaScript</title>
+      <link>/categories/javascript/</link>
+      <pubDate>Wed, 20 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>etc</title>
+      <link>/categories/etc/</link>
       <pubDate>Tue, 29 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>/categories/tech/</guid>
+      <guid>/categories/etc/</guid>
       <description></description>
     </item>
     

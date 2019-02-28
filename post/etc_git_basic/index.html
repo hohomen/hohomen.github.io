@@ -1,0 +1,848 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "BlogPosting",
+        "mainEntityOfPage": {
+             "@type": "WebPage",
+             "@id": "/"
+        },
+        "articleSection" : "post",
+        "name" : "Git 기초(버전관리)",
+        "headline" : "Git 기초(버전관리)",
+        "description" : "아래 내용은 생활코딩 Git(CUI, 윈도우 환경) 강의를 정리한 내용입니다. 강의 내용 요약이므로 복습 용도로 유용합니다. 자세한 설명과 과정은 생활코딩을 참조하길 바랍니다. 
+설치, 저장소 생성, 기본 설정Git을 다운 받고 설치한다. https://git-scm.com/ Git Bash(윈도우를 리눅스 명령어로 관리) 파일을 실행한다. 프로젝트 파일을 만듭니다.(나의 pwd는 /c/Users/DongHo/ 이었다.) $mkdir projectN 프로젝트 디렉토리로 들어갑니다. $cd projectN 현재 디렉토리를 git의 (버전) 저장소로 만듭니다. $git init($ls -al을 해보면 파란색 글씨로 .git/(버전관리를 하게되면 여러가지 정보가 저장되는 곳이다.) 폴더가 생성된 것을 확인할 수 있다.",
+        "inLanguage" : "en",
+        "author" : "",
+        "creator" : "",
+        "publisher": "",
+        "accountablePerson" : "",
+        "copyrightHolder" : "",
+        "copyrightYear" : "2018",
+        "datePublished": "2018-06-03 00:00:00 &#43;0000 UTC",
+        "dateModified" : "2018-06-03 00:00:00 &#43;0000 UTC",
+        "url" : "/post/etc_git_basic/",
+        "wordCount" : "403",
+        "keywords" : [ "tag1","tag2","Blog" ]
+    }
+    </script>
+        
+            
+                <title>Git 기초(버전관리)</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.53" />
+        
+
+
+        
+            <meta name="author" content="     &#34;&#34;">
+        
+        
+            
+                <meta name="description" content="HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador. Powered by Hugo">
+            
+        
+
+        <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Git 기초(버전관리)"/>
+<meta name="twitter:description" content="아래 내용은 생활코딩 Git(CUI, 윈도우 환경) 강의를 정리한 내용입니다. 강의 내용 요약이므로 복습 용도로 유용합니다. 자세한 설명과 과정은 생활코딩을 참조하길 바랍니다. 
+설치, 저장소 생성, 기본 설정Git을 다운 받고 설치한다. https://git-scm.com/ Git Bash(윈도우를 리눅스 명령어로 관리) 파일을 실행한다. 프로젝트 파일을 만듭니다.(나의 pwd는 /c/Users/DongHo/ 이었다.) $mkdir projectN 프로젝트 디렉토리로 들어갑니다. $cd projectN 현재 디렉토리를 git의 (버전) 저장소로 만듭니다. $git init($ls -al을 해보면 파란색 글씨로 .git/(버전관리를 하게되면 여러가지 정보가 저장되는 곳이다.) 폴더가 생성된 것을 확인할 수 있다."/>
+<meta name="twitter:site" content="@example"/>
+
+        <meta property="og:title" content="Git 기초(버전관리)" />
+<meta property="og:description" content="아래 내용은 생활코딩 Git(CUI, 윈도우 환경) 강의를 정리한 내용입니다. 강의 내용 요약이므로 복습 용도로 유용합니다. 자세한 설명과 과정은 생활코딩을 참조하길 바랍니다. 
+설치, 저장소 생성, 기본 설정Git을 다운 받고 설치한다. https://git-scm.com/ Git Bash(윈도우를 리눅스 명령어로 관리) 파일을 실행한다. 프로젝트 파일을 만듭니다.(나의 pwd는 /c/Users/DongHo/ 이었다.) $mkdir projectN 프로젝트 디렉토리로 들어갑니다. $cd projectN 현재 디렉토리를 git의 (버전) 저장소로 만듭니다. $git init($ls -al을 해보면 파란색 글씨로 .git/(버전관리를 하게되면 여러가지 정보가 저장되는 곳이다.) 폴더가 생성된 것을 확인할 수 있다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/etc_git_basic/" /><meta property="article:published_time" content="2018-06-03T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2018-06-03T00:00:00&#43;00:00"/>
+
+        <meta property="og:image" content="//images/logo.png">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="512">
+        <meta property="og:image:height" content="512">
+        
+<meta itemprop="name" content="Git 기초(버전관리)">
+<meta itemprop="description" content="아래 내용은 생활코딩 Git(CUI, 윈도우 환경) 강의를 정리한 내용입니다. 강의 내용 요약이므로 복습 용도로 유용합니다. 자세한 설명과 과정은 생활코딩을 참조하길 바랍니다. 
+설치, 저장소 생성, 기본 설정Git을 다운 받고 설치한다. https://git-scm.com/ Git Bash(윈도우를 리눅스 명령어로 관리) 파일을 실행한다. 프로젝트 파일을 만듭니다.(나의 pwd는 /c/Users/DongHo/ 이었다.) $mkdir projectN 프로젝트 디렉토리로 들어갑니다. $cd projectN 현재 디렉토리를 git의 (버전) 저장소로 만듭니다. $git init($ls -al을 해보면 파란색 글씨로 .git/(버전관리를 하게되면 여러가지 정보가 저장되는 곳이다.) 폴더가 생성된 것을 확인할 수 있다.">
+
+
+<meta itemprop="datePublished" content="2018-06-03T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-06-03T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="403">
+
+
+
+<meta itemprop="keywords" content="tag1,tag2," />
+
+        
+
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+            <link rel="stylesheet" href="/css/main.css">
+            <link rel="stylesheet" href="/css/add-on.css">
+            <link rel="stylesheet" href="/css/academicons.min.css">
+        
+
+        
+            
+                
+            
+        
+
+
+  
+    
+    <link href='//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+  
+
+
+      
+    </head>
+    <body>
+
+      
+      <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+      <h1><a href="/">Dony&#39;s blog</a></h1>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="/">
+                            <i class="fa fa-home">&nbsp;</i>Home
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/about">
+                            <i class="fa fa-id-card-o">&nbsp;</i>About
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/book/">
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Book
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/project/">
+                            <i class="fa fa-list">&nbsp;</i>Project
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/categories/">
+                            <i class="fa fa-sitemap">&nbsp;</i>Categories
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                    <input type="text" name="q" placeholder="Search" />
+                    <input type="hidden" name="as_sitesearch" value="/">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="Search" />
+                <input type="hidden" name="as_sitesearch" value="/">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="/">
+                            <h3>
+                                <i class="fa fa-home">&nbsp;</i>Home
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/about">
+                            <h3>
+                                <i class="fa fa-id-card-o">&nbsp;</i>About
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/book/">
+                            <h3>
+                                <i class="fa fa-newspaper-o">&nbsp;</i>Book
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/project/">
+                            <h3>
+                                <i class="fa fa-list">&nbsp;</i>Project
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories/">
+                            <h3>
+                                <i class="fa fa-sitemap">&nbsp;</i>Categories
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section class="recent-posts">
+            <div class="mini-posts">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+
+                
+                    
+                
+
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/debug_spring/">Spring Debuging list</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-02-22'>
+                                    February 22, 2019</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/css_bootstrap_grid/">Bootstrap grid system</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-02-20'>
+                                    February 20, 2019</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/javascript_basic/">Javascript 기본 문법</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-02-20'>
+                                    February 20, 2019</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/javascript_loop/">배열</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-02-20'>
+                                    February 20, 2019</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/javascript_function/">함수 정리</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-02-20'>
+                                    February 20, 2019</time>
+                            </header>
+                            
+
+                        </article>
+                
+
+                
+                    <a href=
+                        
+                            /blog/
+                        
+                        class="button">View more posts</a>
+                
+            </div>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+  <header>
+    <div class="title">
+        
+            <h1><a href="/post/etc_git_basic/">Git 기초(버전관리)</a></h1>
+            
+        
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published"
+            datetime='2018-06-03'>
+            June 3, 2018</time>
+        <span class="author">     &#34;&#34;</span>
+        
+            <p>2 minute read</p>
+        
+        
+    </div>
+</header>
+
+
+  
+    <section id="social-share">
+      <ul class="icons">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+    </section>
+  
+
+  
+
+  <div id="content">
+    
+
+<h3 id="아래-내용은-생활코딩-git-cui-윈도우-환경-강의를-정리한-내용입니다">아래 내용은 생활코딩 Git(CUI, 윈도우 환경) 강의를 정리한 내용입니다.</h3>
+
+<h3 id="강의-내용-요약이므로-복습-용도로-유용합니다-자세한-설명과-과정은-생활코딩을-참조하길-바랍니다">강의 내용 요약이므로 복습 용도로 유용합니다. 자세한 설명과 과정은 생활코딩을 참조하길 바랍니다.</h3>
+
+<p><br></p>
+
+<pre style="word-wrap: break-word;white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-break:break-all;">
+
+<h2>설치, 저장소 생성, 기본 설정</h2>Git을 다운 받고 설치한다. <a href=https://git-scm.com/>https://git-scm.com/</a>
+
+Git Bash(윈도우를 리눅스 명령어로 관리) 파일을 실행한다.
+
+프로젝트 파일을 만듭니다.(나의 pwd는 /c/Users/DongHo/ 이었다.)
+<code>$mkdir projectN</code>
+프로젝트 디렉토리로 들어갑니다. 
+<code>$cd projectN</code>
+현재 디렉토리를 git의 (버전) 저장소로 만듭니다. 
+<code>$git init</code>($ls -al을 해보면 
+파란색 글씨로 .git/(버전관리를 하게되면 여러가지 정보가 저장되는 곳이다.) 폴더가 생성된 것을 확인할 수 있다.)
+
+commit 하기전에 필요한 설정
+버전에 포함될 버전을 만든 사람에 대한 정보를 설정합니다. 
+이 설정은 ~/.git/config 파일에 저장되고 1번만 해주면 됩니다.
+<code>
+$git config --global user.name "자신의 닉네임"
+$git config --global user.email "자신의 이메일"
+ex)
+$git config --global user.name hohoman
+$git config --global user.email hohoman@naver.com
+</code>
+<br>
+<h2>버전과 변화</h2>버전은 의미있는 변화를 의미한다.
+<br>
+<H2>기본 명령어</h2>
+git의 특징은 add한 파일만(-->stage area) commit(-->repository)할 수 있다는 점이다.
+
+commit하는 방법(순서)은
+1.변화된 파일 등록 2. 해당 파일 add 3. add된 파일 commit(commit message 입력하면 완료)등록.
+
+git log를 하면 이전 기록들을 볼 수 있다.
+(commit message와 그 옆에는 버전주소(id)를 알 수 있다. 그리고 버전들의 리스트들을 볼 수 있음.)
+버전의 만든 것의 효용
+1.로그에서 출력되는 버전간의 차이점을 확인할 수 있다.
+git log -p(commit과 commit사이의 소스상의 차이를 알 수 있다.)
+버전(1~n(commit message))내용을 살펴보면 ---부분은 이전 버전을 의미하며 +++는 버전이 생성되면서 갱신된 내용을 의미한다.
+
+2, 특정 버전 간의 차이점을 비교할 때
+git diff '버전 id'..'버전 id2'
+(git log를 보면 버전 고유의 commit번호를 확인할 수 있다. 그것은 복사해서 입력하면 된다.)
+
+3.git add하기 전과 add한 후의 파일 내용을 비교할 때 
+git diff
+commit하기 전에 최종적으로 소스 상의 오류가 없는 지 점검할 때 유용하다.
+(조금 더 자세하게 들어가면 다른데 이정도로 이해하도록 하자.)
+
+과거로 돌아가기.(되돌리기)
+reset(초기화) vs revert
+
+reset
+아래 명령은 버전 id로 돌아가는 명령입니다. 
+git reset --hard "버전 id" 
+(--hard는 가장 쉬운 방법이지만 위험, 나머지 soft, mixed등의 안전한 옵션을 이용할 수도 있다. git의 원리를 이해하고 섬세하게 사용하자.)
+그 이후의 버전은 삭제됨.(물론 git은 기록을 남기기 때문에 복구할 수 있다.)
+
+revert는 commit을 취소하면서 새로운 버전을 생성.
+(우선은 여기까지만 알자)
+ 
+명령의 빈도와 메뉴얼 보는 방법
+ex) git commit --help하면 commit에 대한 설명과 옵션에 대한 설명이 있다.
+git commit -a(all)을 하면 add의 과정을 생략하고 commit할 수 있다.
+git commit -am "xxxx" 하면 vim으로 commit message를 입력하지 않고 곧 바로 message를 등록
+
+어떤 문제를 해결하는데 핵심적인 방법.
+메뉴얼보기, 커뮤니티에 질문하기, 검색하기
+
+
+여기가지의 내용은 모든 버전관리의 공통적인 사항. (핵심은 백업)
+
+드롭박스등을 이용해 버전관리 디렉토리를 백업해 놓는다면 모든 것을 완벽하게 복구할 수 있다.(백업의 책임은 자기 자신)
+다음 수업부터는 git의 특별함을 배운다.(branch를 비롯해)(협업을 하게 된다면 위에것 까지의 백업의 노력을 택도 없다. 나머지 수업 듣자.)
+
+</pre>
+
+  </div>
+
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+            
+            
+                <i class="fa fa-folder"></i>
+                
+                
+                <li><a class="article-category-link" href="/categories/etc">etc</a></li>
+                
+            
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+            
+            
+                <i class="fa fa-tags"></i>
+                
+                
+                <li><a class="article-category-link" href="/tags/tag1">tag1</a></li>
+                
+                
+                <li><a class="article-category-link" href="/tags/tag2">tag2</a></li>
+                
+            
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "shortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+<ul class="actions pagination">
+    
+
+    
+        <li><a href="/post/etc_build/"
+                class="button big next">(ant) build.xml 작성법</a></li>
+    
+</ul>
+
+
+    </div>
+    
+<section id="sidebar">
+
+  
+  <section id="intro">
+    
+    
+      
+        <a href='/'><img src="/img/main/hello4.jpg" width="220em" alt="Hugo Future Imperfect" /></a>
+      
+    
+    
+      <header>
+        <h2></h2>
+        <p>Dongho Choi <i class='fa fa-hand-peace-o'></i></p>
+      </header>
+    
+    
+  </section>
+
+  
+  <section class="recent-posts">
+    <div class="mini-posts">
+      <header>
+        <h3>Recent Posts</h3>
+      </header>
+      <div class="posts-container">
+        
+
+        
+          
+        
+
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/debug_spring/">Spring Debuging list</a>
+              </h3>
+              
+              <time class="published" datetime='2019-02-22'>
+                February 22, 2019
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/css_bootstrap_grid/">Bootstrap grid system</a>
+              </h3>
+              
+              <time class="published" datetime='2019-02-20'>
+                February 20, 2019
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/javascript_basic/">Javascript 기본 문법</a>
+              </h3>
+              
+              <time class="published" datetime='2019-02-20'>
+                February 20, 2019
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/javascript_loop/">배열</a>
+              </h3>
+              
+              <time class="published" datetime='2019-02-20'>
+                February 20, 2019
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/javascript_function/">함수 정리</a>
+              </h3>
+              
+              <time class="published" datetime='2019-02-20'>
+                February 20, 2019
+              </time>
+            </header>
+            
+
+          </article>
+        
+      </div>
+
+      
+        <a href=
+          
+            /blog/
+          
+        class="button">View more posts</a>
+      
+    </div>
+  </section>
+
+  
+  
+  
+  
+  
+    <section id="categories">
+      <header>
+        <h3>
+          <a href="/categories/">Categories</a>
+        </h3>
+      </header>
+        
+          
+        
+
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/book/">Book</a>
+                <span style="float:right;">2</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/css/">CSS</a>
+                <span style="float:right;">3</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/debuging/">Debuging</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/javascript/">JavaScript</a>
+                <span style="float:right;">3</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/etc/">etc</a>
+                <span style="float:right;">2</span>
+              
+            </header>
+          </article>
+        </p>
+        
+    </section>
+  
+  
+
+  
+  
+
+  
+  <section id="footer">
+    
+    <p class="copyright">
+      
+        &copy; 2019
+        
+          Dony&#39;s blog
+        
+      .
+      Powered by <a href="//gohugo.io" target="_blank">Hugo</a>
+    </p>
+  </section>
+</section>
+
+    </div>
+    <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+    
+
+    
+      
+    
+
+    
+      
+      
+      
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+        
+        
+        
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/r.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/yaml.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/css.min.js"></script>
+        <script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+      
+    
+    
+    
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+      <script src="/js/util.js"></script>
+      <script src="/js/main.js"></script>
+      <script src="/js/backToTop.js"></script>
+    
+
+    
+      
+        
+      
+    
+
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+      <script src="//yihui.name/js/math-code.js"></script>
+<script async
+src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+  </body>
+</html>
+

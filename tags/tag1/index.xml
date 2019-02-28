@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>tag1 on Blog of beginner</title>
+    <title>tag1 on Dony&#39;s blog</title>
     <link>/tags/tag1/</link>
-    <description>Recent content in tag1 on Blog of beginner</description>
+    <description>Recent content in tag1 on Dony&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 03 Jun 2018 00:00:00 +0000</lastBuildDate>
@@ -13,21 +13,12 @@
     
     <item>
       <title>Git 기초(버전관리)</title>
-      <link>/post/test/</link>
+      <link>/post/etc_git_basic/</link>
       <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/test/</guid>
-      <description>아래 내용은 생활코딩 Git(CUI환경) 강의를 정리한 내용입니다.
-Git 설치에서 시작하여 기초적인 명령들을 활용하는 내용을 정리하였습니다.
-1.Git을 다운 받고 설치한다. https://git-scm.com/
-2.Git Bash(윈도우를 리눅스 명령어로 관리) 파일을 실행한다.
-프로젝트 파일을 만듭시다.
-(나의 pwd는 /c/Users/DongHo/ 이었다.)
-$mkdir projectN
-프로젝트 디렉토리로 들어갑니다. cd projectN
-현재 디렉토리를 git의 (버전) 저장소로 만듭니다. $git init
-그러면 파란색 글씨로 .git/(버전관리를 하게되면 여러가지 정보가 저장되는 곳이다.) 폴더가 생성된 것을 확인할 수 있다.
-버전과 변화 버전은 의미있는 변화를 의미한다.</description>
+      <guid>/post/etc_git_basic/</guid>
+      <description>아래 내용은 생활코딩 Git(CUI, 윈도우 환경) 강의를 정리한 내용입니다. 강의 내용 요약이므로 복습 용도로 유용합니다. 자세한 설명과 과정은 생활코딩을 참조하길 바랍니다. 
+설치, 저장소 생성, 기본 설정Git을 다운 받고 설치한다. https://git-scm.com/ Git Bash(윈도우를 리눅스 명령어로 관리) 파일을 실행한다. 프로젝트 파일을 만듭니다.(나의 pwd는 /c/Users/DongHo/ 이었다.) $mkdir projectN 프로젝트 디렉토리로 들어갑니다. $cd projectN 현재 디렉토리를 git의 (버전) 저장소로 만듭니다. $git init($ls -al을 해보면 파란색 글씨로 .git/(버전관리를 하게되면 여러가지 정보가 저장되는 곳이다.) 폴더가 생성된 것을 확인할 수 있다.</description>
     </item>
     
   </channel>

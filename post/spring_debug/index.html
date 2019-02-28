@@ -1,0 +1,824 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "BlogPosting",
+        "mainEntityOfPage": {
+             "@type": "WebPage",
+             "@id": "/"
+        },
+        "articleSection" : "post",
+        "name" : "Spring Debuging",
+        "headline" : "Spring Debuging",
+        "description" : "asdfasdf
+스프링은 한 개의 설정이 잘못되는 경우 실행 자체에 문제가 생기므로 하나씩 설정하고 테스트하는 습관을 가져야만 합니다. myBatis의 연결 설정 역시 이전 Datasource 연결 설정이 정상적으로 이루어진 후에 진행해야 합니다. 1. 버전 오류(전체적으로 이렇게 설정을 바꿔줘야 한다.) https://offbyone.tistory.com/16 에 잘 정리되어 있다. 2. 버전 관련 오류. 메이븐 설정변경이 재대로 되지 않았을 때. Description Resource Path Location Type The container 'Maven Dependencies' references non existing library solved) Today I had this same problem with another jar.",
+        "inLanguage" : "en",
+        "author" : "",
+        "creator" : "",
+        "publisher": "",
+        "accountablePerson" : "",
+        "copyrightHolder" : "",
+        "copyrightYear" : "2019",
+        "datePublished": "2019-02-22 00:00:00 &#43;0000 UTC",
+        "dateModified" : "2019-02-22 00:00:00 &#43;0000 UTC",
+        "url" : "/post/spring_debug/",
+        "wordCount" : "423",
+        "keywords" : [ "Blog" ]
+    }
+    </script>
+        
+            
+                <title>Spring Debuging</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.53" />
+        
+
+
+        
+            <meta name="author" content="     &#34;&#34;">
+        
+        
+            
+                <meta name="description" content="HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador. Powered by Hugo">
+            
+        
+
+        <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Spring Debuging"/>
+<meta name="twitter:description" content="asdfasdf
+스프링은 한 개의 설정이 잘못되는 경우 실행 자체에 문제가 생기므로 하나씩 설정하고 테스트하는 습관을 가져야만 합니다. myBatis의 연결 설정 역시 이전 Datasource 연결 설정이 정상적으로 이루어진 후에 진행해야 합니다. 1. 버전 오류(전체적으로 이렇게 설정을 바꿔줘야 한다.) https://offbyone.tistory.com/16 에 잘 정리되어 있다. 2. 버전 관련 오류. 메이븐 설정변경이 재대로 되지 않았을 때. Description Resource Path Location Type The container &#39;Maven Dependencies&#39; references non existing library solved) Today I had this same problem with another jar."/>
+<meta name="twitter:site" content="@example"/>
+
+        <meta property="og:title" content="Spring Debuging" />
+<meta property="og:description" content="asdfasdf
+스프링은 한 개의 설정이 잘못되는 경우 실행 자체에 문제가 생기므로 하나씩 설정하고 테스트하는 습관을 가져야만 합니다. myBatis의 연결 설정 역시 이전 Datasource 연결 설정이 정상적으로 이루어진 후에 진행해야 합니다. 1. 버전 오류(전체적으로 이렇게 설정을 바꿔줘야 한다.) https://offbyone.tistory.com/16 에 잘 정리되어 있다. 2. 버전 관련 오류. 메이븐 설정변경이 재대로 되지 않았을 때. Description Resource Path Location Type The container &#39;Maven Dependencies&#39; references non existing library solved) Today I had this same problem with another jar." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/spring_debug/" /><meta property="article:published_time" content="2019-02-22T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2019-02-22T00:00:00&#43;00:00"/>
+
+        <meta property="og:image" content="//images/logo.png">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="512">
+        <meta property="og:image:height" content="512">
+        
+<meta itemprop="name" content="Spring Debuging">
+<meta itemprop="description" content="asdfasdf
+스프링은 한 개의 설정이 잘못되는 경우 실행 자체에 문제가 생기므로 하나씩 설정하고 테스트하는 습관을 가져야만 합니다. myBatis의 연결 설정 역시 이전 Datasource 연결 설정이 정상적으로 이루어진 후에 진행해야 합니다. 1. 버전 오류(전체적으로 이렇게 설정을 바꿔줘야 한다.) https://offbyone.tistory.com/16 에 잘 정리되어 있다. 2. 버전 관련 오류. 메이븐 설정변경이 재대로 되지 않았을 때. Description Resource Path Location Type The container &#39;Maven Dependencies&#39; references non existing library solved) Today I had this same problem with another jar.">
+
+
+<meta itemprop="datePublished" content="2019-02-22T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-02-22T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="423">
+
+
+
+<meta itemprop="keywords" content="" />
+
+        
+
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+            <link rel="stylesheet" href="/css/main.css">
+            <link rel="stylesheet" href="/css/add-on.css">
+            <link rel="stylesheet" href="/css/academicons.min.css">
+        
+
+        
+            
+                
+            
+        
+
+
+  
+    
+    <link href='//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+  
+
+
+      
+    </head>
+    <body>
+
+      
+      <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+      <h1><a href="/">Dony&#39;s blog</a></h1>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="/">
+                            <i class="fa fa-home">&nbsp;</i>Home
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/about">
+                            <i class="fa fa-id-card-o">&nbsp;</i>About
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/book/">
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Book
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/project/">
+                            <i class="fa fa-list">&nbsp;</i>Project
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/categories/">
+                            <i class="fa fa-sitemap">&nbsp;</i>Categories
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                    <input type="text" name="q" placeholder="Search" />
+                    <input type="hidden" name="as_sitesearch" value="/">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="Search" />
+                <input type="hidden" name="as_sitesearch" value="/">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="/">
+                            <h3>
+                                <i class="fa fa-home">&nbsp;</i>Home
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/about">
+                            <h3>
+                                <i class="fa fa-id-card-o">&nbsp;</i>About
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/book/">
+                            <h3>
+                                <i class="fa fa-newspaper-o">&nbsp;</i>Book
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/project/">
+                            <h3>
+                                <i class="fa fa-list">&nbsp;</i>Project
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories/">
+                            <h3>
+                                <i class="fa fa-sitemap">&nbsp;</i>Categories
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section class="recent-posts">
+            <div class="mini-posts">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+
+                
+                    
+                
+
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/spring_debug/">Spring Debuging</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-02-22'>
+                                    February 22, 2019</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/css_layout/">CSS 박스모델</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-02-19'>
+                                    February 19, 2019</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/css_basic/">CSS 기초</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-02-18'>
+                                    February 18, 2019</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/build/">(ant) build.xml 작성법</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-01-29'>
+                                    January 29, 2019</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/git_basic/">Git 기초(버전관리)</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-06-03'>
+                                    June 3, 2018</time>
+                            </header>
+                            
+
+                        </article>
+                
+
+                
+                    <a href=
+                        
+                            /blog/
+                        
+                        class="button">View more posts</a>
+                
+            </div>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+  <header>
+    <div class="title">
+        
+            <h1><a href="/post/spring_debug/">Spring Debuging</a></h1>
+            
+        
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published"
+            datetime='2019-02-22'>
+            February 22, 2019</time>
+        <span class="author">     &#34;&#34;</span>
+        
+            <p>2 minute read</p>
+        
+        
+    </div>
+</header>
+
+
+  
+    <section id="social-share">
+      <ul class="icons">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+    </section>
+  
+
+  
+
+  <div id="content">
+    <p>asdfasdf</p>
+
+<pre style="word-wrap: break-word;white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-break:break-all;">
+
+스프링은 한 개의 설정이 잘못되는 경우 실행 자체에 문제가 생기므로 하나씩 설정하고 테스트하는 습관을 가져야만 합니다.
+myBatis의 연결 설정 역시 이전 Datasource 연결 설정이 정상적으로 이루어진 후에 진행해야 합니다.
+
+1. 버전 오류(전체적으로 이렇게 설정을 바꿔줘야 한다.)
+https://offbyone.tistory.com/16 에 잘 정리되어 있다.
+
+2. 버전 관련 오류. 메이븐 설정변경이 재대로 되지 않았을 때.
+Description Resource Path Location Type The container 'Maven Dependencies' references non existing library
+
+solved)
+Today I had this same problem with another jar. I tried multiple things people said on Stackoverflow, but nothing worked. Eventually I did this:
+Close eclipse and any project-app that is running.
+Delete the .m2 folder (Users --> [your_username] --> .m2). It's an invisible folder, make sure you are able to view invisible folders.
+Restarted Eclipse (I guess it works in other IDE too) and updated my project.
+
+3.
+dataSource 부분오류
+Error creating bean with name 'sqlSessionFactory' defined in file [경로/root-context.xml]: Initialization of bean failed;
+Failed to convert property value of type 'java.lang.String' to required type 'org.springframework.core.io.Resource[]' for property 'mapperLocations'; nested exception is java.lang.IllegalArgumentException: Could not resolve resource location pattern [classpath:mappers/**/*Mapper.xml]: class path resource [mappers/] cannot be resolved to URL because it does not exist
+
+solved)
+dataSourceTest 테스트에 mybatis 설정 property가 코드에 있었음.(batis 설정전)
+<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <property name="configLocation" value="classpath:/mybatis-config.xml"></property>
+        <property name="mapperLocations" value="classpath:mappers/**/*Mapper.xml"></property>
+</bean>
+
+tomcat 실행 도중 오류.(4~5)
+4.
+A child container failed during start java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/web]]
+
+(solved)
+Remove server from Eclipse : Go to Window > Preferences > Server > Runtime Environment, here remove the server your are using from eclipse and add it again(doing this will create a new Server project folder in Eclipse) , 
+Remove server from Project : Also remove the server in your project(Build path > configuration path > Java Build path) and add again.
+url:https://stackoverflow.com/questions/28102134/a-child-container-failed-during-start-java-util-concurrent-executionexception
+
+5.
+Failed to start component [StandardEngine[Catalina].StandardHost[localhost]] at java.util.concurrent.FutureTask.report(Unknown Source) at java.util.concurrent.FutureTask.get(Unknown Source)
+
+(solved)
+Any of the jar dependencies of your project seems to be corrupted. You could try deleting all your local maven repo folder, or if you could manage to know which is the corrupted one, just delete it. After one of theese actions, just update maven dependencies and it should start working
+url:https://stackoverflow.com/questions/40674615/failed-to-start-component-standardenginecatalina-standardhostlocalhost-stan
+
+
+6. myBatis xml map causing namespace must be declared for element type mapper
+
+solved) myBatis mapper DTD 선언을 잘 못했었다.
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+7. junit dataSourceTest에서 com.mysql.jdbc.JDBC4Connection@6cc4cdb9가 나오지 않고
+Loaded default TestExecutionListener class names from location와 Using TestExecutionListeners 2줄만 출력되는 상황.
+
+(solved)
+junit dependency version 4.7 --> 4.11(더 높은 버전이다.)로 해결
+
+8.
+mysql 한글 깨짐 현상(아래는 참고 url)
+https://kgh940525.tistory.com/entry/Spring-Mysql-%ED%95%9C%EA%B8%80-%EA%B9%A8%EC%A7%90-UTF-8-%EC%9D%B8%EC%BD%94%EB%94%A9-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0
+https://proinlab.com/archives/1147
+https://stackoverflow.com/questions/19052676/how-to-set-useunicode-true-and-characterencoding-utf8-properties-on-spring-manag
+
+(solved) dataSource에 추가.
+<property name="connectionProperties">
+    <props>
+        <prop key="useUnicode">yes</prop>
+        <prop key="characterEncoding">utf8</prop>
+    </props>
+</property>
+(spring.datasource.connectionProperties=useUnicode=true;characterEncoding=utf-8;)
+
+9.
+Error creating bean with name : Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException:
+
+solved) <context:component-scan 을 선언하지 않았다.
+
+</pre>
+
+  </div>
+
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+            
+            
+                <i class="fa fa-folder"></i>
+                
+                
+                <li><a class="article-category-link" href="/categories/debuging">Debuging</a></li>
+                
+            
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "shortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+<ul class="actions pagination">
+    
+        <li><a href="/post/css_layout/"
+                class="button big previous">CSS 박스모델</a></li>
+    
+
+    
+</ul>
+
+
+    </div>
+    
+<section id="sidebar">
+
+  
+  <section id="intro">
+    
+    
+      
+        <a href='/'><img src="/img/main/hello4.jpg" width="220em" alt="Hugo Future Imperfect" /></a>
+      
+    
+    
+      <header>
+        <h2></h2>
+        <p>Dongho Choi <i class='fa fa-hand-peace-o'></i></p>
+      </header>
+    
+    
+  </section>
+
+  
+  <section class="recent-posts">
+    <div class="mini-posts">
+      <header>
+        <h3>Recent Posts</h3>
+      </header>
+      <div class="posts-container">
+        
+
+        
+          
+        
+
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/spring_debug/">Spring Debuging</a>
+              </h3>
+              
+              <time class="published" datetime='2019-02-22'>
+                February 22, 2019
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/css_layout/">CSS 박스모델</a>
+              </h3>
+              
+              <time class="published" datetime='2019-02-19'>
+                February 19, 2019
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/css_basic/">CSS 기초</a>
+              </h3>
+              
+              <time class="published" datetime='2019-02-18'>
+                February 18, 2019
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/build/">(ant) build.xml 작성법</a>
+              </h3>
+              
+              <time class="published" datetime='2019-01-29'>
+                January 29, 2019
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/git_basic/">Git 기초(버전관리)</a>
+              </h3>
+              
+              <time class="published" datetime='2018-06-03'>
+                June 3, 2018
+              </time>
+            </header>
+            
+
+          </article>
+        
+      </div>
+
+      
+        <a href=
+          
+            /blog/
+          
+        class="button">View more posts</a>
+      
+    </div>
+  </section>
+
+  
+  
+  
+  
+  
+    <section id="categories">
+      <header>
+        <h3>
+          <a href="/categories/">Categories</a>
+        </h3>
+      </header>
+        
+          
+        
+
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/css/">CSS</a>
+                <span style="float:right;">2</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/debuging/">Debuging</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/book/">book</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/etc/">etc</a>
+                <span style="float:right;">2</span>
+              
+            </header>
+          </article>
+        </p>
+        
+    </section>
+  
+  
+
+  
+  
+
+  
+  <section id="footer">
+    
+    <p class="copyright">
+      
+        &copy; 2019
+        
+          Dony&#39;s blog
+        
+      .
+      Powered by <a href="//gohugo.io" target="_blank">Hugo</a>
+    </p>
+  </section>
+</section>
+
+    </div>
+    <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+    
+
+    
+      
+    
+
+    
+      
+      
+      
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+        
+        
+        
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/r.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/yaml.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/css.min.js"></script>
+        <script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+      
+    
+    
+    
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+      <script src="/js/util.js"></script>
+      <script src="/js/main.js"></script>
+      <script src="/js/backToTop.js"></script>
+    
+
+    
+      
+        
+      
+    
+
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+      <script src="//yihui.name/js/math-code.js"></script>
+<script async
+src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+  </body>
+</html>
+

@@ -1,0 +1,838 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "BlogPosting",
+        "mainEntityOfPage": {
+             "@type": "WebPage",
+             "@id": "/"
+        },
+        "articleSection" : "post",
+        "name" : "CSS 기초",
+        "headline" : "CSS 기초",
+        "description" : "HTML5 + CSS3 웹 표준의 정석의 내용을 요약한 것입니다.
+ 1. 스타일과 스타일 시트 스타일 웹 문서에서 스타일(style)이란 HTML 문서에서 자주 사용하는 글꼴이나 색상, 정렬, 각 요소들의 배치 방법 등 문서의 겉모습을 결정짓는 내용들을 가리킵니다. 웹 문서의 내용과 상관없이 디자인만 바꿀 수 있습니다. 스타일 형식 p(=선택자) { text-align(=스타일 속성): center(=속성 값) } 스타일 주석 /* */ 스타일 시트(내부 스타일 시트와 외부 스타일 시트로 나뉜다.) 내부 스타일 시트 &lt;style&gt;&lt;/style&gt; 안에 정의 외부 스타일 시트 &lt;link href="",
+        "inLanguage" : "en",
+        "author" : "",
+        "creator" : "",
+        "publisher": "",
+        "accountablePerson" : "",
+        "copyrightHolder" : "",
+        "copyrightYear" : "2019",
+        "datePublished": "2019-02-18 00:00:00 &#43;0000 UTC",
+        "dateModified" : "2019-02-18 00:00:00 &#43;0000 UTC",
+        "url" : "/post/css_basic/",
+        "wordCount" : "333",
+        "keywords" : [ "Blog" ]
+    }
+    </script>
+        
+            
+                <title>CSS 기초</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.53" />
+        
+
+
+        
+            <meta name="author" content="     &#34;&#34;">
+        
+        
+            
+                <meta name="description" content="HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador. Powered by Hugo">
+            
+        
+
+        <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CSS 기초"/>
+<meta name="twitter:description" content="HTML5 &#43; CSS3 웹 표준의 정석의 내용을 요약한 것입니다.
+ 1. 스타일과 스타일 시트 스타일 웹 문서에서 스타일(style)이란 HTML 문서에서 자주 사용하는 글꼴이나 색상, 정렬, 각 요소들의 배치 방법 등 문서의 겉모습을 결정짓는 내용들을 가리킵니다. 웹 문서의 내용과 상관없이 디자인만 바꿀 수 있습니다. 스타일 형식 p(=선택자) { text-align(=스타일 속성): center(=속성 값) } 스타일 주석 /* */ 스타일 시트(내부 스타일 시트와 외부 스타일 시트로 나뉜다.) 내부 스타일 시트 &lt;style&gt;&lt;/style&gt; 안에 정의 외부 스타일 시트 &lt;link href=&#34;"/>
+<meta name="twitter:site" content="@example"/>
+
+        <meta property="og:title" content="CSS 기초" />
+<meta property="og:description" content="HTML5 &#43; CSS3 웹 표준의 정석의 내용을 요약한 것입니다.
+ 1. 스타일과 스타일 시트 스타일 웹 문서에서 스타일(style)이란 HTML 문서에서 자주 사용하는 글꼴이나 색상, 정렬, 각 요소들의 배치 방법 등 문서의 겉모습을 결정짓는 내용들을 가리킵니다. 웹 문서의 내용과 상관없이 디자인만 바꿀 수 있습니다. 스타일 형식 p(=선택자) { text-align(=스타일 속성): center(=속성 값) } 스타일 주석 /* */ 스타일 시트(내부 스타일 시트와 외부 스타일 시트로 나뉜다.) 내부 스타일 시트 &lt;style&gt;&lt;/style&gt; 안에 정의 외부 스타일 시트 &lt;link href=&#34;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/css_basic/" /><meta property="article:published_time" content="2019-02-18T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2019-02-18T00:00:00&#43;00:00"/>
+
+        <meta property="og:image" content="//images/logo.png">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="512">
+        <meta property="og:image:height" content="512">
+        
+<meta itemprop="name" content="CSS 기초">
+<meta itemprop="description" content="HTML5 &#43; CSS3 웹 표준의 정석의 내용을 요약한 것입니다.
+ 1. 스타일과 스타일 시트 스타일 웹 문서에서 스타일(style)이란 HTML 문서에서 자주 사용하는 글꼴이나 색상, 정렬, 각 요소들의 배치 방법 등 문서의 겉모습을 결정짓는 내용들을 가리킵니다. 웹 문서의 내용과 상관없이 디자인만 바꿀 수 있습니다. 스타일 형식 p(=선택자) { text-align(=스타일 속성): center(=속성 값) } 스타일 주석 /* */ 스타일 시트(내부 스타일 시트와 외부 스타일 시트로 나뉜다.) 내부 스타일 시트 &lt;style&gt;&lt;/style&gt; 안에 정의 외부 스타일 시트 &lt;link href=&#34;">
+
+
+<meta itemprop="datePublished" content="2019-02-18T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-02-18T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="333">
+
+
+
+<meta itemprop="keywords" content="" />
+
+        
+
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+            <link rel="stylesheet" href="/css/main.css">
+            <link rel="stylesheet" href="/css/add-on.css">
+            <link rel="stylesheet" href="/css/academicons.min.css">
+        
+
+        
+            
+                
+            
+        
+
+
+  
+    
+    <link href='//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+  
+
+
+      
+    </head>
+    <body>
+
+      
+      <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+      <h1><a href="/">Dony&#39;s blog</a></h1>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="/">
+                            <i class="fa fa-home">&nbsp;</i>Home
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/about">
+                            <i class="fa fa-id-card-o">&nbsp;</i>About
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/book/">
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Book
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/project/">
+                            <i class="fa fa-list">&nbsp;</i>Project
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/categories/">
+                            <i class="fa fa-sitemap">&nbsp;</i>Categories
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                    <input type="text" name="q" placeholder="Search" />
+                    <input type="hidden" name="as_sitesearch" value="/">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="Search" />
+                <input type="hidden" name="as_sitesearch" value="/">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="/">
+                            <h3>
+                                <i class="fa fa-home">&nbsp;</i>Home
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/about">
+                            <h3>
+                                <i class="fa fa-id-card-o">&nbsp;</i>About
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/book/">
+                            <h3>
+                                <i class="fa fa-newspaper-o">&nbsp;</i>Book
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/project/">
+                            <h3>
+                                <i class="fa fa-list">&nbsp;</i>Project
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories/">
+                            <h3>
+                                <i class="fa fa-sitemap">&nbsp;</i>Categories
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section class="recent-posts">
+            <div class="mini-posts">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+
+                
+                    
+                
+
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/debug_spring/">Spring Debuging list</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-02-22'>
+                                    February 22, 2019</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/css_bootstrap_grid/">Bootstrap grid system</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-02-20'>
+                                    February 20, 2019</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/javascript_basic/">Javascript 기본 문법</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-02-20'>
+                                    February 20, 2019</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/javascript_loop/">배열</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-02-20'>
+                                    February 20, 2019</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/javascript_function/">함수 정리</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-02-20'>
+                                    February 20, 2019</time>
+                            </header>
+                            
+
+                        </article>
+                
+
+                
+                    <a href=
+                        
+                            /blog/
+                        
+                        class="button">View more posts</a>
+                
+            </div>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+  <header>
+    <div class="title">
+        
+            <h1><a href="/post/css_basic/">CSS 기초</a></h1>
+            
+        
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published"
+            datetime='2019-02-18'>
+            February 18, 2019</time>
+        <span class="author">     &#34;&#34;</span>
+        
+            <p>2 minute read</p>
+        
+        
+    </div>
+</header>
+
+
+  
+    <section id="social-share">
+      <ul class="icons">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+    </section>
+  
+
+  
+
+  <div id="content">
+    <p>HTML5 + CSS3 웹 표준의 정석의 내용을 요약한 것입니다.<br></p>
+
+<pre>
+1. 스타일과 스타일 시트
+
+스타일 
+웹 문서에서 스타일(style)이란 HTML 문서에서 자주 사용하는 글꼴이나 색상, 정렬, 각 요소들의 배치 방법 등 
+문서의 겉모습을 결정짓는 내용들을 가리킵니다. 웹 문서의 내용과 상관없이 디자인만 바꿀 수 있습니다.
+
+스타일 형식 p(=선택자) { text-align(=스타일 속성): center(=속성 값) }
+
+스타일 주석 /* */
+
+스타일 시트(내부 스타일 시트와 외부 스타일 시트로 나뉜다.)
+
+내부 스타일 시트 
+&lt;style&gt;&lt;/style&gt; 안에 정의
+
+외부 스타일 시트 
+&lt;link href="외부 스타일 파일 경로" rel=stylesheet" type="text/css"&gt;  
+
+인라인 스타일(간단한 스타일 정보라면 스타일 시트를 사용하지 않고 스타일을 적용할 대상에 직접 표시합니다.)
+&lt;p style="color:blue;"&gt; 블루베리는 항산화제인 ....... &lt;/p&gt;
+
+
+2.선택자
+
+태그 선택자
+p{
+font-size: 12px;
+font-family: 돋움;
+}
+
+클래스 선택자
+같은 태그라도 어떤 곳에서는 다른 스타일을 사용하고 싶을 때
+특정 부분에만 스타일을 적용할 때 사용하는 것이 클래스 선택자.
+.클래스명 { 스타일 }
+.bluetext {
+color:blue;
+}
+&lt;h2 class="bluetext"&gt;블루베리와 항산화 효능&lt;/h2&gt;
+
+만약 다른 태그에 클래스 선택자를 적용하고 싶지 않다면 클래스 선택자 앞에 태그를 써서 해당 태그에만 클래스
+스타일을 적용할 수 있다.
+h2.bluetext {
+coler:blue;
+}
+
+요소 전체가 아니라 일부에만 클래스 선택자를 적용하고 싶다면 &lt;span&gt;태그를 사용하면 된다.
+&lt;span class="redtext"&gt;안녕하세요 &lt;/span&gt;
+
+아이디 선택자
+클래스 선택자와 마찬가지로 웹 문서 안의 특정 부분에 스타일을 지정할 때 사용한다. 마침표(.) 대신 (#)기호를
+사용한다는 점과 id 선택자는 클래스 선택자와 달리 문서 안에서 한 번만 적용할 수 있다는 차이가 있다.(div태그
+와 같이 많이 사용,)
+
+#아이디명 { 스타일 }
+
+그룹 선택자 
+여러 선택자에 같은 스타일이 사용되는 경우에 쉽표(,)로 구분해 여러 선택자를 나열한 후 스타일은 한 번만 정의.
+h1, h2 {
+text-align:center;
+}
+
+
+3.캐스캐이딩 스타일 시트(CSS)
+스타일 시트는 사실 CSS라는 명칭으로 더 많이 알려져 있습니다. 
+CSS와 스타일 시트는 비슷해 보이지만 조금 차이가 있습니다. '스타일 시트'라는 용어 앞에 '카스캐이딩(cascad
+ing)'이라는 용어가 하나 더 붙은 것이 CSS죠. 그렇다면 카스캐이딩은 무슨 의미이며 어떤 역할을 할까요?
+CSS 카스캐이딩: '위에서 아래로 흐르는 스타일 시트' 
+'카스캐이딩'은 선택자에 적용된 많은 스타일 중에 어떤 스타일을 나타낼지를 결정함을 뜻합니다.
+
+우선순위는 다음의 세가지 개념에 따라 지정됩니다. 
+1.얼마나 중요한가 - 중요도(Importance) 2.얼마나 한정지을 수 있는가 - 명시도(Specificity) 3.소스에서의
+순서(Source Order)
+
+중요도(*p.215 그림)
+a. 사용자 스타일 시트가 최우선!
+b. 중요 스타일
+c. 기본적인 브라우저 스타일 시트
+
+명시도(p.217)
+</pre>
+
+  </div>
+
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+            
+            
+                <i class="fa fa-folder"></i>
+                
+                
+                <li><a class="article-category-link" href="/categories/css">CSS</a></li>
+                
+            
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "shortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+<ul class="actions pagination">
+    
+        <li><a href="/post/etc_build/"
+                class="button big previous">(ant) build.xml 작성법</a></li>
+    
+
+    
+        <li><a href="/post/css_layout/"
+                class="button big next">CSS 박스모델</a></li>
+    
+</ul>
+
+
+    </div>
+    
+<section id="sidebar">
+
+  
+  <section id="intro">
+    
+    
+      
+        <a href='/'><img src="/img/main/hello4.jpg" width="220em" alt="Hugo Future Imperfect" /></a>
+      
+    
+    
+      <header>
+        <h2></h2>
+        <p>Dongho Choi <i class='fa fa-hand-peace-o'></i></p>
+      </header>
+    
+    
+  </section>
+
+  
+  <section class="recent-posts">
+    <div class="mini-posts">
+      <header>
+        <h3>Recent Posts</h3>
+      </header>
+      <div class="posts-container">
+        
+
+        
+          
+        
+
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/debug_spring/">Spring Debuging list</a>
+              </h3>
+              
+              <time class="published" datetime='2019-02-22'>
+                February 22, 2019
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/css_bootstrap_grid/">Bootstrap grid system</a>
+              </h3>
+              
+              <time class="published" datetime='2019-02-20'>
+                February 20, 2019
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/javascript_basic/">Javascript 기본 문법</a>
+              </h3>
+              
+              <time class="published" datetime='2019-02-20'>
+                February 20, 2019
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/javascript_loop/">배열</a>
+              </h3>
+              
+              <time class="published" datetime='2019-02-20'>
+                February 20, 2019
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/javascript_function/">함수 정리</a>
+              </h3>
+              
+              <time class="published" datetime='2019-02-20'>
+                February 20, 2019
+              </time>
+            </header>
+            
+
+          </article>
+        
+      </div>
+
+      
+        <a href=
+          
+            /blog/
+          
+        class="button">View more posts</a>
+      
+    </div>
+  </section>
+
+  
+  
+  
+  
+  
+    <section id="categories">
+      <header>
+        <h3>
+          <a href="/categories/">Categories</a>
+        </h3>
+      </header>
+        
+          
+        
+
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/book/">Book</a>
+                <span style="float:right;">2</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/css/">CSS</a>
+                <span style="float:right;">3</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/debuging/">Debuging</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/javascript/">JavaScript</a>
+                <span style="float:right;">3</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/etc/">etc</a>
+                <span style="float:right;">2</span>
+              
+            </header>
+          </article>
+        </p>
+        
+    </section>
+  
+  
+
+  
+  
+
+  
+  <section id="footer">
+    
+    <p class="copyright">
+      
+        &copy; 2019
+        
+          Dony&#39;s blog
+        
+      .
+      Powered by <a href="//gohugo.io" target="_blank">Hugo</a>
+    </p>
+  </section>
+</section>
+
+    </div>
+    <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+    
+
+    
+      
+    
+
+    
+      
+      
+      
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+        
+        
+        
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/r.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/yaml.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/css.min.js"></script>
+        <script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+      
+    
+    
+    
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+      <script src="/js/util.js"></script>
+      <script src="/js/main.js"></script>
+      <script src="/js/backToTop.js"></script>
+    
+
+    
+      
+        
+      
+    
+
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+      <script src="//yihui.name/js/math-code.js"></script>
+<script async
+src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+  </body>
+</html>
+

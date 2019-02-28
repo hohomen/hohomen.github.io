@@ -1,0 +1,866 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "BlogPosting",
+        "mainEntityOfPage": {
+             "@type": "WebPage",
+             "@id": "/"
+        },
+        "articleSection" : "post",
+        "name" : "Javascript 기본 문법",
+        "headline" : "Javascript 기본 문법",
+        "description" : "&lsquo;모던 웹을 위한 JavaScript jQuery입문 3판&rsquo;의 내용을 요약한 것입니다.
+CHAPTER 2 기본 문법 2.1 기본 용어 2 키워드 자바스크립트가 처음 만들어질 때 정해진 특별한 의미가 있는 단어를 '키워드'라고 합니다. (사진P.28) 3 식별자 식별자를 만들 때는 다음의 규칙을 지켜야 합니다. 1.키워드를 사용하면 안 됩니다. 2.숫자로 시작하면 안 됩니다. 3.특수 문자는 _와 $만 허용합니다. 4.공백 문자를 포함할 수 없습니다. 이 네 가지 규칙만 만족한다면 모든 단어를 식별자로 사용할 수 있습니다 식별자를 만들 때 알파벳을 사용하는 것 외에도 자바스크립트 개발자 대부분이 지키는 관례가 있습니다.",
+        "inLanguage" : "en",
+        "author" : "",
+        "creator" : "",
+        "publisher": "",
+        "accountablePerson" : "",
+        "copyrightHolder" : "",
+        "copyrightYear" : "2019",
+        "datePublished": "2019-02-20 00:00:00 &#43;0000 UTC",
+        "dateModified" : "2019-02-20 00:00:00 &#43;0000 UTC",
+        "url" : "/post/javascript_basic/",
+        "wordCount" : "510",
+        "keywords" : [ "Blog" ]
+    }
+    </script>
+        
+            
+                <title>Javascript 기본 문법</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.53" />
+        
+
+
+        
+            <meta name="author" content="     &#34;&#34;">
+        
+        
+            
+                <meta name="description" content="HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador. Powered by Hugo">
+            
+        
+
+        <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Javascript 기본 문법"/>
+<meta name="twitter:description" content="&lsquo;모던 웹을 위한 JavaScript jQuery입문 3판&rsquo;의 내용을 요약한 것입니다.
+CHAPTER 2 기본 문법 2.1 기본 용어 2 키워드 자바스크립트가 처음 만들어질 때 정해진 특별한 의미가 있는 단어를 &#39;키워드&#39;라고 합니다. (사진P.28) 3 식별자 식별자를 만들 때는 다음의 규칙을 지켜야 합니다. 1.키워드를 사용하면 안 됩니다. 2.숫자로 시작하면 안 됩니다. 3.특수 문자는 _와 $만 허용합니다. 4.공백 문자를 포함할 수 없습니다. 이 네 가지 규칙만 만족한다면 모든 단어를 식별자로 사용할 수 있습니다 식별자를 만들 때 알파벳을 사용하는 것 외에도 자바스크립트 개발자 대부분이 지키는 관례가 있습니다."/>
+<meta name="twitter:site" content="@example"/>
+
+        <meta property="og:title" content="Javascript 기본 문법" />
+<meta property="og:description" content="&lsquo;모던 웹을 위한 JavaScript jQuery입문 3판&rsquo;의 내용을 요약한 것입니다.
+CHAPTER 2 기본 문법 2.1 기본 용어 2 키워드 자바스크립트가 처음 만들어질 때 정해진 특별한 의미가 있는 단어를 &#39;키워드&#39;라고 합니다. (사진P.28) 3 식별자 식별자를 만들 때는 다음의 규칙을 지켜야 합니다. 1.키워드를 사용하면 안 됩니다. 2.숫자로 시작하면 안 됩니다. 3.특수 문자는 _와 $만 허용합니다. 4.공백 문자를 포함할 수 없습니다. 이 네 가지 규칙만 만족한다면 모든 단어를 식별자로 사용할 수 있습니다 식별자를 만들 때 알파벳을 사용하는 것 외에도 자바스크립트 개발자 대부분이 지키는 관례가 있습니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/javascript_basic/" /><meta property="article:published_time" content="2019-02-20T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2019-02-20T00:00:00&#43;00:00"/>
+
+        <meta property="og:image" content="//images/logo.png">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="512">
+        <meta property="og:image:height" content="512">
+        
+<meta itemprop="name" content="Javascript 기본 문법">
+<meta itemprop="description" content="&lsquo;모던 웹을 위한 JavaScript jQuery입문 3판&rsquo;의 내용을 요약한 것입니다.
+CHAPTER 2 기본 문법 2.1 기본 용어 2 키워드 자바스크립트가 처음 만들어질 때 정해진 특별한 의미가 있는 단어를 &#39;키워드&#39;라고 합니다. (사진P.28) 3 식별자 식별자를 만들 때는 다음의 규칙을 지켜야 합니다. 1.키워드를 사용하면 안 됩니다. 2.숫자로 시작하면 안 됩니다. 3.특수 문자는 _와 $만 허용합니다. 4.공백 문자를 포함할 수 없습니다. 이 네 가지 규칙만 만족한다면 모든 단어를 식별자로 사용할 수 있습니다 식별자를 만들 때 알파벳을 사용하는 것 외에도 자바스크립트 개발자 대부분이 지키는 관례가 있습니다.">
+
+
+<meta itemprop="datePublished" content="2019-02-20T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-02-20T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="510">
+
+
+
+<meta itemprop="keywords" content="" />
+
+        
+
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+            <link rel="stylesheet" href="/css/main.css">
+            <link rel="stylesheet" href="/css/add-on.css">
+            <link rel="stylesheet" href="/css/academicons.min.css">
+        
+
+        
+            
+                
+            
+        
+
+
+  
+    
+    <link href='//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+  
+
+
+      
+    </head>
+    <body>
+
+      
+      <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+      <h1><a href="/">Dony&#39;s blog</a></h1>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="/">
+                            <i class="fa fa-home">&nbsp;</i>Home
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/about">
+                            <i class="fa fa-id-card-o">&nbsp;</i>About
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/book/">
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Book
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/project/">
+                            <i class="fa fa-list">&nbsp;</i>Project
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/categories/">
+                            <i class="fa fa-sitemap">&nbsp;</i>Categories
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                    <input type="text" name="q" placeholder="Search" />
+                    <input type="hidden" name="as_sitesearch" value="/">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="Search" />
+                <input type="hidden" name="as_sitesearch" value="/">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="/">
+                            <h3>
+                                <i class="fa fa-home">&nbsp;</i>Home
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/about">
+                            <h3>
+                                <i class="fa fa-id-card-o">&nbsp;</i>About
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/book/">
+                            <h3>
+                                <i class="fa fa-newspaper-o">&nbsp;</i>Book
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/project/">
+                            <h3>
+                                <i class="fa fa-list">&nbsp;</i>Project
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories/">
+                            <h3>
+                                <i class="fa fa-sitemap">&nbsp;</i>Categories
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section class="recent-posts">
+            <div class="mini-posts">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+
+                
+                    
+                
+
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/debug_spring/">Spring Debuging list</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-02-22'>
+                                    February 22, 2019</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/css_bootstrap_grid/">Bootstrap grid system</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-02-20'>
+                                    February 20, 2019</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/javascript_basic/">Javascript 기본 문법</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-02-20'>
+                                    February 20, 2019</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/javascript_loop/">배열</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-02-20'>
+                                    February 20, 2019</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/javascript_function/">함수 정리</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-02-20'>
+                                    February 20, 2019</time>
+                            </header>
+                            
+
+                        </article>
+                
+
+                
+                    <a href=
+                        
+                            /blog/
+                        
+                        class="button">View more posts</a>
+                
+            </div>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+  <header>
+    <div class="title">
+        
+            <h1><a href="/post/javascript_basic/">Javascript 기본 문법</a></h1>
+            
+        
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published"
+            datetime='2019-02-20'>
+            February 20, 2019</time>
+        <span class="author">     &#34;&#34;</span>
+        
+            <p>3 minute read</p>
+        
+        
+    </div>
+</header>
+
+
+  
+    <section id="social-share">
+      <ul class="icons">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+    </section>
+  
+
+  
+
+  <div id="content">
+    <p>&lsquo;모던 웹을 위한 JavaScript jQuery입문 3판&rsquo;의 내용을 요약한 것입니다.<br></p>
+
+<pre style="word-wrap: break-word;white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-break:break-all;">
+
+CHAPTER 2 기본 문법 
+2.1 기본 용어 
+2 키워드
+자바스크립트가 처음 만들어질 때 정해진 특별한 의미가 있는 단어를 '키워드'라고 합니다. (사진P.28)
+
+3 식별자
+식별자를 만들 때는 다음의 규칙을 지켜야 합니다.
+1.키워드를 사용하면 안 됩니다.
+2.숫자로 시작하면 안 됩니다.
+3.특수 문자는 _와 $만 허용합니다.
+4.공백 문자를 포함할 수 없습니다.
+이 네 가지 규칙만 만족한다면 모든 단어를 식별자로 사용할 수 있습니다
+
+식별자를 만들 때 알파벳을 사용하는 것 외에도 자바스크립트 개발자 대부분이 지키는 관례가 있습니다.
+1. 생성자 함수의 이름은 항상 대문자로 시작합니다.
+2. 변수와 인스턴스, 함수, 메서드의 이름은 항상 소문자로 시작합니다.
+3. 여러 단어로 이루어진 식별자는 각 단어의 첫 글자를 대문자로 합니다.
+
+자바스크립트의 식별자는 크게 네 종류로 나눌 수 있습니다.(보편적으로)
+함수 alert('Hello World')
+속성 Array.length 
+변수 input
+메서드 Math.abs(-273)
+
+2.2 출력 
+자바 스크립트의 가장 기본적인 출력 방법은 alert() 함수를 사용하는 것입니다.
+함수의 괄호 안에는 문자열을 입력합니다.
+
+2.3 문자열 자료형 
+자바스크립트는 두 가지 방법으로 문자열을 생성합니다.
+큰 따옴표와 작은 따옴표를 사용합니다.
+
+내부에 작은따옴표를 사용하고 싶다면 외부에 큰따옴표를 사용합니다. 반대로 내부에 큰따옴표를 사용하고 싶으면 외부에 작은따옴표를 사용합니다.
+한 가지 따옴표로 일관되게 쓰고 싶다면 특수한 기능을 수행하는 이스케이프 문자(\)를 사용합니다.
+이스케이프 문자는 이외에도 여러 가지 특수 기능이 있습니다. \n과 같은.
+
+2.4 숫자 자료형 
+정수와 유리수의 구분 없이 모두 같은 자료형으로 인식합니다.
+
+2.5 불 자료형 
+자바 스크립트에는 다음과 같은 비교 연산자가 있습니다.
+>=  <=  >   <   ==  !=
+alert(52 > 173); --> false 
+alert(52 < 173); --> true
+
+논리 연산자 
+  ! &&  ||
+alert(30 > 20 > 10); --> false
+(= alert 1 > 10); 과 같음
+
+2.6 변수
+변수는 값을 저장하는 식별자입니다. 변수는 숫자 자료형 뿐만 아니라 모든 _자료형_을 저장할 수 있습니다.
+자바스크립트에는 문자열, 숫자, 불, 함수, 객체, undefined 총 여섯 가지 자료형이 있습니다.
+변수에 저장된 자료형에 따라 지금까지 배운 모든 연산이 가능합니다.
+var stringVar = 'String';
+var numberVar = 237;
+var booleanVar =true;
+var functionVar = function () { };
+var objectVar = { };
+
+변수는 복합 대입 연산자와 증감 연산자를 사용할 수 있습니다.
+복합 대입 연산자는 대입 연산자와 다른 연산자를 함께 사용하는 연산자입니다.
++=  -=  *=  /=  %=
+증감 연산자는 복합 대입 연산자를 약간 간략하게 사용한 형태입니다.
+Variable++  ++Variable  Variable--      --Variable
+ 
+2.7 자료형 검사.
+typeof 연산자를 사용합니다.
+alert(typeof ('String')); //문자열
+alert(typeof (273)); // 숫자
+alert(typeof (true)); //불
+alert(typeof (function () { })); // 함수
+alert(typeof ({})); //객체
+alert(typeof (alpha)); //undefined 
+2.8 undefined 자료형 
+
+2.9 입력 
+이 절에서는 문자열 자료형과 불 자료형을 입력하는 방법을 살펴봅시다.
+문자열 var input = prompt('Message', 'DefStr');
+불  var input = confirm('수락하시겠습니까?');
+
+2.10 숫자와 문자열 자료형 변환 
+자바스크립트는 자동으로 자료형을 변환하는 경우가 많습니다.
+alert('52'+ 273); //52273
+alert('52' * 273); //14196
+더하기 연산자를 제외한 사칙 연산자는 문자열 자료형을 숫자 자료형으로 자동 변환합니다.
+
+강제로 자료형을 변환
+Number( ) (숫자가 아닐 때는 NaN값을 출력합니다, 자바스크립트는 복소수를 표현할 수 없습니다. 루트-3과 같은 복소수는 NaN으로 표시됩니다.)
+String( ) 
+
+2.11 불 자료형 변환 
+불 자료형으로 변환할 때는 Boolean( ) 함수를 사용합니다.
+다섯가지를 제외한 모든 경우에 true로 변환됩니다.
+alert(Boolean(0));  alert(Boolean('')); alert(Boolean(NaN));    alert(Boolean(null));       **alert(Boolean(undefined));**
+
+2.12 일치 연산자 
+비교 연산자를 사용할 때 자동으로 자료형이 변환되어 뜻하지 않는 경우가 발생할 수 있습니다.
+alert('' == false); //true
+alert('' == 0); //true
+alert(0 == false); //true
+alert('273' == 273); //true
+
+이러한 유연성으로 인해 원하는 결과가 나오지 않게 하기 위해 
+일치 연산자 ===, !==를 사용하면 false의 결과가 나온다.
+
+</pre>
+
+  </div>
+
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+            
+            
+                <i class="fa fa-folder"></i>
+                
+                
+                <li><a class="article-category-link" href="/categories/javascript">JavaScript</a></li>
+                
+            
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "shortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+<ul class="actions pagination">
+    
+        <li><a href="/post/javascript_loop/"
+                class="button big previous">배열</a></li>
+    
+
+    
+        <li><a href="/post/css_bootstrap_grid/"
+                class="button big next">Bootstrap grid system</a></li>
+    
+</ul>
+
+
+    </div>
+    
+<section id="sidebar">
+
+  
+  <section id="intro">
+    
+    
+      
+        <a href='/'><img src="/img/main/hello4.jpg" width="220em" alt="Hugo Future Imperfect" /></a>
+      
+    
+    
+      <header>
+        <h2></h2>
+        <p>Dongho Choi <i class='fa fa-hand-peace-o'></i></p>
+      </header>
+    
+    
+  </section>
+
+  
+  <section class="recent-posts">
+    <div class="mini-posts">
+      <header>
+        <h3>Recent Posts</h3>
+      </header>
+      <div class="posts-container">
+        
+
+        
+          
+        
+
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/debug_spring/">Spring Debuging list</a>
+              </h3>
+              
+              <time class="published" datetime='2019-02-22'>
+                February 22, 2019
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/css_bootstrap_grid/">Bootstrap grid system</a>
+              </h3>
+              
+              <time class="published" datetime='2019-02-20'>
+                February 20, 2019
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/javascript_basic/">Javascript 기본 문법</a>
+              </h3>
+              
+              <time class="published" datetime='2019-02-20'>
+                February 20, 2019
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/javascript_loop/">배열</a>
+              </h3>
+              
+              <time class="published" datetime='2019-02-20'>
+                February 20, 2019
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/javascript_function/">함수 정리</a>
+              </h3>
+              
+              <time class="published" datetime='2019-02-20'>
+                February 20, 2019
+              </time>
+            </header>
+            
+
+          </article>
+        
+      </div>
+
+      
+        <a href=
+          
+            /blog/
+          
+        class="button">View more posts</a>
+      
+    </div>
+  </section>
+
+  
+  
+  
+  
+  
+    <section id="categories">
+      <header>
+        <h3>
+          <a href="/categories/">Categories</a>
+        </h3>
+      </header>
+        
+          
+        
+
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/book/">Book</a>
+                <span style="float:right;">2</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/css/">CSS</a>
+                <span style="float:right;">3</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/debuging/">Debuging</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/javascript/">JavaScript</a>
+                <span style="float:right;">3</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/etc/">etc</a>
+                <span style="float:right;">2</span>
+              
+            </header>
+          </article>
+        </p>
+        
+    </section>
+  
+  
+
+  
+  
+
+  
+  <section id="footer">
+    
+    <p class="copyright">
+      
+        &copy; 2019
+        
+          Dony&#39;s blog
+        
+      .
+      Powered by <a href="//gohugo.io" target="_blank">Hugo</a>
+    </p>
+  </section>
+</section>
+
+    </div>
+    <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+    
+
+    
+      
+    
+
+    
+      
+      
+      
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+        
+        
+        
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/r.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/yaml.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/css.min.js"></script>
+        <script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+      
+    
+    
+    
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+      <script src="/js/util.js"></script>
+      <script src="/js/main.js"></script>
+      <script src="/js/backToTop.js"></script>
+    
+
+    
+      
+        
+      
+    
+
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+      <script src="//yihui.name/js/math-code.js"></script>
+<script async
+src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+  </body>
+</html>
+

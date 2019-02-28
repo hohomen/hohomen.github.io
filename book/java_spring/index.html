@@ -1,0 +1,784 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "BlogPosting",
+        "mainEntityOfPage": {
+             "@type": "WebPage",
+             "@id": "/"
+        },
+        "articleSection" : "book",
+        "name" : "자바 객체 지향의 원리와 이해(booklog)",
+        "headline" : "자바 객체 지향의 원리와 이해(booklog)",
+        "description" : "스프링에 입문하려는 (JAVA OOP)개발자에게 추천해주고 싶은 책이다. 당장 스프링 프로젝트를 구현하는 것이 목적인 분들에게는 어쩌면 이 책은 도움이 되지 않을 수 있다. 그와 관련된 내용은 책의 후반부에나 나오기 때문이다. 대신 이 책은 독자에게 JAVA OOP 개발에 대한 전체적인 시선을 알려주고 스프링을 그 맥락에서 설명한다. 자바를 처음 공부했던 내가 자바에 대해 느낀점은 "어렵다"였다. 의무적으로 인터페이스를 만들고 구현 클래스를 만들고 생성자를 호출했지만 도대체 왜 그렇게 해야하는 지는 이해할 수 없어서 어려웠다.(물론 전과생이어서 적응상의 문제일 수 있다.",
+        "inLanguage" : "en",
+        "author" : "",
+        "creator" : "",
+        "publisher": "",
+        "accountablePerson" : "",
+        "copyrightHolder" : "",
+        "copyrightYear" : "2019",
+        "datePublished": "2019-02-02 00:00:00 &#43;0000 UTC",
+        "dateModified" : "2019-02-02 00:00:00 &#43;0000 UTC",
+        "url" : "/book/java_spring/",
+        "wordCount" : "226",
+        "keywords" : [ "Blog" ]
+    }
+    </script>
+        
+            
+                <title>자바 객체 지향의 원리와 이해(booklog)</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.53" />
+        
+
+
+        
+        
+            
+                <meta name="description" content="HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador. Powered by Hugo">
+            
+        
+
+        <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="자바 객체 지향의 원리와 이해(booklog)"/>
+<meta name="twitter:description" content="스프링에 입문하려는 (JAVA OOP)개발자에게 추천해주고 싶은 책이다. 당장 스프링 프로젝트를 구현하는 것이 목적인 분들에게는 어쩌면 이 책은 도움이 되지 않을 수 있다. 그와 관련된 내용은 책의 후반부에나 나오기 때문이다. 대신 이 책은 독자에게 JAVA OOP 개발에 대한 전체적인 시선을 알려주고 스프링을 그 맥락에서 설명한다. 자바를 처음 공부했던 내가 자바에 대해 느낀점은 &#34;어렵다&#34;였다. 의무적으로 인터페이스를 만들고 구현 클래스를 만들고 생성자를 호출했지만 도대체 왜 그렇게 해야하는 지는 이해할 수 없어서 어려웠다.(물론 전과생이어서 적응상의 문제일 수 있다."/>
+<meta name="twitter:site" content="@example"/>
+
+        <meta property="og:title" content="자바 객체 지향의 원리와 이해(booklog)" />
+<meta property="og:description" content="스프링에 입문하려는 (JAVA OOP)개발자에게 추천해주고 싶은 책이다. 당장 스프링 프로젝트를 구현하는 것이 목적인 분들에게는 어쩌면 이 책은 도움이 되지 않을 수 있다. 그와 관련된 내용은 책의 후반부에나 나오기 때문이다. 대신 이 책은 독자에게 JAVA OOP 개발에 대한 전체적인 시선을 알려주고 스프링을 그 맥락에서 설명한다. 자바를 처음 공부했던 내가 자바에 대해 느낀점은 &#34;어렵다&#34;였다. 의무적으로 인터페이스를 만들고 구현 클래스를 만들고 생성자를 호출했지만 도대체 왜 그렇게 해야하는 지는 이해할 수 없어서 어려웠다.(물론 전과생이어서 적응상의 문제일 수 있다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/book/java_spring/" /><meta property="article:published_time" content="2019-02-02T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2019-02-02T00:00:00&#43;00:00"/>
+
+        <meta property="og:image" content="//images/logo.png">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="512">
+        <meta property="og:image:height" content="512">
+        
+<meta itemprop="name" content="자바 객체 지향의 원리와 이해(booklog)">
+<meta itemprop="description" content="스프링에 입문하려는 (JAVA OOP)개발자에게 추천해주고 싶은 책이다. 당장 스프링 프로젝트를 구현하는 것이 목적인 분들에게는 어쩌면 이 책은 도움이 되지 않을 수 있다. 그와 관련된 내용은 책의 후반부에나 나오기 때문이다. 대신 이 책은 독자에게 JAVA OOP 개발에 대한 전체적인 시선을 알려주고 스프링을 그 맥락에서 설명한다. 자바를 처음 공부했던 내가 자바에 대해 느낀점은 &#34;어렵다&#34;였다. 의무적으로 인터페이스를 만들고 구현 클래스를 만들고 생성자를 호출했지만 도대체 왜 그렇게 해야하는 지는 이해할 수 없어서 어려웠다.(물론 전과생이어서 적응상의 문제일 수 있다.">
+
+
+<meta itemprop="datePublished" content="2019-02-02T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-02-02T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="226">
+
+
+
+<meta itemprop="keywords" content="" />
+
+        
+
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+            <link rel="stylesheet" href="/css/main.css">
+            <link rel="stylesheet" href="/css/add-on.css">
+            <link rel="stylesheet" href="/css/academicons.min.css">
+        
+
+        
+            
+                
+            
+        
+
+
+  
+    
+    <link href='//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+  
+
+
+      
+    </head>
+    <body>
+
+      
+      <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+      <h1><a href="/">Dony&#39;s blog</a></h1>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="/">
+                            <i class="fa fa-home">&nbsp;</i>Home
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/about">
+                            <i class="fa fa-id-card-o">&nbsp;</i>About
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/book/">
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Book
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/project/">
+                            <i class="fa fa-list">&nbsp;</i>Project
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/categories/">
+                            <i class="fa fa-sitemap">&nbsp;</i>Categories
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                    <input type="text" name="q" placeholder="Search" />
+                    <input type="hidden" name="as_sitesearch" value="/">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="Search" />
+                <input type="hidden" name="as_sitesearch" value="/">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="/">
+                            <h3>
+                                <i class="fa fa-home">&nbsp;</i>Home
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/about">
+                            <h3>
+                                <i class="fa fa-id-card-o">&nbsp;</i>About
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/book/">
+                            <h3>
+                                <i class="fa fa-newspaper-o">&nbsp;</i>Book
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/project/">
+                            <h3>
+                                <i class="fa fa-list">&nbsp;</i>Project
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories/">
+                            <h3>
+                                <i class="fa fa-sitemap">&nbsp;</i>Categories
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section class="recent-posts">
+            <div class="mini-posts">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+
+                
+                    
+                
+
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/debug_spring/">Spring Debuging list</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-02-22'>
+                                    February 22, 2019</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/css_bootstrap_grid/">Bootstrap grid system</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-02-20'>
+                                    February 20, 2019</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/javascript_basic/">Javascript 기본 문법</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-02-20'>
+                                    February 20, 2019</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/javascript_loop/">배열</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-02-20'>
+                                    February 20, 2019</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/javascript_function/">함수 정리</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-02-20'>
+                                    February 20, 2019</time>
+                            </header>
+                            
+
+                        </article>
+                
+
+                
+                    <a href=
+                        
+                            /blog/
+                        
+                        class="button">View more posts</a>
+                
+            </div>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+  <header>
+    <div class="title">
+        
+            <h1><a href="/book/java_spring/">자바 객체 지향의 원리와 이해(booklog)</a></h1>
+            
+        
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published"
+            datetime='2019-02-02'>
+            February 2, 2019</time>
+        <span class="author"></span>
+        
+            <p>2 minute read</p>
+        
+        
+    </div>
+</header>
+
+
+  
+    <section id="social-share">
+      <ul class="icons">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+    </section>
+  
+
+  
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="/book/java_spring/" class="image featured">
+            <img src="/book/objectiveBook.jpg" alt="">
+        </a>
+    
+
+
+  <div id="content">
+    <pre style="word-wrap: break-word;white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-break:break-all;">
+
+스프링에 입문하려는 (JAVA OOP)개발자에게 추천해주고 싶은 책이다.
+
+ 당장 스프링 프로젝트를 구현하는 것이 목적인 분들에게는 어쩌면 이 책은 도움이 되지 않을 수 있다. 그와 관련된 내용은 책의 후반부에나 나오기 때문이다. 대신 이 책은 독자에게 JAVA OOP 개발에 대한 전체적인 시선을 알려주고 스프링을 그 맥락에서 설명한다.
+
+ 자바를 처음 공부했던 내가 자바에 대해 느낀점은 "어렵다"였다. 의무적으로 인터페이스를 만들고 구현 클래스를 만들고 생성자를 호출했지만 도대체 왜 그렇게 해야하는 지는 이해할 수 없어서 어려웠다.(물론 전과생이어서 적응상의 문제일 수 있다.) 이 책은 객체지향 프로그래밍이라는 큰 관점에서 해당 키워드들을 설명해 준다. 나는 이 책을 통해 abstract, ,interface, this, package등의 키워드들을 객체지향이라는 큰 관점에서 이해함으로서 자바에서 느꼈던 어려움을 완전히 날려버릴 수 있었다. 또한 해당 키워드들을 더욱 올바르게 사용할 수 있게 되었다.
+
+ 나아가 책은 일관성 있게 객체지향적 관점에서 객체지향 설계원칙(SOLID), 디자인 패턴, 스프링 프레임워크에 대해서 설명한다. 다만 책의 물리적 한계로 개념의 핵심과 맛보기 정도의 설명만 다룬다. 저자는 그 한계를 인식하고 해당 주제에 대한 책들을 추천하거나 블로그 자료들을 추가로 링크한다. 내가 이 책을 좋아하는 이유는 이 부분인데 그렇게 함으로서 이 책은 JAVA OOP 개발의 일종의 지도가 되어준다는 점이다. 내가 무엇을 모르는 지를 아는 것 또한 상당히 중요하기 때문이다. 또한 곳곳에 선배 개발자로서의 경험이 묻어있는 설명이 좋았다. "SRP(단일 책임 원칙)을 지키지 않으면 if문을 남발하게 됩니다."와 같은 설명은 설계 원칙의 중요성을 더 피부로 느낄 수 있었다.
+
+막상 작성하고 보니 북리뷰가 아닌 추천사와 같은 글이 되버렸다.
+혹시나 나와 같이 스프링 입문자라면 이 책을 통해 스프링을 OOP적 관점에서 이해하였으면 좋겠다.
+
+</pre>
+
+  </div>
+
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+            
+            
+                <i class="fa fa-folder"></i>
+                
+                
+                <li><a class="article-category-link" href="/categories/book">Book</a></li>
+                
+            
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "shortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+<ul class="actions pagination">
+    
+        <li><a href="/book/oopbooks/"
+                class="button big previous">자바 OOP 서재</a></li>
+    
+
+    
+</ul>
+
+
+    </div>
+    
+<section id="sidebar">
+
+  
+  <section id="intro">
+    
+    
+      
+        <a href='/'><img src="/img/main/hello4.jpg" width="220em" alt="Hugo Future Imperfect" /></a>
+      
+    
+    
+      <header>
+        <h2></h2>
+        <p>Dongho Choi <i class='fa fa-hand-peace-o'></i></p>
+      </header>
+    
+    
+  </section>
+
+  
+  <section class="recent-posts">
+    <div class="mini-posts">
+      <header>
+        <h3>Recent Posts</h3>
+      </header>
+      <div class="posts-container">
+        
+
+        
+          
+        
+
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/debug_spring/">Spring Debuging list</a>
+              </h3>
+              
+              <time class="published" datetime='2019-02-22'>
+                February 22, 2019
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/css_bootstrap_grid/">Bootstrap grid system</a>
+              </h3>
+              
+              <time class="published" datetime='2019-02-20'>
+                February 20, 2019
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/javascript_basic/">Javascript 기본 문법</a>
+              </h3>
+              
+              <time class="published" datetime='2019-02-20'>
+                February 20, 2019
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/javascript_loop/">배열</a>
+              </h3>
+              
+              <time class="published" datetime='2019-02-20'>
+                February 20, 2019
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/javascript_function/">함수 정리</a>
+              </h3>
+              
+              <time class="published" datetime='2019-02-20'>
+                February 20, 2019
+              </time>
+            </header>
+            
+
+          </article>
+        
+      </div>
+
+      
+        <a href=
+          
+            /blog/
+          
+        class="button">View more posts</a>
+      
+    </div>
+  </section>
+
+  
+  
+  
+  
+  
+    <section id="categories">
+      <header>
+        <h3>
+          <a href="/categories/">Categories</a>
+        </h3>
+      </header>
+        
+          
+        
+
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/book/">Book</a>
+                <span style="float:right;">2</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/css/">CSS</a>
+                <span style="float:right;">3</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/debuging/">Debuging</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/javascript/">JavaScript</a>
+                <span style="float:right;">3</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/etc/">etc</a>
+                <span style="float:right;">2</span>
+              
+            </header>
+          </article>
+        </p>
+        
+    </section>
+  
+  
+
+  
+  
+
+  
+  <section id="footer">
+    
+    <p class="copyright">
+      
+        &copy; 2019
+        
+          Dony&#39;s blog
+        
+      .
+      Powered by <a href="//gohugo.io" target="_blank">Hugo</a>
+    </p>
+  </section>
+</section>
+
+    </div>
+    <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+    
+
+    
+      
+    
+
+    
+      
+      
+      
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+        
+        
+        
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/r.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/yaml.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/css.min.js"></script>
+        <script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+      
+    
+    
+    
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+      <script src="/js/util.js"></script>
+      <script src="/js/main.js"></script>
+      <script src="/js/backToTop.js"></script>
+    
+
+    
+      
+        
+      
+    
+
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+      <script src="//yihui.name/js/math-code.js"></script>
+<script async
+src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+  </body>
+</html>
+

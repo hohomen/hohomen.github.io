@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Project on Blog of beginner</title>
+    <title>Project on Dony&#39;s blog</title>
     <link>/project/</link>
-    <description>Recent content in Project on Blog of beginner</description>
+    <description>Recent content in Project on Dony&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 23 Jun 2017 00:00:00 +0000</lastBuildDate>
@@ -17,22 +17,9 @@
       <pubDate>Fri, 23 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>/project/cafe-de-cultura/</guid>
-      <description>개요 동호회,&amp;nbsp; 동창회,&amp;nbsp; 가족&amp;nbsp; 등의&amp;nbsp; 구룹간의&amp;nbsp; 소통&amp;nbsp; 증진을&amp;nbsp; 위한&amp;nbsp; 애플리케이션
-프로젝트 정보 프로젝트명:&amp;nbsp; dykelly 졸업작품 프로젝트로 진행
-수행기간: 2018년 06월 ~2018년 10월
-프로젝트 인원 4명
-나의 기여도: 35%
-담당역활: 서버 구축, DB설계, 대화창, 구룹 선택 기능, 새소식(ajax적용)
-개발환경 언어
-HTML5,&amp;ensp; CSS,&amp;ensp; JavaScript(jQuery),&amp;ensp; jAVA
-기술
-Bootstrap,&amp;ensp; Ajax,&amp;ensp; JSON,&amp;ensp; JSP(model1, model2혼용 개발)
-도구
-Eclipse(Neon),&amp;ensp; MY-SQL,&amp;ensp; Android Studio
-서버
-AWS(Ubuntu Linux),&amp;ensp; Tomcat8(WAS)
-프로젝트 url
-프로젝트 소개 url</description>
+      <description>Cafe De Cultura는 스프링 학습을 목적으로 진행하고 있는 토이 프로젝트입니다.
+기획카페에서 우리는 영화, 연애, 여행 등의 다양한 주제를 가지고 이야기를 합니다. Cafe De Cultura는 문화를 주제로 한 문화인들을 위한 온라인 공간입니다. 문화에 관심있는 사람이라면 누구나 이곳에서 책, 영화, 공연에 대해서 이야기를 주고 받으며 소통할 할 수 있습니다.
+(메인 화면) 개발환경언어 HTML5, CSS, JavaScript(jQuery), jAVA8 사용 기술 Bootstrap, Spring(4.0), MyBatis 도구 Eclipse(Neon), MY-SQL(5.7) 서버 AWS(Ubuntu Linux), Tomcat8(WAS)  구현 기능  게시판 기능(CRUD)</description>
     </item>
     
     <item>
@@ -41,21 +28,11 @@ AWS(Ubuntu Linux),&amp;ensp; Tomcat8(WAS)
       <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>/project/docking/</guid>
-      <description>What is Docking? 졸업작품으로&amp;nbsp; 진행했던&amp;nbsp; 프로젝트입니다.
-동호회,&amp;nbsp; 동창회,&amp;nbsp; 가족&amp;nbsp; 등의&amp;nbsp; 구룹간의&amp;nbsp; 소통&amp;nbsp; 증진을&amp;nbsp; 목적으로&amp;nbsp; 개발한&amp;nbsp; 웹&amp;nbsp; 애플리케이션입니다.
-그러면 여기에 어떤 기능이 있는 지 등이 설명이 없는 거다.
-Information 수행기간:&amp;nbsp; 2018년 06월 ~2018년 10월
-프로젝트 인원:&amp;nbsp; 4명
-기여도:&amp;nbsp; 35%
-담당역활:&amp;nbsp; 서버 구축,&amp;nbsp; DB설계,&amp;nbsp; 기능 구현(대화창,&amp;nbsp; 구룹 선택,&amp;nbsp; 새소식)
-Develop environment 언어
-HTML5,&amp;ensp; CSS,&amp;ensp; JavaScript(jQuery),&amp;ensp; jAVA8
-사용 기술
-Bootstrap,&amp;ensp; Ajax,&amp;ensp; JSON,&amp;ensp; JSP(model1, model2혼용 개발)
-도구
-Eclipse(Neon),&amp;ensp; MY-SQL,&amp;ensp; Android Studio
-서버
-AWS(Ubuntu Linux),&amp;ensp; Tomcat8(WAS)</description>
+      <description>What is Docking?  졸업작품으로&amp;nbsp; 진행했던&amp;nbsp; 프로젝트입니다.
+ 동호회,&amp;nbsp; 동창회,&amp;nbsp; 가족&amp;nbsp; 등의&amp;nbsp; 구룹간의&amp;nbsp; 소통&amp;nbsp; 증진을&amp;nbsp; 목적으로&amp;nbsp; 개발한&amp;nbsp; 웹&amp;nbsp; 애플리케이션입니다.
+ 주요&amp;nbsp; 기능으로&amp;nbsp; 공유&amp;nbsp; 일기장,&amp;nbsp; 공유&amp;nbsp; 일정,&amp;nbsp; 구룹&amp;nbsp; 대화창이&amp;nbsp; 있습니다.
+  Develop environment  언어 HTML5, CSS, JavaScript(jQuery), jAVA8 사용 기술 Bootstrap, Ajax, JSON, JSP(Model1, Model2 혼용 개발) 도구 Eclipse(Neon), MY-SQL, Android Studio 서버 AWS(Ubuntu Linux), Tomcat8(WAS)  project PPT project Link ID : asdf
+Password : asdf</description>
     </item>
     
   </channel>

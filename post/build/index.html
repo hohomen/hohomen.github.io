@@ -13,11 +13,8 @@
         "articleSection" : "post",
         "name" : "(ant) build.xml 작성법",
         "headline" : "(ant) build.xml 작성법",
-        "description" : "자바를 이용해 자료구조를 공부하면서 빌드 도구인 &nbsp;ant를 사용할 일이 생겼다.
-여기에 &nbsp;ant를 사용한다면 필수적으로 알아야할 build.xml 문서 작성에 대한 정리를 하고자 한다.
-빌드 시작 명령어인&nbsp;
-&gt;ant  가 실행되면&nbsp; ant는 기본적으로 현재 작업 디렉터리에서 build.xml이라는 빌드 파일을 찾아 실행한다. (완성된 build.xml문서는 페이지 아래에 정리해 두었다.) 이제 그 내부 작성을 단계적으로 따라가보자.
-&lt;?xml version=&quot;1.0&quot;&gt; (xml 문서 선언)  1.프로젝트 정의하기 &lt;project name=&quot;dms&quot; default=&quot;compile&quot; basedir=&quot;.&quot;&gt;  name: 프로젝트 이름 default: 명령줄에서 매게 변수 없이 ant를 입력할 때 엔트가 빌드프로세스에서 컴파일 단계를 실행해야 한다는 뜻이다.",
+        "description" : "build.xml 문서를 작성할 수 있다면 문서를 해석하는 데에도 어려움이 없을 것이라는 취지에서 정리합니다.
+지금부터 이 문장을 처음부터 만들어 나가봅시다. &lt;?xml version=&quot;1.0&quot;&gt; &lt;project name=&quot;dms&quot; default=&quot;compile&quot; basedir=&quot;.&quot;&gt; &lt;property name=&quot;build.dir&quot; location=&quot;build&quot;/&gt; &lt;property name=&quot;build.prod.dir&quot; location=&quot;${build.dir}/prod&quot;/&gt; &lt;property name=&quot;build.test.dir&quot; location=&quot;${build.dir}/test&quot;/&gt; &lt;property name=&quot;doc.dir&quot; location=&quot;doc&quot;/&gt; &lt;property name=&quot;index.dir&quot; location=&quot;index&quot;/&gt; &lt;property name=&quot;src.dir&quot; location=&quot;src&quot;/&gt; &lt;property name=&quot;test.dir&quot; location=&quot;test&quot;/&gt; &lt;property name=&quot;vendor.lib.dir&quot; location=&quot;vendor/lib&quot;/&gt; &lt;path id=&quot;project.classpath&quot;&gt; &lt;pathelement location=&quot;${build.prod.dir}&quot; /&gt; &lt;pathelement location=&quot;${build.test.dir}&quot; /&gt; &lt;fileset dir=&quot;${vendor.lib.dir}&quot;&gt; &lt;include name=&quot;*.jar&quot;/&gt; &lt;/fileset&gt; &lt;/path&gt; &lt;target name=&quot;prepare&quot;&gt; &lt;mkdir dir=&quot;${build.prod.dir}&quot; /&gt; &lt;mkdir dir=&quot;${build.",
         "inLanguage" : "en",
         "author" : "",
         "creator" : "",
@@ -28,7 +25,7 @@
         "datePublished": "2019-01-29 00:00:00 &#43;0000 UTC",
         "dateModified" : "2019-01-29 00:00:00 &#43;0000 UTC",
         "url" : "/post/build/",
-        "wordCount" : "452",
+        "wordCount" : "420",
         "keywords" : [ "Blog" ]
     }
     </script>
@@ -55,19 +52,13 @@
 
         <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="(ant) build.xml 작성법"/>
-<meta name="twitter:description" content="자바를 이용해 자료구조를 공부하면서 빌드 도구인 &nbsp;ant를 사용할 일이 생겼다.
-여기에 &nbsp;ant를 사용한다면 필수적으로 알아야할 build.xml 문서 작성에 대한 정리를 하고자 한다.
-빌드 시작 명령어인&nbsp;
-&gt;ant  가 실행되면&nbsp; ant는 기본적으로 현재 작업 디렉터리에서 build.xml이라는 빌드 파일을 찾아 실행한다. (완성된 build.xml문서는 페이지 아래에 정리해 두었다.) 이제 그 내부 작성을 단계적으로 따라가보자.
-&lt;?xml version=&quot;1.0&quot;&gt; (xml 문서 선언)  1.프로젝트 정의하기 &lt;project name=&quot;dms&quot; default=&quot;compile&quot; basedir=&quot;.&quot;&gt;  name: 프로젝트 이름 default: 명령줄에서 매게 변수 없이 ant를 입력할 때 엔트가 빌드프로세스에서 컴파일 단계를 실행해야 한다는 뜻이다."/>
+<meta name="twitter:description" content="build.xml 문서를 작성할 수 있다면 문서를 해석하는 데에도 어려움이 없을 것이라는 취지에서 정리합니다.
+지금부터 이 문장을 처음부터 만들어 나가봅시다. &lt;?xml version=&quot;1.0&quot;&gt; &lt;project name=&quot;dms&quot; default=&quot;compile&quot; basedir=&quot;.&quot;&gt; &lt;property name=&quot;build.dir&quot; location=&quot;build&quot;/&gt; &lt;property name=&quot;build.prod.dir&quot; location=&quot;${build.dir}/prod&quot;/&gt; &lt;property name=&quot;build.test.dir&quot; location=&quot;${build.dir}/test&quot;/&gt; &lt;property name=&quot;doc.dir&quot; location=&quot;doc&quot;/&gt; &lt;property name=&quot;index.dir&quot; location=&quot;index&quot;/&gt; &lt;property name=&quot;src.dir&quot; location=&quot;src&quot;/&gt; &lt;property name=&quot;test.dir&quot; location=&quot;test&quot;/&gt; &lt;property name=&quot;vendor.lib.dir&quot; location=&quot;vendor/lib&quot;/&gt; &lt;path id=&quot;project.classpath&quot;&gt; &lt;pathelement location=&quot;${build.prod.dir}&quot; /&gt; &lt;pathelement location=&quot;${build.test.dir}&quot; /&gt; &lt;fileset dir=&quot;${vendor.lib.dir}&quot;&gt; &lt;include name=&quot;*.jar&quot;/&gt; &lt;/fileset&gt; &lt;/path&gt; &lt;target name=&quot;prepare&quot;&gt; &lt;mkdir dir=&quot;${build.prod.dir}&quot; /&gt; &lt;mkdir dir=&quot;${build."/>
 <meta name="twitter:site" content="@example"/>
 
         <meta property="og:title" content="(ant) build.xml 작성법" />
-<meta property="og:description" content="자바를 이용해 자료구조를 공부하면서 빌드 도구인 &nbsp;ant를 사용할 일이 생겼다.
-여기에 &nbsp;ant를 사용한다면 필수적으로 알아야할 build.xml 문서 작성에 대한 정리를 하고자 한다.
-빌드 시작 명령어인&nbsp;
-&gt;ant  가 실행되면&nbsp; ant는 기본적으로 현재 작업 디렉터리에서 build.xml이라는 빌드 파일을 찾아 실행한다. (완성된 build.xml문서는 페이지 아래에 정리해 두었다.) 이제 그 내부 작성을 단계적으로 따라가보자.
-&lt;?xml version=&quot;1.0&quot;&gt; (xml 문서 선언)  1.프로젝트 정의하기 &lt;project name=&quot;dms&quot; default=&quot;compile&quot; basedir=&quot;.&quot;&gt;  name: 프로젝트 이름 default: 명령줄에서 매게 변수 없이 ant를 입력할 때 엔트가 빌드프로세스에서 컴파일 단계를 실행해야 한다는 뜻이다." />
+<meta property="og:description" content="build.xml 문서를 작성할 수 있다면 문서를 해석하는 데에도 어려움이 없을 것이라는 취지에서 정리합니다.
+지금부터 이 문장을 처음부터 만들어 나가봅시다. &lt;?xml version=&quot;1.0&quot;&gt; &lt;project name=&quot;dms&quot; default=&quot;compile&quot; basedir=&quot;.&quot;&gt; &lt;property name=&quot;build.dir&quot; location=&quot;build&quot;/&gt; &lt;property name=&quot;build.prod.dir&quot; location=&quot;${build.dir}/prod&quot;/&gt; &lt;property name=&quot;build.test.dir&quot; location=&quot;${build.dir}/test&quot;/&gt; &lt;property name=&quot;doc.dir&quot; location=&quot;doc&quot;/&gt; &lt;property name=&quot;index.dir&quot; location=&quot;index&quot;/&gt; &lt;property name=&quot;src.dir&quot; location=&quot;src&quot;/&gt; &lt;property name=&quot;test.dir&quot; location=&quot;test&quot;/&gt; &lt;property name=&quot;vendor.lib.dir&quot; location=&quot;vendor/lib&quot;/&gt; &lt;path id=&quot;project.classpath&quot;&gt; &lt;pathelement location=&quot;${build.prod.dir}&quot; /&gt; &lt;pathelement location=&quot;${build.test.dir}&quot; /&gt; &lt;fileset dir=&quot;${vendor.lib.dir}&quot;&gt; &lt;include name=&quot;*.jar&quot;/&gt; &lt;/fileset&gt; &lt;/path&gt; &lt;target name=&quot;prepare&quot;&gt; &lt;mkdir dir=&quot;${build.prod.dir}&quot; /&gt; &lt;mkdir dir=&quot;${build." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/post/build/" /><meta property="article:published_time" content="2019-01-29T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2019-01-29T00:00:00&#43;00:00"/>
@@ -78,16 +69,13 @@
         <meta property="og:image:height" content="512">
         
 <meta itemprop="name" content="(ant) build.xml 작성법">
-<meta itemprop="description" content="자바를 이용해 자료구조를 공부하면서 빌드 도구인 &nbsp;ant를 사용할 일이 생겼다.
-여기에 &nbsp;ant를 사용한다면 필수적으로 알아야할 build.xml 문서 작성에 대한 정리를 하고자 한다.
-빌드 시작 명령어인&nbsp;
-&gt;ant  가 실행되면&nbsp; ant는 기본적으로 현재 작업 디렉터리에서 build.xml이라는 빌드 파일을 찾아 실행한다. (완성된 build.xml문서는 페이지 아래에 정리해 두었다.) 이제 그 내부 작성을 단계적으로 따라가보자.
-&lt;?xml version=&quot;1.0&quot;&gt; (xml 문서 선언)  1.프로젝트 정의하기 &lt;project name=&quot;dms&quot; default=&quot;compile&quot; basedir=&quot;.&quot;&gt;  name: 프로젝트 이름 default: 명령줄에서 매게 변수 없이 ant를 입력할 때 엔트가 빌드프로세스에서 컴파일 단계를 실행해야 한다는 뜻이다.">
+<meta itemprop="description" content="build.xml 문서를 작성할 수 있다면 문서를 해석하는 데에도 어려움이 없을 것이라는 취지에서 정리합니다.
+지금부터 이 문장을 처음부터 만들어 나가봅시다. &lt;?xml version=&quot;1.0&quot;&gt; &lt;project name=&quot;dms&quot; default=&quot;compile&quot; basedir=&quot;.&quot;&gt; &lt;property name=&quot;build.dir&quot; location=&quot;build&quot;/&gt; &lt;property name=&quot;build.prod.dir&quot; location=&quot;${build.dir}/prod&quot;/&gt; &lt;property name=&quot;build.test.dir&quot; location=&quot;${build.dir}/test&quot;/&gt; &lt;property name=&quot;doc.dir&quot; location=&quot;doc&quot;/&gt; &lt;property name=&quot;index.dir&quot; location=&quot;index&quot;/&gt; &lt;property name=&quot;src.dir&quot; location=&quot;src&quot;/&gt; &lt;property name=&quot;test.dir&quot; location=&quot;test&quot;/&gt; &lt;property name=&quot;vendor.lib.dir&quot; location=&quot;vendor/lib&quot;/&gt; &lt;path id=&quot;project.classpath&quot;&gt; &lt;pathelement location=&quot;${build.prod.dir}&quot; /&gt; &lt;pathelement location=&quot;${build.test.dir}&quot; /&gt; &lt;fileset dir=&quot;${vendor.lib.dir}&quot;&gt; &lt;include name=&quot;*.jar&quot;/&gt; &lt;/fileset&gt; &lt;/path&gt; &lt;target name=&quot;prepare&quot;&gt; &lt;mkdir dir=&quot;${build.prod.dir}&quot; /&gt; &lt;mkdir dir=&quot;${build.">
 
 
 <meta itemprop="datePublished" content="2019-01-29T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-01-29T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="452">
+<meta itemprop="wordCount" content="420">
 
 
 
@@ -134,7 +122,7 @@
     
 <header id="header">
     
-      <h1><a href="/">sprout&#39;s blog</a></h1>
+      <h1><a href="/">Dony&#39;s blog</a></h1>
     
 
     <nav class="links">
@@ -147,7 +135,7 @@
                 </li>
             
                 <li>
-                    <a href="/about/">
+                    <a href="/about">
                             <i class="fa fa-id-card-o">&nbsp;</i>About
                     </a>
                 </li>
@@ -217,7 +205,7 @@
                     </li>
                 
                     <li>
-                        <a href="/about/">
+                        <a href="/about">
                             <h3>
                                 <i class="fa fa-id-card-o">&nbsp;</i>About
                             </h3>
@@ -266,6 +254,42 @@
                 
                         <article class="mini-post">
                             <header>
+                                <h3><a href="/post/spring_debug/">Spring Debuging</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-02-22'>
+                                    February 22, 2019</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/css_layout/">CSS 박스모델</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-02-19'>
+                                    February 19, 2019</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/css_basic/">CSS 기초</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-02-18'>
+                                    February 18, 2019</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
                                 <h3><a href="/post/build/">(ant) build.xml 작성법</a></h3>
                                 
                                 <time class="published" datetime=
@@ -278,7 +302,7 @@
                 
                         <article class="mini-post">
                             <header>
-                                <h3><a href="/post/test/">Git 기초(버전관리)</a></h3>
+                                <h3><a href="/post/git_basic/">Git 기초(버전관리)</a></h3>
                                 
                                 <time class="published" datetime=
                                     '2018-06-03'>
@@ -288,19 +312,13 @@
 
                         </article>
                 
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="/post/">Post</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2019-01-29'>
-                                    January 29, 2019</time>
-                            </header>
-                            
 
-                        </article>
                 
-
+                    <a href=
+                        
+                            /blog/
+                        
+                        class="button">View more posts</a>
                 
             </div>
         </section>
@@ -366,7 +384,7 @@
             January 29, 2019</time>
         <span class="author">     &#34;&#34;</span>
         
-            <p>3 minute read</p>
+            <p>2 minute read</p>
         
         
     </div>
@@ -411,20 +429,37 @@
   <div id="content">
     
 
-<p>자바를 이용해 자료구조를 공부하면서 빌드 도구인 &nbsp;ant를 사용할 일이 생겼다.<br>
-여기에 &nbsp;ant를 사용한다면 필수적으로 알아야할 build.xml 문서 작성에 대한 정리를 하고자 한다.<br></p>
+<p>build.xml 문서를 작성할 수 있다면 문서를 해석하는 데에도 어려움이 없을 것이라는 취지에서 정리합니다.<br><br></p>
 
-<hr />
+<h3 id="지금부터-이-문장을-처음부터-만들어-나가봅시다">지금부터 이 문장을 처음부터 만들어 나가봅시다.</h3>
 
-<p>빌드 시작 명령어인&nbsp;</p>
-
-<pre><code>&gt;ant
-</code></pre>
-
-<p>가 실행되면&nbsp; ant는 기본적으로 현재 작업 디렉터리에서 build.xml이라는 빌드 파일을 찾아 실행한다.
-(완성된 build.xml문서는 페이지 아래에 정리해 두었다.) 이제 그 내부 작성을 단계적으로 따라가보자.</p>
-
-<pre><code>&lt;?xml version=&quot;1.0&quot;&gt; (xml 문서 선언)
+<pre><code>&lt;?xml version=&quot;1.0&quot;&gt;
+&lt;project name=&quot;dms&quot; default=&quot;compile&quot; basedir=&quot;.&quot;&gt;
+    &lt;property name=&quot;build.dir&quot; location=&quot;build&quot;/&gt;
+    &lt;property name=&quot;build.prod.dir&quot; location=&quot;${build.dir}/prod&quot;/&gt;
+    &lt;property name=&quot;build.test.dir&quot; location=&quot;${build.dir}/test&quot;/&gt;
+    &lt;property name=&quot;doc.dir&quot; location=&quot;doc&quot;/&gt;
+    &lt;property name=&quot;index.dir&quot; location=&quot;index&quot;/&gt;
+    &lt;property name=&quot;src.dir&quot; location=&quot;src&quot;/&gt;
+    &lt;property name=&quot;test.dir&quot; location=&quot;test&quot;/&gt;
+    &lt;property name=&quot;vendor.lib.dir&quot; location=&quot;vendor/lib&quot;/&gt;
+        &lt;path id=&quot;project.classpath&quot;&gt;
+            &lt;pathelement location=&quot;${build.prod.dir}&quot; /&gt;
+            &lt;pathelement location=&quot;${build.test.dir}&quot; /&gt;
+            &lt;fileset dir=&quot;${vendor.lib.dir}&quot;&gt;
+                &lt;include name=&quot;*.jar&quot;/&gt;
+            &lt;/fileset&gt;
+        &lt;/path&gt;
+        &lt;target name=&quot;prepare&quot;&gt;
+            &lt;mkdir dir=&quot;${build.prod.dir}&quot; /&gt;
+            &lt;mkdir dir=&quot;${build.test.dir}&quot; /&gt;
+        &lt;/target&gt;
+        &lt;target name=&quot;compile&quot; depends =&quot;prepare&quot;&gt;
+            &lt;javac srcdir=&quot;$src.dir}&quot; destdir=&quot;${build.prod.dir}&quot;&gt;
+                &lt;classpath refid=&quot;project.classpath&quot; /&gt;
+            &lt;/javac&gt;
+        &lt;/target&gt;
+&lt;/project&gt;
 </code></pre>
 
 <h3 id="1-프로젝트-정의하기">1.프로젝트 정의하기</h3>
@@ -495,40 +530,11 @@ basedir: 속성값을 &lsquo;.&lsquo;으로 해주면, 이 빌드 파일에서 �
 </code></pre>
 
 <p>target의 실행 순서는 매우 중요하다. 왜냐하면, 컴파일 결과를 저장할 디렉터리 없이 소스를 컴파일할 수는 없기 때문이다. depends 속성으로 타깃 간 의존성을 만들어서 순서를 지정해야 한다. 이 속성에는 타깃 이름을 콤파(,)로 구분해서 나열한다.
-예를 들어 위 코드에서 compile 타깃은 depends 속성에 prepare 타깃에 대한 의존성을 선언했다. 이것은 compile 타깃을 실행하면 소스 파일을 컴파일하기 전에 필요한 디렉터리를 만들기 위해 먼저 prepare 타깃을 실행한다는 뜻이다.</p>
+예를 들어 위 코드에서 compile 타깃은 depends 속성에 prepare 타깃에 대한 의존성을 선언했다. 이것은 compile 타깃을 실행하면 소스 파일을 컴파일하기 전에 필요한 디렉터리를 만들기 위해 먼저 prepare 타깃을 실행한다는 뜻이다.
+refid(=reference ID)</p>
 
-<p>refid(=reference ID)</p>
-
-<h3 id="완성-문장">완성 문장.</h3>
-
-<pre><code>&lt;?xml version=&quot;1.0&quot;&gt;
-&lt;project name=&quot;dms&quot; default=&quot;compile&quot; basedir=&quot;.&quot;&gt;
-    &lt;property name=&quot;build.dir&quot; location=&quot;build&quot;/&gt;
-    &lt;property name=&quot;build.prod.dir&quot; location=&quot;${build.dir}/prod&quot;/&gt;
-    &lt;property name=&quot;build.test.dir&quot; location=&quot;${build.dir}/test&quot;/&gt;
-    &lt;property name=&quot;doc.dir&quot; location=&quot;doc&quot;/&gt;
-    &lt;property name=&quot;index.dir&quot; location=&quot;index&quot;/&gt;
-    &lt;property name=&quot;src.dir&quot; location=&quot;src&quot;/&gt;
-    &lt;property name=&quot;test.dir&quot; location=&quot;test&quot;/&gt;
-    &lt;property name=&quot;vendor.lib.dir&quot; location=&quot;vendor/lib&quot;/&gt;
-        &lt;path id=&quot;project.classpath&quot;&gt;
-            &lt;pathelement location=&quot;${build.prod.dir}&quot; /&gt;
-            &lt;pathelement location=&quot;${build.test.dir}&quot; /&gt;
-            &lt;fileset dir=&quot;${vendor.lib.dir}&quot;&gt;
-                &lt;include name=&quot;*.jar&quot;/&gt;
-            &lt;/fileset&gt;
-        &lt;/path&gt;
-        &lt;target name=&quot;prepare&quot;&gt;
-            &lt;mkdir dir=&quot;${build.prod.dir}&quot; /&gt;
-            &lt;mkdir dir=&quot;${build.test.dir}&quot; /&gt;
-        &lt;/target&gt;
-        &lt;target name=&quot;compile&quot; depends =&quot;prepare&quot;&gt;
-            &lt;javac srcdir=&quot;$src.dir}&quot; destdir=&quot;${build.prod.dir}&quot;&gt;
-                &lt;classpath refid=&quot;project.classpath&quot; /&gt;
-            &lt;/javac&gt;
-        &lt;/target&gt;
-&lt;/project&gt;
-</code></pre>
+<p><br>
+참고자료: 실용주의 프로그래머를 위한 프로젝트 자동화</p>
 
   </div>
 
@@ -542,7 +548,7 @@ basedir: 속성값을 &lsquo;.&lsquo;으로 해주면, 이 빌드 파일에서 �
                 <i class="fa fa-folder"></i>
                 
                 
-                <li><a class="article-category-link" href="/categories/tech">tech</a></li>
+                <li><a class="article-category-link" href="/categories/etc">etc</a></li>
                 
             
         
@@ -585,10 +591,13 @@ basedir: 속성값을 &lsquo;.&lsquo;으로 해주면, 이 빌드 파일에서 �
 
 <ul class="actions pagination">
     
-        <li><a href="/post/test/"
+        <li><a href="/post/git_basic/"
                 class="button big previous">Git 기초(버전관리)</a></li>
     
 
+    
+        <li><a href="/post/css_basic/"
+                class="button big next">CSS 기초</a></li>
     
 </ul>
 
@@ -631,6 +640,48 @@ basedir: 속성값을 &lsquo;.&lsquo;으로 해주면, 이 빌드 파일에서 �
           <article class="mini-post">
             <header>
               <h3>
+                <a href="/post/spring_debug/">Spring Debuging</a>
+              </h3>
+              
+              <time class="published" datetime='2019-02-22'>
+                February 22, 2019
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/css_layout/">CSS 박스모델</a>
+              </h3>
+              
+              <time class="published" datetime='2019-02-19'>
+                February 19, 2019
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/css_basic/">CSS 기초</a>
+              </h3>
+              
+              <time class="published" datetime='2019-02-18'>
+                February 18, 2019
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
                 <a href="/post/build/">(ant) build.xml 작성법</a>
               </h3>
               
@@ -645,7 +696,7 @@ basedir: 속성값을 &lsquo;.&lsquo;으로 해주면, 이 빌드 파일에서 �
           <article class="mini-post">
             <header>
               <h3>
-                <a href="/post/test/">Git 기초(버전관리)</a>
+                <a href="/post/git_basic/">Git 기초(버전관리)</a>
               </h3>
               
               <time class="published" datetime='2018-06-03'>
@@ -656,22 +707,14 @@ basedir: 속성값을 &lsquo;.&lsquo;으로 해주면, 이 빌드 파일에서 �
 
           </article>
         
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="/post/">Post</a>
-              </h3>
-              
-              <time class="published" datetime='2019-01-29'>
-                January 29, 2019
-              </time>
-            </header>
-            
-
-          </article>
-        
       </div>
 
+      
+        <a href=
+          
+            /blog/
+          
+        class="button">View more posts</a>
       
     </div>
   </section>
@@ -696,7 +739,18 @@ basedir: 속성값을 &lsquo;.&lsquo;으로 해주면, 이 빌드 파일에서 �
           <article>
             <header>
               
-                <a href="/categories/git/">Git</a>
+                <a href="/categories/css/">CSS</a>
+                <span style="float:right;">2</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/debuging/">Debuging</a>
                 <span style="float:right;">1</span>
               
             </header>
@@ -707,8 +761,19 @@ basedir: 속성값을 &lsquo;.&lsquo;으로 해주면, 이 빌드 파일에서 �
           <article>
             <header>
               
-                <a href="/categories/tech/">tech</a>
+                <a href="/categories/book/">book</a>
                 <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/etc/">etc</a>
+                <span style="float:right;">2</span>
               
             </header>
           </article>
@@ -728,7 +793,7 @@ basedir: 속성값을 &lsquo;.&lsquo;으로 해주면, 이 빌드 파일에서 �
       
         &copy; 2019
         
-          Blog of beginner
+          Dony&#39;s blog
         
       .
       Powered by <a href="//gohugo.io" target="_blank">Hugo</a>

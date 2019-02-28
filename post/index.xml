@@ -1,46 +1,100 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Post on Blog of beginner</title>
+    <title>Post on Dony&#39;s blog</title>
     <link>/post/</link>
-    <description>Recent content in Post on Blog of beginner</description>
+    <description>Recent content in Post on Dony&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 22 Feb 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Spring Debuging list</title>
+      <link>/post/debug_spring/</link>
+      <pubDate>Fri, 22 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/debug_spring/</guid>
+      <description>스프링은 한 개의 설정이 잘못되는 경우 실행 자체에 문제가 생기므로 하나씩 설정하고 테스트하는 습관을 가져야만 합니다. 나의 Debuging 목록. (1~2) 버전 관련 오류(3.0 → 4.0) 1. 버전 오류(전체적으로 이렇게 설정을 바꿔줘야 한다.) https://offbyone.tistory.com/16 에 잘 정리되어 있다. 2. 버전 관련 오류. 메이븐 설정변경이 재대로 되지 않았을 때. message)Description Resource Path Location Type The container &#39;Maven Dependencies&#39; references non existing library solved) Today I had this same problem with another jar. I tried multiple things people said on Stackoverflow, but nothing worked.</description>
+    </item>
+    
+    <item>
+      <title>Bootstrap grid system</title>
+      <link>/post/css_bootstrap_grid/</link>
+      <pubDate>Wed, 20 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/css_bootstrap_grid/</guid>
+      <description>(부트스트랩으로 디자인하라 - 양용석(로드북)의 내용을 참조하였습니다.)
+부트스트랩은 그리드 시스템을 이용하여 레이아웃(배치)을 잡습니다. 그리드(격자)grid는 총 12열로 구성되어 있으며, 클래스 선택자를 기반으로 화면의 레이아웃을 잡아주는 역활을 합니다. 특징1 모든 그리드는 중첩될 수 있는데 하나의 그리드 내부에 또 하나의 그리드를 만들 수 있습니다. 내부에 만들어진 그리드는 또 다시 12개의 그리드가 생성됩니다. &amp;lt;div class=&amp;ldquo;col-md-8&amp;rdquo;&amp;gt; .col-md-8 &amp;lt;div class=&amp;ldquo;row&amp;rdquo;&amp;gt; &amp;lt;div class=&amp;ldquo;col-md-4 pad10&amp;rdquo;&amp;gt; 내부 12개 그리드 중 4개 .col-md-4 &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;ldquo;col-md-8 pad10&amp;rdquo;&amp;gt; 내부 12개 그리드 중 8개 .</description>
+    </item>
+    
+    <item>
+      <title>Javascript 기본 문법</title>
+      <link>/post/javascript_basic/</link>
+      <pubDate>Wed, 20 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/javascript_basic/</guid>
+      <description>&amp;lsquo;모던 웹을 위한 JavaScript jQuery입문 3판&amp;rsquo;의 내용을 요약한 것입니다.
+CHAPTER 2 기본 문법 2.1 기본 용어 2 키워드 자바스크립트가 처음 만들어질 때 정해진 특별한 의미가 있는 단어를 &#39;키워드&#39;라고 합니다. (사진P.28) 3 식별자 식별자를 만들 때는 다음의 규칙을 지켜야 합니다. 1.키워드를 사용하면 안 됩니다. 2.숫자로 시작하면 안 됩니다. 3.특수 문자는 _와 $만 허용합니다. 4.공백 문자를 포함할 수 없습니다. 이 네 가지 규칙만 만족한다면 모든 단어를 식별자로 사용할 수 있습니다 식별자를 만들 때 알파벳을 사용하는 것 외에도 자바스크립트 개발자 대부분이 지키는 관례가 있습니다.</description>
+    </item>
+    
+    <item>
+      <title>배열</title>
+      <link>/post/javascript_loop/</link>
+      <pubDate>Wed, 20 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/javascript_loop/</guid>
+      <description>배열은 여러 개의 변수를 한꺼번에 선언해 다룰 수 있는 자료형입니다. 배열은 아래처럼 대괄호 []로 생성합니다. 대괄호를 사용하고 안에 있는 값을 쉼표로 구분해 입력합니다. 배연 안에 입력된 값을 요소 element라고 합니다. 어떠한 종류의 자료형도 요소가 될 수 있습니다. var exampleA = [273, &#39;String&#39;, true, function() {}, { }, [273, 103]]; 각 요소를 사용하기 exampleA[n] length 속성 alert(exampleA.legth); push() 메소드 exampleA.push(23); 문자열과 배열 var a = &#34;abcdefg&#34;; alert(a[2]);  </description>
+    </item>
+    
+    <item>
+      <title>함수 정리</title>
+      <link>/post/javascript_function/</link>
+      <pubDate>Wed, 20 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/javascript_function/</guid>
+      <description>함수는 코드의 집합을 나타내는 자료형입니다. 1.익명함수: 이름이 없으므로 변수에 넣어 사용해야 합니다.(point= 변수) var 함수 = function() { }; 자바스크립트에서 함수는 한의 자료형이지만 여타, 자료형과 다르게 뒤에 괄호를 열고 닫음으로써 코드를 실행합니다. = &#39;함수를 호출&#39; 함수(); // 익명함수를 호출할 때. 2.선언적 함수: 이름이 있는 함수. function 함수( ) { } #선언적 함수와 익명 함수의 차이점. 익명함수는 변수로 선언했기 때문에 오류 발생. 반대로 선언적 함수를 사용하면 코드가 정상적으로 실행.  함수( ); // 오류.</description>
+    </item>
+    
+    <item>
+      <title>CSS 박스모델</title>
+      <link>/post/css_layout/</link>
+      <pubDate>Tue, 19 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/css_layout/</guid>
+      <description>CSS와 박스 모델 박스 모델은 &#39;블록 레벨(block-level)&#39; 요소인지 &#39;인라인 레벨(Inline-level)&#39; 요소인지에 따라 나열 방법이 달라집니다. 블록 레벨(block-level) 요소 태그를 사용해 요소를 사입했을 때 혼자 한 줄을 차지하는 요소입니다. 너비나 마진, 패딩 등을 이용해 크기나 위치를 지정하려면 블록 레벨 요소여야 합니다. &amp;lt;div&amp;gt; 태그나 &amp;lt;p&amp;gt; 태그 등 블록 레벨 태그 p, ,h1~h6, ul, ol, pre, dl, div, noscript, blockquote, form, hr, table, fieldset, address, article 인라인 레벨(Inline-level) 요소 줄을 차지하지 않는 요소입니다.</description>
+    </item>
+    
+    <item>
+      <title>CSS 기초</title>
+      <link>/post/css_basic/</link>
+      <pubDate>Mon, 18 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/css_basic/</guid>
+      <description>HTML5 + CSS3 웹 표준의 정석의 내용을 요약한 것입니다.
+ 1. 스타일과 스타일 시트 스타일 웹 문서에서 스타일(style)이란 HTML 문서에서 자주 사용하는 글꼴이나 색상, 정렬, 각 요소들의 배치 방법 등 문서의 겉모습을 결정짓는 내용들을 가리킵니다. 웹 문서의 내용과 상관없이 디자인만 바꿀 수 있습니다. 스타일 형식 p(=선택자) { text-align(=스타일 속성): center(=속성 값) } 스타일 주석 /* */ 스타일 시트(내부 스타일 시트와 외부 스타일 시트로 나뉜다.) 내부 스타일 시트 &amp;lt;style&amp;gt;&amp;lt;/style&amp;gt; 안에 정의 외부 스타일 시트 &amp;lt;link href=&#34;</description>
+    </item>
+    
+    <item>
       <title>(ant) build.xml 작성법</title>
-      <link>/post/build/</link>
+      <link>/post/etc_build/</link>
       <pubDate>Tue, 29 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/build/</guid>
-      <description>자바를 이용해 자료구조를 공부하면서 빌드 도구인 &amp;nbsp;ant를 사용할 일이 생겼다.
-여기에 &amp;nbsp;ant를 사용한다면 필수적으로 알아야할 build.xml 문서 작성에 대한 정리를 하고자 한다.
-빌드 시작 명령어인&amp;nbsp;
-&amp;gt;ant  가 실행되면&amp;nbsp; ant는 기본적으로 현재 작업 디렉터리에서 build.xml이라는 빌드 파일을 찾아 실행한다. (완성된 build.xml문서는 페이지 아래에 정리해 두었다.) 이제 그 내부 작성을 단계적으로 따라가보자.
-&amp;lt;?xml version=&amp;quot;1.0&amp;quot;&amp;gt; (xml 문서 선언)  1.프로젝트 정의하기 &amp;lt;project name=&amp;quot;dms&amp;quot; default=&amp;quot;compile&amp;quot; basedir=&amp;quot;.&amp;quot;&amp;gt;  name: 프로젝트 이름 default: 명령줄에서 매게 변수 없이 ant를 입력할 때 엔트가 빌드프로세스에서 컴파일 단계를 실행해야 한다는 뜻이다.</description>
+      <guid>/post/etc_build/</guid>
+      <description>가끔 학습용으로 Ant를 사용해야하는 일이 있다. build.xml 작성법을 익힌다면 해석하는 데에도 무리가 없을 것이다.
+지금부터 이 문장을 처음부터 만들어 나가봅시다. &amp;lt;?xml version=&amp;quot;1.0&amp;quot;&amp;gt; &amp;lt;project name=&amp;quot;dms&amp;quot; default=&amp;quot;compile&amp;quot; basedir=&amp;quot;.&amp;quot;&amp;gt; &amp;lt;property name=&amp;quot;build.dir&amp;quot; location=&amp;quot;build&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;build.prod.dir&amp;quot; location=&amp;quot;${build.dir}/prod&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;build.test.dir&amp;quot; location=&amp;quot;${build.dir}/test&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;doc.dir&amp;quot; location=&amp;quot;doc&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;index.dir&amp;quot; location=&amp;quot;index&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;src.dir&amp;quot; location=&amp;quot;src&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;test.dir&amp;quot; location=&amp;quot;test&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;vendor.lib.dir&amp;quot; location=&amp;quot;vendor/lib&amp;quot;/&amp;gt; &amp;lt;path id=&amp;quot;project.classpath&amp;quot;&amp;gt; &amp;lt;pathelement location=&amp;quot;${build.prod.dir}&amp;quot; /&amp;gt; &amp;lt;pathelement location=&amp;quot;${build.test.dir}&amp;quot; /&amp;gt; &amp;lt;fileset dir=&amp;quot;${vendor.lib.dir}&amp;quot;&amp;gt; &amp;lt;include name=&amp;quot;*.jar&amp;quot;/&amp;gt; &amp;lt;/fileset&amp;gt; &amp;lt;/path&amp;gt; &amp;lt;target name=&amp;quot;prepare&amp;quot;&amp;gt; &amp;lt;mkdir dir=&amp;quot;${build.prod.dir}&amp;quot; /&amp;gt; &amp;lt;mkdir dir=&amp;quot;${build.</description>
     </item>
     
     <item>
       <title>Git 기초(버전관리)</title>
-      <link>/post/test/</link>
+      <link>/post/etc_git_basic/</link>
       <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/test/</guid>
-      <description>아래 내용은 생활코딩 Git(CUI환경) 강의를 정리한 내용입니다.
-Git 설치에서 시작하여 기초적인 명령들을 활용하는 내용을 정리하였습니다.
-1.Git을 다운 받고 설치한다. https://git-scm.com/
-2.Git Bash(윈도우를 리눅스 명령어로 관리) 파일을 실행한다.
-프로젝트 파일을 만듭시다.
-(나의 pwd는 /c/Users/DongHo/ 이었다.)
-$mkdir projectN
-프로젝트 디렉토리로 들어갑니다. cd projectN
-현재 디렉토리를 git의 (버전) 저장소로 만듭니다. $git init
-그러면 파란색 글씨로 .git/(버전관리를 하게되면 여러가지 정보가 저장되는 곳이다.) 폴더가 생성된 것을 확인할 수 있다.
-버전과 변화 버전은 의미있는 변화를 의미한다.</description>
+      <guid>/post/etc_git_basic/</guid>
+      <description>아래 내용은 생활코딩 Git(CUI, 윈도우 환경) 강의를 정리한 내용입니다. 강의 내용 요약이므로 복습 용도로 유용합니다. 자세한 설명과 과정은 생활코딩을 참조하길 바랍니다. 
+설치, 저장소 생성, 기본 설정Git을 다운 받고 설치한다. https://git-scm.com/ Git Bash(윈도우를 리눅스 명령어로 관리) 파일을 실행한다. 프로젝트 파일을 만듭니다.(나의 pwd는 /c/Users/DongHo/ 이었다.) $mkdir projectN 프로젝트 디렉토리로 들어갑니다. $cd projectN 현재 디렉토리를 git의 (버전) 저장소로 만듭니다. $git init($ls -al을 해보면 파란색 글씨로 .git/(버전관리를 하게되면 여러가지 정보가 저장되는 곳이다.) 폴더가 생성된 것을 확인할 수 있다.</description>
     </item>
     
   </channel>
