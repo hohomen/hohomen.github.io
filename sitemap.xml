@@ -18,17 +18,7 @@
   </url>
   
   <url>
-    <loc>/post/javascript_basic/</loc>
-    <lastmod>2019-02-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/javascript_loop/</loc>
-    <lastmod>2019-02-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/javascript_function/</loc>
+    <loc>/post/javascript_object/</loc>
     <lastmod>2019-02-20T00:00:00+00:00</lastmod>
   </url>
   
@@ -38,8 +28,23 @@
   </url>
   
   <url>
+    <loc>/post/javascript_function/</loc>
+    <lastmod>2019-02-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/css_basic/</loc>
     <lastmod>2019-02-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/javascript_loop/</loc>
+    <lastmod>2019-02-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/javascript_basic/</loc>
+    <lastmod>2019-02-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>

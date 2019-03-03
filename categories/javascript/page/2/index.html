@@ -1,3 +1,13 @@
+
+
+
+    
+        
+    
+
+
+
+
 <!DOCTYPE HTML>
 
 <html>
@@ -10,9 +20,9 @@
              "@type": "WebPage",
              "@id": "/"
         },
-        "articleSection" : "",
-        "name" : "Dony&#39;s blog",
-        "headline" : "Dony&#39;s blog",
+        "articleSection" : "categories",
+        "name" : "JavaScript",
+        "headline" : "JavaScript",
         "description" : "",
         "inLanguage" : "en",
         "author" : "",
@@ -21,17 +31,15 @@
         "accountablePerson" : "",
         "copyrightHolder" : "",
         "copyrightYear" : "2019",
-        "datePublished": "2019-02-22 00:00:00 &#43;0000 UTC",
-        "dateModified" : "2019-02-22 00:00:00 &#43;0000 UTC",
-        "url" : "/",
+        "datePublished": "2019-02-17 00:00:00 &#43;0000 UTC",
+        "dateModified" : "2019-02-17 00:00:00 &#43;0000 UTC",
+        "url" : "/categories/javascript/",
         "wordCount" : "0",
         "keywords" : [ "Blog" ]
     }
     </script>
         
-            
-                <title>Dony&#39;s blog</title>
-            
+            <title>JavaScript Posts - Dony&#39;s blog</title>
         
 
         <meta charset="utf-8" />
@@ -48,22 +56,22 @@
         
 
         <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Dony&#39;s blog"/>
+<meta name="twitter:title" content="JavaScript"/>
 <meta name="twitter:description" content="HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador. Powered by Hugo"/>
 <meta name="twitter:site" content="@example"/>
 
-        <meta property="og:title" content="Dony&#39;s blog" />
+        <meta property="og:title" content="JavaScript" />
 <meta property="og:description" content="HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador. Powered by Hugo" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="/" />
-<meta property="og:updated_time" content="2019-02-22T00:00:00&#43;00:00"/>
+<meta property="og:url" content="/categories/javascript/" />
+<meta property="og:updated_time" content="2019-02-17T00:00:00&#43;00:00"/>
 
         <meta property="og:image" content="//images/logo.png">
         <meta property="og:image:type" content="image/png">
         <meta property="og:image:width" content="512">
         <meta property="og:image:height" content="512">
         
-<meta itemprop="name" content="Dony&#39;s blog">
+<meta itemprop="name" content="JavaScript">
 <meta itemprop="description" content="HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador. Powered by Hugo">
 
 
@@ -104,7 +112,6 @@
       
       <div id="wrapper">
 
-    
     
 <header id="header">
     
@@ -148,10 +155,6 @@
     </nav>
     <nav class="main">
         <ul>
-            
-            <li id="share-nav" class="share-menu" style="display:none;">
-                <a class="fa-share-alt" href="#share-menu">Share</a>
-            </li>
             
             <li class="search">
                 <a class="fa-search" href="#search">Search</a>
@@ -315,12 +318,14 @@
 
     
     <div id="main">
+        <h1>JavaScript</h1>
+        
         
             <article class="post">
   <header>
     <div class="title">
         
-            <h2><a href="/post/debug_spring/">Spring Debuging list</a></h2>
+            <h2><a href="/post/javascript_basic/">Javascript 기본 문법</a></h2>
         
         
     </div>
@@ -328,131 +333,25 @@
         
 
         <time class="published"
-            datetime='2019-02-22'>
-            February 22, 2019</time>
+            datetime='2019-02-17'>
+            February 17, 2019</time>
         <span class="author">     &#34;&#34;</span>
         
-            <p>2 minute read</p>
+            <p>3 minute read</p>
         
         
     </div>
 </header>
 
-
-  
-    <section id="social-share">
-      <ul class="icons">
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </ul>
-    </section>
   
 
   
-
-  <div id="content">
-    <pre style="word-wrap: break-word;white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-break:break-all;">
-
-스프링은 한 개의 설정이 잘못되는 경우 실행 자체에 문제가 생기므로 하나씩 설정하고 테스트하는 습관을 가져야만 합니다.
-
-나의 Debuging 목록.
-
-(1~2) 버전 관련 오류(3.0 → 4.0)
-1. 버전 오류(전체적으로 이렇게 설정을 바꿔줘야 한다.)
-<a href=https://offbyone.tistory.com/16>https://offbyone.tistory.com/16</a> 에 잘 정리되어 있다.
-
-2. 버전 관련 오류. 메이븐 설정변경이 재대로 되지 않았을 때.
-message)Description Resource Path Location Type The container 'Maven Dependencies' references non existing library
-
-solved)
-Today I had this same problem with another jar. I tried multiple things people said on Stackoverflow, but nothing worked. Eventually I did this:
-Close eclipse and any project-app that is running.
-Delete the .m2 folder (Users --> [your_username] --> .m2). It's an invisible folder, make sure you are able to view invisible folders.
-Restarted Eclipse (I guess it works in other IDE too) and updated my project.
-
-tomcat 실행 도중 오류.(3~4)
-3.
-A child container failed during start java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/web]]
-
-(solved)
-Remove server from Eclipse : Go to Window > Preferences > Server > Runtime Environment, here remove the server your are using from eclipse and add it again(doing this will create a new Server project folder in Eclipse) , 
-Remove server from Project : Also remove the server in your project(Build path > configuration path > Java Build path) and add again.
-
-url:https://stackoverflow.com/questions/28102134/a-child-container-failed-during-start-java-util-concurrent-executionexception
-
-4.
-Failed to start component [StandardEngine[Catalina].StandardHost[localhost]] at java.util.concurrent.FutureTask.report(Unknown Source) at java.util.concurrent.FutureTask.get(Unknown Source)
-
-(solved)
-Any of the jar dependencies of your project seems to be corrupted. You could try deleting all your local maven repo folder, or if you could manage to know which is the corrupted one, just delete it. After one of theese actions, just update maven dependencies and it should start working
-
-url:https://stackoverflow.com/questions/40674615/failed-to-start-component-standardenginecatalina-standardhostlocalhost-stan
-
-
-5. myBatis xml map causing namespace must be declared for element type mapper
-
-solved) myBatis mapper DTD 선언을 잘 못했었다.
-<!DOCTYPE mapper
-  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-
-6. junit dataSourceTest에서 com.mysql.jdbc.JDBC4Connection@6cc4cdb9가 나오지 않고 콘솔에
-Loaded default TestExecutionListener class names from location와 Using TestExecutionListeners 2줄만 출력되는 상황.
-
-(solved)
-junit dependency version 4.7 --> 4.11(더 높은 버전이다.)로 해결
-
-7.
-mysql 한글 깨짐 현상(아래는 참고 url)
-https://kgh940525.tistory.com/entry/Spring-Mysql-%ED%95%9C%EA%B8%80-%EA%B9%A8%EC%A7%90-UTF-8-%EC%9D%B8%EC%BD%94%EB%94%A9-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0
-https://proinlab.com/archives/1147
-https://stackoverflow.com/questions/19052676/how-to-set-useunicode-true-and-characterencoding-utf8-properties-on-spring-manag
-
-
-(solved) dataSource에 추가.
-&lt;property name="connectionProperties"&gt;
-    &lt;props&gt;
-        &lt;prop key="useUnicode"&gt;yes&lt;/prop&gt;
-        &lt;prop key="characterEncoding"&gt;utf8&lt;/prop&gt;
-    &lt;/props&gt;
-&lt;/property&gt;
-(spring.datasource.connectionProperties=useUnicode=true;characterEncoding=utf-8;)
-
-8.
-Error creating bean with name : Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException:
-
-solved) &lt;context:component-scan&gt; 을 선언하지 않았다.
-
-</pre>
-
-  </div>
-
+  <p>&lsquo;모던 웹을 위한 JavaScript jQuery입문 3판&rsquo;의 내용을 요약한 것입니다.<br></p>
   <footer>
-    <ul class="stats">
+    <ul class="actions">
+      <li><a href="/post/javascript_basic/" class="button big">Continue Reading</a></li>
+    </ul>
+  <ul class="stats">
   <li class="categories">
     <ul>
         
@@ -461,7 +360,7 @@ solved) &lt;context:component-scan&gt; 을 선언하지 않았다.
                 <i class="fa fa-folder"></i>
                 
                 
-                <li><a class="article-category-link" href="/categories/debuging">Debuging</a></li>
+                <li><a class="article-category-link" href="/categories/javascript">JavaScript</a></li>
                 
             
         
@@ -475,81 +374,22 @@ solved) &lt;context:component-scan&gt; 을 선언하지 않았다.
 </ul>
 
   </footer>
-
 </article>
 
-    <article class="post">
-        <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "shortname" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    </article>
+        
 
-
+        
 <ul class="actions pagination">
     
-        <li><a href="/post/css_bootstrap_grid/"
-                class="button big previous">Bootstrap grid system</a></li>
+        <li><a href="/categories/javascript/"
+                class="button big previous">Previous Page</a></li>
     
 
+    
+        <li><a href="#" class="disabled button big next">Next Page</a></li>
     
 </ul>
 
-
-
-            <section id="share-menu">
-    <section id="social-share-nav">
-        <ul class="links">
-            <header>
-                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
-            </header>
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </ul>
-    </section>
-</section>
-
-        
     </div>
     
 <section id="sidebar">
