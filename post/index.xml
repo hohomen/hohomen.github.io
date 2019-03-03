@@ -6,10 +6,20 @@
     <description>Recent content in Post on Dony&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 02 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>(ant) build.xml 작성법</title>
+      <link>/post/etc_build/</link>
+      <pubDate>Sat, 02 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/etc_build/</guid>
+      <description>가끔 학습용으로 Ant를 사용해야하는 일이 있다. build.xml 작성법을 익힌다면 해석하는 데에도 무리가 없을 것이다.
+지금부터 이 문장을 처음부터 만들어 나가봅시다. &amp;lt;?xml version=&amp;quot;1.0&amp;quot;&amp;gt; &amp;lt;project name=&amp;quot;dms&amp;quot; default=&amp;quot;compile&amp;quot; basedir=&amp;quot;.&amp;quot;&amp;gt; &amp;lt;property name=&amp;quot;build.dir&amp;quot; location=&amp;quot;build&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;build.prod.dir&amp;quot; location=&amp;quot;${build.dir}/prod&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;build.test.dir&amp;quot; location=&amp;quot;${build.dir}/test&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;doc.dir&amp;quot; location=&amp;quot;doc&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;index.dir&amp;quot; location=&amp;quot;index&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;src.dir&amp;quot; location=&amp;quot;src&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;test.dir&amp;quot; location=&amp;quot;test&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;vendor.lib.dir&amp;quot; location=&amp;quot;vendor/lib&amp;quot;/&amp;gt; &amp;lt;path id=&amp;quot;project.classpath&amp;quot;&amp;gt; &amp;lt;pathelement location=&amp;quot;${build.prod.dir}&amp;quot; /&amp;gt; &amp;lt;pathelement location=&amp;quot;${build.test.dir}&amp;quot; /&amp;gt; &amp;lt;fileset dir=&amp;quot;${vendor.lib.dir}&amp;quot;&amp;gt; &amp;lt;include name=&amp;quot;*.jar&amp;quot;/&amp;gt; &amp;lt;/fileset&amp;gt; &amp;lt;/path&amp;gt; &amp;lt;target name=&amp;quot;prepare&amp;quot;&amp;gt; &amp;lt;mkdir dir=&amp;quot;${build.prod.dir}&amp;quot; /&amp;gt; &amp;lt;mkdir dir=&amp;quot;${build.</description>
+    </item>
     
     <item>
       <title>Spring Debuging list</title>
@@ -84,16 +94,6 @@
       <guid>/post/javascript_basic/</guid>
       <description>&amp;lsquo;모던 웹을 위한 JavaScript jQuery입문 3판&amp;rsquo;의 내용을 요약한 것입니다.
 CHAPTER 2 기본 문법 2.1 기본 용어 2 키워드 자바스크립트가 처음 만들어질 때 정해진 특별한 의미가 있는 단어를 &#39;키워드&#39;라고 합니다. (사진P.28) 3 식별자 식별자를 만들 때는 다음의 규칙을 지켜야 합니다. 1.키워드를 사용하면 안 됩니다. 2.숫자로 시작하면 안 됩니다. 3.특수 문자는 _와 $만 허용합니다. 4.공백 문자를 포함할 수 없습니다. 이 네 가지 규칙만 만족한다면 모든 단어를 식별자로 사용할 수 있습니다 식별자를 만들 때 알파벳을 사용하는 것 외에도 자바스크립트 개발자 대부분이 지키는 관례가 있습니다.</description>
-    </item>
-    
-    <item>
-      <title>(ant) build.xml 작성법</title>
-      <link>/post/etc_build/</link>
-      <pubDate>Tue, 29 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/etc_build/</guid>
-      <description>가끔 학습용으로 Ant를 사용해야하는 일이 있다. build.xml 작성법을 익힌다면 해석하는 데에도 무리가 없을 것이다.
-지금부터 이 문장을 처음부터 만들어 나가봅시다. &amp;lt;?xml version=&amp;quot;1.0&amp;quot;&amp;gt; &amp;lt;project name=&amp;quot;dms&amp;quot; default=&amp;quot;compile&amp;quot; basedir=&amp;quot;.&amp;quot;&amp;gt; &amp;lt;property name=&amp;quot;build.dir&amp;quot; location=&amp;quot;build&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;build.prod.dir&amp;quot; location=&amp;quot;${build.dir}/prod&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;build.test.dir&amp;quot; location=&amp;quot;${build.dir}/test&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;doc.dir&amp;quot; location=&amp;quot;doc&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;index.dir&amp;quot; location=&amp;quot;index&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;src.dir&amp;quot; location=&amp;quot;src&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;test.dir&amp;quot; location=&amp;quot;test&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;vendor.lib.dir&amp;quot; location=&amp;quot;vendor/lib&amp;quot;/&amp;gt; &amp;lt;path id=&amp;quot;project.classpath&amp;quot;&amp;gt; &amp;lt;pathelement location=&amp;quot;${build.prod.dir}&amp;quot; /&amp;gt; &amp;lt;pathelement location=&amp;quot;${build.test.dir}&amp;quot; /&amp;gt; &amp;lt;fileset dir=&amp;quot;${vendor.lib.dir}&amp;quot;&amp;gt; &amp;lt;include name=&amp;quot;*.jar&amp;quot;/&amp;gt; &amp;lt;/fileset&amp;gt; &amp;lt;/path&amp;gt; &amp;lt;target name=&amp;quot;prepare&amp;quot;&amp;gt; &amp;lt;mkdir dir=&amp;quot;${build.prod.dir}&amp;quot; /&amp;gt; &amp;lt;mkdir dir=&amp;quot;${build.</description>
     </item>
     
     <item>

@@ -21,8 +21,8 @@
         "accountablePerson" : "",
         "copyrightHolder" : "",
         "copyrightYear" : "2019",
-        "datePublished": "2019-02-22 00:00:00 &#43;0000 UTC",
-        "dateModified" : "2019-02-22 00:00:00 &#43;0000 UTC",
+        "datePublished": "2019-03-02 00:00:00 &#43;0000 UTC",
+        "dateModified" : "2019-03-02 00:00:00 &#43;0000 UTC",
         "url" : "/",
         "wordCount" : "0",
         "keywords" : [ "Blog" ]
@@ -56,7 +56,7 @@
 <meta property="og:description" content="HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador. Powered by Hugo" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/" />
-<meta property="og:updated_time" content="2019-02-22T00:00:00&#43;00:00"/>
+<meta property="og:updated_time" content="2019-03-02T00:00:00&#43;00:00"/>
 
         <meta property="og:image" content="//images/logo.png">
         <meta property="og:image:type" content="image/png">
@@ -240,6 +240,54 @@
                 
                         <article class="mini-post">
                             <header>
+                                <h3><a href="/post/etc_build/">(ant) build.xml 작성법</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-03-02'>
+                                    March 2, 2019</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/book/toby_spring/">(북로그) 토비의 스프링</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-03-01'>
+                                    March 1, 2019</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="/book/toby_spring/" class="image featured">
+            <img src="/book/toby.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
                                 <h3><a href="/post/debug_spring/">Spring Debuging list</a></h3>
                                 
                                 <time class="published" datetime=
@@ -274,30 +322,6 @@
 
                         </article>
                 
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="/post/css_layout/">CSS 박스모델</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2019-02-19'>
-                                    February 19, 2019</time>
-                            </header>
-                            
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="/post/javascript_function/">함수(JavaScript Basic)</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2019-02-19'>
-                                    February 19, 2019</time>
-                            </header>
-                            
-
-                        </article>
-                
 
                 
                     <a href=
@@ -320,7 +344,7 @@
   <header>
     <div class="title">
         
-            <h2><a href="/post/debug_spring/">Spring Debuging list</a></h2>
+            <h2><a href="/post/etc_build/">(ant) build.xml 작성법</a></h2>
         
         
     </div>
@@ -328,8 +352,8 @@
         
 
         <time class="published"
-            datetime='2019-02-22'>
-            February 22, 2019</time>
+            datetime='2019-03-02'>
+            March 2, 2019</time>
         <span class="author">     &#34;&#34;</span>
         
             <p>2 minute read</p>
@@ -375,79 +399,114 @@
   
 
   <div id="content">
-    <pre style="word-wrap: break-word;white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-break:break-all;">
+    
 
-스프링은 한 개의 설정이 잘못되는 경우 실행 자체에 문제가 생기므로 하나씩 설정하고 테스트하는 습관을 가져야만 합니다.
+<p>가끔 학습용으로 Ant를 사용해야하는 일이 있다. build.xml 작성법을 익힌다면 해석하는 데에도 무리가 없을 것이다.<br><br></p>
 
-나의 Debuging 목록.
+<h3 id="지금부터-이-문장을-처음부터-만들어-나가봅시다">지금부터 이 문장을 처음부터 만들어 나가봅시다.</h3>
 
-(1~2) 버전 관련 오류(3.0 → 4.0)
-1. 버전 오류(전체적으로 이렇게 설정을 바꿔줘야 한다.)
-<a href=https://offbyone.tistory.com/16>https://offbyone.tistory.com/16</a> 에 잘 정리되어 있다.
+<pre><code>&lt;?xml version=&quot;1.0&quot;&gt;
+&lt;project name=&quot;dms&quot; default=&quot;compile&quot; basedir=&quot;.&quot;&gt;
+    &lt;property name=&quot;build.dir&quot; location=&quot;build&quot;/&gt;
+    &lt;property name=&quot;build.prod.dir&quot; location=&quot;${build.dir}/prod&quot;/&gt;
+    &lt;property name=&quot;build.test.dir&quot; location=&quot;${build.dir}/test&quot;/&gt;
+    &lt;property name=&quot;doc.dir&quot; location=&quot;doc&quot;/&gt;
+    &lt;property name=&quot;index.dir&quot; location=&quot;index&quot;/&gt;
+    &lt;property name=&quot;src.dir&quot; location=&quot;src&quot;/&gt;
+    &lt;property name=&quot;test.dir&quot; location=&quot;test&quot;/&gt;
+    &lt;property name=&quot;vendor.lib.dir&quot; location=&quot;vendor/lib&quot;/&gt;
+        &lt;path id=&quot;project.classpath&quot;&gt;
+            &lt;pathelement location=&quot;${build.prod.dir}&quot; /&gt;
+            &lt;pathelement location=&quot;${build.test.dir}&quot; /&gt;
+            &lt;fileset dir=&quot;${vendor.lib.dir}&quot;&gt;
+                &lt;include name=&quot;*.jar&quot;/&gt;
+            &lt;/fileset&gt;
+        &lt;/path&gt;
+        &lt;target name=&quot;prepare&quot;&gt;
+            &lt;mkdir dir=&quot;${build.prod.dir}&quot; /&gt;
+            &lt;mkdir dir=&quot;${build.test.dir}&quot; /&gt;
+        &lt;/target&gt;
+        &lt;target name=&quot;compile&quot; depends =&quot;prepare&quot;&gt;
+            &lt;javac srcdir=&quot;$src.dir}&quot; destdir=&quot;${build.prod.dir}&quot;&gt;
+                &lt;classpath refid=&quot;project.classpath&quot; /&gt;
+            &lt;/javac&gt;
+        &lt;/target&gt;
+&lt;/project&gt;
+</code></pre>
 
-2. 버전 관련 오류. 메이븐 설정변경이 재대로 되지 않았을 때.
-message)Description Resource Path Location Type The container 'Maven Dependencies' references non existing library
+<h3 id="1-프로젝트-정의하기">1.프로젝트 정의하기</h3>
 
-solved)
-Today I had this same problem with another jar. I tried multiple things people said on Stackoverflow, but nothing worked. Eventually I did this:
-Close eclipse and any project-app that is running.
-Delete the .m2 folder (Users --> [your_username] --> .m2). It's an invisible folder, make sure you are able to view invisible folders.
-Restarted Eclipse (I guess it works in other IDE too) and updated my project.
+<pre><code>&lt;project name=&quot;dms&quot; default=&quot;compile&quot; basedir=&quot;.&quot;&gt;
+</code></pre>
 
-tomcat 실행 도중 오류.(3~4)
-3.
-A child container failed during start java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/web]]
+<p>name: 프로젝트 이름
+default: 명령줄에서 매게 변수 없이 ant를 입력할 때 엔트가 빌드프로세스에서 컴파일 단계를 실행해야 한다는 뜻이다.
+basedir: 속성값을 &lsquo;.&lsquo;으로 해주면, 이 빌드 파일에서 쓰는 다른 모든 경로는 build.xml이 들어 있는 디렉터리를 기준으로 한 상대 경로를 사용한다는 뜻이 된다.</p>
 
-(solved)
-Remove server from Eclipse : Go to Window > Preferences > Server > Runtime Environment, here remove the server your are using from eclipse and add it again(doing this will create a new Server project folder in Eclipse) , 
-Remove server from Project : Also remove the server in your project(Build path > configuration path > Java Build path) and add again.
+<h3 id="2-재료-선택하기">2.재료 선택하기</h3>
 
-url:https://stackoverflow.com/questions/28102134/a-child-container-failed-during-start-java-util-concurrent-executionexception
+<p>프로퍼티(property)를 정의하여 엔트에 프로젝트 디렉터리 구조를 알려준다.</p>
 
-4.
-Failed to start component [StandardEngine[Catalina].StandardHost[localhost]] at java.util.concurrent.FutureTask.report(Unknown Source) at java.util.concurrent.FutureTask.get(Unknown Source)
+<pre><code>&lt;property name=&quot;build.dir&quot; location=&quot;build&quot;/&gt;
+&lt;property name=&quot;build.prod.dir&quot; location=&quot;${build.dir}/prod&quot;/&gt;
+&lt;property name=&quot;build.test.dir&quot; location=&quot;${build.dir}/test&quot;/&gt;
+&lt;property name=&quot;doc.dir&quot; location=&quot;doc&quot;/&gt;
+&lt;property name=&quot;index.dir&quot; location=&quot;index&quot;/&gt;
+&lt;property name=&quot;src.dir&quot; location=&quot;src&quot;/&gt;
+&lt;property name=&quot;test.dir&quot; location=&quot;test&quot;/&gt;
+&lt;property name=&quot;vendor.lib.dir&quot; location=&quot;vendor/lib&quot;/&gt;
+</code></pre>
 
-(solved)
-Any of the jar dependencies of your project seems to be corrupted. You could try deleting all your local maven repo folder, or if you could manage to know which is the corrupted one, just delete it. After one of theese actions, just update maven dependencies and it should start working
+<p>추가설명,
+각각의 <property> 요소는 location 속성 값에 쓴 디렉터리와 name 값을 연결한다. location 속성이 가리키는 디렉터리들은 <property> 요소에서 정의한 basedir 속성 값을 기준으로 한 상대 경로로 표현한 디렉터리다.</p>
 
-url:https://stackoverflow.com/questions/40674615/failed-to-start-component-standardenginecatalina-standardhostlocalhost-stan
+<p>${propertyName.dir}는 디렉토리를 상대적으로 선언하는 것이다. 이렇게 선언하는 것의 장점은 나중에 디렉터리의 위치가 바뀔 경우 propertyName.dir의 location의 위치만 바꿔주면 된다는 점이다.(ex. 여기서는 build &ndash;&gt; bin)</p>
 
+<h3 id="3-재료-버무리기">3.재료 버무리기</h3>
 
-5. myBatis xml map causing namespace must be declared for element type mapper
+<p>(완전한 빌드를 생성하려면 모든 빌드 재료들을 지정하기 쉽게 만드는 것이 좋다.)
+먼저 클래스 경로부터 시작하자.</p>
 
-solved) myBatis mapper DTD 선언을 잘 못했었다.
-<!DOCTYPE mapper
-  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<pre><code>&lt;path id=&quot;project.classpath&quot;&gt;
+    &lt;pathelement location=&quot;${build.prod.dir}&quot; /&gt;
+    &lt;pathelement location=&quot;${build.test.dir}&quot; /&gt;
+    &lt;fileset dir=&quot;${vendor.lib.dir}&quot;&gt;
+        &lt;include name=&quot;*.jar&quot;/&gt;
+    &lt;/fileset&gt;
+&lt;/path&gt;
+</code></pre>
 
-6. junit dataSourceTest에서 com.mysql.jdbc.JDBC4Connection@6cc4cdb9가 나오지 않고 콘솔에
-Loaded default TestExecutionListener class names from location와 Using TestExecutionListeners 2줄만 출력되는 상황.
+<p>해설
+<path> 요소는 project.classpath라는 경로를 생성한다. 이 경로는 나중에 빌드 프로세스의 컴파일 단계에서 사용할 것이다.
+<pathelement> 요소에서 빌드 디렉터리 두 개를 경로에 추가해서 자바 컴파일러가 모든 .class 파일을 찾아낼 수 있게 했다.
+그 다음에 <fileset> 요소에서 모든 벤더 라이브러리 .jar 파일을 클래스 경로에 추가해서 .class파일이 사용할 벤더클래스들을 찾을 수 있도록 했다.</p>
 
-(solved)
-junit dependency version 4.7 --> 4.11(더 높은 버전이다.)로 해결
+<h3 id="4-상-차리기">4.상 차리기</h3>
 
-7.
-mysql 한글 깨짐 현상(아래는 참고 url)
-https://kgh940525.tistory.com/entry/Spring-Mysql-%ED%95%9C%EA%B8%80-%EA%B9%A8%EC%A7%90-UTF-8-%EC%9D%B8%EC%BD%94%EB%94%A9-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0
-https://proinlab.com/archives/1147
-https://stackoverflow.com/questions/19052676/how-to-set-useunicode-true-and-characterencoding-utf8-properties-on-spring-manag
+<pre><code>&lt;target name=&quot;prepare&quot;&gt;
+    &lt;mkdir dir=&quot;${build.prod.dir}&quot; /&gt;
+    &lt;mkdir dir=&quot;${build.test.dir}&quot; /&gt;
+&lt;/target&gt;
+</code></pre>
 
+<p>target은 지정한 순서에 따라 실행될 일련의 &lsquo;task&rsquo;들을 정의하는 빌드 단계이다.
+<mkdir>은 명령줄에서 mkdir를 사용하는 것과 동일하게 작동하지만, 어떤 운영체제에서나 작동하고 만들 디렉터리가 이미 있더라도 상관없으며, 필요하다면 상위 디렉터리까지 만들어 준다는 점이 다르다.</p>
 
-(solved) dataSource에 추가.
-&lt;property name="connectionProperties"&gt;
-    &lt;props&gt;
-        &lt;prop key="useUnicode"&gt;yes&lt;/prop&gt;
-        &lt;prop key="characterEncoding"&gt;utf8&lt;/prop&gt;
-    &lt;/props&gt;
-&lt;/property&gt;
-(spring.datasource.connectionProperties=useUnicode=true;characterEncoding=utf-8;)
+<h3 id="5-본격적으로-시작하기">5.본격적으로 시작하기.</h3>
 
-8.
-Error creating bean with name : Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException:
+<pre><code>&lt;target name=&quot;compile&quot; depends =&quot;prepare&quot;&gt;
+    &lt;javac srcdir=&quot;$src.dir}&quot; destdir=&quot;${build.prod.dir}&quot;&gt;
+        &lt;classpath refid=&quot;project.classpath&quot; /&gt;
+    &lt;/javac&gt;
+&lt;/target&gt;
+</code></pre>
 
-solved) &lt;context:component-scan&gt; 을 선언하지 않았다.
+<p>target의 실행 순서는 매우 중요하다. 왜냐하면, 컴파일 결과를 저장할 디렉터리 없이 소스를 컴파일할 수는 없기 때문이다. depends 속성으로 타깃 간 의존성을 만들어서 순서를 지정해야 한다. 이 속성에는 타깃 이름을 콤파(,)로 구분해서 나열한다.
+예를 들어 위 코드에서 compile 타깃은 depends 속성에 prepare 타깃에 대한 의존성을 선언했다. 이것은 compile 타깃을 실행하면 소스 파일을 컴파일하기 전에 필요한 디렉터리를 만들기 위해 먼저 prepare 타깃을 실행한다는 뜻이다.
+refid(=reference ID)</p>
 
-</pre>
+<p><br>
+참고자료: 실용주의 프로그래머를 위한 프로젝트 자동화</p>
 
   </div>
 
@@ -461,7 +520,7 @@ solved) &lt;context:component-scan&gt; 을 선언하지 않았다.
                 <i class="fa fa-folder"></i>
                 
                 
-                <li><a class="article-category-link" href="/categories/debuging">Debuging</a></li>
+                <li><a class="article-category-link" href="/categories/etc">etc</a></li>
                 
             
         
@@ -504,8 +563,8 @@ solved) &lt;context:component-scan&gt; 을 선언하지 않았다.
 
 <ul class="actions pagination">
     
-        <li><a href="/post/css_bootstrap_grid/"
-                class="button big previous">Bootstrap grid system</a></li>
+        <li><a href="/post/debug_spring/"
+                class="button big previous">Spring Debuging list</a></li>
     
 
     
@@ -588,6 +647,58 @@ solved) &lt;context:component-scan&gt; 을 선언하지 않았다.
           <article class="mini-post">
             <header>
               <h3>
+                <a href="/post/etc_build/">(ant) build.xml 작성법</a>
+              </h3>
+              
+              <time class="published" datetime='2019-03-02'>
+                March 2, 2019
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/book/toby_spring/">(북로그) 토비의 스프링</a>
+              </h3>
+              
+              <time class="published" datetime='2019-03-01'>
+                March 1, 2019
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="/book/toby_spring/" class="image featured">
+            <img src="/book/toby.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
                 <a href="/post/debug_spring/">Spring Debuging list</a>
               </h3>
               
@@ -627,34 +738,6 @@ solved) &lt;context:component-scan&gt; 을 선언하지 않았다.
 
           </article>
         
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="/post/css_layout/">CSS 박스모델</a>
-              </h3>
-              
-              <time class="published" datetime='2019-02-19'>
-                February 19, 2019
-              </time>
-            </header>
-            
-
-          </article>
-        
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="/post/javascript_function/">함수(JavaScript Basic)</a>
-              </h3>
-              
-              <time class="published" datetime='2019-02-19'>
-                February 19, 2019
-              </time>
-            </header>
-            
-
-          </article>
-        
       </div>
 
       
@@ -688,7 +771,7 @@ solved) &lt;context:component-scan&gt; 을 선언하지 않았다.
             <header>
               
                 <a href="/categories/book/">Book</a>
-                <span style="float:right;">2</span>
+                <span style="float:right;">3</span>
               
             </header>
           </article>

@@ -6,13 +6,22 @@
     <description>Recent content in Book on Dony&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/book/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>(booklog) 자바 객체 지향의 원리와 이해</title>
+      <title>(북로그) 토비의 스프링</title>
+      <link>/book/toby_spring/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/book/toby_spring/</guid>
+      <description>처음에는 &#34;저 두꺼운 책을 왜 추천하고 볼까&#34; 하는 생각을 했었다. 그러나 구현 의주의 스프링 책을 보면서 혼란속에 빠졌을 때 &#39;토비의 스프링&#39;은 나의 구원이었다. 한 사례를 들면 구현 의주의 스프링 책에서는 MVC 애노테이션의 종류에 대해서만 나열할 뿐 설명이 없다. 이 책에서는 나열된 애노테이션이 (예를들어 @RequestParam) 정확히 어떻게 동작하는 지에 대해서 자세히 설명되어 있다. 또 하나의 사례를 들자면 Spring의 개념을 설명할 때 가장 자주 나오는 개념이 POJO이다. 하지만 POJO에 대해 설명해주는 책은 거의 없었다.</description>
+    </item>
+    
+    <item>
+      <title>(북로그) 자바 객체 지향의 원리와 이해</title>
       <link>/book/java_spring/</link>
       <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
       

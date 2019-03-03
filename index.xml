@@ -6,10 +6,29 @@
     <description>Recent content on Dony&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 02 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>(ant) build.xml 작성법</title>
+      <link>/post/etc_build/</link>
+      <pubDate>Sat, 02 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/etc_build/</guid>
+      <description>가끔 학습용으로 Ant를 사용해야하는 일이 있다. build.xml 작성법을 익힌다면 해석하는 데에도 무리가 없을 것이다.
+지금부터 이 문장을 처음부터 만들어 나가봅시다. &amp;lt;?xml version=&amp;quot;1.0&amp;quot;&amp;gt; &amp;lt;project name=&amp;quot;dms&amp;quot; default=&amp;quot;compile&amp;quot; basedir=&amp;quot;.&amp;quot;&amp;gt; &amp;lt;property name=&amp;quot;build.dir&amp;quot; location=&amp;quot;build&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;build.prod.dir&amp;quot; location=&amp;quot;${build.dir}/prod&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;build.test.dir&amp;quot; location=&amp;quot;${build.dir}/test&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;doc.dir&amp;quot; location=&amp;quot;doc&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;index.dir&amp;quot; location=&amp;quot;index&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;src.dir&amp;quot; location=&amp;quot;src&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;test.dir&amp;quot; location=&amp;quot;test&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;vendor.lib.dir&amp;quot; location=&amp;quot;vendor/lib&amp;quot;/&amp;gt; &amp;lt;path id=&amp;quot;project.classpath&amp;quot;&amp;gt; &amp;lt;pathelement location=&amp;quot;${build.prod.dir}&amp;quot; /&amp;gt; &amp;lt;pathelement location=&amp;quot;${build.test.dir}&amp;quot; /&amp;gt; &amp;lt;fileset dir=&amp;quot;${vendor.lib.dir}&amp;quot;&amp;gt; &amp;lt;include name=&amp;quot;*.jar&amp;quot;/&amp;gt; &amp;lt;/fileset&amp;gt; &amp;lt;/path&amp;gt; &amp;lt;target name=&amp;quot;prepare&amp;quot;&amp;gt; &amp;lt;mkdir dir=&amp;quot;${build.prod.dir}&amp;quot; /&amp;gt; &amp;lt;mkdir dir=&amp;quot;${build.</description>
+    </item>
+    
+    <item>
+      <title>(북로그) 토비의 스프링</title>
+      <link>/book/toby_spring/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/book/toby_spring/</guid>
+      <description>처음에는 &#34;저 두꺼운 책을 왜 추천하고 볼까&#34; 하는 생각을 했었다. 그러나 구현 의주의 스프링 책을 보면서 혼란속에 빠졌을 때 &#39;토비의 스프링&#39;은 나의 구원이었다. 한 사례를 들면 구현 의주의 스프링 책에서는 MVC 애노테이션의 종류에 대해서만 나열할 뿐 설명이 없다. 이 책에서는 나열된 애노테이션이 (예를들어 @RequestParam) 정확히 어떻게 동작하는 지에 대해서 자세히 설명되어 있다. 또 하나의 사례를 들자면 Spring의 개념을 설명할 때 가장 자주 나오는 개념이 POJO이다. 하지만 POJO에 대해 설명해주는 책은 거의 없었다.</description>
+    </item>
     
     <item>
       <title>Spring Debuging list</title>
@@ -27,7 +46,7 @@
       
       <guid>/about/</guid>
       <description>지식, 기술에 대한 관심이 많다.
- 소통력과 생산성을 갖춘 개발자로 성장하는 것이 꿈이다.
+ 소통력과 생산성을 갖춘 개발자로 성장하는 것이 목표이다.
  Information Name : 최동호
 Email : donystack@gmail.com
 Github : https://github.com/hohomen
@@ -106,7 +125,7 @@ CHAPTER 2 기본 문법 2.1 기본 용어 2 키워드 자바스크립트가 처�
     </item>
     
     <item>
-      <title>(booklog) 자바 객체 지향의 원리와 이해</title>
+      <title>(북로그) 자바 객체 지향의 원리와 이해</title>
       <link>/book/java_spring/</link>
       <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
       
@@ -121,16 +140,6 @@ CHAPTER 2 기본 문법 2.1 기본 용어 2 키워드 자바스크립트가 처�
       
       <guid>/book/oopbooks/</guid>
       <description> h2h2  </description>
-    </item>
-    
-    <item>
-      <title>(ant) build.xml 작성법</title>
-      <link>/post/etc_build/</link>
-      <pubDate>Tue, 29 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/etc_build/</guid>
-      <description>가끔 학습용으로 Ant를 사용해야하는 일이 있다. build.xml 작성법을 익힌다면 해석하는 데에도 무리가 없을 것이다.
-지금부터 이 문장을 처음부터 만들어 나가봅시다. &amp;lt;?xml version=&amp;quot;1.0&amp;quot;&amp;gt; &amp;lt;project name=&amp;quot;dms&amp;quot; default=&amp;quot;compile&amp;quot; basedir=&amp;quot;.&amp;quot;&amp;gt; &amp;lt;property name=&amp;quot;build.dir&amp;quot; location=&amp;quot;build&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;build.prod.dir&amp;quot; location=&amp;quot;${build.dir}/prod&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;build.test.dir&amp;quot; location=&amp;quot;${build.dir}/test&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;doc.dir&amp;quot; location=&amp;quot;doc&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;index.dir&amp;quot; location=&amp;quot;index&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;src.dir&amp;quot; location=&amp;quot;src&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;test.dir&amp;quot; location=&amp;quot;test&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;vendor.lib.dir&amp;quot; location=&amp;quot;vendor/lib&amp;quot;/&amp;gt; &amp;lt;path id=&amp;quot;project.classpath&amp;quot;&amp;gt; &amp;lt;pathelement location=&amp;quot;${build.prod.dir}&amp;quot; /&amp;gt; &amp;lt;pathelement location=&amp;quot;${build.test.dir}&amp;quot; /&amp;gt; &amp;lt;fileset dir=&amp;quot;${vendor.lib.dir}&amp;quot;&amp;gt; &amp;lt;include name=&amp;quot;*.jar&amp;quot;/&amp;gt; &amp;lt;/fileset&amp;gt; &amp;lt;/path&amp;gt; &amp;lt;target name=&amp;quot;prepare&amp;quot;&amp;gt; &amp;lt;mkdir dir=&amp;quot;${build.prod.dir}&amp;quot; /&amp;gt; &amp;lt;mkdir dir=&amp;quot;${build.</description>
     </item>
     
     <item>
