@@ -48,6 +48,11 @@
   </url>
   
   <url>
+    <loc>/post/xml_basic/</loc>
+    <lastmod>2019-02-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/javascript_loop/</loc>
     <lastmod>2019-02-18T00:00:00+00:00</lastmod>
   </url>
@@ -55,6 +60,16 @@
   <url>
     <loc>/post/javascript_basic/</loc>
     <lastmod>2019-02-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/xml_language/</loc>
+    <lastmod>2019-02-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/xml_namespace/</loc>
+    <lastmod>2019-02-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -138,6 +153,12 @@
   
   <url>
     <loc>/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/xml/</loc>
+    <lastmod>2019-02-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
