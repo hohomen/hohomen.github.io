@@ -21,8 +21,8 @@
         "accountablePerson" : "",
         "copyrightHolder" : "",
         "copyrightYear" : "2019",
-        "datePublished": "2019-03-02 00:00:00 &#43;0000 UTC",
-        "dateModified" : "2019-03-02 00:00:00 &#43;0000 UTC",
+        "datePublished": "2019-03-20 00:00:00 &#43;0000 UTC",
+        "dateModified" : "2019-03-20 00:00:00 &#43;0000 UTC",
         "url" : "/",
         "wordCount" : "0",
         "keywords" : [ "Blog" ]
@@ -56,7 +56,7 @@
 <meta property="og:description" content="HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador. Powered by Hugo" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/" />
-<meta property="og:updated_time" content="2019-03-02T00:00:00&#43;00:00"/>
+<meta property="og:updated_time" content="2019-03-20T00:00:00&#43;00:00"/>
 
         <meta property="og:image" content="//images/logo.png">
         <meta property="og:image:type" content="image/png">
@@ -240,6 +240,18 @@
                 
                         <article class="mini-post">
                             <header>
+                                <h3><a href="/post/spring_mvccontroller/">MVC Controller</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-03-20'>
+                                    March 20, 2019</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
                                 <h3><a href="/post/etc_build/">(ant) build.xml 작성법</a></h3>
                                 
                                 <time class="published" datetime=
@@ -310,18 +322,6 @@
 
                         </article>
                 
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="/post/javascript_object/">객체(JavaScript Basic)</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2019-02-20'>
-                                    February 20, 2019</time>
-                            </header>
-                            
-
-                        </article>
-                
 
                 
                     <a href=
@@ -344,7 +344,7 @@
   <header>
     <div class="title">
         
-            <h2><a href="/post/etc_build/">(ant) build.xml 작성법</a></h2>
+            <h2><a href="/post/spring_mvccontroller/">MVC Controller</a></h2>
         
         
     </div>
@@ -352,8 +352,8 @@
         
 
         <time class="published"
-            datetime='2019-03-02'>
-            March 2, 2019</time>
+            datetime='2019-03-20'>
+            March 20, 2019</time>
         <span class="author">     &#34;&#34;</span>
         
             <p>2 minute read</p>
@@ -399,114 +399,85 @@
   
 
   <div id="content">
+    <pre style="word-wrap: break-word;white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-break:break-all;">
+
+스프링 MVC를 이용한 웹 개발의 핵심인 컨트롤러의 구현 방법을 살펴보자.
+
+#컨트롤러 구현 과정은 다음과 같다.
+1. @Controller 애노테이션을 클래스에 적용한다.
+2. @ReaquestMapping 애노테이션을 이용해서 처리한 요청 경로를 지정한다.
+3. 웹 브라우저의 요청을 처리할 메서드를 구현하고, 뷰 이름을 리턴한다.
+
+#@ReaquestMapping 메서드는 뷰이름을 리턴하기 전에 다움의 두 가지 작업을 수행한다.
+- 클라이언트의 요청을 처리한다.
+- 처리 결과 데이터를 뷰에 전달한다.
+
+다양한 방식으로 모델에 데이터를 담을 수 있는데
+가장 간단한 방법은 
+Model을 파라미터로 추가하고, Model 파라미터에 데이터를 추가하는 것이다.
+
+(Model 클래스는 addAttribute( ) 메서드를 제공하고 있다.)
+addAttribute(Object attrValue)
+addAttribute(String attrNane, Object attrValue) ex) model.addAttribute("pageMaker", pageMaker);
+
+@RequestMapping(value = "/modify", method = RequestMethod.GET)
+      public void modifyGET(int board_id, Model model) throws Exception {
+
+        model.addAttribute(service.read(board_id));
+      }
+
+
+지금부터는 웹 브라우저에서 서버에 전송한 데이터를 처리하는 방법에 대해서 살펴보도록 하자.
+
+스프링 MVC에서 요청 파라미터 값을 구하는(처리하는)방법은 크게 다음의 세 가지 정도로 구분할 수 있다.
+- HttpServletRequest의 getParameter()메서드를 이용해서 구하기
+- @RequestParam 애노테이션을 이용해서 구하기
+- 커멘드 객체를 이용해서 구하기
+
+1. HttpServletRequest를 이용한 요청 파라미터 구하기.
+public Stirng list(HttpServletRequest request, Model model) throws IOException{
+    String id = request.getParameter("id");
+    .....
+    ......
+}
+
+2. @RequestParam 애노테이션을 이용해서 구하기(HttpServletRequest 방법이 다소 번잡하다면)
+    @RequestMapping(value ="/read", method = RequestMethod.GET)
+    public void read(@RequestParam("board_id") int board_id, Model model)throws Exception{
+        logger.info("show read ...........");
+        model.addAttribute(service.read(board_id));
+    }
+
+
+3. 커멘드 객체를 이용해서 구하기
+
+Http 요청 파라미터를 모아서 하나에 담아야 한다면 어떻게 될까?
+@RequestMapping(value = "/register", method = RequestMethod.POST)
+      public String regist(@RequestParam("email") String email, @RequestParam("name")     String name, @RequestParam("password") String password) throws Exception {
     
+      MemberRegistRequest memRegReq = new MemberRegistRequest();
+      memRegReq.setEmail(email);
+      memRegReq.setPassword(password);
+      memRegReq.setName(name);
+      }
+스프링 MVC는 @RequestMapping이 적용된 메서드의 파라미터에 객체를 추가하면 그 객체의 set메서드를 호출해서 요청 파라미터 값을 전달한다.(스프링 MVC의 컨트롤러는 특정 URL에 해당하는 메소드를 실행할 때, 파라미터의 타입을 보고, 해당 객체를 자동으로 생성해낸다.)
 
-<p>가끔 학습용으로 Ant를 사용해야하는 일이 있다. build.xml 작성법을 익힌다면 해석하는 데에도 무리가 없을 것이다.<br><br></p>
+#커멘드 객체는 뷰에 전달할 모델에 자동으로 포함된다(아래 코드의 경우 memRegReq 커맨드 객체는 "memberRegistEquest"라는 이름의 모델 이름으로 뷰에 전달된다.)
+여기서 MemberRegistRequest 객체와 같이 HTTP 요청 파라미터 값을 전달받을 때 사용되는 객체를 커맨드 객체라고 부른다.
+@RequestMapping(value = "/register", method = RequestMethod.POST)
+      public String regist(MemberRegistRequest memRegReq) throws Exception {
+        
+      return "member/registered";
+      }
 
-<h3 id="지금부터-이-문장을-처음부터-만들어-나가봅시다">지금부터 이 문장을 처음부터 만들어 나가봅시다.</h3>
 
-<pre><code>&lt;?xml version=&quot;1.0&quot;&gt;
-&lt;project name=&quot;dms&quot; default=&quot;compile&quot; basedir=&quot;.&quot;&gt;
-    &lt;property name=&quot;build.dir&quot; location=&quot;build&quot;/&gt;
-    &lt;property name=&quot;build.prod.dir&quot; location=&quot;${build.dir}/prod&quot;/&gt;
-    &lt;property name=&quot;build.test.dir&quot; location=&quot;${build.dir}/test&quot;/&gt;
-    &lt;property name=&quot;doc.dir&quot; location=&quot;doc&quot;/&gt;
-    &lt;property name=&quot;index.dir&quot; location=&quot;index&quot;/&gt;
-    &lt;property name=&quot;src.dir&quot; location=&quot;src&quot;/&gt;
-    &lt;property name=&quot;test.dir&quot; location=&quot;test&quot;/&gt;
-    &lt;property name=&quot;vendor.lib.dir&quot; location=&quot;vendor/lib&quot;/&gt;
-        &lt;path id=&quot;project.classpath&quot;&gt;
-            &lt;pathelement location=&quot;${build.prod.dir}&quot; /&gt;
-            &lt;pathelement location=&quot;${build.test.dir}&quot; /&gt;
-            &lt;fileset dir=&quot;${vendor.lib.dir}&quot;&gt;
-                &lt;include name=&quot;*.jar&quot;/&gt;
-            &lt;/fileset&gt;
-        &lt;/path&gt;
-        &lt;target name=&quot;prepare&quot;&gt;
-            &lt;mkdir dir=&quot;${build.prod.dir}&quot; /&gt;
-            &lt;mkdir dir=&quot;${build.test.dir}&quot; /&gt;
-        &lt;/target&gt;
-        &lt;target name=&quot;compile&quot; depends =&quot;prepare&quot;&gt;
-            &lt;javac srcdir=&quot;$src.dir}&quot; destdir=&quot;${build.prod.dir}&quot;&gt;
-                &lt;classpath refid=&quot;project.classpath&quot; /&gt;
-            &lt;/javac&gt;
-        &lt;/target&gt;
-&lt;/project&gt;
-</code></pre>
+#커맨드 객체로 사용될 파라미터에 @ModelAttribute(@RequestBody도 JSON에서 유사한 역할)를 적용하면 커맨드 객체의 모델 이름을 변경할 수 있다.
+@RequestMapping(value = "/listCri", method = RequestMethod.GET)
+      public void listPage(@ModelAttribute("memreq") MemberRegistRequest memRegReq, Model model) throws Exception {
 
-<h3 id="1-프로젝트-정의하기">1.프로젝트 정의하기</h3>
 
-<pre><code>&lt;project name=&quot;dms&quot; default=&quot;compile&quot; basedir=&quot;.&quot;&gt;
-</code></pre>
 
-<p>name: 프로젝트 이름
-default: 명령줄에서 매게 변수 없이 ant를 입력할 때 엔트가 빌드프로세스에서 컴파일 단계를 실행해야 한다는 뜻이다.
-basedir: 속성값을 &lsquo;.&lsquo;으로 해주면, 이 빌드 파일에서 쓰는 다른 모든 경로는 build.xml이 들어 있는 디렉터리를 기준으로 한 상대 경로를 사용한다는 뜻이 된다.</p>
-
-<h3 id="2-재료-선택하기">2.재료 선택하기</h3>
-
-<p>프로퍼티(property)를 정의하여 엔트에 프로젝트 디렉터리 구조를 알려준다.</p>
-
-<pre><code>&lt;property name=&quot;build.dir&quot; location=&quot;build&quot;/&gt;
-&lt;property name=&quot;build.prod.dir&quot; location=&quot;${build.dir}/prod&quot;/&gt;
-&lt;property name=&quot;build.test.dir&quot; location=&quot;${build.dir}/test&quot;/&gt;
-&lt;property name=&quot;doc.dir&quot; location=&quot;doc&quot;/&gt;
-&lt;property name=&quot;index.dir&quot; location=&quot;index&quot;/&gt;
-&lt;property name=&quot;src.dir&quot; location=&quot;src&quot;/&gt;
-&lt;property name=&quot;test.dir&quot; location=&quot;test&quot;/&gt;
-&lt;property name=&quot;vendor.lib.dir&quot; location=&quot;vendor/lib&quot;/&gt;
-</code></pre>
-
-<p>추가설명,
-각각의 <property> 요소는 location 속성 값에 쓴 디렉터리와 name 값을 연결한다. location 속성이 가리키는 디렉터리들은 <property> 요소에서 정의한 basedir 속성 값을 기준으로 한 상대 경로로 표현한 디렉터리다.</p>
-
-<p>${propertyName.dir}는 디렉토리를 상대적으로 선언하는 것이다. 이렇게 선언하는 것의 장점은 나중에 디렉터리의 위치가 바뀔 경우 propertyName.dir의 location의 위치만 바꿔주면 된다는 점이다.(ex. 여기서는 build &ndash;&gt; bin)</p>
-
-<h3 id="3-재료-버무리기">3.재료 버무리기</h3>
-
-<p>(완전한 빌드를 생성하려면 모든 빌드 재료들을 지정하기 쉽게 만드는 것이 좋다.)
-먼저 클래스 경로부터 시작하자.</p>
-
-<pre><code>&lt;path id=&quot;project.classpath&quot;&gt;
-    &lt;pathelement location=&quot;${build.prod.dir}&quot; /&gt;
-    &lt;pathelement location=&quot;${build.test.dir}&quot; /&gt;
-    &lt;fileset dir=&quot;${vendor.lib.dir}&quot;&gt;
-        &lt;include name=&quot;*.jar&quot;/&gt;
-    &lt;/fileset&gt;
-&lt;/path&gt;
-</code></pre>
-
-<p>해설
-<path> 요소는 project.classpath라는 경로를 생성한다. 이 경로는 나중에 빌드 프로세스의 컴파일 단계에서 사용할 것이다.
-<pathelement> 요소에서 빌드 디렉터리 두 개를 경로에 추가해서 자바 컴파일러가 모든 .class 파일을 찾아낼 수 있게 했다.
-그 다음에 <fileset> 요소에서 모든 벤더 라이브러리 .jar 파일을 클래스 경로에 추가해서 .class파일이 사용할 벤더클래스들을 찾을 수 있도록 했다.</p>
-
-<h3 id="4-상-차리기">4.상 차리기</h3>
-
-<pre><code>&lt;target name=&quot;prepare&quot;&gt;
-    &lt;mkdir dir=&quot;${build.prod.dir}&quot; /&gt;
-    &lt;mkdir dir=&quot;${build.test.dir}&quot; /&gt;
-&lt;/target&gt;
-</code></pre>
-
-<p>target은 지정한 순서에 따라 실행될 일련의 &lsquo;task&rsquo;들을 정의하는 빌드 단계이다.
-<mkdir>은 명령줄에서 mkdir를 사용하는 것과 동일하게 작동하지만, 어떤 운영체제에서나 작동하고 만들 디렉터리가 이미 있더라도 상관없으며, 필요하다면 상위 디렉터리까지 만들어 준다는 점이 다르다.</p>
-
-<h3 id="5-본격적으로-시작하기">5.본격적으로 시작하기.</h3>
-
-<pre><code>&lt;target name=&quot;compile&quot; depends =&quot;prepare&quot;&gt;
-    &lt;javac srcdir=&quot;$src.dir}&quot; destdir=&quot;${build.prod.dir}&quot;&gt;
-        &lt;classpath refid=&quot;project.classpath&quot; /&gt;
-    &lt;/javac&gt;
-&lt;/target&gt;
-</code></pre>
-
-<p>target의 실행 순서는 매우 중요하다. 왜냐하면, 컴파일 결과를 저장할 디렉터리 없이 소스를 컴파일할 수는 없기 때문이다. depends 속성으로 타깃 간 의존성을 만들어서 순서를 지정해야 한다. 이 속성에는 타깃 이름을 콤파(,)로 구분해서 나열한다.
-예를 들어 위 코드에서 compile 타깃은 depends 속성에 prepare 타깃에 대한 의존성을 선언했다. 이것은 compile 타깃을 실행하면 소스 파일을 컴파일하기 전에 필요한 디렉터리를 만들기 위해 먼저 prepare 타깃을 실행한다는 뜻이다.
-refid(=reference ID)</p>
-
-<p><br>
-참고자료: 실용주의 프로그래머를 위한 프로젝트 자동화</p>
+</pre>
 
   </div>
 
@@ -520,7 +491,7 @@ refid(=reference ID)</p>
                 <i class="fa fa-folder"></i>
                 
                 
-                <li><a class="article-category-link" href="/categories/etc">etc</a></li>
+                <li><a class="article-category-link" href="/categories/spring">Spring</a></li>
                 
             
         
@@ -563,8 +534,8 @@ refid(=reference ID)</p>
 
 <ul class="actions pagination">
     
-        <li><a href="/post/debug_spring/"
-                class="button big previous">Spring Debuging list</a></li>
+        <li><a href="/post/etc_build/"
+                class="button big previous">(ant) build.xml 작성법</a></li>
     
 
     
@@ -647,6 +618,20 @@ refid(=reference ID)</p>
           <article class="mini-post">
             <header>
               <h3>
+                <a href="/post/spring_mvccontroller/">MVC Controller</a>
+              </h3>
+              
+              <time class="published" datetime='2019-03-20'>
+                March 20, 2019
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
                 <a href="/post/etc_build/">(ant) build.xml 작성법</a>
               </h3>
               
@@ -724,20 +709,6 @@ refid(=reference ID)</p>
 
           </article>
         
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="/post/javascript_object/">객체(JavaScript Basic)</a>
-              </h3>
-              
-              <time class="published" datetime='2019-02-20'>
-                February 20, 2019
-              </time>
-            </header>
-            
-
-          </article>
-        
       </div>
 
       
@@ -805,6 +776,17 @@ refid(=reference ID)</p>
               
                 <a href="/categories/javascript/">JavaScript</a>
                 <span style="float:right;">4</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/spring/">Spring</a>
+                <span style="float:right;">1</span>
               
             </header>
           </article>

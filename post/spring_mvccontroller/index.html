@@ -1,11 +1,3 @@
-
-
-
-    
-
-
-
-
 <!DOCTYPE HTML>
 
 <html>
@@ -18,26 +10,28 @@
              "@type": "WebPage",
              "@id": "/"
         },
-        "articleSection" : "tags",
-        "name" : "Tags",
-        "headline" : "Tags",
-        "description" : "",
+        "articleSection" : "post",
+        "name" : "MVC Controller",
+        "headline" : "MVC Controller",
+        "description" : "스프링 MVC를 이용한 웹 개발의 핵심인 컨트롤러의 구현 방법을 살펴보자. #컨트롤러 구현 과정은 다음과 같다. 1. @Controller 애노테이션을 클래스에 적용한다. 2. @ReaquestMapping 애노테이션을 이용해서 처리한 요청 경로를 지정한다. 3. 웹 브라우저의 요청을 처리할 메서드를 구현하고, 뷰 이름을 리턴한다. #@ReaquestMapping 메서드는 뷰이름을 리턴하기 전에 다움의 두 가지 작업을 수행한다. - 클라이언트의 요청을 처리한다. - 처리 결과 데이터를 뷰에 전달한다. 다양한 방식으로 모델에 데이터를 담을 수 있는데 가장 간단한 방법은 Model을 파라미터로 추가하고, Model 파라미터에 데이터를 추가하는 것이다.",
         "inLanguage" : "en",
         "author" : "",
         "creator" : "",
         "publisher": "",
         "accountablePerson" : "",
         "copyrightHolder" : "",
-        "copyrightYear" : "0001",
-        "datePublished": "0001-01-01 00:00:00 &#43;0000 UTC",
-        "dateModified" : "0001-01-01 00:00:00 &#43;0000 UTC",
-        "url" : "/tags/",
-        "wordCount" : "0",
+        "copyrightYear" : "2019",
+        "datePublished": "2019-03-20 00:00:00 &#43;0000 UTC",
+        "dateModified" : "2019-03-20 00:00:00 &#43;0000 UTC",
+        "url" : "/post/spring_mvccontroller/",
+        "wordCount" : "351",
         "keywords" : [ "Blog" ]
     }
     </script>
         
-            <title>Tags - Dony&#39;s blog</title>
+            
+                <title>MVC Controller</title>
+            
         
 
         <meta charset="utf-8" />
@@ -47,6 +41,8 @@
 
 
         
+            <meta name="author" content="     &#34;&#34;">
+        
         
             
                 <meta name="description" content="HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador. Powered by Hugo">
@@ -54,23 +50,32 @@
         
 
         <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tags"/>
-<meta name="twitter:description" content="HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador. Powered by Hugo"/>
+<meta name="twitter:title" content="MVC Controller"/>
+<meta name="twitter:description" content="스프링 MVC를 이용한 웹 개발의 핵심인 컨트롤러의 구현 방법을 살펴보자. #컨트롤러 구현 과정은 다음과 같다. 1. @Controller 애노테이션을 클래스에 적용한다. 2. @ReaquestMapping 애노테이션을 이용해서 처리한 요청 경로를 지정한다. 3. 웹 브라우저의 요청을 처리할 메서드를 구현하고, 뷰 이름을 리턴한다. #@ReaquestMapping 메서드는 뷰이름을 리턴하기 전에 다움의 두 가지 작업을 수행한다. - 클라이언트의 요청을 처리한다. - 처리 결과 데이터를 뷰에 전달한다. 다양한 방식으로 모델에 데이터를 담을 수 있는데 가장 간단한 방법은 Model을 파라미터로 추가하고, Model 파라미터에 데이터를 추가하는 것이다."/>
 <meta name="twitter:site" content="@example"/>
 
-        <meta property="og:title" content="Tags" />
-<meta property="og:description" content="HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador. Powered by Hugo" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="/tags/" />
+        <meta property="og:title" content="MVC Controller" />
+<meta property="og:description" content="스프링 MVC를 이용한 웹 개발의 핵심인 컨트롤러의 구현 방법을 살펴보자. #컨트롤러 구현 과정은 다음과 같다. 1. @Controller 애노테이션을 클래스에 적용한다. 2. @ReaquestMapping 애노테이션을 이용해서 처리한 요청 경로를 지정한다. 3. 웹 브라우저의 요청을 처리할 메서드를 구현하고, 뷰 이름을 리턴한다. #@ReaquestMapping 메서드는 뷰이름을 리턴하기 전에 다움의 두 가지 작업을 수행한다. - 클라이언트의 요청을 처리한다. - 처리 결과 데이터를 뷰에 전달한다. 다양한 방식으로 모델에 데이터를 담을 수 있는데 가장 간단한 방법은 Model을 파라미터로 추가하고, Model 파라미터에 데이터를 추가하는 것이다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/spring_mvccontroller/" /><meta property="article:published_time" content="2019-03-20T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2019-03-20T00:00:00&#43;00:00"/>
 
         <meta property="og:image" content="//images/logo.png">
         <meta property="og:image:type" content="image/png">
         <meta property="og:image:width" content="512">
         <meta property="og:image:height" content="512">
         
-<meta itemprop="name" content="Tags">
-<meta itemprop="description" content="HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador. Powered by Hugo">
+<meta itemprop="name" content="MVC Controller">
+<meta itemprop="description" content="스프링 MVC를 이용한 웹 개발의 핵심인 컨트롤러의 구현 방법을 살펴보자. #컨트롤러 구현 과정은 다음과 같다. 1. @Controller 애노테이션을 클래스에 적용한다. 2. @ReaquestMapping 애노테이션을 이용해서 처리한 요청 경로를 지정한다. 3. 웹 브라우저의 요청을 처리할 메서드를 구현하고, 뷰 이름을 리턴한다. #@ReaquestMapping 메서드는 뷰이름을 리턴하기 전에 다움의 두 가지 작업을 수행한다. - 클라이언트의 요청을 처리한다. - 처리 결과 데이터를 뷰에 전달한다. 다양한 방식으로 모델에 데이터를 담을 수 있는데 가장 간단한 방법은 Model을 파라미터로 추가하고, Model 파라미터에 데이터를 추가하는 것이다.">
 
+
+<meta itemprop="datePublished" content="2019-03-20T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-03-20T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="351">
+
+
+
+<meta itemprop="keywords" content="" />
 
         
 
@@ -109,6 +114,7 @@
       
       <div id="wrapper">
 
+    
     
 <header id="header">
     
@@ -152,6 +158,10 @@
     </nav>
     <nav class="main">
         <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
             
             <li class="search">
                 <a class="fa-search" href="#search">Search</a>
@@ -337,43 +347,250 @@
         
 </section>
 
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </ul>
+    </section>
+</section>
+
     
     <div id="main">
         
+        
+        <article class="post">
+  <header>
+    <div class="title">
+        
+            <h1><a href="/post/spring_mvccontroller/">MVC Controller</a></h1>
             
         
-
-        <ul class="posts">
-            <header>
-                <h1>tags</h1>
-            </header>
-            
-            
-                <li>
-                    <article>
-                        <header>
-                            
-                                <a href="/tags/tag1">tag1</a>
-                                <span style="float:right;">1</span>
-                            
-                        </header>
-                    </article>
-                </li>
-            
-                <li>
-                    <article>
-                        <header>
-                            
-                                <a href="/tags/tag2">tag2</a>
-                                <span style="float:right;">1</span>
-                            
-                        </header>
-                    </article>
-                </li>
-            
-        </ul>
+        
     </div>
+    <div class="meta">
+        
 
+        <time class="published"
+            datetime='2019-03-20'>
+            March 20, 2019</time>
+        <span class="author">     &#34;&#34;</span>
+        
+            <p>2 minute read</p>
+        
+        
+    </div>
+</header>
+
+
+  
+    <section id="social-share">
+      <ul class="icons">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+    </section>
+  
+
+  
+
+  <div id="content">
+    <pre style="word-wrap: break-word;white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-break:break-all;">
+
+스프링 MVC를 이용한 웹 개발의 핵심인 컨트롤러의 구현 방법을 살펴보자.
+
+#컨트롤러 구현 과정은 다음과 같다.
+1. @Controller 애노테이션을 클래스에 적용한다.
+2. @ReaquestMapping 애노테이션을 이용해서 처리한 요청 경로를 지정한다.
+3. 웹 브라우저의 요청을 처리할 메서드를 구현하고, 뷰 이름을 리턴한다.
+
+#@ReaquestMapping 메서드는 뷰이름을 리턴하기 전에 다움의 두 가지 작업을 수행한다.
+- 클라이언트의 요청을 처리한다.
+- 처리 결과 데이터를 뷰에 전달한다.
+
+다양한 방식으로 모델에 데이터를 담을 수 있는데
+가장 간단한 방법은 
+Model을 파라미터로 추가하고, Model 파라미터에 데이터를 추가하는 것이다.
+
+(Model 클래스는 addAttribute( ) 메서드를 제공하고 있다.)
+addAttribute(Object attrValue)
+addAttribute(String attrNane, Object attrValue) ex) model.addAttribute("pageMaker", pageMaker);
+
+@RequestMapping(value = "/modify", method = RequestMethod.GET)
+      public void modifyGET(int board_id, Model model) throws Exception {
+
+        model.addAttribute(service.read(board_id));
+      }
+
+
+지금부터는 웹 브라우저에서 서버에 전송한 데이터를 처리하는 방법에 대해서 살펴보도록 하자.
+
+스프링 MVC에서 요청 파라미터 값을 구하는(처리하는)방법은 크게 다음의 세 가지 정도로 구분할 수 있다.
+- HttpServletRequest의 getParameter()메서드를 이용해서 구하기
+- @RequestParam 애노테이션을 이용해서 구하기
+- 커멘드 객체를 이용해서 구하기
+
+1. HttpServletRequest를 이용한 요청 파라미터 구하기.
+public Stirng list(HttpServletRequest request, Model model) throws IOException{
+    String id = request.getParameter("id");
+    .....
+    ......
+}
+
+2. @RequestParam 애노테이션을 이용해서 구하기(HttpServletRequest 방법이 다소 번잡하다면)
+    @RequestMapping(value ="/read", method = RequestMethod.GET)
+    public void read(@RequestParam("board_id") int board_id, Model model)throws Exception{
+        logger.info("show read ...........");
+        model.addAttribute(service.read(board_id));
+    }
+
+
+3. 커멘드 객체를 이용해서 구하기
+
+Http 요청 파라미터를 모아서 하나에 담아야 한다면 어떻게 될까?
+@RequestMapping(value = "/register", method = RequestMethod.POST)
+      public String regist(@RequestParam("email") String email, @RequestParam("name")     String name, @RequestParam("password") String password) throws Exception {
+    
+      MemberRegistRequest memRegReq = new MemberRegistRequest();
+      memRegReq.setEmail(email);
+      memRegReq.setPassword(password);
+      memRegReq.setName(name);
+      }
+스프링 MVC는 @RequestMapping이 적용된 메서드의 파라미터에 객체를 추가하면 그 객체의 set메서드를 호출해서 요청 파라미터 값을 전달한다.(스프링 MVC의 컨트롤러는 특정 URL에 해당하는 메소드를 실행할 때, 파라미터의 타입을 보고, 해당 객체를 자동으로 생성해낸다.)
+
+#커멘드 객체는 뷰에 전달할 모델에 자동으로 포함된다(아래 코드의 경우 memRegReq 커맨드 객체는 "memberRegistEquest"라는 이름의 모델 이름으로 뷰에 전달된다.)
+여기서 MemberRegistRequest 객체와 같이 HTTP 요청 파라미터 값을 전달받을 때 사용되는 객체를 커맨드 객체라고 부른다.
+@RequestMapping(value = "/register", method = RequestMethod.POST)
+      public String regist(MemberRegistRequest memRegReq) throws Exception {
+        
+      return "member/registered";
+      }
+
+
+#커맨드 객체로 사용될 파라미터에 @ModelAttribute(@RequestBody도 JSON에서 유사한 역할)를 적용하면 커맨드 객체의 모델 이름을 변경할 수 있다.
+@RequestMapping(value = "/listCri", method = RequestMethod.GET)
+      public void listPage(@ModelAttribute("memreq") MemberRegistRequest memRegReq, Model model) throws Exception {
+
+
+
+</pre>
+
+  </div>
+
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+            
+            
+                <i class="fa fa-folder"></i>
+                
+                
+                <li><a class="article-category-link" href="/categories/spring">Spring</a></li>
+                
+            
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "shortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+<ul class="actions pagination">
+    
+        <li><a href="/post/etc_build/"
+                class="button big previous">(ant) build.xml 작성법</a></li>
+    
+
+    
+</ul>
+
+
+    </div>
     
 <section id="sidebar">
 
