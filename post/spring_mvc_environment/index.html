@@ -10,10 +10,12 @@
              "@type": "WebPage",
              "@id": "/"
         },
-        "articleSection" : "book",
-        "name" : "(북로그) 토비의 스프링",
-        "headline" : "(북로그) 토비의 스프링",
-        "description" : "처음에는 "저 두꺼운 책을 왜 추천하고 볼까" 하는 생각을 했었다. 그러나 구현 의주의 스프링 책을 보면서 혼란속에 빠졌을 때 '토비의 스프링'은 나의 구원이었다. 한 사례를 들면 구현 의주의 스프링 책에서는 MVC 애노테이션의 종류에 대해서만 나열할 뿐 설명이 없다. 이 책에서는 나열된 애노테이션이 (예를들어 @RequestParam) 정확히 어떻게 동작하는 지에 대해서 자세히 설명되어 있다. 또 하나의 사례를 들자면 Spring의 개념을 설명할 때 가장 자주 나오는 개념이 POJO이다. 하지만 POJO에 대해 설명해주는 책은 거의 없었다.",
+        "articleSection" : "post",
+        "name" : "MVC 작동 원리와 설정",
+        "headline" : "MVC 작동 원리와 설정",
+        "description" : "이 포스트에서는 스프링 MVC의 작동 방식과 스프링 환경 설정 요소 web.xml root-context.xml servlet-context.xml를 정리합니다. 이 구성은 기본 템플릿 환경요소이며 사용자 수준에 맞게 환경설정을 구성할 수 있습니다. 먼저 Spring MVC의 큰 그림을 그리자. 이미지 출처(https://tinkerbellbass.tistory.com/40)
+스프링 MVC를 사용하기 위한 기본 설정 과정은 다음과 같다. 1. web.xml에 DispatcherServlet 설정 2. web.xml에 캐릭터 인코딩 처리를 위한 필터 설정 3. 스프링 MVC 설정 A. HandlerMapping, HandlerAdapter (= mvc:annotation-driven) B. ViewResolver 설정
+web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 톰켓이 최초 구동될 때 web.",
         "inLanguage" : "en",
         "author" : "",
         "creator" : "",
@@ -21,16 +23,16 @@
         "accountablePerson" : "",
         "copyrightHolder" : "",
         "copyrightYear" : "2019",
-        "datePublished": "2019-03-01 00:00:00 &#43;0000 UTC",
-        "dateModified" : "2019-03-01 00:00:00 &#43;0000 UTC",
-        "url" : "/book/toby_spring/",
-        "wordCount" : "92",
+        "datePublished": "2019-03-29 00:00:00 &#43;0000 UTC",
+        "dateModified" : "2019-03-29 00:00:00 &#43;0000 UTC",
+        "url" : "/post/spring_mvc_environment/",
+        "wordCount" : "370",
         "keywords" : [ "Blog" ]
     }
     </script>
         
             
-                <title>(북로그) 토비의 스프링</title>
+                <title>MVC 작동 원리와 설정</title>
             
         
 
@@ -41,6 +43,8 @@
 
 
         
+            <meta name="author" content="     &#34;&#34;">
+        
         
             
                 <meta name="description" content="HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador. Powered by Hugo">
@@ -48,28 +52,34 @@
         
 
         <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="(북로그) 토비의 스프링"/>
-<meta name="twitter:description" content="처음에는 &#34;저 두꺼운 책을 왜 추천하고 볼까&#34; 하는 생각을 했었다. 그러나 구현 의주의 스프링 책을 보면서 혼란속에 빠졌을 때 &#39;토비의 스프링&#39;은 나의 구원이었다. 한 사례를 들면 구현 의주의 스프링 책에서는 MVC 애노테이션의 종류에 대해서만 나열할 뿐 설명이 없다. 이 책에서는 나열된 애노테이션이 (예를들어 @RequestParam) 정확히 어떻게 동작하는 지에 대해서 자세히 설명되어 있다. 또 하나의 사례를 들자면 Spring의 개념을 설명할 때 가장 자주 나오는 개념이 POJO이다. 하지만 POJO에 대해 설명해주는 책은 거의 없었다."/>
+<meta name="twitter:title" content="MVC 작동 원리와 설정"/>
+<meta name="twitter:description" content="이 포스트에서는 스프링 MVC의 작동 방식과 스프링 환경 설정 요소 web.xml root-context.xml servlet-context.xml를 정리합니다. 이 구성은 기본 템플릿 환경요소이며 사용자 수준에 맞게 환경설정을 구성할 수 있습니다. 먼저 Spring MVC의 큰 그림을 그리자. 이미지 출처(https://tinkerbellbass.tistory.com/40)
+스프링 MVC를 사용하기 위한 기본 설정 과정은 다음과 같다. 1. web.xml에 DispatcherServlet 설정 2. web.xml에 캐릭터 인코딩 처리를 위한 필터 설정 3. 스프링 MVC 설정 A. HandlerMapping, HandlerAdapter (= mvc:annotation-driven) B. ViewResolver 설정
+web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 톰켓이 최초 구동될 때 web."/>
 <meta name="twitter:site" content="@example"/>
 
-        <meta property="og:title" content="(북로그) 토비의 스프링" />
-<meta property="og:description" content="처음에는 &#34;저 두꺼운 책을 왜 추천하고 볼까&#34; 하는 생각을 했었다. 그러나 구현 의주의 스프링 책을 보면서 혼란속에 빠졌을 때 &#39;토비의 스프링&#39;은 나의 구원이었다. 한 사례를 들면 구현 의주의 스프링 책에서는 MVC 애노테이션의 종류에 대해서만 나열할 뿐 설명이 없다. 이 책에서는 나열된 애노테이션이 (예를들어 @RequestParam) 정확히 어떻게 동작하는 지에 대해서 자세히 설명되어 있다. 또 하나의 사례를 들자면 Spring의 개념을 설명할 때 가장 자주 나오는 개념이 POJO이다. 하지만 POJO에 대해 설명해주는 책은 거의 없었다." />
+        <meta property="og:title" content="MVC 작동 원리와 설정" />
+<meta property="og:description" content="이 포스트에서는 스프링 MVC의 작동 방식과 스프링 환경 설정 요소 web.xml root-context.xml servlet-context.xml를 정리합니다. 이 구성은 기본 템플릿 환경요소이며 사용자 수준에 맞게 환경설정을 구성할 수 있습니다. 먼저 Spring MVC의 큰 그림을 그리자. 이미지 출처(https://tinkerbellbass.tistory.com/40)
+스프링 MVC를 사용하기 위한 기본 설정 과정은 다음과 같다. 1. web.xml에 DispatcherServlet 설정 2. web.xml에 캐릭터 인코딩 처리를 위한 필터 설정 3. 스프링 MVC 설정 A. HandlerMapping, HandlerAdapter (= mvc:annotation-driven) B. ViewResolver 설정
+web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 톰켓이 최초 구동될 때 web." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/book/toby_spring/" /><meta property="article:published_time" content="2019-03-01T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2019-03-01T00:00:00&#43;00:00"/>
+<meta property="og:url" content="/post/spring_mvc_environment/" /><meta property="article:published_time" content="2019-03-29T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2019-03-29T00:00:00&#43;00:00"/>
 
         <meta property="og:image" content="//images/logo.png">
         <meta property="og:image:type" content="image/png">
         <meta property="og:image:width" content="512">
         <meta property="og:image:height" content="512">
         
-<meta itemprop="name" content="(북로그) 토비의 스프링">
-<meta itemprop="description" content="처음에는 &#34;저 두꺼운 책을 왜 추천하고 볼까&#34; 하는 생각을 했었다. 그러나 구현 의주의 스프링 책을 보면서 혼란속에 빠졌을 때 &#39;토비의 스프링&#39;은 나의 구원이었다. 한 사례를 들면 구현 의주의 스프링 책에서는 MVC 애노테이션의 종류에 대해서만 나열할 뿐 설명이 없다. 이 책에서는 나열된 애노테이션이 (예를들어 @RequestParam) 정확히 어떻게 동작하는 지에 대해서 자세히 설명되어 있다. 또 하나의 사례를 들자면 Spring의 개념을 설명할 때 가장 자주 나오는 개념이 POJO이다. 하지만 POJO에 대해 설명해주는 책은 거의 없었다.">
+<meta itemprop="name" content="MVC 작동 원리와 설정">
+<meta itemprop="description" content="이 포스트에서는 스프링 MVC의 작동 방식과 스프링 환경 설정 요소 web.xml root-context.xml servlet-context.xml를 정리합니다. 이 구성은 기본 템플릿 환경요소이며 사용자 수준에 맞게 환경설정을 구성할 수 있습니다. 먼저 Spring MVC의 큰 그림을 그리자. 이미지 출처(https://tinkerbellbass.tistory.com/40)
+스프링 MVC를 사용하기 위한 기본 설정 과정은 다음과 같다. 1. web.xml에 DispatcherServlet 설정 2. web.xml에 캐릭터 인코딩 처리를 위한 필터 설정 3. 스프링 MVC 설정 A. HandlerMapping, HandlerAdapter (= mvc:annotation-driven) B. ViewResolver 설정
+web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 톰켓이 최초 구동될 때 web.">
 
 
-<meta itemprop="datePublished" content="2019-03-01T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-03-01T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="92">
+<meta itemprop="datePublished" content="2019-03-29T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-03-29T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="370">
 
 
 
@@ -389,7 +399,7 @@
   <header>
     <div class="title">
         
-            <h1><a href="/book/toby_spring/">(북로그) 토비의 스프링</a></h1>
+            <h1><a href="/post/spring_mvc_environment/">MVC 작동 원리와 설정</a></h1>
             
         
         
@@ -398,11 +408,11 @@
         
 
         <time class="published"
-            datetime='2019-03-01'>
-            March 1, 2019</time>
-        <span class="author"></span>
+            datetime='2019-03-29'>
+            March 29, 2019</time>
+        <span class="author">     &#34;&#34;</span>
         
-            <p>1 minute read</p>
+            <p>2 minute read</p>
         
         
     </div>
@@ -443,46 +453,119 @@
   
 
   
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="/book/toby_spring/" class="image featured">
-            <img src="/book/toby.jpg" alt="">
-        </a>
-    
-
 
   <div id="content">
-    <pre style="word-wrap: break-word;white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-break:break-all;">
+    
 
-처음에는 "저 두꺼운 책을 왜 추천하고 볼까" 하는 생각을 했었다.
-그러나 구현 의주의 스프링 책을 보면서 혼란속에 빠졌을 때 '토비의 스프링'은 나의 구원이었다.
-
-한 사례를 들면 구현 의주의 스프링 책에서는 MVC 애노테이션의 종류에 대해서만 나열할 뿐 설명이 없다.
-이 책에서는 나열된 애노테이션이 (예를들어 @RequestParam) 정확히 어떻게 동작하는 지에 대해서 자세히 설명되어 있다. 
-
-또 하나의 사례를 들자면 
-Spring의 개념을 설명할 때 가장 자주 나오는 개념이 POJO이다. 하지만 POJO에 대해 설명해주는 책은 거의 없었다. 역시 이 책을 통해 POJO가 무엇인지 정확히 알 수 있었다.
-
-버전은 비록 3.1일지라도 Spring 개발자라면 읽어볼 필요가 있는 것 같다.
-
+<p><pre style="word-wrap: break-word;white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-break:break-all;">
+이 포스트에서는 스프링 MVC의 작동 방식과 스프링 환경 설정 요소 web.xml root-context.xml servlet-context.xml를 정리합니다. 이 구성은 기본 템플릿 환경요소이며 사용자 수준에 맞게 환경설정을 구성할 수 있습니다.
+<br>
+<strong>먼저 Spring MVC의 큰 그림을 그리자.</strong>
+<img src='https://user-images.githubusercontent.com/38998522/55763927-2ac1ef80-5aa4-11e9-99b1-9c01263fb0c9.jpg'/>
+이미지 출처(<a href="https://tinkerbellbass.tistory.com/40">https://tinkerbellbass.tistory.com/40</a>)<br>
+<h2>스프링 MVC를 사용하기 위한 기본 설정 과정은 다음과 같다.</h2>
+1. web.xml에 DispatcherServlet 설정
+2. web.xml에 캐릭터 인코딩 처리를 위한 필터 설정
+3. 스프링 MVC 설정
+ A. HandlerMapping, HandlerAdapter (= <a href="mvc:annotation-driven">mvc:annotation-driven</a>)
+ B. ViewResolver 설정<br>
+<strong>web.xml</strong>
+이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 톰켓이 최초 구동될 때 web.xml을 읽고 그에 해당하는 설정을 구성한다. 즉 각종 설정을 위한 설정파일이라고 할 수 있다. 배포 기술자로써 영어로는 DD(Deployment Descriptor) 이다.
+WAS가 구동되면 web.xml을 읽고 위에서부터 차례로 태그를 해석하기 시작한다.
 </pre>
+모든 서블릿과 필터들이 공유하는 루트 스프링 컨테이너(root-context.xml 등) 정의</p>
+
+<pre><code>&lt;context-param&gt;
+    &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+    &lt;param-value&gt;/WEB-INF/spring/root-context.xml&lt;/param-value&gt;
+&lt;/context-param&gt;
+</code></pre>
+
+<p>모든 서블릿과 필터들이 공유하는 스프링 컨테이너(리스너) 생성</p>
+
+<pre><code>&lt;listener&gt;
+    &lt;listener-class&gt;org.springframework.web.context.ContextLoaderListener&lt;/listener-class&gt;
+&lt;/listener&gt;
+</code></pre>
+
+<p>애플리케이션 요청 처리 과정.<br>
+DispatcherServlet(스프링에 내장된 서블릿 클래스)은 스프링 MVC 프레임워크의 중심이 되는 서블릿 클래스다. 웹 브라우저의 요청 DispatcherServlet이 받게 되며, DispatcherServlet은 관련 컴포넌트(servlet-context.xml)를 이용해서 웹 브라우저의 요청을 처리한 뒤 결과를 전송하게 된다.</p>
+
+<pre><code>    &lt;servlet&gt;
+        &lt;servlet-name&gt;appServlet&lt;/servlet-name&gt;     
+        &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;
+        &lt;init-param&gt;         
+            &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+            #contextConfigLocation 초기화 파라미터는 설정 파일의 목록을 값으로 갖는다.
+            
+            &lt;param-value&gt;/WEB-INF/spring/appServlet/servlet-context.xml&lt;/param-value&gt;
+            #servlet-context.xml을 참조, 즉 객체들을 로딩한다.
+        &lt;/init-param&gt;
+        &lt;load-on-startup&gt;1&lt;/load-on-startup&gt; //가장 첫 번째 우선순위를 의미
+    &lt;/servlet&gt;
+</code></pre>
+
+<p>캐릭터 인코등 필터 설정</p>
+
+<pre><code>    &lt;servlet-mapping&gt;
+        &lt;servlet-name&gt;appServlet&lt;/servlet-name&gt;
+        &lt;url-pattern&gt;/&lt;/url-pattern&gt;
+    &lt;/servlet-mapping&gt;
+
+    &lt;filter&gt;
+        &lt;filter-name&gt;encoding&lt;/filter-name&gt;
+        &lt;filter-class&gt;org.springframework.web.filter.CharacterEncodingFilter&lt;/filter-class&gt;
+        &lt;init-param&gt;
+            &lt;param-name&gt;encoding&lt;/param-name&gt;
+            &lt;param-value&gt;UTF-8&lt;/param-value&gt;
+        &lt;/init-param&gt;
+    &lt;/filter&gt;
+</code></pre>
+
+<h3 id="아래-이미지를-통해-web-xml코드의-내용을-입체적으로-이해하면-좋습니다">아래 이미지를 통해 web.xml코드의 내용을 입체적으로 이해하면 좋습니다.</h3>
+
+<p><img src="https://user-images.githubusercontent.com/38998522/55763890-fbab7e00-5aa3-11e9-8855-a67c390d1989.png" alt="DispatcherServlet" />
+<pre style="word-wrap: break-word;white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-break:break-all;">
+이미지 출처 : (<a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/web.html#mvc">https://docs.spring.io/spring/docs/current/spring-framework-reference/web.html#mvc</a>)
+<br><br></p>
+
+<p><h3>root-context.xml</h3>
+처음에 프로젝트 생성시에는 아무 내용도 없다. servlet-context.xml 과는 반대로 <strong>view와 관련되지 않은 객체를 정의한다.</strong> 따라서 Service, Repository(DAO), DB등 비즈니스 로직과 관련된 설정을 해준다.
+<br></p>
+
+<p><h3>servlet-context.xml</h3>
+웹브라우져의 요청과 처리(DispatcherServlet)와 관련된 객체들을 정의합니다.
+url과 관련된 controller나, @(어노테이션), ViewResolver, Interceptor, MultipartResolver 등의 설정을 해줍니다.
+</pre>
+내용을 살펴보면</p>
+
+<pre><code>&lt;!-- Enables the Spring MVC @Controller programming model --&gt;
+    &lt;annotation-driven /&gt;
+</code></pre>
+
+<ul>
+<li>RequestMappingHandlerMapping, RequestMappingHandlerAdapter 클래스를 빈으로 등록해 준다. 이 두 클래스는 @Controller 애노테이션이 적용된 클래스를 컨트롤러로 사용할 수 있도록 해준다.<br></li>
+<li>또한 JSON이나 XMl등 요청/응답 처리를 위해 필요한 변환 모듈이나 데이터 바인딩 처리를 위한 ConversionService 등을 빈으로 등록해준다.<br></li>
+<li>&lt;annotation-driven&gt;이 설정하는 빈을 더 자세히 알고 싶다면<br><a href="https://github.com/madvirus/spring4/blob/master/mvnprj/spring4-chap07/src/main/webapp/WEB-INF/sample-no-mvc.xml">https://github.com/madvirus/spring4/blob/master/mvnprj/spring4-chap07/src/main/webapp/WEB-INF/sample-no-mvc.xml</a>
+<br><br></li>
+</ul>
+
+<pre><code>&lt;!--Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory--&gt;
+    &lt;beans:bean class=&quot;org.springframework.web.servlet.view.InternalResourceViewResolver&quot;&gt;
+        &lt;beans:property name=&quot;prefix&quot; value=&quot;/WEB-INF/views/&quot; /&gt;
+        &lt;beans:property name=&quot;suffix&quot; value=&quot;.jsp&quot; /&gt;
+    &lt;/beans:bean&gt;
+</code></pre>
+
+<ul>
+<li>InternalResourceViewResolver는 JSP를 이용해서 뷰를 생성할 때 사용되는 ViewResolver 구현체이다.<br></li>
+<li>prefix와 suffix는 컨트롤러의 처리 결과를 보여줄 JSP의 경로를 생성할 때 사용된다.<br><br></li>
+</ul>
+
+<p>참고자료<br>
+<a href="https://thiago6.tistory.com/70">https://thiago6.tistory.com/70</a><br>
+<a href="https://doublesprogramming.tistory.com/84">https://doublesprogramming.tistory.com/84</a><br>
+도서: 최범균의 Spring4.0 프로그래밍</p>
 
   </div>
 
@@ -496,7 +579,7 @@ Spring의 개념을 설명할 때 가장 자주 나오는 개념이 POJO이다. 
                 <i class="fa fa-folder"></i>
                 
                 
-                <li><a class="article-category-link" href="/categories/book">Book</a></li>
+                <li><a class="article-category-link" href="/categories/spring">Spring</a></li>
                 
             
         
@@ -539,8 +622,8 @@ Spring의 개념을 설명할 때 가장 자주 나오는 개념이 POJO이다. 
 
 <ul class="actions pagination">
     
-        <li><a href="/book/java_spring/"
-                class="button big previous">(북로그) 자바 객체 지향의 원리와 이해</a></li>
+        <li><a href="/post/spring_mvccontroller/"
+                class="button big previous">MVC Controller</a></li>
     
 
     
