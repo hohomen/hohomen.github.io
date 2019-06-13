@@ -11,9 +11,10 @@
              "@id": "/"
         },
         "articleSection" : "post",
-        "name" : "함수(JavaScript Basic)",
-        "headline" : "함수(JavaScript Basic)",
-        "description" : "함수는 코드의 집합을 나타내는 자료형입니다. 1.익명함수: 이름이 없으므로 변수에 넣어 사용해야 합니다.(point= 변수) var 함수 = function() { }; 자바스크립트에서 함수는 한의 자료형이지만 여타, 자료형과 다르게 뒤에 괄호를 열고 닫음으로써 코드를 실행합니다. = '함수를 호출' 함수(); // 익명함수를 호출할 때. 2.선언적 함수: 이름이 있는 함수. function 함수( ) { } #선언적 함수와 익명 함수의 차이점. 익명함수는 변수로 선언했기 때문에 오류 발생. 반대로 선언적 함수를 사용하면 코드가 정상적으로 실행.  함수( ); // 오류.",
+        "name" : "ajax(jQuery) 정리 및 실전 코드 분석",
+        "headline" : "ajax(jQuery) 정리 및 실전 코드 분석",
+        "description" : "Intro $.ajax( ) 메서드는 내부에서 XMLHttpRequest 객체를 만들어 Ajax를 수행합니다.(직접 XMLHttpRequest 객체를 만들 때보다 간단합니다.) Syntax.문법(두 가지 형태로 사용할 수 있다.) 1. $.ajax(url, options); // 일반적 형태 $.ajax('/data.html',{ success: function (data) { $('body').append(data); } }); 2. $.ajax(options); //매개변수 url은 옵션 속성으로 지정할 수도 있다.(옵션은 객체로 이루어져있다.) $.ajax({ url: '/data.html', success: function (data) { $('body').append(data); } });
+메서드 옵션(객체의 속성은 대부분 자동으로 지정한다.) 주요 속성은 다음과 같다. async : 동기 비동기를 지정합니다.",
         "inLanguage" : "en",
         "author" : "",
         "creator" : "",
@@ -21,16 +22,16 @@
         "accountablePerson" : "",
         "copyrightHolder" : "",
         "copyrightYear" : "2019",
-        "datePublished": "2019-02-19 00:00:00 &#43;0000 UTC",
-        "dateModified" : "2019-02-19 00:00:00 &#43;0000 UTC",
-        "url" : "/post/javascript_function/",
-        "wordCount" : "223",
+        "datePublished": "2019-04-20 00:00:00 &#43;0000 UTC",
+        "dateModified" : "2019-04-20 00:00:00 &#43;0000 UTC",
+        "url" : "/post/javascript_ajax_jquery/",
+        "wordCount" : "376",
         "keywords" : [ "Blog" ]
     }
     </script>
         
             
-                <title>함수(JavaScript Basic)</title>
+                <title>ajax(jQuery) 정리 및 실전 코드 분석</title>
             
         
 
@@ -50,28 +51,31 @@
         
 
         <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="함수(JavaScript Basic)"/>
-<meta name="twitter:description" content="함수는 코드의 집합을 나타내는 자료형입니다. 1.익명함수: 이름이 없으므로 변수에 넣어 사용해야 합니다.(point= 변수) var 함수 = function() { }; 자바스크립트에서 함수는 한의 자료형이지만 여타, 자료형과 다르게 뒤에 괄호를 열고 닫음으로써 코드를 실행합니다. = &#39;함수를 호출&#39; 함수(); // 익명함수를 호출할 때. 2.선언적 함수: 이름이 있는 함수. function 함수( ) { } #선언적 함수와 익명 함수의 차이점. 익명함수는 변수로 선언했기 때문에 오류 발생. 반대로 선언적 함수를 사용하면 코드가 정상적으로 실행.  함수( ); // 오류."/>
+<meta name="twitter:title" content="ajax(jQuery) 정리 및 실전 코드 분석"/>
+<meta name="twitter:description" content="Intro $.ajax( ) 메서드는 내부에서 XMLHttpRequest 객체를 만들어 Ajax를 수행합니다.(직접 XMLHttpRequest 객체를 만들 때보다 간단합니다.) Syntax.문법(두 가지 형태로 사용할 수 있다.) 1. $.ajax(url, options); // 일반적 형태 $.ajax(&#39;/data.html&#39;,{ success: function (data) { $(&#39;body&#39;).append(data); } }); 2. $.ajax(options); //매개변수 url은 옵션 속성으로 지정할 수도 있다.(옵션은 객체로 이루어져있다.) $.ajax({ url: &#39;/data.html&#39;, success: function (data) { $(&#39;body&#39;).append(data); } });
+메서드 옵션(객체의 속성은 대부분 자동으로 지정한다.) 주요 속성은 다음과 같다. async : 동기 비동기를 지정합니다."/>
 <meta name="twitter:site" content="@example"/>
 
-        <meta property="og:title" content="함수(JavaScript Basic)" />
-<meta property="og:description" content="함수는 코드의 집합을 나타내는 자료형입니다. 1.익명함수: 이름이 없으므로 변수에 넣어 사용해야 합니다.(point= 변수) var 함수 = function() { }; 자바스크립트에서 함수는 한의 자료형이지만 여타, 자료형과 다르게 뒤에 괄호를 열고 닫음으로써 코드를 실행합니다. = &#39;함수를 호출&#39; 함수(); // 익명함수를 호출할 때. 2.선언적 함수: 이름이 있는 함수. function 함수( ) { } #선언적 함수와 익명 함수의 차이점. 익명함수는 변수로 선언했기 때문에 오류 발생. 반대로 선언적 함수를 사용하면 코드가 정상적으로 실행.  함수( ); // 오류." />
+        <meta property="og:title" content="ajax(jQuery) 정리 및 실전 코드 분석" />
+<meta property="og:description" content="Intro $.ajax( ) 메서드는 내부에서 XMLHttpRequest 객체를 만들어 Ajax를 수행합니다.(직접 XMLHttpRequest 객체를 만들 때보다 간단합니다.) Syntax.문법(두 가지 형태로 사용할 수 있다.) 1. $.ajax(url, options); // 일반적 형태 $.ajax(&#39;/data.html&#39;,{ success: function (data) { $(&#39;body&#39;).append(data); } }); 2. $.ajax(options); //매개변수 url은 옵션 속성으로 지정할 수도 있다.(옵션은 객체로 이루어져있다.) $.ajax({ url: &#39;/data.html&#39;, success: function (data) { $(&#39;body&#39;).append(data); } });
+메서드 옵션(객체의 속성은 대부분 자동으로 지정한다.) 주요 속성은 다음과 같다. async : 동기 비동기를 지정합니다." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/post/javascript_function/" /><meta property="article:published_time" content="2019-02-19T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2019-02-19T00:00:00&#43;00:00"/>
+<meta property="og:url" content="/post/javascript_ajax_jquery/" /><meta property="article:published_time" content="2019-04-20T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2019-04-20T00:00:00&#43;00:00"/>
 
         <meta property="og:image" content="//images/logo.png">
         <meta property="og:image:type" content="image/png">
         <meta property="og:image:width" content="512">
         <meta property="og:image:height" content="512">
         
-<meta itemprop="name" content="함수(JavaScript Basic)">
-<meta itemprop="description" content="함수는 코드의 집합을 나타내는 자료형입니다. 1.익명함수: 이름이 없으므로 변수에 넣어 사용해야 합니다.(point= 변수) var 함수 = function() { }; 자바스크립트에서 함수는 한의 자료형이지만 여타, 자료형과 다르게 뒤에 괄호를 열고 닫음으로써 코드를 실행합니다. = &#39;함수를 호출&#39; 함수(); // 익명함수를 호출할 때. 2.선언적 함수: 이름이 있는 함수. function 함수( ) { } #선언적 함수와 익명 함수의 차이점. 익명함수는 변수로 선언했기 때문에 오류 발생. 반대로 선언적 함수를 사용하면 코드가 정상적으로 실행.  함수( ); // 오류.">
+<meta itemprop="name" content="ajax(jQuery) 정리 및 실전 코드 분석">
+<meta itemprop="description" content="Intro $.ajax( ) 메서드는 내부에서 XMLHttpRequest 객체를 만들어 Ajax를 수행합니다.(직접 XMLHttpRequest 객체를 만들 때보다 간단합니다.) Syntax.문법(두 가지 형태로 사용할 수 있다.) 1. $.ajax(url, options); // 일반적 형태 $.ajax(&#39;/data.html&#39;,{ success: function (data) { $(&#39;body&#39;).append(data); } }); 2. $.ajax(options); //매개변수 url은 옵션 속성으로 지정할 수도 있다.(옵션은 객체로 이루어져있다.) $.ajax({ url: &#39;/data.html&#39;, success: function (data) { $(&#39;body&#39;).append(data); } });
+메서드 옵션(객체의 속성은 대부분 자동으로 지정한다.) 주요 속성은 다음과 같다. async : 동기 비동기를 지정합니다.">
 
 
-<meta itemprop="datePublished" content="2019-02-19T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-02-19T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="223">
+<meta itemprop="datePublished" content="2019-04-20T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-04-20T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="376">
 
 
 
@@ -367,7 +371,7 @@
   <header>
     <div class="title">
         
-            <h1><a href="/post/javascript_function/">함수(JavaScript Basic)</a></h1>
+            <h1><a href="/post/javascript_ajax_jquery/">ajax(jQuery) 정리 및 실전 코드 분석</a></h1>
             
         
         
@@ -376,8 +380,8 @@
         
 
         <time class="published"
-            datetime='2019-02-19'>
-            February 19, 2019</time>
+            datetime='2019-04-20'>
+            April 20, 2019</time>
         <span class="author">     &#34;&#34;</span>
         
             <p>2 minute read</p>
@@ -424,125 +428,100 @@
 
   <div id="content">
     <pre style="word-wrap: break-word;white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-break:break-all;">
-함수는 코드의 집합을 나타내는 자료형입니다.
 
-1.익명함수: 이름이 없으므로 변수에 넣어 사용해야 합니다.(point= 변수)
-var 함수 = function() { };
+<strong>Intro</strong>
+$.ajax( ) 메서드는 내부에서 XMLHttpRequest 객체를 만들어 Ajax를 수행합니다.(직접 XMLHttpRequest 객체를 만들 때보다 간단합니다.)
 
-자바스크립트에서 함수는 한의 자료형이지만 여타, 자료형과 다르게 뒤에 괄호를 열고 닫음으로써 코드를 실행합니다. = '함수를 호출'
+<strong>Syntax.문법(두 가지 형태로 사용할 수 있다.)</strong>
+1. $.ajax(url, options); // 일반적 형태
+<code>$.ajax('/data.html',{
+    success: function (data) {
+        $('body').append(data);
+    }
+});</code>
 
-함수(); // 익명함수를 호출할 때.
+2. $.ajax(options);
+//매개변수 url은 옵션 속성으로 지정할 수도 있다.(옵션은 객체로 이루어져있다.)
+<code>$.ajax({
+    url: '/data.html',
+    success: function (data) {
+        $('body').append(data);
+    }
+});</code><br>
+<strong>메서드 옵션</strong>(객체의 속성은 대부분 자동으로 지정한다.)
+주요 속성은 다음과 같다.
+async : 동기 비동기를 지정합니다.
+complete(xhr, status) : Ajax 완료 이벤트 리스너를 지정합니다.
+data : 요청 매개변수를 지정합니다.
+error(xhr, status, error) : Ajax 실패 이벤트 리스너를 지정합니다.
+success(data, status, xhr) : Ajax 성공 이벤트 리스너를 지정합니다.
+timeout : 만료 시간을 지정합니다.
+type : Get 또는 Post 등을 지정합니다.
+url : 대상 URL을 지정합니다.
+(속성에 대한 자세한 정보는 <a href="http://api.jquery.com/jquery.ajax/">http://api.jquery.com/jquery.ajax/</a>)
 
 
-2.선언적 함수: 이름이 있는 함수.
-function 함수( ) {
-
-}
-
-#선언적 함수와 익명 함수의 차이점.
-익명함수는 변수로 선언했기 때문에 오류 발생.
-반대로  선언적 함수를 사용하면 코드가 정상적으로 실행.
-<script> 
-    함수( );  // 오류.
-    var 함수 = function() { alert('함수 A'); };
-    var 함수 = function() { alert('함수 B'); };
-</script>
-    cf. function 함수( ) { alert('함수 A'); }
-
-4.매개변수
-*자바스크립트는 함수를 생성할 때 함수에서 지정한 매개변수 개수보다 많거나 적은 매개변수를 사용하는 것을 허용합니다.
-(매개변수보다 많은 수를 선언하면 일반적으로 추가된 매개변수는 무시합니다.)
-(원래 함수에서 선언할 수 있는 매개변수 숫자보다 적게 선언하면 지정하지 않는 매게변수는 undefinded로 입력됩니다. ex)prompt())
-
-
-일부 함수는 이렇게 지정한 매개변수보다 많거나 적게 매개변수를 사용하는 점을 이용하기도 합니다.
-5.가변 인자 함수.
-매개변수를 선언된 형태와 다르게 사용했을 때, 매개변수를 모두활용하는 함수를 뜻합니다.
-<script>
-        function sumAll() {
-            alert(typeof (arguments) + ' : ' + arguments.length);
-    //자바스크립트의 모든 함수는 내부에 기본적으로 arguments(매개변수의 배열)가 있습니다.
-        }
-        sumAll(1, 2, 3, 4, 5, 6, 7, 8, 9);  // 결과: object : 9
-배열은 객체 자료형이므로 object를 출력합니다.
-arguments 배열의 length 속성값이 9로 나오는 것입니다.
-</script>
-
-cf. 가변 인자를 사용한 함수.
-function sumAll() {
-            var output = 0;
-            for (var i = 0; i < arguments.length; i++) {
-                output += arguments[i];
-            }
-            return output;
-        }
-        alert(sumAll(1, 2, 3, 4, 5, 6, 7, 8, 9));
-}//결과 : 45
-
-6.리턴 값.
-return 키우드를 사용하면 값을 지정하지 않아도 함수를 호출한 곳으로 돌아갑니다.
-function returnFunction() {
-            return;
-            alert('문장 A');
-            alert('문장 B');
-        }
-        // 함수를 호출합니다.
-        var output = returnFunction();
-        alert(typeof (output) + ' : ' + output);
-}// 결과 undefined : undefined
-
-7.내부 함수
-내부 함수는 이러한 충돌을 막는 방법입니다.(<- 프로그램의 규모가 커지면 커질수록 다른 사람과 함께 프로그램을 개발하며 그 와중에 여러 가지 충돌이 발생합니다.)
-
-8.콜백 함수
-자바스크립트에서는 함수도 하나의 자료형이므로 매개변수로 전달할 수 있습니다.
-function callTenTimes(callback) {
-            for (var i = 0; i < 10; i++) {
-                callback();
-            }
-        }
-        var callback = function () {
-            alert('함수 호출');
-        };
-        callTenTimes(callback);
-} // 경고 화면을 10번 출력
-
-함수를 매개변수로 전달하는 것은 분명한 이유가 있습니다. 이번 절에서 보았듯이 특정 함수를 여러번 실행할 수 있고, 9장에서 이벤트를 배우면 "이렇게 사용하는 것이구나"라고 이해할 수 있습니다.
-
-익명함수. (콜백 함수는 익명 함수로 사용하는 경우가 많습니다.)
-function callTenTimes(callback) {
-            for (var i = 0; i < 10; i++) {
-                callback();
-            }
-        }
-        callTenTimes(function () {
-            alert('함수 호출');
+<strong>실전 코드를 갖고 좀 더 메서드 옵션을 실용(심화)적으로 정리해 봅시다.</strong>
+<code>
+        $.ajax({
+              type:'put',
+              url:'/replies/'+replyId,
+              headers: { 
+                    "Content-Type": "application/json",
+                    "X-HTTP-Method-Override": "PUT" },
+              data:JSON.stringify({replytext:replytext}), 
+              dataType:'text', 
+              success:function(result){
+                  console.log("result: " + result);
+                  if(result == 'SUCCESS'){                    
+                      alert("수정 되었습니다.");
+                  }
+              }    
         });
+</code>
+"X-HTTP-Method-Override": "PUT"
+많은 브라우저가 GET, POST 방식만을 지원하기 때문에 REST 방식을 제대로 사용하려면 브라우저가 지원하지 않는 상황을 고려해야 합니다. 그 해결책으로 브라우저에서 POST 방식으로 전송하고, 추가적인 정보를 이용해서 PUT, PATCH, DELETE와 같은 정보를 같이 전송하는 것입니다. 이를 'Overloaded POST'라고 합니다.
+1. Ajax를 이용해서 전송하는 경우 "X-HTTP-Method-Override": "PUT"를 headers 정보에 포함시켜줍니다.
+<XMP style="word-wrap: break-word;white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-break:break-all;">2. <form> 태그를 이용해서 데이터를 전송하는 경우 POST 방식으로 전송하되 '_method'라는 추가적인 정보를 이용합니다. 
+    <input type ="hidden" name="_method" value="PUT">
+    
+cf. 스프링에서는 이런 처리를 위해서 설정할 수 있는 HiddenHttpMethodFilter를 제공하는데, 웹 애플리케이션(web.xml) 내에서 Filter로 설정해서 처리합니다.
+    <filter>
+        <filter-name>hiddenHttpMethodFilter</filter-name>
+        <filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>hiddenHttpMethodFilter</filter-name>
+        <url-pattern>/</url-pattern>
+    </filter-mapping>
+</xmp>data:JSON.stringify({replytext:replytext})
+자바스크립트 객체를 JSON 문자열로 변환합니다.(웹 서버에 데이터를 전송할 때는 문자열이어야 합니다.)
 
-9. 함수를 리턴하는 함수
+dataType:'text', 
+dayaType 속성은 입력하지 않아도 된다. dataType 속성을 입력하지 않으면 적절한 형태로 데이터가 변환된다. 이 속성을 넣고 안 넣고의 차이는 다음과 같다.
 
-function returnFunction() {
-            return function () {
-                alert('Hello Function .. !');
-            };
-        }
-        // 함수를 호출합니다.
-        returnFunction()();
+속성을 넣었을 때 Text 출력
+[
+    {
+        "name" : "우유",
+        "price" : "2000"
+    }
+    
+속성을 넣지 않았을 때 Text 출력
+[object Object], [object Object], [object Object], [object Object]
 
-함수를 리턴하는 함수를 사용하는 가장 큰 이유는 클로저(closure) 때문입니다.
-10. 클로저
-지역 변수를 남겨두는 현상.
-function test(name) {
-            var output = 'Hello ' + name + ' .. !';
-            return function () {
-                alert(output);
-            };
-        }
-        // 출력합니다.
-        test('JavaScript')();
 
-클로저와 관련된 것은 직접 여러 가지 프로그램을 접하면서 "이러한 경우에 사용해야 한다"라는 것을 느껴야 합니다.
-이책에서는 7장 캡슐화 부분에서 다시 한 번 클로저와 관련된 내용을 살펴봅니다.
+<strong>추가적인 jQuery Ajax 메서드</strong>
+$.getJSON()  :  get 방식으로 Ajax를 수행해 JSON 데이터를 가져옵니다.
+syntax : $.getJSON(url,data,success(data,status,xhr))
+$.get( )  :  
+syntax : $.get(URL,data,function(data,status,xhr),dataType)
+$.post( )  :  post방식으로 Ajax를 수행합니다.
+syntax : $.post(URL,data,function(data,status,xhr),dataType)
+
+<strong>REST 방식에서 $.post( )를 사용하지 않는 이유</strong>
+$.post의 형식은 $.post(URL,data,function(data,status,xhr),dataType) 이렇습니다. 즉 이 메소드는 일반적인 데이터 전송(&lt;form&gt; 처리된 데이터 전송) 방식에 적합합니다. 이 메소드는 headers: { "Content-Type": "application/json"}과 같은 옵션을 지정할수 없습니다. REST 방식에서 사용한다면 415(지원되지 않는 타입) 상태 코드가 발생합니다.
+
 
 </pre>
 
@@ -601,13 +580,13 @@ function test(name) {
 
 <ul class="actions pagination">
     
-        <li><a href="/post/css_basic/"
-                class="button big previous">CSS 기초</a></li>
+        <li><a href="/post/spring_di/"
+                class="button big previous">스프링 DI(Dependency Injection)</a></li>
     
 
     
-        <li><a href="/post/css_layout/"
-                class="button big next">CSS 박스모델</a></li>
+        <li><a href="/post/etc_index/"
+                class="button big next">Contents Summary</a></li>
     
 </ul>
 

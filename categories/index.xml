@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Dony&#39;s blog</title>
+    <title>Categories on Dony Rose</title>
     <link>/categories/</link>
-    <description>Recent content in Categories on Dony&#39;s blog</description>
+    <description>Recent content in Categories on Dony Rose</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 01 Mar 2019 00:00:00 +0000</lastBuildDate>
@@ -30,18 +30,9 @@
     </item>
     
     <item>
-      <title>Debuging</title>
-      <link>/categories/debuging/</link>
-      <pubDate>Fri, 22 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/debuging/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>JavaScript</title>
       <link>/categories/javascript/</link>
-      <pubDate>Wed, 20 Feb 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/categories/javascript/</guid>
       <description></description>
@@ -50,7 +41,7 @@
     <item>
       <title>Spring</title>
       <link>/categories/spring/</link>
-      <pubDate>Fri, 29 Mar 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/categories/spring/</guid>
       <description></description>
@@ -68,7 +59,7 @@
     <item>
       <title>etc</title>
       <link>/categories/etc/</link>
-      <pubDate>Sat, 02 Mar 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 03 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>/categories/etc/</guid>
       <description></description>

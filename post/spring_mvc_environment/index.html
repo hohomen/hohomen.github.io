@@ -11,8 +11,8 @@
              "@id": "/"
         },
         "articleSection" : "post",
-        "name" : "MVC 작동 원리와 설정",
-        "headline" : "MVC 작동 원리와 설정",
+        "name" : "MVC 작동 원리와 환경설정",
+        "headline" : "MVC 작동 원리와 환경설정",
         "description" : "이 포스트에서는 스프링 MVC의 작동 방식과 스프링 환경 설정 요소 web.xml root-context.xml servlet-context.xml를 정리합니다. 이 구성은 기본 템플릿 환경요소이며 사용자 수준에 맞게 환경설정을 구성할 수 있습니다. 먼저 Spring MVC의 큰 그림을 그리자. 이미지 출처(https://tinkerbellbass.tistory.com/40)
 스프링 MVC를 사용하기 위한 기본 설정 과정은 다음과 같다. 1. web.xml에 DispatcherServlet 설정 2. web.xml에 캐릭터 인코딩 처리를 위한 필터 설정 3. 스프링 MVC 설정 A. HandlerMapping, HandlerAdapter (= mvc:annotation-driven) B. ViewResolver 설정
 web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 톰켓이 최초 구동될 때 web.",
@@ -32,7 +32,7 @@ web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 �
     </script>
         
             
-                <title>MVC 작동 원리와 설정</title>
+                <title>MVC 작동 원리와 환경설정</title>
             
         
 
@@ -52,13 +52,13 @@ web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 �
         
 
         <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="MVC 작동 원리와 설정"/>
+<meta name="twitter:title" content="MVC 작동 원리와 환경설정"/>
 <meta name="twitter:description" content="이 포스트에서는 스프링 MVC의 작동 방식과 스프링 환경 설정 요소 web.xml root-context.xml servlet-context.xml를 정리합니다. 이 구성은 기본 템플릿 환경요소이며 사용자 수준에 맞게 환경설정을 구성할 수 있습니다. 먼저 Spring MVC의 큰 그림을 그리자. 이미지 출처(https://tinkerbellbass.tistory.com/40)
 스프링 MVC를 사용하기 위한 기본 설정 과정은 다음과 같다. 1. web.xml에 DispatcherServlet 설정 2. web.xml에 캐릭터 인코딩 처리를 위한 필터 설정 3. 스프링 MVC 설정 A. HandlerMapping, HandlerAdapter (= mvc:annotation-driven) B. ViewResolver 설정
 web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 톰켓이 최초 구동될 때 web."/>
 <meta name="twitter:site" content="@example"/>
 
-        <meta property="og:title" content="MVC 작동 원리와 설정" />
+        <meta property="og:title" content="MVC 작동 원리와 환경설정" />
 <meta property="og:description" content="이 포스트에서는 스프링 MVC의 작동 방식과 스프링 환경 설정 요소 web.xml root-context.xml servlet-context.xml를 정리합니다. 이 구성은 기본 템플릿 환경요소이며 사용자 수준에 맞게 환경설정을 구성할 수 있습니다. 먼저 Spring MVC의 큰 그림을 그리자. 이미지 출처(https://tinkerbellbass.tistory.com/40)
 스프링 MVC를 사용하기 위한 기본 설정 과정은 다음과 같다. 1. web.xml에 DispatcherServlet 설정 2. web.xml에 캐릭터 인코딩 처리를 위한 필터 설정 3. 스프링 MVC 설정 A. HandlerMapping, HandlerAdapter (= mvc:annotation-driven) B. ViewResolver 설정
 web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 톰켓이 최초 구동될 때 web." />
@@ -71,7 +71,7 @@ web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 �
         <meta property="og:image:width" content="512">
         <meta property="og:image:height" content="512">
         
-<meta itemprop="name" content="MVC 작동 원리와 설정">
+<meta itemprop="name" content="MVC 작동 원리와 환경설정">
 <meta itemprop="description" content="이 포스트에서는 스프링 MVC의 작동 방식과 스프링 환경 설정 요소 web.xml root-context.xml servlet-context.xml를 정리합니다. 이 구성은 기본 템플릿 환경요소이며 사용자 수준에 맞게 환경설정을 구성할 수 있습니다. 먼저 Spring MVC의 큰 그림을 그리자. 이미지 출처(https://tinkerbellbass.tistory.com/40)
 스프링 MVC를 사용하기 위한 기본 설정 과정은 다음과 같다. 1. web.xml에 DispatcherServlet 설정 2. web.xml에 캐릭터 인코딩 처리를 위한 필터 설정 3. 스프링 MVC 설정 A. HandlerMapping, HandlerAdapter (= mvc:annotation-driven) B. ViewResolver 설정
 web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 톰켓이 최초 구동될 때 web.">
@@ -126,7 +126,7 @@ web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 �
     
 <header id="header">
     
-      <h1><a href="/">Dony&#39;s blog</a></h1>
+      <h1><a href="/">Dony Rose</a></h1>
     
 
     <nav class="links">
@@ -258,7 +258,43 @@ web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 �
                 
                         <article class="mini-post">
                             <header>
-                                <h3><a href="/post/spring_mvc_environment/">MVC 작동 원리와 설정</a></h3>
+                                <h3><a href="/post/etc_index/">Contents Summary</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-06-03'>
+                                    June 3, 2019</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/javascript_ajax_jquery/">ajax(jQuery) 정리 및 실전 코드 분석</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-04-20'>
+                                    April 20, 2019</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/spring_di/">스프링 DI(Dependency Injection)</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-04-20'>
+                                    April 20, 2019</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/spring_mvc_environment/">MVC 작동 원리와 환경설정</a></h3>
                                 
                                 <time class="published" datetime=
                                     '2019-03-29'>
@@ -275,66 +311,6 @@ web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 �
                                 <time class="published" datetime=
                                     '2019-03-20'>
                                     March 20, 2019</time>
-                            </header>
-                            
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="/post/etc_build/">(ant) build.xml 작성법</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2019-03-02'>
-                                    March 2, 2019</time>
-                            </header>
-                            
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="/book/toby_spring/">(북로그) 토비의 스프링</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2019-03-01'>
-                                    March 1, 2019</time>
-                            </header>
-                            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="/book/toby_spring/" class="image featured">
-            <img src="/book/toby.jpg" alt="">
-        </a>
-    
-
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="/post/debug_spring/">Spring Debuging list</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2019-02-22'>
-                                    February 22, 2019</time>
                             </header>
                             
 
@@ -399,7 +375,7 @@ web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 �
   <header>
     <div class="title">
         
-            <h1><a href="/post/spring_mvc_environment/">MVC 작동 원리와 설정</a></h1>
+            <h1><a href="/post/spring_mvc_environment/">MVC 작동 원리와 환경설정</a></h1>
             
         
         
@@ -627,6 +603,9 @@ url과 관련된 controller나, @(어노테이션), ViewResolver, Interceptor, M
     
 
     
+        <li><a href="/post/spring_di/"
+                class="button big next">스프링 DI(Dependency Injection)</a></li>
+    
 </ul>
 
 
@@ -668,7 +647,49 @@ url과 관련된 controller나, @(어노테이션), ViewResolver, Interceptor, M
           <article class="mini-post">
             <header>
               <h3>
-                <a href="/post/spring_mvc_environment/">MVC 작동 원리와 설정</a>
+                <a href="/post/etc_index/">Contents Summary</a>
+              </h3>
+              
+              <time class="published" datetime='2019-06-03'>
+                June 3, 2019
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/javascript_ajax_jquery/">ajax(jQuery) 정리 및 실전 코드 분석</a>
+              </h3>
+              
+              <time class="published" datetime='2019-04-20'>
+                April 20, 2019
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/spring_di/">스프링 DI(Dependency Injection)</a>
+              </h3>
+              
+              <time class="published" datetime='2019-04-20'>
+                April 20, 2019
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/spring_mvc_environment/">MVC 작동 원리와 환경설정</a>
               </h3>
               
               <time class="published" datetime='2019-03-29'>
@@ -687,72 +708,6 @@ url과 관련된 controller나, @(어노테이션), ViewResolver, Interceptor, M
               
               <time class="published" datetime='2019-03-20'>
                 March 20, 2019
-              </time>
-            </header>
-            
-
-          </article>
-        
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="/post/etc_build/">(ant) build.xml 작성법</a>
-              </h3>
-              
-              <time class="published" datetime='2019-03-02'>
-                March 2, 2019
-              </time>
-            </header>
-            
-
-          </article>
-        
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="/book/toby_spring/">(북로그) 토비의 스프링</a>
-              </h3>
-              
-              <time class="published" datetime='2019-03-01'>
-                March 1, 2019
-              </time>
-            </header>
-            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="/book/toby_spring/" class="image featured">
-            <img src="/book/toby.jpg" alt="">
-        </a>
-    
-
-
-          </article>
-        
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="/post/debug_spring/">Spring Debuging list</a>
-              </h3>
-              
-              <time class="published" datetime='2019-02-22'>
-                February 22, 2019
               </time>
             </header>
             
@@ -813,19 +768,8 @@ url과 관련된 controller나, @(어노테이션), ViewResolver, Interceptor, M
           <article>
             <header>
               
-                <a href="/categories/debuging/">Debuging</a>
-                <span style="float:right;">1</span>
-              
-            </header>
-          </article>
-        </p>
-        
-        <p>
-          <article>
-            <header>
-              
                 <a href="/categories/javascript/">JavaScript</a>
-                <span style="float:right;">4</span>
+                <span style="float:right;">7</span>
               
             </header>
           </article>
@@ -836,7 +780,7 @@ url과 관련된 controller나, @(어노테이션), ViewResolver, Interceptor, M
             <header>
               
                 <a href="/categories/spring/">Spring</a>
-                <span style="float:right;">2</span>
+                <span style="float:right;">3</span>
               
             </header>
           </article>
@@ -858,7 +802,7 @@ url과 관련된 controller나, @(어노테이션), ViewResolver, Interceptor, M
             <header>
               
                 <a href="/categories/etc/">etc</a>
-                <span style="float:right;">2</span>
+                <span style="float:right;">3</span>
               
             </header>
           </article>
@@ -878,7 +822,7 @@ url과 관련된 controller나, @(어노테이션), ViewResolver, Interceptor, M
       
         &copy; 2019
         
-          Dony&#39;s blog
+          Dony Rose
         
       .
       Powered by <a href="//gohugo.io" target="_blank">Hugo</a>

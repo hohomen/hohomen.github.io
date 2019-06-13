@@ -1,15 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>etc on Dony&#39;s blog</title>
+    <title>etc on Dony Rose</title>
     <link>/categories/etc/</link>
-    <description>Recent content in etc on Dony&#39;s blog</description>
+    <description>Recent content in etc on Dony Rose</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/etc/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Contents Summary</title>
+      <link>/post/etc_index/</link>
+      <pubDate>Mon, 03 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/etc_index/</guid>
+      <description>단순한 복붙 No! 이해 한 만큼만 직접 작성한다.  Book Log  스프링 독학을 위한 도서 활용 자바 객체 지향의 원리와 이해  Java    Spring  MVC 설정과 작동 원리 MVC CONTROLLER 스프링 DI(Dependency Injection)
+  JavaScript  ajax(jQuery) 정리 및 실전 코드 분석 ajax(XMLHttpRequest) 함수(JavaScript Basic) 객체(JavaScript Basic) 배열(JavaScript Basic) 기본 문법(Javascript Basic) HTML에서 JavaScript Load  CSS  Bootstrap grid system
+ CSS 기본 CSS 박스모델   li  a { color: #4374D9; border-bottom: none!</description>
+    </item>
     
     <item>
       <title>(ant) build.xml 작성법</title>

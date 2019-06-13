@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Spring on Dony&#39;s blog</title>
+    <title>Spring on Dony Rose</title>
     <link>/categories/spring/</link>
-    <description>Recent content in Spring on Dony&#39;s blog</description>
+    <description>Recent content in Spring on Dony Rose</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 29 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 20 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/spring/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>MVC 작동 원리와 설정</title>
+      <title>스프링 DI(Dependency Injection)</title>
+      <link>/post/spring_di/</link>
+      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/spring_di/</guid>
+      <description>스프링의 가장 기본적인 기능은 객체를 생성하고 초기화하여 필요로 하는 곳에 제공하는 것인데, 이 중심에는 DI(Dependency Injection)라는 의존에 대한 설계 패턴이 적용되어 있다. 목차 1. DI와 스프링 (가장 기본적 의존 생성) 2. 스프링 DI 설정 2.1 XML을 이용한 DI 설정 keyword : &amp;lt;bean&amp;gt; &amp;lt;property&amp;gt; &amp;lt;constructor-arg&amp;gt; 2.2 자바 코드를 이용한 DI 설정 keyword : @Configuration과 @Bean @ImportResource 2.3 XML 설정과 자바 코드 설정 함께 사용하기 keyword : &amp;lt;context:annotation-config/&amp;gt; , @ImportResource 3. 애노테이션을 이용한 객체 간 의존 자동 연결 keyword : @Autowired , @Resource , @Inject 4.</description>
+    </item>
+    
+    <item>
+      <title>MVC 작동 원리와 환경설정</title>
       <link>/post/spring_mvc_environment/</link>
       <pubDate>Fri, 29 Mar 2019 00:00:00 +0000</pubDate>
       
