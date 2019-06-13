@@ -17,9 +17,20 @@
       <pubDate>Mon, 03 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/etc_index/</guid>
-      <description>단순한 복붙 No! 이해 한 만큼만 직접 작성한다.  Book Log  스프링 독학을 위한 도서 활용 자바 객체 지향의 원리와 이해  Java    Spring  MVC 설정과 작동 원리 MVC CONTROLLER 스프링 DI(Dependency Injection)
-  JavaScript  ajax(jQuery) 정리 및 실전 코드 분석 ajax(XMLHttpRequest) 함수(JavaScript Basic) 객체(JavaScript Basic) 배열(JavaScript Basic) 기본 문법(Javascript Basic) HTML에서 JavaScript Load  CSS  Bootstrap grid system
- CSS 기본 CSS 박스모델   li  a { color: #4374D9; border-bottom: none!</description>
+      <description>단순한 복붙 No! 이해 한 만큼만 직접 작성한다.  Book Log  자바 객체 지향의 원리와 이해  Java    Spring  REST 기본과 Controller MVC 설정과 작동 원리 MVC CONTROLLER 스프링 DI(Dependency Injection)
+  JavaScript  ajax(jQuery) 정리 및 실전 코드 분석 ajax(XMLHttpRequest) 함수(JavaScript Basic) 객체(JavaScript Basic) 배열(JavaScript Basic) 기본 문법(Javascript Basic) HTML에서 JavaScript Load  CSS  Bootstrap grid system CSS 기본 CSS 박스모델   li  a { color: #4374D9; border-bottom: none!</description>
+    </item>
+    
+    <item>
+      <title>REST 기본과 Controller</title>
+      <link>/post/spring_rest/</link>
+      <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/spring_rest/</guid>
+      <description>REST에 대한 자세한 개념 정리는 그런 REST API로 괜찮은가에 자세히 정리되어있습니다.
+이 포스트에서는 실용적 관점에서 REST를 정리하고 REST Controller에 대해서 정리합니다. 프론트엔드(client)에서의 REST 처리는 AJAX(JQUERY) 정리 및 실전 코드 분석에 정리하였습니다.
+개념. URI는 하나의 고유한 리소스(Resource)를 대표하도록 설계된다. 의미 URI는 반드시 그에 상응하는 데이터 자체. ex)/boards/123
+REST API -외부에서 위와 같은 방식으로 특정 URI를 통해서 사용자가 원하는 정보를 제공하는 방식. -최근에 Open API에서 많이 사용되면서 REST 방식으로 제공되는 외부 연결 URI를 REST API라고 하고, REST 방식의 서비스 제공이 가능한 것을 &amp;lsquo;Restful&amp;rsquo; 하다고 표현합니다.</description>
     </item>
     
     <item>
@@ -42,7 +53,7 @@
     </item>
     
     <item>
-      <title>MVC 작동 원리와 환경설정</title>
+      <title>MVC 설정과 작동 원리</title>
       <link>/post/spring_mvc_environment/</link>
       <pubDate>Fri, 29 Mar 2019 00:00:00 +0000</pubDate>
       
@@ -148,11 +159,11 @@ web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 �
     
     <item>
       <title>배열(JavaScript Basic)</title>
-      <link>/post/javascript_loop/</link>
+      <link>/post/javascript_array/</link>
       <pubDate>Mon, 18 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/javascript_loop/</guid>
-      <description>배열은 여러 개의 변수를 한꺼번에 선언해 다룰 수 있는 자료형입니다. 배열은 아래처럼 대괄호 []로 생성합니다. 대괄호를 사용하고 안에 있는 값을 쉼표로 구분해 입력합니다. 배연 안에 입력된 값을 요소 element라고 합니다. 어떠한 종류의 자료형도 요소가 될 수 있습니다. var exampleA = [273, &#39;String&#39;, true, function() {}, { }, [273, 103]]; 각 요소를 사용하기 exampleA[n] length 속성 alert(exampleA.legth); push() 메소드 exampleA.push(23); 문자열과 배열 var a = &#34;abcdefg&#34;; alert(a[2]);  </description>
+      <guid>/post/javascript_array/</guid>
+      <description>본 내용은 필자가 JavaScript 배열에서 정리되지 않은 부분만 작성하였습니다. 배열은 여러 개의 변수를 한꺼번에 선언해 다룰 수 있는 자료형입니다. 배열은 아래처럼 대괄호 []로 생성합니다. 대괄호를 사용하고 안에 있는 값을 쉼표로 구분해 입력합니다. 배연 안에 입력된 값을 요소 element라고 합니다. 어떠한 종류의 자료형도 요소가 될 수 있습니다. var exampleA = [273, &#39;String&#39;, true, function() {}, { }, [273, 103]]; 각 요소를 사용하기 exampleA[n] length 속성 alert(exampleA.legth); push() 메소드 exampleA.push(23); 문자열과 배열 var a = &#34;</description>
     </item>
     
     <item>

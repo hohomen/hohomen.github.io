@@ -11,11 +11,9 @@
              "@id": "/"
         },
         "articleSection" : "post",
-        "name" : "MVC 설정과 작동 원리",
-        "headline" : "MVC 설정과 작동 원리",
-        "description" : "이 포스트에서는 스프링 MVC의 작동 방식과 스프링 환경 설정 요소 web.xml root-context.xml servlet-context.xml를 정리합니다. 이 구성은 기본 템플릿 환경요소이며 사용자 수준에 맞게 환경설정을 구성할 수 있습니다. 먼저 Spring MVC의 큰 그림을 그리자. 이미지 출처(https://tinkerbellbass.tistory.com/40)
-스프링 MVC를 사용하기 위한 기본 설정 과정은 다음과 같다. 1. web.xml에 DispatcherServlet 설정 2. web.xml에 캐릭터 인코딩 처리를 위한 필터 설정 3. 스프링 MVC 설정 A. HandlerMapping, HandlerAdapter (= mvc:annotation-driven) B. ViewResolver 설정
-web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 톰켓이 최초 구동될 때 web.",
+        "name" : "배열(JavaScript Basic)",
+        "headline" : "배열(JavaScript Basic)",
+        "description" : "본 내용은 필자가 JavaScript 배열에서 정리되지 않은 부분만 작성하였습니다. 배열은 여러 개의 변수를 한꺼번에 선언해 다룰 수 있는 자료형입니다. 배열은 아래처럼 대괄호 []로 생성합니다. 대괄호를 사용하고 안에 있는 값을 쉼표로 구분해 입력합니다. 배연 안에 입력된 값을 요소 element라고 합니다. 어떠한 종류의 자료형도 요소가 될 수 있습니다. var exampleA = [273, 'String', true, function() {}, { }, [273, 103]]; 각 요소를 사용하기 exampleA[n] length 속성 alert(exampleA.legth); push() 메소드 exampleA.push(23); 문자열과 배열 var a = "",
         "inLanguage" : "en",
         "author" : "",
         "creator" : "",
@@ -23,16 +21,16 @@ web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 �
         "accountablePerson" : "",
         "copyrightHolder" : "",
         "copyrightYear" : "2019",
-        "datePublished": "2019-03-29 00:00:00 &#43;0000 UTC",
-        "dateModified" : "2019-03-29 00:00:00 &#43;0000 UTC",
-        "url" : "/post/spring_mvc_environment/",
-        "wordCount" : "370",
+        "datePublished": "2019-02-18 00:00:00 &#43;0000 UTC",
+        "dateModified" : "2019-02-18 00:00:00 &#43;0000 UTC",
+        "url" : "/post/javascript_array/",
+        "wordCount" : "75",
         "keywords" : [ "Blog" ]
     }
     </script>
         
             
-                <title>MVC 설정과 작동 원리</title>
+                <title>배열(JavaScript Basic)</title>
             
         
 
@@ -52,34 +50,28 @@ web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 �
         
 
         <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="MVC 설정과 작동 원리"/>
-<meta name="twitter:description" content="이 포스트에서는 스프링 MVC의 작동 방식과 스프링 환경 설정 요소 web.xml root-context.xml servlet-context.xml를 정리합니다. 이 구성은 기본 템플릿 환경요소이며 사용자 수준에 맞게 환경설정을 구성할 수 있습니다. 먼저 Spring MVC의 큰 그림을 그리자. 이미지 출처(https://tinkerbellbass.tistory.com/40)
-스프링 MVC를 사용하기 위한 기본 설정 과정은 다음과 같다. 1. web.xml에 DispatcherServlet 설정 2. web.xml에 캐릭터 인코딩 처리를 위한 필터 설정 3. 스프링 MVC 설정 A. HandlerMapping, HandlerAdapter (= mvc:annotation-driven) B. ViewResolver 설정
-web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 톰켓이 최초 구동될 때 web."/>
+<meta name="twitter:title" content="배열(JavaScript Basic)"/>
+<meta name="twitter:description" content="본 내용은 필자가 JavaScript 배열에서 정리되지 않은 부분만 작성하였습니다. 배열은 여러 개의 변수를 한꺼번에 선언해 다룰 수 있는 자료형입니다. 배열은 아래처럼 대괄호 []로 생성합니다. 대괄호를 사용하고 안에 있는 값을 쉼표로 구분해 입력합니다. 배연 안에 입력된 값을 요소 element라고 합니다. 어떠한 종류의 자료형도 요소가 될 수 있습니다. var exampleA = [273, &#39;String&#39;, true, function() {}, { }, [273, 103]]; 각 요소를 사용하기 exampleA[n] length 속성 alert(exampleA.legth); push() 메소드 exampleA.push(23); 문자열과 배열 var a = &#34;"/>
 <meta name="twitter:site" content="@example"/>
 
-        <meta property="og:title" content="MVC 설정과 작동 원리" />
-<meta property="og:description" content="이 포스트에서는 스프링 MVC의 작동 방식과 스프링 환경 설정 요소 web.xml root-context.xml servlet-context.xml를 정리합니다. 이 구성은 기본 템플릿 환경요소이며 사용자 수준에 맞게 환경설정을 구성할 수 있습니다. 먼저 Spring MVC의 큰 그림을 그리자. 이미지 출처(https://tinkerbellbass.tistory.com/40)
-스프링 MVC를 사용하기 위한 기본 설정 과정은 다음과 같다. 1. web.xml에 DispatcherServlet 설정 2. web.xml에 캐릭터 인코딩 처리를 위한 필터 설정 3. 스프링 MVC 설정 A. HandlerMapping, HandlerAdapter (= mvc:annotation-driven) B. ViewResolver 설정
-web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 톰켓이 최초 구동될 때 web." />
+        <meta property="og:title" content="배열(JavaScript Basic)" />
+<meta property="og:description" content="본 내용은 필자가 JavaScript 배열에서 정리되지 않은 부분만 작성하였습니다. 배열은 여러 개의 변수를 한꺼번에 선언해 다룰 수 있는 자료형입니다. 배열은 아래처럼 대괄호 []로 생성합니다. 대괄호를 사용하고 안에 있는 값을 쉼표로 구분해 입력합니다. 배연 안에 입력된 값을 요소 element라고 합니다. 어떠한 종류의 자료형도 요소가 될 수 있습니다. var exampleA = [273, &#39;String&#39;, true, function() {}, { }, [273, 103]]; 각 요소를 사용하기 exampleA[n] length 속성 alert(exampleA.legth); push() 메소드 exampleA.push(23); 문자열과 배열 var a = &#34;" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/post/spring_mvc_environment/" /><meta property="article:published_time" content="2019-03-29T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2019-03-29T00:00:00&#43;00:00"/>
+<meta property="og:url" content="/post/javascript_array/" /><meta property="article:published_time" content="2019-02-18T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2019-02-18T00:00:00&#43;00:00"/>
 
         <meta property="og:image" content="//images/logo.png">
         <meta property="og:image:type" content="image/png">
         <meta property="og:image:width" content="512">
         <meta property="og:image:height" content="512">
         
-<meta itemprop="name" content="MVC 설정과 작동 원리">
-<meta itemprop="description" content="이 포스트에서는 스프링 MVC의 작동 방식과 스프링 환경 설정 요소 web.xml root-context.xml servlet-context.xml를 정리합니다. 이 구성은 기본 템플릿 환경요소이며 사용자 수준에 맞게 환경설정을 구성할 수 있습니다. 먼저 Spring MVC의 큰 그림을 그리자. 이미지 출처(https://tinkerbellbass.tistory.com/40)
-스프링 MVC를 사용하기 위한 기본 설정 과정은 다음과 같다. 1. web.xml에 DispatcherServlet 설정 2. web.xml에 캐릭터 인코딩 처리를 위한 필터 설정 3. 스프링 MVC 설정 A. HandlerMapping, HandlerAdapter (= mvc:annotation-driven) B. ViewResolver 설정
-web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 톰켓이 최초 구동될 때 web.">
+<meta itemprop="name" content="배열(JavaScript Basic)">
+<meta itemprop="description" content="본 내용은 필자가 JavaScript 배열에서 정리되지 않은 부분만 작성하였습니다. 배열은 여러 개의 변수를 한꺼번에 선언해 다룰 수 있는 자료형입니다. 배열은 아래처럼 대괄호 []로 생성합니다. 대괄호를 사용하고 안에 있는 값을 쉼표로 구분해 입력합니다. 배연 안에 입력된 값을 요소 element라고 합니다. 어떠한 종류의 자료형도 요소가 될 수 있습니다. var exampleA = [273, &#39;String&#39;, true, function() {}, { }, [273, 103]]; 각 요소를 사용하기 exampleA[n] length 속성 alert(exampleA.legth); push() 메소드 exampleA.push(23); 문자열과 배열 var a = &#34;">
 
 
-<meta itemprop="datePublished" content="2019-03-29T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-03-29T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="370">
+<meta itemprop="datePublished" content="2019-02-18T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-02-18T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="75">
 
 
 
@@ -375,7 +367,7 @@ web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 �
   <header>
     <div class="title">
         
-            <h1><a href="/post/spring_mvc_environment/">MVC 설정과 작동 원리</a></h1>
+            <h1><a href="/post/javascript_array/">배열(JavaScript Basic)</a></h1>
             
         
         
@@ -384,11 +376,11 @@ web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 �
         
 
         <time class="published"
-            datetime='2019-03-29'>
-            March 29, 2019</time>
+            datetime='2019-02-18'>
+            February 18, 2019</time>
         <span class="author">     &#34;&#34;</span>
         
-            <p>2 minute read</p>
+            <p>1 minute read</p>
         
         
     </div>
@@ -431,117 +423,24 @@ web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 �
   
 
   <div id="content">
-    
+    <pre style="word-wrap: break-word;white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-break:break-all;">
+본 내용은 필자가 JavaScript 배열에서 정리되지 않은 부분만 작성하였습니다.
 
-<p><pre style="word-wrap: break-word;white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-break:break-all;">
-이 포스트에서는 스프링 MVC의 작동 방식과 스프링 환경 설정 요소 web.xml root-context.xml servlet-context.xml를 정리합니다. 이 구성은 기본 템플릿 환경요소이며 사용자 수준에 맞게 환경설정을 구성할 수 있습니다.
-<br>
-<strong>먼저 Spring MVC의 큰 그림을 그리자.</strong>
-<img src='https://user-images.githubusercontent.com/38998522/55763927-2ac1ef80-5aa4-11e9-99b1-9c01263fb0c9.jpg'/>
-이미지 출처(<a href="https://tinkerbellbass.tistory.com/40">https://tinkerbellbass.tistory.com/40</a>)<br>
-<h2>스프링 MVC를 사용하기 위한 기본 설정 과정은 다음과 같다.</h2>
-1. web.xml에 DispatcherServlet 설정
-2. web.xml에 캐릭터 인코딩 처리를 위한 필터 설정
-3. 스프링 MVC 설정
- A. HandlerMapping, HandlerAdapter (= <a href="mvc:annotation-driven">mvc:annotation-driven</a>)
- B. ViewResolver 설정<br>
-<strong>web.xml</strong>
-이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 톰켓이 최초 구동될 때 web.xml을 읽고 그에 해당하는 설정을 구성한다. 즉 각종 설정을 위한 설정파일이라고 할 수 있다. 배포 기술자로써 영어로는 DD(Deployment Descriptor) 이다.
-WAS가 구동되면 web.xml을 읽고 위에서부터 차례로 태그를 해석하기 시작한다.
+배열은 여러 개의 변수를 한꺼번에 선언해 다룰 수 있는 자료형입니다.
+배열은 아래처럼 대괄호 []로 생성합니다.
+대괄호를 사용하고 안에 있는 값을 쉼표로 구분해 입력합니다.
+배연 안에 입력된 값을 요소 element라고 합니다.
+어떠한 종류의 자료형도 요소가 될 수 있습니다.
+
+var exampleA = [273, 'String', true, function() {}, { }, [273, 103]];
+각 요소를 사용하기 exampleA[n]
+
+length 속성  alert(exampleA.legth);
+push() 메소드 exampleA.push(23);
+문자열과 배열  var a = "abcdefg"; alert(a[2]);
+
+
 </pre>
-모든 서블릿과 필터들이 공유하는 루트 스프링 컨테이너(root-context.xml 등) 정의</p>
-
-<pre><code>&lt;context-param&gt;
-    &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
-    &lt;param-value&gt;/WEB-INF/spring/root-context.xml&lt;/param-value&gt;
-&lt;/context-param&gt;
-</code></pre>
-
-<p>모든 서블릿과 필터들이 공유하는 스프링 컨테이너(리스너) 생성</p>
-
-<pre><code>&lt;listener&gt;
-    &lt;listener-class&gt;org.springframework.web.context.ContextLoaderListener&lt;/listener-class&gt;
-&lt;/listener&gt;
-</code></pre>
-
-<p>애플리케이션 요청 처리 과정.<br>
-DispatcherServlet(스프링에 내장된 서블릿 클래스)은 스프링 MVC 프레임워크의 중심이 되는 서블릿 클래스다. 웹 브라우저의 요청 DispatcherServlet이 받게 되며, DispatcherServlet은 관련 컴포넌트(servlet-context.xml)를 이용해서 웹 브라우저의 요청을 처리한 뒤 결과를 전송하게 된다.</p>
-
-<pre><code>    &lt;servlet&gt;
-        &lt;servlet-name&gt;appServlet&lt;/servlet-name&gt;     
-        &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;
-        &lt;init-param&gt;         
-            &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
-            #contextConfigLocation 초기화 파라미터는 설정 파일의 목록을 값으로 갖는다.
-            
-            &lt;param-value&gt;/WEB-INF/spring/appServlet/servlet-context.xml&lt;/param-value&gt;
-            #servlet-context.xml을 참조, 즉 객체들을 로딩한다.
-        &lt;/init-param&gt;
-        &lt;load-on-startup&gt;1&lt;/load-on-startup&gt; //가장 첫 번째 우선순위를 의미
-    &lt;/servlet&gt;
-</code></pre>
-
-<p>캐릭터 인코등 필터 설정</p>
-
-<pre><code>    &lt;servlet-mapping&gt;
-        &lt;servlet-name&gt;appServlet&lt;/servlet-name&gt;
-        &lt;url-pattern&gt;/&lt;/url-pattern&gt;
-    &lt;/servlet-mapping&gt;
-
-    &lt;filter&gt;
-        &lt;filter-name&gt;encoding&lt;/filter-name&gt;
-        &lt;filter-class&gt;org.springframework.web.filter.CharacterEncodingFilter&lt;/filter-class&gt;
-        &lt;init-param&gt;
-            &lt;param-name&gt;encoding&lt;/param-name&gt;
-            &lt;param-value&gt;UTF-8&lt;/param-value&gt;
-        &lt;/init-param&gt;
-    &lt;/filter&gt;
-</code></pre>
-
-<h3 id="아래-이미지를-통해-web-xml코드의-내용을-입체적으로-이해하면-좋습니다">아래 이미지를 통해 web.xml코드의 내용을 입체적으로 이해하면 좋습니다.</h3>
-
-<p><img src="https://user-images.githubusercontent.com/38998522/55763890-fbab7e00-5aa3-11e9-8855-a67c390d1989.png" alt="DispatcherServlet" />
-<pre style="word-wrap: break-word;white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-break:break-all;">
-이미지 출처 : (<a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/web.html#mvc">https://docs.spring.io/spring/docs/current/spring-framework-reference/web.html#mvc</a>)
-<br><br></p>
-
-<p><h3>root-context.xml</h3>
-처음에 프로젝트 생성시에는 아무 내용도 없다. servlet-context.xml 과는 반대로 <strong>view와 관련되지 않은 객체를 정의한다.</strong> 따라서 Service, Repository(DAO), DB등 비즈니스 로직과 관련된 설정을 해준다.
-<br></p>
-
-<p><h3>servlet-context.xml</h3>
-웹브라우져의 요청과 처리(DispatcherServlet)와 관련된 객체들을 정의합니다.
-url과 관련된 controller나, @(어노테이션), ViewResolver, Interceptor, MultipartResolver 등의 설정을 해줍니다.
-</pre>
-내용을 살펴보면</p>
-
-<pre><code>&lt;!-- Enables the Spring MVC @Controller programming model --&gt;
-    &lt;annotation-driven /&gt;
-</code></pre>
-
-<ul>
-<li>RequestMappingHandlerMapping, RequestMappingHandlerAdapter 클래스를 빈으로 등록해 준다. 이 두 클래스는 @Controller 애노테이션이 적용된 클래스를 컨트롤러로 사용할 수 있도록 해준다.<br></li>
-<li>또한 JSON이나 XMl등 요청/응답 처리를 위해 필요한 변환 모듈이나 데이터 바인딩 처리를 위한 ConversionService 등을 빈으로 등록해준다.<br></li>
-<li>&lt;annotation-driven&gt;이 설정하는 빈을 더 자세히 알고 싶다면<br><a href="https://github.com/madvirus/spring4/blob/master/mvnprj/spring4-chap07/src/main/webapp/WEB-INF/sample-no-mvc.xml">https://github.com/madvirus/spring4/blob/master/mvnprj/spring4-chap07/src/main/webapp/WEB-INF/sample-no-mvc.xml</a>
-<br><br></li>
-</ul>
-
-<pre><code>&lt;!--Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory--&gt;
-    &lt;beans:bean class=&quot;org.springframework.web.servlet.view.InternalResourceViewResolver&quot;&gt;
-        &lt;beans:property name=&quot;prefix&quot; value=&quot;/WEB-INF/views/&quot; /&gt;
-        &lt;beans:property name=&quot;suffix&quot; value=&quot;.jsp&quot; /&gt;
-    &lt;/beans:bean&gt;
-</code></pre>
-
-<ul>
-<li>InternalResourceViewResolver는 JSP를 이용해서 뷰를 생성할 때 사용되는 ViewResolver 구현체이다.<br></li>
-<li>prefix와 suffix는 컨트롤러의 처리 결과를 보여줄 JSP의 경로를 생성할 때 사용된다.<br><br></li>
-</ul>
-
-<p>참고자료<br>
-<a href="https://thiago6.tistory.com/70">https://thiago6.tistory.com/70</a><br>
-<a href="https://doublesprogramming.tistory.com/84">https://doublesprogramming.tistory.com/84</a><br>
-도서: 최범균의 Spring4.0 프로그래밍</p>
 
   </div>
 
@@ -555,7 +454,7 @@ url과 관련된 controller나, @(어노테이션), ViewResolver, Interceptor, M
                 <i class="fa fa-folder"></i>
                 
                 
-                <li><a class="article-category-link" href="/categories/spring">Spring</a></li>
+                <li><a class="article-category-link" href="/categories/javascript">JavaScript</a></li>
                 
             
         
@@ -598,13 +497,13 @@ url과 관련된 controller나, @(어노테이션), ViewResolver, Interceptor, M
 
 <ul class="actions pagination">
     
-        <li><a href="/post/spring_mvccontroller/"
-                class="button big previous">MVC Controller</a></li>
+        <li><a href="/post/javascript_basic/"
+                class="button big previous">Javascript 기본 문법</a></li>
     
 
     
-        <li><a href="/post/spring_di/"
-                class="button big next">스프링 DI(Dependency Injection)</a></li>
+        <li><a href="/post/xml_basic/"
+                class="button big next">XML 기본</a></li>
     
 </ul>
 

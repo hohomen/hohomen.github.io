@@ -11,11 +11,12 @@
              "@id": "/"
         },
         "articleSection" : "post",
-        "name" : "MVC 설정과 작동 원리",
-        "headline" : "MVC 설정과 작동 원리",
-        "description" : "이 포스트에서는 스프링 MVC의 작동 방식과 스프링 환경 설정 요소 web.xml root-context.xml servlet-context.xml를 정리합니다. 이 구성은 기본 템플릿 환경요소이며 사용자 수준에 맞게 환경설정을 구성할 수 있습니다. 먼저 Spring MVC의 큰 그림을 그리자. 이미지 출처(https://tinkerbellbass.tistory.com/40)
-스프링 MVC를 사용하기 위한 기본 설정 과정은 다음과 같다. 1. web.xml에 DispatcherServlet 설정 2. web.xml에 캐릭터 인코딩 처리를 위한 필터 설정 3. 스프링 MVC 설정 A. HandlerMapping, HandlerAdapter (= mvc:annotation-driven) B. ViewResolver 설정
-web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 톰켓이 최초 구동될 때 web.",
+        "name" : "REST 기본과 Controller",
+        "headline" : "REST 기본과 Controller",
+        "description" : "REST에 대한 자세한 개념 정리는 그런 REST API로 괜찮은가에 자세히 정리되어있습니다.
+이 포스트에서는 실용적 관점에서 REST를 정리하고 REST Controller에 대해서 정리합니다. 프론트엔드(client)에서의 REST 처리는 AJAX(JQUERY) 정리 및 실전 코드 분석에 정리하였습니다.
+개념. URI는 하나의 고유한 리소스(Resource)를 대표하도록 설계된다. 의미 URI는 반드시 그에 상응하는 데이터 자체. ex)/boards/123
+REST API -외부에서 위와 같은 방식으로 특정 URI를 통해서 사용자가 원하는 정보를 제공하는 방식. -최근에 Open API에서 많이 사용되면서 REST 방식으로 제공되는 외부 연결 URI를 REST API라고 하고, REST 방식의 서비스 제공이 가능한 것을 &lsquo;Restful&rsquo; 하다고 표현합니다.",
         "inLanguage" : "en",
         "author" : "",
         "creator" : "",
@@ -23,16 +24,16 @@ web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 �
         "accountablePerson" : "",
         "copyrightHolder" : "",
         "copyrightYear" : "2019",
-        "datePublished": "2019-03-29 00:00:00 &#43;0000 UTC",
-        "dateModified" : "2019-03-29 00:00:00 &#43;0000 UTC",
-        "url" : "/post/spring_mvc_environment/",
-        "wordCount" : "370",
+        "datePublished": "2019-05-20 00:00:00 &#43;0000 UTC",
+        "dateModified" : "2019-05-20 00:00:00 &#43;0000 UTC",
+        "url" : "/post/spring_rest/",
+        "wordCount" : "450",
         "keywords" : [ "Blog" ]
     }
     </script>
         
             
-                <title>MVC 설정과 작동 원리</title>
+                <title>REST 기본과 Controller</title>
             
         
 
@@ -52,34 +53,37 @@ web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 �
         
 
         <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="MVC 설정과 작동 원리"/>
-<meta name="twitter:description" content="이 포스트에서는 스프링 MVC의 작동 방식과 스프링 환경 설정 요소 web.xml root-context.xml servlet-context.xml를 정리합니다. 이 구성은 기본 템플릿 환경요소이며 사용자 수준에 맞게 환경설정을 구성할 수 있습니다. 먼저 Spring MVC의 큰 그림을 그리자. 이미지 출처(https://tinkerbellbass.tistory.com/40)
-스프링 MVC를 사용하기 위한 기본 설정 과정은 다음과 같다. 1. web.xml에 DispatcherServlet 설정 2. web.xml에 캐릭터 인코딩 처리를 위한 필터 설정 3. 스프링 MVC 설정 A. HandlerMapping, HandlerAdapter (= mvc:annotation-driven) B. ViewResolver 설정
-web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 톰켓이 최초 구동될 때 web."/>
+<meta name="twitter:title" content="REST 기본과 Controller"/>
+<meta name="twitter:description" content="REST에 대한 자세한 개념 정리는 그런 REST API로 괜찮은가에 자세히 정리되어있습니다.
+이 포스트에서는 실용적 관점에서 REST를 정리하고 REST Controller에 대해서 정리합니다. 프론트엔드(client)에서의 REST 처리는 AJAX(JQUERY) 정리 및 실전 코드 분석에 정리하였습니다.
+개념. URI는 하나의 고유한 리소스(Resource)를 대표하도록 설계된다. 의미 URI는 반드시 그에 상응하는 데이터 자체. ex)/boards/123
+REST API -외부에서 위와 같은 방식으로 특정 URI를 통해서 사용자가 원하는 정보를 제공하는 방식. -최근에 Open API에서 많이 사용되면서 REST 방식으로 제공되는 외부 연결 URI를 REST API라고 하고, REST 방식의 서비스 제공이 가능한 것을 &lsquo;Restful&rsquo; 하다고 표현합니다."/>
 <meta name="twitter:site" content="@example"/>
 
-        <meta property="og:title" content="MVC 설정과 작동 원리" />
-<meta property="og:description" content="이 포스트에서는 스프링 MVC의 작동 방식과 스프링 환경 설정 요소 web.xml root-context.xml servlet-context.xml를 정리합니다. 이 구성은 기본 템플릿 환경요소이며 사용자 수준에 맞게 환경설정을 구성할 수 있습니다. 먼저 Spring MVC의 큰 그림을 그리자. 이미지 출처(https://tinkerbellbass.tistory.com/40)
-스프링 MVC를 사용하기 위한 기본 설정 과정은 다음과 같다. 1. web.xml에 DispatcherServlet 설정 2. web.xml에 캐릭터 인코딩 처리를 위한 필터 설정 3. 스프링 MVC 설정 A. HandlerMapping, HandlerAdapter (= mvc:annotation-driven) B. ViewResolver 설정
-web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 톰켓이 최초 구동될 때 web." />
+        <meta property="og:title" content="REST 기본과 Controller" />
+<meta property="og:description" content="REST에 대한 자세한 개념 정리는 그런 REST API로 괜찮은가에 자세히 정리되어있습니다.
+이 포스트에서는 실용적 관점에서 REST를 정리하고 REST Controller에 대해서 정리합니다. 프론트엔드(client)에서의 REST 처리는 AJAX(JQUERY) 정리 및 실전 코드 분석에 정리하였습니다.
+개념. URI는 하나의 고유한 리소스(Resource)를 대표하도록 설계된다. 의미 URI는 반드시 그에 상응하는 데이터 자체. ex)/boards/123
+REST API -외부에서 위와 같은 방식으로 특정 URI를 통해서 사용자가 원하는 정보를 제공하는 방식. -최근에 Open API에서 많이 사용되면서 REST 방식으로 제공되는 외부 연결 URI를 REST API라고 하고, REST 방식의 서비스 제공이 가능한 것을 &lsquo;Restful&rsquo; 하다고 표현합니다." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/post/spring_mvc_environment/" /><meta property="article:published_time" content="2019-03-29T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2019-03-29T00:00:00&#43;00:00"/>
+<meta property="og:url" content="/post/spring_rest/" /><meta property="article:published_time" content="2019-05-20T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2019-05-20T00:00:00&#43;00:00"/>
 
         <meta property="og:image" content="//images/logo.png">
         <meta property="og:image:type" content="image/png">
         <meta property="og:image:width" content="512">
         <meta property="og:image:height" content="512">
         
-<meta itemprop="name" content="MVC 설정과 작동 원리">
-<meta itemprop="description" content="이 포스트에서는 스프링 MVC의 작동 방식과 스프링 환경 설정 요소 web.xml root-context.xml servlet-context.xml를 정리합니다. 이 구성은 기본 템플릿 환경요소이며 사용자 수준에 맞게 환경설정을 구성할 수 있습니다. 먼저 Spring MVC의 큰 그림을 그리자. 이미지 출처(https://tinkerbellbass.tistory.com/40)
-스프링 MVC를 사용하기 위한 기본 설정 과정은 다음과 같다. 1. web.xml에 DispatcherServlet 설정 2. web.xml에 캐릭터 인코딩 처리를 위한 필터 설정 3. 스프링 MVC 설정 A. HandlerMapping, HandlerAdapter (= mvc:annotation-driven) B. ViewResolver 설정
-web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 톰켓이 최초 구동될 때 web.">
+<meta itemprop="name" content="REST 기본과 Controller">
+<meta itemprop="description" content="REST에 대한 자세한 개념 정리는 그런 REST API로 괜찮은가에 자세히 정리되어있습니다.
+이 포스트에서는 실용적 관점에서 REST를 정리하고 REST Controller에 대해서 정리합니다. 프론트엔드(client)에서의 REST 처리는 AJAX(JQUERY) 정리 및 실전 코드 분석에 정리하였습니다.
+개념. URI는 하나의 고유한 리소스(Resource)를 대표하도록 설계된다. 의미 URI는 반드시 그에 상응하는 데이터 자체. ex)/boards/123
+REST API -외부에서 위와 같은 방식으로 특정 URI를 통해서 사용자가 원하는 정보를 제공하는 방식. -최근에 Open API에서 많이 사용되면서 REST 방식으로 제공되는 외부 연결 URI를 REST API라고 하고, REST 방식의 서비스 제공이 가능한 것을 &lsquo;Restful&rsquo; 하다고 표현합니다.">
 
 
-<meta itemprop="datePublished" content="2019-03-29T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-03-29T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="370">
+<meta itemprop="datePublished" content="2019-05-20T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-05-20T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="450">
 
 
 
@@ -375,7 +379,7 @@ web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 �
   <header>
     <div class="title">
         
-            <h1><a href="/post/spring_mvc_environment/">MVC 설정과 작동 원리</a></h1>
+            <h1><a href="/post/spring_rest/">REST 기본과 Controller</a></h1>
             
         
         
@@ -384,11 +388,11 @@ web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 �
         
 
         <time class="published"
-            datetime='2019-03-29'>
-            March 29, 2019</time>
+            datetime='2019-05-20'>
+            May 20, 2019</time>
         <span class="author">     &#34;&#34;</span>
         
-            <p>2 minute read</p>
+            <p>3 minute read</p>
         
         
     </div>
@@ -431,117 +435,131 @@ web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 �
   
 
   <div id="content">
-    
+    <p><pre style="word-wrap: break-word;white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-break:break-all;">
+REST에 대한 자세한 개념 정리는 <b><a href="https://www.youtube.com/watch?v=RP_f5dMoHFc&t=412s">그런 REST API로 괜찮은가</a></b>에 자세히 정리되어있습니다.</p>
+
+<p>이 포스트에서는 실용적 관점에서 REST를 정리하고 REST Controller에 대해서 정리합니다.
+프론트엔드(client)에서의 REST 처리는 <b><a href="https://hohomen.github.io/post/javascript_ajax_jquery/">AJAX(JQUERY) 정리 및 실전 코드 분석</a></b>에 정리하였습니다.</p>
+
+<p>개념.
+URI는 하나의 고유한 리소스(Resource)를 대표하도록 설계된다.
+의미
+URI는 반드시 그에 상응하는 데이터 자체. ex)/boards/123</p>
+
+<p>REST API
+-외부에서 위와 같은 방식으로 특정 URI를 통해서 사용자가 원하는 정보를 제공하는 방식.
+-최근에 Open API에서 많이 사용되면서 REST 방식으로 제공되는 외부 연결 URI를
+REST API라고 하고, REST 방식의 서비스 제공이 가능한 것을 &lsquo;Restful&rsquo; 하다고 표현합니다.</p>
+
+<p>어디에 사용하나?
+결과 데이터만을 서버에서 제공하는 방식은 데이터를 이용하는 클라이언트 측에서의 기능이
+많아지는 경우에 사용됩니다. 모바일 환경이나 HTML5, Ajax등을 이용하는 경우에 많이 사용됩니다.</p>
+
+<p>컨트롤러 정리.
+#@RestController는 JSP와 같은 뷰를 만들어 내지 않는 대신에 데이터 자체를 반환한다.</p>
+
+<p>1.단순 문자열
+@RestController에서 문자열 데이터는 기본적으로 브라우저에는 &lsquo;text/html&rsquo;타입으로 처리됩니다.
+ex)
+    @RequestMapping(&ldquo;/hello&rdquo;)
+    public String sayHello(){
+         return &ldquo;Hello Wrold&rdquo;;
+    }</p>
+
+<ol>
+<li>객체를 JSON으로
+@RestController에서 객체는 자동으로 JSON으로 처리될 수 있습니다.
+(pom.xml에 jackson-databind(2.5.4) 라이브러리를 추가해 주어야 한다.)
+(&lt;- 객체를 JSON 타입으로 변환하거나 반대의 작업을 할 때 사용.)
+(그렇지 않으면 스프링에서 객체 변환에 실패해서 406 Not Accepatable 에러)</li>
+</ol>
+
+<p>ex)@RequestMapping(&ldquo;/sendVO&rdquo;)
+    public SampleVO sendVO(){
+        SampleVO vo = new SampleVO();
+        vo.setFirstName(&ldquo;길동&rdquo;);
+        vo.setLastName(&ldquo;홍&rdquo;);
+        vo.setMno(123);<br />
+        return vo;
+    }</p>
+
+<p>Content-Type 확인
+(브라우져 개발자도구-네트워크의 Response Headers로 Content-Type을 확인해라.)
++Response Headers
+    Content-Type: application/json;charset=UTF-8
+    Date: Sat, 25 Jul 2015 06:30:35 GMT
+    Server: Apache-Coyote/1.1
+    Transfer-Encoding: chunked</p>
+
+<p>컬렉션 타입으로 반환하는 경우
+List는 배열로 표현 [{ : , : , : }, { }, &hellip; { }]
+Map은 key와 value로 구성 { &ldquo;0&rdquo; : { : , : , : }, &ldquo;1&rdquo; : {..},  .. }
+{ : , : , : } = sampleVO타입의 객체.</p>
+
+<p>Map 예제)</pre></p>
+
+<pre><code>  @RequestMapping(&quot;/sendMap&quot;)
+  public Map&lt;Integer, SampleVO&gt; sendMap() {
+
+    Map&lt;Integer, SampleVO&gt; map = new HashMap&lt;&gt;();
+
+    for (int i = 0; i &lt; 10; i++) {
+      SampleVO vo = new SampleVO();
+      vo.setFirstName(&quot;길동&quot;);
+      vo.setLastName(&quot;홍&quot;);
+      vo.setMno(i);
+      map.put(i, vo);
+    }
+    return map;
+  }
+</code></pre>
 
 <p><pre style="word-wrap: break-word;white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-break:break-all;">
-이 포스트에서는 스프링 MVC의 작동 방식과 스프링 환경 설정 요소 web.xml root-context.xml servlet-context.xml를 정리합니다. 이 구성은 기본 템플릿 환경요소이며 사용자 수준에 맞게 환경설정을 구성할 수 있습니다.
-<br>
-<strong>먼저 Spring MVC의 큰 그림을 그리자.</strong>
-<img src='https://user-images.githubusercontent.com/38998522/55763927-2ac1ef80-5aa4-11e9-99b1-9c01263fb0c9.jpg'/>
-이미지 출처(<a href="https://tinkerbellbass.tistory.com/40">https://tinkerbellbass.tistory.com/40</a>)<br>
-<h2>스프링 MVC를 사용하기 위한 기본 설정 과정은 다음과 같다.</h2>
-1. web.xml에 DispatcherServlet 설정
-2. web.xml에 캐릭터 인코딩 처리를 위한 필터 설정
-3. 스프링 MVC 설정
- A. HandlerMapping, HandlerAdapter (= <a href="mvc:annotation-driven">mvc:annotation-driven</a>)
- B. ViewResolver 설정<br>
-<strong>web.xml</strong>
-이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 톰켓이 최초 구동될 때 web.xml을 읽고 그에 해당하는 설정을 구성한다. 즉 각종 설정을 위한 설정파일이라고 할 수 있다. 배포 기술자로써 영어로는 DD(Deployment Descriptor) 이다.
-WAS가 구동되면 web.xml을 읽고 위에서부터 차례로 태그를 해석하기 시작한다.
-</pre>
-모든 서블릿과 필터들이 공유하는 루트 스프링 컨테이너(root-context.xml 등) 정의</p>
+Rest 방식의 Controller 작성
+@PathVariable : URI의 경로에서 언하는 데이터를 추출하는 용도로 사용.
+ResponseEntity 타입은 개발자가 직접 결과 데이터 + HTTP 상태 코드를 제어할 수 있는 클래스이다.
+(안 쓰고 리턴한 뒤 예외처리 해주어도 괜찮을 것 같다. 이때는 @ResponseBody 사용)</p>
 
-<pre><code>&lt;context-param&gt;
-    &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
-    &lt;param-value&gt;/WEB-INF/spring/root-context.xml&lt;/param-value&gt;
-&lt;/context-param&gt;
+<p>사용 예)</pre></p>
+
+<pre><code>@RequestMapping(value = &quot;/all/{board_id}&quot;, method = RequestMethod.GET)
+    public ResponseEntity&lt;List&lt;ReplyVO&gt;&gt; list(@PathVariable(&quot;board_id&quot;) Integer board_id) {
+
+      ResponseEntity&lt;List&lt;ReplyVO&gt;&gt; entity = null;
+      try {
+        entity = new ResponseEntity&lt;&gt;(service.list(board_id), HttpStatus.OK);
+      } catch (Exception e) {
+        e.printStackTrace();
+        entity = new ResponseEntity&lt;&gt;(HttpStatus.BAD_REQUEST);
+      }
+      return entity;
+    }
 </code></pre>
 
-<p>모든 서블릿과 필터들이 공유하는 스프링 컨테이너(리스너) 생성</p>
+<p>@RequestBody : 전송된 JSON 데이터를 객체로 변환해 주는 애노테이션.<br>
+((커맨드 객체 별칭)@ModelAttribute와 유사한 역할을 하지만 JSON에서 사용된다는 점이 차이)</p>
 
-<pre><code>&lt;listener&gt;
-    &lt;listener-class&gt;org.springframework.web.context.ContextLoaderListener&lt;/listener-class&gt;
-&lt;/listener&gt;
+<p>사용 예)</p>
+
+<pre><code>@RequestMapping(value = &quot;/replies&quot;, method = RequestMethod.POST)
+    public String register(@RequestBody ReplyVO vo) {
+        service.create(vo);       
+        return &quot;redirect:/sboard/list&quot;;
+    }
 </code></pre>
 
-<p>애플리케이션 요청 처리 과정.<br>
-DispatcherServlet(스프링에 내장된 서블릿 클래스)은 스프링 MVC 프레임워크의 중심이 되는 서블릿 클래스다. 웹 브라우저의 요청 DispatcherServlet이 받게 되며, DispatcherServlet은 관련 컴포넌트(servlet-context.xml)를 이용해서 웹 브라우저의 요청을 처리한 뒤 결과를 전송하게 된다.</p>
+<p>@ResponseBody : 자바 객체를 JSON 형식이나 XML 형식의 문자열로 변환할 때 사용한다.<br>
+(리턴 타입이 HTTP의 응답  메세지로 전송)
+사용 예)</p>
 
-<pre><code>    &lt;servlet&gt;
-        &lt;servlet-name&gt;appServlet&lt;/servlet-name&gt;     
-        &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;
-        &lt;init-param&gt;         
-            &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
-            #contextConfigLocation 초기화 파라미터는 설정 파일의 목록을 값으로 갖는다.
-            
-            &lt;param-value&gt;/WEB-INF/spring/appServlet/servlet-context.xml&lt;/param-value&gt;
-            #servlet-context.xml을 참조, 즉 객체들을 로딩한다.
-        &lt;/init-param&gt;
-        &lt;load-on-startup&gt;1&lt;/load-on-startup&gt; //가장 첫 번째 우선순위를 의미
-    &lt;/servlet&gt;
+<pre><code>@RequestMapping(&quot;/board/read&quot;)
+public @ResponseBody ProductVO doJSON(){    
+    ProductVO vo = new ProductVO(&quot;샘플상품&quot;,30000);     
+    return vo;      
+}
 </code></pre>
 
-<p>캐릭터 인코등 필터 설정</p>
-
-<pre><code>    &lt;servlet-mapping&gt;
-        &lt;servlet-name&gt;appServlet&lt;/servlet-name&gt;
-        &lt;url-pattern&gt;/&lt;/url-pattern&gt;
-    &lt;/servlet-mapping&gt;
-
-    &lt;filter&gt;
-        &lt;filter-name&gt;encoding&lt;/filter-name&gt;
-        &lt;filter-class&gt;org.springframework.web.filter.CharacterEncodingFilter&lt;/filter-class&gt;
-        &lt;init-param&gt;
-            &lt;param-name&gt;encoding&lt;/param-name&gt;
-            &lt;param-value&gt;UTF-8&lt;/param-value&gt;
-        &lt;/init-param&gt;
-    &lt;/filter&gt;
-</code></pre>
-
-<h3 id="아래-이미지를-통해-web-xml코드의-내용을-입체적으로-이해하면-좋습니다">아래 이미지를 통해 web.xml코드의 내용을 입체적으로 이해하면 좋습니다.</h3>
-
-<p><img src="https://user-images.githubusercontent.com/38998522/55763890-fbab7e00-5aa3-11e9-8855-a67c390d1989.png" alt="DispatcherServlet" />
-<pre style="word-wrap: break-word;white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-break:break-all;">
-이미지 출처 : (<a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/web.html#mvc">https://docs.spring.io/spring/docs/current/spring-framework-reference/web.html#mvc</a>)
-<br><br></p>
-
-<p><h3>root-context.xml</h3>
-처음에 프로젝트 생성시에는 아무 내용도 없다. servlet-context.xml 과는 반대로 <strong>view와 관련되지 않은 객체를 정의한다.</strong> 따라서 Service, Repository(DAO), DB등 비즈니스 로직과 관련된 설정을 해준다.
-<br></p>
-
-<p><h3>servlet-context.xml</h3>
-웹브라우져의 요청과 처리(DispatcherServlet)와 관련된 객체들을 정의합니다.
-url과 관련된 controller나, @(어노테이션), ViewResolver, Interceptor, MultipartResolver 등의 설정을 해줍니다.
-</pre>
-내용을 살펴보면</p>
-
-<pre><code>&lt;!-- Enables the Spring MVC @Controller programming model --&gt;
-    &lt;annotation-driven /&gt;
-</code></pre>
-
-<ul>
-<li>RequestMappingHandlerMapping, RequestMappingHandlerAdapter 클래스를 빈으로 등록해 준다. 이 두 클래스는 @Controller 애노테이션이 적용된 클래스를 컨트롤러로 사용할 수 있도록 해준다.<br></li>
-<li>또한 JSON이나 XMl등 요청/응답 처리를 위해 필요한 변환 모듈이나 데이터 바인딩 처리를 위한 ConversionService 등을 빈으로 등록해준다.<br></li>
-<li>&lt;annotation-driven&gt;이 설정하는 빈을 더 자세히 알고 싶다면<br><a href="https://github.com/madvirus/spring4/blob/master/mvnprj/spring4-chap07/src/main/webapp/WEB-INF/sample-no-mvc.xml">https://github.com/madvirus/spring4/blob/master/mvnprj/spring4-chap07/src/main/webapp/WEB-INF/sample-no-mvc.xml</a>
-<br><br></li>
-</ul>
-
-<pre><code>&lt;!--Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory--&gt;
-    &lt;beans:bean class=&quot;org.springframework.web.servlet.view.InternalResourceViewResolver&quot;&gt;
-        &lt;beans:property name=&quot;prefix&quot; value=&quot;/WEB-INF/views/&quot; /&gt;
-        &lt;beans:property name=&quot;suffix&quot; value=&quot;.jsp&quot; /&gt;
-    &lt;/beans:bean&gt;
-</code></pre>
-
-<ul>
-<li>InternalResourceViewResolver는 JSP를 이용해서 뷰를 생성할 때 사용되는 ViewResolver 구현체이다.<br></li>
-<li>prefix와 suffix는 컨트롤러의 처리 결과를 보여줄 JSP의 경로를 생성할 때 사용된다.<br><br></li>
-</ul>
-
-<p>참고자료<br>
-<a href="https://thiago6.tistory.com/70">https://thiago6.tistory.com/70</a><br>
-<a href="https://doublesprogramming.tistory.com/84">https://doublesprogramming.tistory.com/84</a><br>
-도서: 최범균의 Spring4.0 프로그래밍</p>
+<p>참고자료 : 코드로 배우는 스프링, 남가람북스</p>
 
   </div>
 
@@ -598,13 +616,13 @@ url과 관련된 controller나, @(어노테이션), ViewResolver, Interceptor, M
 
 <ul class="actions pagination">
     
-        <li><a href="/post/spring_mvccontroller/"
-                class="button big previous">MVC Controller</a></li>
+        <li><a href="/post/javascript_ajax_jquery/"
+                class="button big previous">ajax(jQuery) 정리 및 실전 코드 분석</a></li>
     
 
     
-        <li><a href="/post/spring_di/"
-                class="button big next">스프링 DI(Dependency Injection)</a></li>
+        <li><a href="/post/etc_index/"
+                class="button big next">Contents Summary</a></li>
     
 </ul>
 
