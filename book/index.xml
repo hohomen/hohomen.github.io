@@ -6,10 +6,19 @@
     <description>Recent content in Book on Dony Rose</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 30 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/book/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>스프링 독학을 위한 책 비교</title>
+      <link>/book/spring_books/</link>
+      <pubDate>Sat, 30 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/book/spring_books/</guid>
+      <description>내용 작성중  </description>
+    </item>
     
     <item>
       <title>(북로그) 토비의 스프링</title>
@@ -27,15 +36,6 @@
       
       <guid>/book/java_spring/</guid>
       <description>스프링에 입문하려는 (JAVA OOP)개발자에게 추천해주고 싶은 책이다. 당장 스프링 프로젝트를 구현하는 것이 목적인 분들에게는 어쩌면 이 책은 도움이 되지 않을 수 있다. 그와 관련된 내용은 책의 후반부에나 나오기 때문이다. 대신 이 책은 독자에게 JAVA OOP 개발에 대한 전체적인 시선을 알려주고 스프링을 그 맥락에서 설명한다. 자바를 처음 공부했던 내가 자바에 대해 느낀점은 &#34;어렵다&#34;였다. 의무적으로 인터페이스를 만들고 구현 클래스를 만들고 생성자를 호출했지만 도대체 왜 그렇게 해야하는 지는 이해할 수 없어서 어려웠다.(물론 전과생이어서 적응상의 문제일 수 있다.</description>
-    </item>
-    
-    <item>
-      <title>(서재) 자바 OOP를 위한 책 </title>
-      <link>/book/oopbooks/</link>
-      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/book/oopbooks/</guid>
-      <description> h2h2  </description>
     </item>
     
   </channel>

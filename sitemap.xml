@@ -23,6 +23,11 @@
   </url>
   
   <url>
+    <loc>/book/spring_books/</loc>
+    <lastmod>2019-03-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/spring_mvc_environment/</loc>
     <lastmod>2019-03-29T00:00:00+00:00</lastmod>
   </url>
@@ -113,11 +118,6 @@
   </url>
   
   <url>
-    <loc>/book/oopbooks/</loc>
-    <lastmod>2019-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/post/etc_git_basic/</loc>
     <lastmod>2018-06-03T00:00:00+00:00</lastmod>
   </url>
@@ -134,13 +134,13 @@
   
   <url>
     <loc>/book/</loc>
-    <lastmod>2019-03-01T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/book/</loc>
-    <lastmod>2019-03-01T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -152,7 +152,7 @@
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2019-03-01T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -13,8 +13,10 @@
         "articleSection" : "post",
         "name" : "REST 기본과 Controller",
         "headline" : "REST 기본과 Controller",
-        "description" : "REST에 대한 자세한 개념 정리는 그런 REST API로 괜찮은가에 자세히 정리되어있습니다.
-이 포스트에서는 실용적 관점에서 REST를 정리하고 REST Controller에 대해서 정리합니다. 프론트엔드(client)에서의 REST 처리는 AJAX(JQUERY) 정리 및 실전 코드 분석에 정리하였습니다.
+        "description" : "이 포스트에서는 간단히 REST를 정리하고 REST Controller에 대해서 정리합니다.
+프론트엔드(client)에서의 REST 처리는 AJAX(JQUERY) 정리 및 실전 코드 분석에 정리하였습니다.
+REST에 대한 자세한 개념 정리는 그런 REST API로 괜찮은가에 자세히 정리되어있습니다.
+REST(Representational state transfer)
 개념. URI는 하나의 고유한 리소스(Resource)를 대표하도록 설계된다. 의미 URI는 반드시 그에 상응하는 데이터 자체. ex)/boards/123
 REST API -외부에서 위와 같은 방식으로 특정 URI를 통해서 사용자가 원하는 정보를 제공하는 방식. -최근에 Open API에서 많이 사용되면서 REST 방식으로 제공되는 외부 연결 URI를 REST API라고 하고, REST 방식의 서비스 제공이 가능한 것을 &lsquo;Restful&rsquo; 하다고 표현합니다.",
         "inLanguage" : "en",
@@ -27,7 +29,7 @@ REST API -외부에서 위와 같은 방식으로 특정 URI를 통해서 사용
         "datePublished": "2019-05-20 00:00:00 &#43;0000 UTC",
         "dateModified" : "2019-05-20 00:00:00 &#43;0000 UTC",
         "url" : "/post/spring_rest/",
-        "wordCount" : "450",
+        "wordCount" : "452",
         "keywords" : [ "Blog" ]
     }
     </script>
@@ -54,15 +56,19 @@ REST API -외부에서 위와 같은 방식으로 특정 URI를 통해서 사용
 
         <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="REST 기본과 Controller"/>
-<meta name="twitter:description" content="REST에 대한 자세한 개념 정리는 그런 REST API로 괜찮은가에 자세히 정리되어있습니다.
-이 포스트에서는 실용적 관점에서 REST를 정리하고 REST Controller에 대해서 정리합니다. 프론트엔드(client)에서의 REST 처리는 AJAX(JQUERY) 정리 및 실전 코드 분석에 정리하였습니다.
+<meta name="twitter:description" content="이 포스트에서는 간단히 REST를 정리하고 REST Controller에 대해서 정리합니다.
+프론트엔드(client)에서의 REST 처리는 AJAX(JQUERY) 정리 및 실전 코드 분석에 정리하였습니다.
+REST에 대한 자세한 개념 정리는 그런 REST API로 괜찮은가에 자세히 정리되어있습니다.
+REST(Representational state transfer)
 개념. URI는 하나의 고유한 리소스(Resource)를 대표하도록 설계된다. 의미 URI는 반드시 그에 상응하는 데이터 자체. ex)/boards/123
 REST API -외부에서 위와 같은 방식으로 특정 URI를 통해서 사용자가 원하는 정보를 제공하는 방식. -최근에 Open API에서 많이 사용되면서 REST 방식으로 제공되는 외부 연결 URI를 REST API라고 하고, REST 방식의 서비스 제공이 가능한 것을 &lsquo;Restful&rsquo; 하다고 표현합니다."/>
 <meta name="twitter:site" content="@example"/>
 
         <meta property="og:title" content="REST 기본과 Controller" />
-<meta property="og:description" content="REST에 대한 자세한 개념 정리는 그런 REST API로 괜찮은가에 자세히 정리되어있습니다.
-이 포스트에서는 실용적 관점에서 REST를 정리하고 REST Controller에 대해서 정리합니다. 프론트엔드(client)에서의 REST 처리는 AJAX(JQUERY) 정리 및 실전 코드 분석에 정리하였습니다.
+<meta property="og:description" content="이 포스트에서는 간단히 REST를 정리하고 REST Controller에 대해서 정리합니다.
+프론트엔드(client)에서의 REST 처리는 AJAX(JQUERY) 정리 및 실전 코드 분석에 정리하였습니다.
+REST에 대한 자세한 개념 정리는 그런 REST API로 괜찮은가에 자세히 정리되어있습니다.
+REST(Representational state transfer)
 개념. URI는 하나의 고유한 리소스(Resource)를 대표하도록 설계된다. 의미 URI는 반드시 그에 상응하는 데이터 자체. ex)/boards/123
 REST API -외부에서 위와 같은 방식으로 특정 URI를 통해서 사용자가 원하는 정보를 제공하는 방식. -최근에 Open API에서 많이 사용되면서 REST 방식으로 제공되는 외부 연결 URI를 REST API라고 하고, REST 방식의 서비스 제공이 가능한 것을 &lsquo;Restful&rsquo; 하다고 표현합니다." />
 <meta property="og:type" content="article" />
@@ -75,15 +81,17 @@ REST API -외부에서 위와 같은 방식으로 특정 URI를 통해서 사용
         <meta property="og:image:height" content="512">
         
 <meta itemprop="name" content="REST 기본과 Controller">
-<meta itemprop="description" content="REST에 대한 자세한 개념 정리는 그런 REST API로 괜찮은가에 자세히 정리되어있습니다.
-이 포스트에서는 실용적 관점에서 REST를 정리하고 REST Controller에 대해서 정리합니다. 프론트엔드(client)에서의 REST 처리는 AJAX(JQUERY) 정리 및 실전 코드 분석에 정리하였습니다.
+<meta itemprop="description" content="이 포스트에서는 간단히 REST를 정리하고 REST Controller에 대해서 정리합니다.
+프론트엔드(client)에서의 REST 처리는 AJAX(JQUERY) 정리 및 실전 코드 분석에 정리하였습니다.
+REST에 대한 자세한 개념 정리는 그런 REST API로 괜찮은가에 자세히 정리되어있습니다.
+REST(Representational state transfer)
 개념. URI는 하나의 고유한 리소스(Resource)를 대표하도록 설계된다. 의미 URI는 반드시 그에 상응하는 데이터 자체. ex)/boards/123
 REST API -외부에서 위와 같은 방식으로 특정 URI를 통해서 사용자가 원하는 정보를 제공하는 방식. -최근에 Open API에서 많이 사용되면서 REST 방식으로 제공되는 외부 연결 URI를 REST API라고 하고, REST 방식의 서비스 제공이 가능한 것을 &lsquo;Restful&rsquo; 하다고 표현합니다.">
 
 
 <meta itemprop="datePublished" content="2019-05-20T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-05-20T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="450">
+<meta itemprop="wordCount" content="452">
 
 
 
@@ -310,13 +318,37 @@ REST API -외부에서 위와 같은 방식으로 특정 URI를 통해서 사용
                 
                         <article class="mini-post">
                             <header>
-                                <h3><a href="/post/spring_mvc_environment/">MVC 설정과 작동 원리</a></h3>
+                                <h3><a href="/book/spring_books/">스프링 독학을 위한 책 비교</a></h3>
                                 
                                 <time class="published" datetime=
-                                    '2019-03-29'>
-                                    March 29, 2019</time>
+                                    '2019-03-30'>
+                                    March 30, 2019</time>
                             </header>
                             
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="/book/spring_books/" class="image featured">
+            <img src="/book/spring_books.jpg" alt="">
+        </a>
+    
+
 
                         </article>
                 
@@ -435,11 +467,14 @@ REST API -외부에서 위와 같은 방식으로 특정 URI를 통해서 사용
   
 
   <div id="content">
-    <p><pre style="word-wrap: break-word;white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-break:break-all;">
-REST에 대한 자세한 개념 정리는 <b><a href="https://www.youtube.com/watch?v=RP_f5dMoHFc&t=412s">그런 REST API로 괜찮은가</a></b>에 자세히 정리되어있습니다.</p>
-
-<p>이 포스트에서는 실용적 관점에서 REST를 정리하고 REST Controller에 대해서 정리합니다.
+    <p>이 포스트에서는 간단히 REST를 정리하고 REST Controller에 대해서 정리합니다.<br>
 프론트엔드(client)에서의 REST 처리는 <b><a href="https://hohomen.github.io/post/javascript_ajax_jquery/">AJAX(JQUERY) 정리 및 실전 코드 분석</a></b>에 정리하였습니다.</p>
+
+<p>REST에 대한 자세한 개념 정리는 <b><a href="https://www.youtube.com/watch?v=RP_f5dMoHFc&t=412s">그런 REST API로 괜찮은가</a></b>에 자세히 정리되어있습니다.</p>
+
+<p><pre style="word-wrap: break-word;white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-break:break-all;"></p>
+
+<p><b>REST(Representational state transfer)</b></p>
 
 <p>개념.
 URI는 하나의 고유한 리소스(Resource)를 대표하도록 설계된다.
@@ -721,14 +756,38 @@ public @ResponseBody ProductVO doJSON(){
           <article class="mini-post">
             <header>
               <h3>
-                <a href="/post/spring_mvc_environment/">MVC 설정과 작동 원리</a>
+                <a href="/book/spring_books/">스프링 독학을 위한 책 비교</a>
               </h3>
               
-              <time class="published" datetime='2019-03-29'>
-                March 29, 2019
+              <time class="published" datetime='2019-03-30'>
+                March 30, 2019
               </time>
             </header>
             
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="/book/spring_books/" class="image featured">
+            <img src="/book/spring_books.jpg" alt="">
+        </a>
+    
+
 
           </article>
         
