@@ -1,13 +1,3 @@
-
-
-
-    
-        
-    
-
-
-
-
 <!DOCTYPE HTML>
 
 <html>
@@ -20,10 +10,14 @@
              "@type": "WebPage",
              "@id": "/"
         },
-        "articleSection" : "categories",
-        "name" : "JavaScript",
-        "headline" : "JavaScript",
-        "description" : "",
+        "articleSection" : "post",
+        "name" : "Spring Security 인증 구조",
+        "headline" : "Spring Security 인증 구조",
+        "description" : "스프링 시큐리티의 인증과정을 살펴보자. 위의 그림을 보며 이해하면 길을 잃지 않을 것이다.
+1.Received the Http Request
+스프링 시큐리티는 연속된 필터들을 갖고 있다. 그래서 request가 왔을 때 request는 인증 혹은 인가를 목적으로 이 필터들을 통과한다.
+2.요청 정보를 통해 AuthenticationToken 을 생성.
+Authentication과 관련된 Filter에 authentication request가 들어오면 필터는 request로부터 username과 password를 추출한다. 그 다음 추출한 사용자 정보를 갖고 Authentication 객체를 생성한다. 만약 추출한 정보가 username과 password일 경우에는 이것을 이용해 UsernamePasswordAuthenticationToken(Authentication의 구현체) 객체를 생성한다.",
         "inLanguage" : "en",
         "author" : "",
         "creator" : "",
@@ -31,15 +25,17 @@
         "accountablePerson" : "",
         "copyrightHolder" : "",
         "copyrightYear" : "2019",
-        "datePublished": "2019-02-20 00:00:00 &#43;0000 UTC",
-        "dateModified" : "2019-02-20 00:00:00 &#43;0000 UTC",
-        "url" : "/categories/javascript/",
-        "wordCount" : "0",
+        "datePublished": "2019-05-23 00:00:00 &#43;0000 UTC",
+        "dateModified" : "2019-05-23 00:00:00 &#43;0000 UTC",
+        "url" : "/post/spring_security/",
+        "wordCount" : "324",
         "keywords" : [ "Blog" ]
     }
     </script>
         
-            <title>JavaScript Posts - Dony Rose</title>
+            
+                <title>Spring Security 인증 구조</title>
+            
         
 
         <meta charset="utf-8" />
@@ -49,6 +45,8 @@
 
 
         
+            <meta name="author" content="     &#34;&#34;">
+        
         
             
                 <meta name="description" content="HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador. Powered by Hugo">
@@ -56,24 +54,44 @@
         
 
         <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="JavaScript"/>
-<meta name="twitter:description" content="HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador. Powered by Hugo"/>
+<meta name="twitter:title" content="Spring Security 인증 구조"/>
+<meta name="twitter:description" content="스프링 시큐리티의 인증과정을 살펴보자. 위의 그림을 보며 이해하면 길을 잃지 않을 것이다.
+1.Received the Http Request
+스프링 시큐리티는 연속된 필터들을 갖고 있다. 그래서 request가 왔을 때 request는 인증 혹은 인가를 목적으로 이 필터들을 통과한다.
+2.요청 정보를 통해 AuthenticationToken 을 생성.
+Authentication과 관련된 Filter에 authentication request가 들어오면 필터는 request로부터 username과 password를 추출한다. 그 다음 추출한 사용자 정보를 갖고 Authentication 객체를 생성한다. 만약 추출한 정보가 username과 password일 경우에는 이것을 이용해 UsernamePasswordAuthenticationToken(Authentication의 구현체) 객체를 생성한다."/>
 <meta name="twitter:site" content="@example"/>
 
-        <meta property="og:title" content="JavaScript" />
-<meta property="og:description" content="HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador. Powered by Hugo" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="/categories/javascript/" />
-<meta property="og:updated_time" content="2019-02-20T00:00:00&#43;00:00"/>
+        <meta property="og:title" content="Spring Security 인증 구조" />
+<meta property="og:description" content="스프링 시큐리티의 인증과정을 살펴보자. 위의 그림을 보며 이해하면 길을 잃지 않을 것이다.
+1.Received the Http Request
+스프링 시큐리티는 연속된 필터들을 갖고 있다. 그래서 request가 왔을 때 request는 인증 혹은 인가를 목적으로 이 필터들을 통과한다.
+2.요청 정보를 통해 AuthenticationToken 을 생성.
+Authentication과 관련된 Filter에 authentication request가 들어오면 필터는 request로부터 username과 password를 추출한다. 그 다음 추출한 사용자 정보를 갖고 Authentication 객체를 생성한다. 만약 추출한 정보가 username과 password일 경우에는 이것을 이용해 UsernamePasswordAuthenticationToken(Authentication의 구현체) 객체를 생성한다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/spring_security/" /><meta property="article:published_time" content="2019-05-23T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2019-05-23T00:00:00&#43;00:00"/>
 
         <meta property="og:image" content="//images/logo.png">
         <meta property="og:image:type" content="image/png">
         <meta property="og:image:width" content="512">
         <meta property="og:image:height" content="512">
         
-<meta itemprop="name" content="JavaScript">
-<meta itemprop="description" content="HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador. Powered by Hugo">
+<meta itemprop="name" content="Spring Security 인증 구조">
+<meta itemprop="description" content="스프링 시큐리티의 인증과정을 살펴보자. 위의 그림을 보며 이해하면 길을 잃지 않을 것이다.
+1.Received the Http Request
+스프링 시큐리티는 연속된 필터들을 갖고 있다. 그래서 request가 왔을 때 request는 인증 혹은 인가를 목적으로 이 필터들을 통과한다.
+2.요청 정보를 통해 AuthenticationToken 을 생성.
+Authentication과 관련된 Filter에 authentication request가 들어오면 필터는 request로부터 username과 password를 추출한다. 그 다음 추출한 사용자 정보를 갖고 Authentication 객체를 생성한다. 만약 추출한 정보가 username과 password일 경우에는 이것을 이용해 UsernamePasswordAuthenticationToken(Authentication의 구현체) 객체를 생성한다.">
 
+
+<meta itemprop="datePublished" content="2019-05-23T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-05-23T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="324">
+
+
+
+<meta itemprop="keywords" content="" />
 
         
 
@@ -112,6 +130,7 @@
       
       <div id="wrapper">
 
+    
     
 <header id="header">
     
@@ -155,6 +174,10 @@
     </nav>
     <nav class="main">
         <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
             
             <li class="search">
                 <a class="fa-search" href="#search">Search</a>
@@ -316,16 +339,52 @@
         
 </section>
 
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </ul>
+    </section>
+</section>
+
     
     <div id="main">
-        <h1>JavaScript</h1>
         
         
-            <article class="post">
+        <article class="post">
   <header>
     <div class="title">
         
-            <h2><a href="/post/javascript_object/">객체(JavaScript Basic)</a></h2>
+            <h1><a href="/post/spring_security/">Spring Security 인증 구조</a></h1>
+            
         
         
     </div>
@@ -333,64 +392,8 @@
         
 
         <time class="published"
-            datetime='2019-02-20'>
-            February 20, 2019</time>
-        <span class="author">     &#34;&#34;</span>
-        
-            <p>3 minute read</p>
-        
-        
-    </div>
-</header>
-
-  
-
-  
-  
-  <footer>
-    <ul class="actions">
-      <li><a href="/post/javascript_object/" class="button big">Continue Reading</a></li>
-    </ul>
-  <ul class="stats">
-  <li class="categories">
-    <ul>
-        
-            
-            
-                <i class="fa fa-folder"></i>
-                
-                
-                <li><a class="article-category-link" href="/categories/javascript">JavaScript</a></li>
-                
-            
-        
-    </ul>
-  </li>
-  <li class="tags">
-    <ul>
-        
-    </ul>
-  </li>
-</ul>
-
-  </footer>
-</article>
-
-        
-            <article class="post">
-  <header>
-    <div class="title">
-        
-            <h2><a href="/post/javascript_function/">함수(JavaScript Basic)</a></h2>
-        
-        
-    </div>
-    <div class="meta">
-        
-
-        <time class="published"
-            datetime='2019-02-19'>
-            February 19, 2019</time>
+            datetime='2019-05-23'>
+            May 23, 2019</time>
         <span class="author">     &#34;&#34;</span>
         
             <p>2 minute read</p>
@@ -399,15 +402,130 @@
     </div>
 </header>
 
+
+  
+    <section id="social-share">
+      <ul class="icons">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+    </section>
   
 
   
-  
+
+  <div id="content">
+    <p><img src="https://user-images.githubusercontent.com/38998522/59583538-96fd4700-9116-11e9-9127-bfe421f50cf5.png"></p>
+
+<p>스프링 시큐리티의 인증과정을 살펴보자. 위의 그림을 보며 이해하면 길을 잃지 않을 것이다.</p>
+
+<p><b>1.Received the Http Request</b><br>
+스프링 시큐리티는 연속된 필터들을 갖고 있다. 그래서 request가 왔을 때 request는 인증 혹은 인가를 목적으로 이 필터들을 통과한다.</p>
+
+<p><b>2.요청 정보를 통해 AuthenticationToken 을 생성.</b><br>
+Authentication과 관련된 Filter에 authentication request가 들어오면 필터는 request로부터 username과 password를 추출한다. 그 다음 추출한 사용자 정보를 갖고 Authentication 객체를 생성한다. 만약 추출한 정보가 username과 password일 경우에는 이것을 이용해 UsernamePasswordAuthenticationToken(Authentication의 구현체) 객체를 생성한다.</p>
+
+<p><b>3.생성된 AuthenticationToken을 AuthenticationManagager에게 위임.</b>
+UsernamePasswordAuthenticationToken 객체가 생성되면 이 객체는 AuthenticationManager의 authenticate()를 호출하는데 이용됩니다.  AuthenticationManager는 인터페이스이며 실제 구현 클래스는 ProviderManager이다.</p>
+
+<pre><code>AuthenticationManager.java
+public interface AuthenticationManager
+{
+  Authentication authenticate(Authentication authentication)throws AuthenticationException;
+}
+</code></pre>
+
+<p><b>4.Trying to authenticate with list of AuthenticationProvider(s)</b><br>
+ProviderManager는 사용자의 request를 인증하는데 사용되는 AuthenticationProvider의 구현체를 여러개 가질 수 있다. ProviderManager는 Authentication 객체(UsernamePasswordAuthenticationToken)를 갖고 등록된 AuthenticationProvider(interface)에 대해 차례대로 인증한다.</p>
+
+<p>스프링 시큐리티는 몇 가지 AuthenticationProvider의 기본 구현체를 제공한다.</p>
+
+<ul>
+<li>CasAuthenticationProvider</li>
+<li>JaasAuthenticationProvider</li>
+<li>DaoAuthenticationProvider</li>
+<li>OpenIDAuthenticationProvider</li>
+<li>RememberMeAuthenticationProvider</li>
+<li>LdapAuthenticationProvider</li>
+</ul>
+
+<p>예를 들어 아래와 같이 jdbc-user-service 태그를 설정하면 AuthenticationProvider의 구현 클래스로 DaoAuthenticationProvider를 사용한다.</p>
+
+<pre><code>    &lt;security:authentication-manager&gt;
+        &lt;security:authentication-provider &gt;
+            &lt;security:jdbc-user-service data-source-ref=&quot;dataSource&quot; id=&quot;jdbcUserService&quot; /&gt;
+            &lt;security:user-service&gt;
+                &lt;security:user name=&quot;dhchoi&quot; password=&quot;1234&quot; authorities=&quot;MEMBER&quot; /&gt;
+                &lt;security:user name=&quot;manager&quot; password=&quot;qwer&quot; authorities=&quot;ROLE_MANAGER&quot; /&gt;
+                &lt;security:user name=&quot;admin&quot; password=&quot;asdf&quot; authorities=&quot;ROLE_ADMIN,ROLE_USER&quot; /&gt;
+            &lt;/security:user-service&gt; 
+        &lt;/security:authentication-provider&gt;
+    &lt;/security:authentication-manager&gt;
+</code></pre>
+
+<p><b>5.몇몇 AuthenticationProvider는 username을 갖고 사용자의 구체적 정보(UserDetails)를 가지고 오기 위해 UserDetailsService(interface)를 사용한다.</b></p>
+
+<p>가령 DaoAuthenticationProvider의 authenticate() 메서드는 다음과 같은 과정을 거쳐 인증을 처리한다.</p>
+
+<p>1.UserDetailsService의 loadUserByUsername() 메서드로 사용자의 이름(아이디)에 해당하는 UserDetails 객체를 구한다.<br>
+2.입력한 암호가 UserDetails 객체의 getPassword)로 구한 암호와 일치하는 지 비교한다. (두 암호가 일치하지 않으면 BadCredentialsException)을 발생시킨다.<br>
+3.두 암호가 일치하면, UserDetails 객체로부터 Authentication 객체를 생성해서 리턴한다.<br></p>
+
+<pre><code>public interface UserDetailsService{
+    UserDetails loadUserByUsername(String username) throws UsernameNotFoundException;
+}
+
+public interface UserDetails extends Serializable{
+    Collection&lt;? extends GrantedAuthority&gt; getAuthorities();
+    String getPassword();
+    String getUsername();
+    boolean isAccountNonExpired();
+    boolean isAccountNonLocked();
+    boolean isCredentialsNonExpired();
+    boolean isEnabled();    
+}
+</code></pre>
+
+<p><b>6.Authentication is done!</b>
+AuthenticationManager will return the obtained fully populated Authentication object back to the relevant Authentication Filter.
+last
+Setting up Authentication Object in SecurityContext</p>
+
+<p><b>7.Setting up Authentication Object in SecurityContext</b>
+Then the related AuthenticationFilter will store the obtained authentication object in the SecurityContext for future filter uses. (Use for Authorization Filters)</p>
+
+<p>참고 자료<br>
+<a href="https://springbootdev.com/2017/08/23/spring-security-authentication-architecture/">https://springbootdev.com/2017/08/23/spring-security-authentication-architecture/</a> <br>
+최범균 Spring4.0</p>
+
+  </div>
+
   <footer>
-    <ul class="actions">
-      <li><a href="/post/javascript_function/" class="button big">Continue Reading</a></li>
-    </ul>
-  <ul class="stats">
+    <ul class="stats">
   <li class="categories">
     <ul>
         
@@ -416,7 +534,7 @@
                 <i class="fa fa-folder"></i>
                 
                 
-                <li><a class="article-category-link" href="/categories/javascript">JavaScript</a></li>
+                <li><a class="article-category-link" href="/categories/spring">Spring</a></li>
                 
             
         
@@ -430,78 +548,45 @@
 </ul>
 
   </footer>
+
 </article>
 
-        
-            <article class="post">
-  <header>
-    <div class="title">
-        
-            <h2><a href="/post/javascript_array/">배열(JavaScript Basic)</a></h2>
-        
-        
-    </div>
-    <div class="meta">
-        
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "shortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
 
-        <time class="published"
-            datetime='2019-02-18'>
-            February 18, 2019</time>
-        <span class="author">     &#34;&#34;</span>
-        
-            <p>1 minute read</p>
-        
-        
-    </div>
-</header>
 
-  
-
-  
-  
-  <footer>
-    <ul class="actions">
-      <li><a href="/post/javascript_array/" class="button big">Continue Reading</a></li>
-    </ul>
-  <ul class="stats">
-  <li class="categories">
-    <ul>
-        
-            
-            
-                <i class="fa fa-folder"></i>
-                
-                
-                <li><a class="article-category-link" href="/categories/javascript">JavaScript</a></li>
-                
-            
-        
-    </ul>
-  </li>
-  <li class="tags">
-    <ul>
-        
-    </ul>
-  </li>
-</ul>
-
-  </footer>
-</article>
-
-        
-
-        
 <ul class="actions pagination">
     
-        <li><a href="/categories/javascript/"
-                class="button big previous">Previous Page</a></li>
+        <li><a href="/post/spring_rest/"
+                class="button big previous">REST 기본과 Controller</a></li>
     
 
     
-        <li><a href="/categories/javascript/page/3/"
-                class="button big next">Next Page</a></li>
+        <li><a href="/post/etc_index/"
+                class="button big next">Contents Summary</a></li>
     
 </ul>
+
 
     </div>
     

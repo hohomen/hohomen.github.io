@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>/post/spring_security/</loc>
+    <lastmod>2019-05-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/spring_rest/</loc>
     <lastmod>2019-05-20T00:00:00+00:00</lastmod>
   </url>
@@ -182,7 +187,7 @@
   
   <url>
     <loc>/categories/spring/</loc>
-    <lastmod>2019-05-20T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
