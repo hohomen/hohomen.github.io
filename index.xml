@@ -6,19 +6,19 @@
     <description>Recent content on Dony Rose</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Contents Summary</title>
-      <link>/post/etc_index/</link>
-      <pubDate>Mon, 03 Jun 2019 00:00:00 +0000</pubDate>
+      <link>/post/a_index/</link>
+      <pubDate>Wed, 19 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/etc_index/</guid>
-      <description>단순한 복붙 No! 이해 한 만큼만 직접 작성한다.  Book Log  자바 객체 지향의 원리와 이해  Java    Spring  REST 기본과 Controller MVC 설정과 작동 원리 MVC CONTROLLER 스프링 DI(Dependency Injection)
-  JavaScript  ajax(jQuery) 정리 및 실전 코드 분석 ajax(XMLHttpRequest) 함수(JavaScript Basic) 객체(JavaScript Basic) 배열(JavaScript Basic) 기본 문법(Javascript Basic) HTML에서 JavaScript Load  CSS  Bootstrap grid system CSS 기본 CSS 박스모델   li  a { color: #4374D9; border-bottom: none!</description>
+      <guid>/post/a_index/</guid>
+      <description>단순한 복붙 No! 이해 한 만큼만 직접 작성한다.  Book Review  자바 객체 지향의 원리와 이해  ETC  (ant) build.xml 작성법  Spring  Spring Security 인증 구조 REST 기본과 Controller MVC 설정과 작동 원리 MVC CONTROLLER 스프링 DI(Dependency Injection)
+  XML  XML 기본 XML 특수 기호 XML 네임스페이스  JavaScript  ajax(jQuery) 정리 및 실전 코드 분석 ajax(XMLHttpRequest) 함수(JavaScript Basic) 객체(JavaScript Basic) 배열(JavaScript Basic) 기본 문법(Javascript Basic) HTML에서 JavaScript Load  CSS  Bootstrap grid system CSS 기본 CSS 박스모델   li  a { color: #4374D9; border-bottom: none!</description>
     </item>
     
     <item>
@@ -29,7 +29,7 @@
       <guid>/post/spring_security/</guid>
       <description>스프링 시큐리티의 인증과정을 살펴보자. 위의 그림을 보며 이해하면 길을 잃지 않을 것이다.
 1.Received the Http Request
-스프링 시큐리티는 연속된 필터들을 갖고 있다. 그래서 request가 왔을 때 request는 인증 혹은 인가를 목적으로 이 필터들을 통과한다.
+스프링 시큐리티는 연속된 필터(필터에 대해서는 다음에 정리해 보도록 하자)들을 갖고 있다. 그래서 request가 왔을 때 request는 인증 혹은 인가를 목적으로 이 필터들을 통과한다.
 2.요청 정보를 통해 AuthenticationToken 을 생성.
 Authentication과 관련된 Filter에 authentication request가 들어오면 필터는 request로부터 username과 password를 추출한다. 그 다음 추출한 사용자 정보를 갖고 Authentication 객체를 생성한다. 만약 추출한 정보가 username과 password일 경우에는 이것을 이용해 UsernamePasswordAuthenticationToken(Authentication의 구현체) 객체를 생성한다.</description>
     </item>
@@ -42,7 +42,7 @@ Authentication과 관련된 Filter에 authentication request가 들어오면 필
       <guid>/post/spring_rest/</guid>
       <description>이 포스트에서는 간단히 REST를 정리하고 REST Controller에 대해서 정리합니다.
 프론트엔드(client)에서의 REST 처리는 AJAX(JQUERY) 정리 및 실전 코드 분석에 정리하였습니다.
-REST에 대한 자세한 개념 정리는 그런 REST API로 괜찮은가에 자세히 정리되어있습니다.
+REST에 대한 자세한 개념 정리는 그런 REST API로 괜찮은가에서 이해할 수 있습니다.
 REST(Representational state transfer)
 개념. URI는 하나의 고유한 리소스(Resource)를 대표하도록 설계된다. 의미 URI는 반드시 그에 상응하는 데이터 자체. ex)/boards/123
 REST API -외부에서 위와 같은 방식으로 특정 URI를 통해서 사용자가 원하는 정보를 제공하는 방식. -최근에 Open API에서 많이 사용되면서 REST 방식으로 제공되는 외부 연결 URI를 REST API라고 하고, REST 방식의 서비스 제공이 가능한 것을 &amp;lsquo;Restful&amp;rsquo; 하다고 표현합니다.</description>
@@ -68,23 +68,13 @@ REST API -외부에서 위와 같은 방식으로 특정 URI를 통해서 사용
     </item>
     
     <item>
-      <title>스프링 독학을 위한 책 비교</title>
-      <link>/book/spring_books/</link>
-      <pubDate>Sat, 30 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/book/spring_books/</guid>
-      <description>내용 작성중  </description>
-    </item>
-    
-    <item>
       <title>MVC 설정과 작동 원리</title>
       <link>/post/spring_mvc_environment/</link>
       <pubDate>Fri, 29 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/spring_mvc_environment/</guid>
-      <description>이 포스트에서는 스프링 MVC의 작동 방식과 스프링 환경 설정 요소 web.xml root-context.xml servlet-context.xml를 정리합니다. 이 구성은 기본 템플릿 환경요소이며 사용자 수준에 맞게 환경설정을 구성할 수 있습니다. 먼저 Spring MVC의 큰 그림을 그리자. 이미지 출처(https://tinkerbellbass.tistory.com/40)
-스프링 MVC를 사용하기 위한 기본 설정 과정은 다음과 같다. 1. web.xml에 DispatcherServlet 설정 2. web.xml에 캐릭터 인코딩 처리를 위한 필터 설정 3. 스프링 MVC 설정 A. HandlerMapping, HandlerAdapter (= mvc:annotation-driven) B. ViewResolver 설정
-web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 톰켓이 최초 구동될 때 web.</description>
+      <description>이 포스트에서는 스프링 MVC의 작동 방식과 스프링 환경 설정 요소 web.xml root-context.xml servlet-context.xml를 정리합니다. 이 구성은 스프링 프로젝트 생성시 기본 템플릿 환경요소이며 사용자 수준에 맞게 환경설정을 구성할 수 있습니다. 먼저 Spring MVC의 큰 그림을 그리자. 이미지 출처(https://tinkerbellbass.tistory.com/40)
+스프링 MVC를 사용하기 위한 기본 설정 과정은 다음과 같다. 1. web.xml에 DispatcherServlet 설정 2. web.xml에 캐릭터 인코딩 처리를 위한 필터 설정 3. 스프링 MVC 설정 A. HandlerMapping, HandlerAdapter (= mvc:annotation-driven) B. ViewResolver 설정</description>
     </item>
     
     <item>
@@ -113,15 +103,6 @@ web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 �
       <guid>/post/etc_build/</guid>
       <description>가끔 학습용으로 Ant를 사용해야하는 일이 있다. build.xml 작성법을 익힌다면 해석하는 데에도 무리가 없을 것이다.
 지금부터 이 문장을 처음부터 만들어 나가봅시다. &amp;lt;?xml version=&amp;quot;1.0&amp;quot;&amp;gt; &amp;lt;project name=&amp;quot;dms&amp;quot; default=&amp;quot;compile&amp;quot; basedir=&amp;quot;.&amp;quot;&amp;gt; &amp;lt;property name=&amp;quot;build.dir&amp;quot; location=&amp;quot;build&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;build.prod.dir&amp;quot; location=&amp;quot;${build.dir}/prod&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;build.test.dir&amp;quot; location=&amp;quot;${build.dir}/test&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;doc.dir&amp;quot; location=&amp;quot;doc&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;index.dir&amp;quot; location=&amp;quot;index&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;src.dir&amp;quot; location=&amp;quot;src&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;test.dir&amp;quot; location=&amp;quot;test&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;vendor.lib.dir&amp;quot; location=&amp;quot;vendor/lib&amp;quot;/&amp;gt; &amp;lt;path id=&amp;quot;project.classpath&amp;quot;&amp;gt; &amp;lt;pathelement location=&amp;quot;${build.prod.dir}&amp;quot; /&amp;gt; &amp;lt;pathelement location=&amp;quot;${build.test.dir}&amp;quot; /&amp;gt; &amp;lt;fileset dir=&amp;quot;${vendor.lib.dir}&amp;quot;&amp;gt; &amp;lt;include name=&amp;quot;*.jar&amp;quot;/&amp;gt; &amp;lt;/fileset&amp;gt; &amp;lt;/path&amp;gt; &amp;lt;target name=&amp;quot;prepare&amp;quot;&amp;gt; &amp;lt;mkdir dir=&amp;quot;${build.prod.dir}&amp;quot; /&amp;gt; &amp;lt;mkdir dir=&amp;quot;${build.</description>
-    </item>
-    
-    <item>
-      <title>(북로그) 토비의 스프링</title>
-      <link>/book/toby_spring/</link>
-      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/book/toby_spring/</guid>
-      <description>처음에는 &#34;저 두꺼운 책을 왜 추천하고 볼까&#34; 하는 생각을 했었다. 그러나 구현 의주의 스프링 책을 보면서 혼란속에 빠졌을 때 &#39;토비의 스프링&#39;은 나의 구원이었다. 한 사례를 들면 구현 의주의 스프링 책에서는 MVC 애노테이션의 종류에 대해서만 나열할 뿐 설명이 없다. 이 책에서는 나열된 애노테이션이 (예를들어 @RequestParam) 정확히 어떻게 동작하는 지에 대해서 자세히 설명되어 있다. 또 하나의 사례를 들자면 Spring의 개념을 설명할 때 가장 자주 나오는 개념이 POJO이다. 하지만 POJO에 대해 설명해주는 책은 거의 없었다.</description>
     </item>
     
     <item>
@@ -257,7 +238,7 @@ ex) 표현 문자 &amp;lt; 개체 참조명 &amp;amp;lt; 어원 less then 표현
       <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/book/java_spring/</guid>
-      <description>스프링에 입문하려는 (JAVA OOP)개발자에게 추천해주고 싶은 책이다. 당장 스프링 프로젝트를 구현하는 것이 목적인 분들에게는 어쩌면 이 책은 도움이 되지 않을 수 있다. 그와 관련된 내용은 책의 후반부에나 나오기 때문이다. 대신 이 책은 독자에게 JAVA OOP 개발에 대한 전체적인 시선을 알려주고 스프링을 그 맥락에서 설명한다. 자바를 처음 공부했던 내가 자바에 대해 느낀점은 &#34;어렵다&#34;였다. 의무적으로 인터페이스를 만들고 구현 클래스를 만들고 생성자를 호출했지만 도대체 왜 그렇게 해야하는 지는 이해할 수 없어서 어려웠다.(물론 전과생이어서 적응상의 문제일 수 있다.</description>
+      <description>스프링에 입문하려는 (JAVA OOP)개발자에게 추천해주고 싶은 책이다. 자바를 처음 공부했던 내가 자바에 대해 느낀점은 &#34;어렵다&#34;였다. 의무적으로 인터페이스를 만들고 구현 클래스를 만들고 생성자를 호출했지만 도대체 왜 그렇게 해야하는 지는 이해할 수 없어서 어려웠다.(물론 전과생이어서 적응상의 문제일 수 있다.) 이 책은 객체지향 프로그래밍이라는 큰 관점에서 JAVA의 키워드들을 설명해 준다. 나는 이 책을 통해 class, interface, abstract, super 등의 키워드들을 객체지향이라는 큰 관점에서 이해함으로서 이 키워드들을 더욱 올바르게 사용할 수 있게 되었다. 나아가 책은 일관성 있게 객체지향적 관점에서 객체지향 설계원칙(SOLID), 디자인 패턴, 스프링 프레임워크에 대해서 설명한다.</description>
     </item>
     
     <item>

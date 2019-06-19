@@ -6,28 +6,10 @@
     <description>Recent content in Book on Dony Rose</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 30 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 02 Feb 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/book/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>스프링 독학을 위한 책 비교</title>
-      <link>/book/spring_books/</link>
-      <pubDate>Sat, 30 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/book/spring_books/</guid>
-      <description>내용 작성중  </description>
-    </item>
-    
-    <item>
-      <title>(북로그) 토비의 스프링</title>
-      <link>/book/toby_spring/</link>
-      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/book/toby_spring/</guid>
-      <description>처음에는 &#34;저 두꺼운 책을 왜 추천하고 볼까&#34; 하는 생각을 했었다. 그러나 구현 의주의 스프링 책을 보면서 혼란속에 빠졌을 때 &#39;토비의 스프링&#39;은 나의 구원이었다. 한 사례를 들면 구현 의주의 스프링 책에서는 MVC 애노테이션의 종류에 대해서만 나열할 뿐 설명이 없다. 이 책에서는 나열된 애노테이션이 (예를들어 @RequestParam) 정확히 어떻게 동작하는 지에 대해서 자세히 설명되어 있다. 또 하나의 사례를 들자면 Spring의 개념을 설명할 때 가장 자주 나오는 개념이 POJO이다. 하지만 POJO에 대해 설명해주는 책은 거의 없었다.</description>
-    </item>
     
     <item>
       <title>(북로그) 자바 객체 지향의 원리와 이해</title>
@@ -35,7 +17,7 @@
       <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/book/java_spring/</guid>
-      <description>스프링에 입문하려는 (JAVA OOP)개발자에게 추천해주고 싶은 책이다. 당장 스프링 프로젝트를 구현하는 것이 목적인 분들에게는 어쩌면 이 책은 도움이 되지 않을 수 있다. 그와 관련된 내용은 책의 후반부에나 나오기 때문이다. 대신 이 책은 독자에게 JAVA OOP 개발에 대한 전체적인 시선을 알려주고 스프링을 그 맥락에서 설명한다. 자바를 처음 공부했던 내가 자바에 대해 느낀점은 &#34;어렵다&#34;였다. 의무적으로 인터페이스를 만들고 구현 클래스를 만들고 생성자를 호출했지만 도대체 왜 그렇게 해야하는 지는 이해할 수 없어서 어려웠다.(물론 전과생이어서 적응상의 문제일 수 있다.</description>
+      <description>스프링에 입문하려는 (JAVA OOP)개발자에게 추천해주고 싶은 책이다. 자바를 처음 공부했던 내가 자바에 대해 느낀점은 &#34;어렵다&#34;였다. 의무적으로 인터페이스를 만들고 구현 클래스를 만들고 생성자를 호출했지만 도대체 왜 그렇게 해야하는 지는 이해할 수 없어서 어려웠다.(물론 전과생이어서 적응상의 문제일 수 있다.) 이 책은 객체지향 프로그래밍이라는 큰 관점에서 JAVA의 키워드들을 설명해 준다. 나는 이 책을 통해 class, interface, abstract, super 등의 키워드들을 객체지향이라는 큰 관점에서 이해함으로서 이 키워드들을 더욱 올바르게 사용할 수 있게 되었다. 나아가 책은 일관성 있게 객체지향적 관점에서 객체지향 설계원칙(SOLID), 디자인 패턴, 스프링 프레임워크에 대해서 설명한다.</description>
     </item>
     
   </channel>

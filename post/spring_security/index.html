@@ -15,7 +15,7 @@
         "headline" : "Spring Security 인증 구조",
         "description" : "스프링 시큐리티의 인증과정을 살펴보자. 위의 그림을 보며 이해하면 길을 잃지 않을 것이다.
 1.Received the Http Request
-스프링 시큐리티는 연속된 필터들을 갖고 있다. 그래서 request가 왔을 때 request는 인증 혹은 인가를 목적으로 이 필터들을 통과한다.
+스프링 시큐리티는 연속된 필터(필터에 대해서는 다음에 정리해 보도록 하자)들을 갖고 있다. 그래서 request가 왔을 때 request는 인증 혹은 인가를 목적으로 이 필터들을 통과한다.
 2.요청 정보를 통해 AuthenticationToken 을 생성.
 Authentication과 관련된 Filter에 authentication request가 들어오면 필터는 request로부터 username과 password를 추출한다. 그 다음 추출한 사용자 정보를 갖고 Authentication 객체를 생성한다. 만약 추출한 정보가 username과 password일 경우에는 이것을 이용해 UsernamePasswordAuthenticationToken(Authentication의 구현체) 객체를 생성한다.",
         "inLanguage" : "en",
@@ -28,7 +28,7 @@ Authentication과 관련된 Filter에 authentication request가 들어오면 필
         "datePublished": "2019-05-23 00:00:00 &#43;0000 UTC",
         "dateModified" : "2019-05-23 00:00:00 &#43;0000 UTC",
         "url" : "/post/spring_security/",
-        "wordCount" : "324",
+        "wordCount" : "311",
         "keywords" : [ "Blog" ]
     }
     </script>
@@ -57,7 +57,7 @@ Authentication과 관련된 Filter에 authentication request가 들어오면 필
 <meta name="twitter:title" content="Spring Security 인증 구조"/>
 <meta name="twitter:description" content="스프링 시큐리티의 인증과정을 살펴보자. 위의 그림을 보며 이해하면 길을 잃지 않을 것이다.
 1.Received the Http Request
-스프링 시큐리티는 연속된 필터들을 갖고 있다. 그래서 request가 왔을 때 request는 인증 혹은 인가를 목적으로 이 필터들을 통과한다.
+스프링 시큐리티는 연속된 필터(필터에 대해서는 다음에 정리해 보도록 하자)들을 갖고 있다. 그래서 request가 왔을 때 request는 인증 혹은 인가를 목적으로 이 필터들을 통과한다.
 2.요청 정보를 통해 AuthenticationToken 을 생성.
 Authentication과 관련된 Filter에 authentication request가 들어오면 필터는 request로부터 username과 password를 추출한다. 그 다음 추출한 사용자 정보를 갖고 Authentication 객체를 생성한다. 만약 추출한 정보가 username과 password일 경우에는 이것을 이용해 UsernamePasswordAuthenticationToken(Authentication의 구현체) 객체를 생성한다."/>
 <meta name="twitter:site" content="@example"/>
@@ -65,7 +65,7 @@ Authentication과 관련된 Filter에 authentication request가 들어오면 필
         <meta property="og:title" content="Spring Security 인증 구조" />
 <meta property="og:description" content="스프링 시큐리티의 인증과정을 살펴보자. 위의 그림을 보며 이해하면 길을 잃지 않을 것이다.
 1.Received the Http Request
-스프링 시큐리티는 연속된 필터들을 갖고 있다. 그래서 request가 왔을 때 request는 인증 혹은 인가를 목적으로 이 필터들을 통과한다.
+스프링 시큐리티는 연속된 필터(필터에 대해서는 다음에 정리해 보도록 하자)들을 갖고 있다. 그래서 request가 왔을 때 request는 인증 혹은 인가를 목적으로 이 필터들을 통과한다.
 2.요청 정보를 통해 AuthenticationToken 을 생성.
 Authentication과 관련된 Filter에 authentication request가 들어오면 필터는 request로부터 username과 password를 추출한다. 그 다음 추출한 사용자 정보를 갖고 Authentication 객체를 생성한다. 만약 추출한 정보가 username과 password일 경우에는 이것을 이용해 UsernamePasswordAuthenticationToken(Authentication의 구현체) 객체를 생성한다." />
 <meta property="og:type" content="article" />
@@ -80,14 +80,14 @@ Authentication과 관련된 Filter에 authentication request가 들어오면 필
 <meta itemprop="name" content="Spring Security 인증 구조">
 <meta itemprop="description" content="스프링 시큐리티의 인증과정을 살펴보자. 위의 그림을 보며 이해하면 길을 잃지 않을 것이다.
 1.Received the Http Request
-스프링 시큐리티는 연속된 필터들을 갖고 있다. 그래서 request가 왔을 때 request는 인증 혹은 인가를 목적으로 이 필터들을 통과한다.
+스프링 시큐리티는 연속된 필터(필터에 대해서는 다음에 정리해 보도록 하자)들을 갖고 있다. 그래서 request가 왔을 때 request는 인증 혹은 인가를 목적으로 이 필터들을 통과한다.
 2.요청 정보를 통해 AuthenticationToken 을 생성.
 Authentication과 관련된 Filter에 authentication request가 들어오면 필터는 request로부터 username과 password를 추출한다. 그 다음 추출한 사용자 정보를 갖고 Authentication 객체를 생성한다. 만약 추출한 정보가 username과 password일 경우에는 이것을 이용해 UsernamePasswordAuthenticationToken(Authentication의 구현체) 객체를 생성한다.">
 
 
 <meta itemprop="datePublished" content="2019-05-23T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-05-23T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="324">
+<meta itemprop="wordCount" content="311">
 
 
 
@@ -266,11 +266,11 @@ Authentication과 관련된 Filter에 authentication request가 들어오면 필
                 
                         <article class="mini-post">
                             <header>
-                                <h3><a href="/post/etc_index/">Contents Summary</a></h3>
+                                <h3><a href="/post/a_index/">Contents Summary</a></h3>
                                 
                                 <time class="published" datetime=
-                                    '2019-06-03'>
-                                    June 3, 2019</time>
+                                    '2019-06-19'>
+                                    June 19, 2019</time>
                             </header>
                             
 
@@ -444,7 +444,7 @@ Authentication과 관련된 Filter에 authentication request가 들어오면 필
 <p>스프링 시큐리티의 인증과정을 살펴보자. 위의 그림을 보며 이해하면 길을 잃지 않을 것이다.</p>
 
 <p><b>1.Received the Http Request</b><br>
-스프링 시큐리티는 연속된 필터들을 갖고 있다. 그래서 request가 왔을 때 request는 인증 혹은 인가를 목적으로 이 필터들을 통과한다.</p>
+스프링 시큐리티는 연속된 필터(필터에 대해서는 다음에 정리해 보도록 하자)들을 갖고 있다. 그래서 request가 왔을 때 request는 인증 혹은 인가를 목적으로 이 필터들을 통과한다.</p>
 
 <p><b>2.요청 정보를 통해 AuthenticationToken 을 생성.</b><br>
 Authentication과 관련된 Filter에 authentication request가 들어오면 필터는 request로부터 username과 password를 추출한다. 그 다음 추출한 사용자 정보를 갖고 Authentication 객체를 생성한다. 만약 추출한 정보가 username과 password일 경우에는 이것을 이용해 UsernamePasswordAuthenticationToken(Authentication의 구현체) 객체를 생성한다.</p>
@@ -459,7 +459,7 @@ public interface AuthenticationManager
 }
 </code></pre>
 
-<p><b>4.Trying to authenticate with list of AuthenticationProvider(s)</b><br>
+<p><b>4.AuthenticationProvider(s)의 리스트들을 갖고 인증 시도</b><br>
 ProviderManager는 사용자의 request를 인증하는데 사용되는 AuthenticationProvider의 구현체를 여러개 가질 수 있다. ProviderManager는 Authentication 객체(UsernamePasswordAuthenticationToken)를 갖고 등록된 AuthenticationProvider(interface)에 대해 차례대로 인증한다.</p>
 
 <p>스프링 시큐리티는 몇 가지 AuthenticationProvider의 기본 구현체를 제공한다.</p>
@@ -510,17 +510,15 @@ public interface UserDetails extends Serializable{
 }
 </code></pre>
 
-<p><b>6.Authentication is done!</b>
-AuthenticationManager will return the obtained fully populated Authentication object back to the relevant Authentication Filter.
-last
-Setting up Authentication Object in SecurityContext</p>
+<p><b>6.인증 성공!</b><br>
+위의 과정을 거쳐 인증이 성공되면 AuthenticationManager는 Authentication Filter에 인증 완료한 사용자 정보가 담겨있는 Authentication 객체를 반환한다.</p>
 
-<p><b>7.Setting up Authentication Object in SecurityContext</b>
-Then the related AuthenticationFilter will store the obtained authentication object in the SecurityContext for future filter uses. (Use for Authorization Filters)</p>
+<p><b>7.SecurityContext에 authentication 객체를 저장</b><br>
+Authentication 객체를 반환받은 AuthenticationFilter는 앞으로의 사용을 위해(권한확인 등의 목적) SecurityContext에 authentication을 저장한다.</p>
 
-<p>참고 자료<br>
+<p><br>참고 자료<br>
 <a href="https://springbootdev.com/2017/08/23/spring-security-authentication-architecture/">https://springbootdev.com/2017/08/23/spring-security-authentication-architecture/</a> <br>
-최범균 Spring4.0</p>
+저서 : 최범균 Spring4.0</p>
 
   </div>
 
@@ -582,7 +580,7 @@ Then the related AuthenticationFilter will store the obtained authentication obj
     
 
     
-        <li><a href="/post/etc_index/"
+        <li><a href="/post/a_index/"
                 class="button big next">Contents Summary</a></li>
     
 </ul>
@@ -626,11 +624,11 @@ Then the related AuthenticationFilter will store the obtained authentication obj
           <article class="mini-post">
             <header>
               <h3>
-                <a href="/post/etc_index/">Contents Summary</a>
+                <a href="/post/a_index/">Contents Summary</a>
               </h3>
               
-              <time class="published" datetime='2019-06-03'>
-                June 3, 2019
+              <time class="published" datetime='2019-06-19'>
+                June 19, 2019
               </time>
             </header>
             
@@ -726,7 +724,7 @@ Then the related AuthenticationFilter will store the obtained authentication obj
             <header>
               
                 <a href="/categories/book/">Book</a>
-                <span style="float:right;">3</span>
+                <span style="float:right;">1</span>
               
             </header>
           </article>

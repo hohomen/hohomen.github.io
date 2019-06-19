@@ -3,8 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/post/etc_index/</loc>
-    <lastmod>2019-06-03T00:00:00+00:00</lastmod>
+    <loc>/post/a_index/</loc>
+    <lastmod>2019-06-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -28,11 +28,6 @@
   </url>
   
   <url>
-    <loc>/book/spring_books/</loc>
-    <lastmod>2019-03-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/post/spring_mvc_environment/</loc>
     <lastmod>2019-03-29T00:00:00+00:00</lastmod>
   </url>
@@ -50,11 +45,6 @@
   <url>
     <loc>/post/etc_build/</loc>
     <lastmod>2019-03-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/book/toby_spring/</loc>
-    <lastmod>2019-03-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -139,13 +129,13 @@
   
   <url>
     <loc>/book/</loc>
-    <lastmod>2019-03-30T00:00:00+00:00</lastmod>
+    <lastmod>2019-02-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/book/</loc>
-    <lastmod>2019-03-30T00:00:00+00:00</lastmod>
+    <lastmod>2019-02-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -157,13 +147,13 @@
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2019-03-30T00:00:00+00:00</lastmod>
+    <lastmod>2019-02-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-06-03T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -175,7 +165,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2019-06-03T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -204,7 +194,7 @@
   
   <url>
     <loc>/categories/etc/</loc>
-    <lastmod>2019-06-03T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

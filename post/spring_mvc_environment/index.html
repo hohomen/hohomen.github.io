@@ -13,9 +13,8 @@
         "articleSection" : "post",
         "name" : "MVC 설정과 작동 원리",
         "headline" : "MVC 설정과 작동 원리",
-        "description" : "이 포스트에서는 스프링 MVC의 작동 방식과 스프링 환경 설정 요소 web.xml root-context.xml servlet-context.xml를 정리합니다. 이 구성은 기본 템플릿 환경요소이며 사용자 수준에 맞게 환경설정을 구성할 수 있습니다. 먼저 Spring MVC의 큰 그림을 그리자. 이미지 출처(https://tinkerbellbass.tistory.com/40)
-스프링 MVC를 사용하기 위한 기본 설정 과정은 다음과 같다. 1. web.xml에 DispatcherServlet 설정 2. web.xml에 캐릭터 인코딩 처리를 위한 필터 설정 3. 스프링 MVC 설정 A. HandlerMapping, HandlerAdapter (= mvc:annotation-driven) B. ViewResolver 설정
-web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 톰켓이 최초 구동될 때 web.",
+        "description" : "이 포스트에서는 스프링 MVC의 작동 방식과 스프링 환경 설정 요소 web.xml root-context.xml servlet-context.xml를 정리합니다. 이 구성은 스프링 프로젝트 생성시 기본 템플릿 환경요소이며 사용자 수준에 맞게 환경설정을 구성할 수 있습니다. 먼저 Spring MVC의 큰 그림을 그리자. 이미지 출처(https://tinkerbellbass.tistory.com/40)
+스프링 MVC를 사용하기 위한 기본 설정 과정은 다음과 같다. 1. web.xml에 DispatcherServlet 설정 2. web.xml에 캐릭터 인코딩 처리를 위한 필터 설정 3. 스프링 MVC 설정 A. HandlerMapping, HandlerAdapter (= mvc:annotation-driven) B. ViewResolver 설정",
         "inLanguage" : "en",
         "author" : "",
         "creator" : "",
@@ -26,7 +25,7 @@ web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 �
         "datePublished": "2019-03-29 00:00:00 &#43;0000 UTC",
         "dateModified" : "2019-03-29 00:00:00 &#43;0000 UTC",
         "url" : "/post/spring_mvc_environment/",
-        "wordCount" : "370",
+        "wordCount" : "373",
         "keywords" : [ "Blog" ]
     }
     </script>
@@ -53,15 +52,13 @@ web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 �
 
         <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="MVC 설정과 작동 원리"/>
-<meta name="twitter:description" content="이 포스트에서는 스프링 MVC의 작동 방식과 스프링 환경 설정 요소 web.xml root-context.xml servlet-context.xml를 정리합니다. 이 구성은 기본 템플릿 환경요소이며 사용자 수준에 맞게 환경설정을 구성할 수 있습니다. 먼저 Spring MVC의 큰 그림을 그리자. 이미지 출처(https://tinkerbellbass.tistory.com/40)
-스프링 MVC를 사용하기 위한 기본 설정 과정은 다음과 같다. 1. web.xml에 DispatcherServlet 설정 2. web.xml에 캐릭터 인코딩 처리를 위한 필터 설정 3. 스프링 MVC 설정 A. HandlerMapping, HandlerAdapter (= mvc:annotation-driven) B. ViewResolver 설정
-web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 톰켓이 최초 구동될 때 web."/>
+<meta name="twitter:description" content="이 포스트에서는 스프링 MVC의 작동 방식과 스프링 환경 설정 요소 web.xml root-context.xml servlet-context.xml를 정리합니다. 이 구성은 스프링 프로젝트 생성시 기본 템플릿 환경요소이며 사용자 수준에 맞게 환경설정을 구성할 수 있습니다. 먼저 Spring MVC의 큰 그림을 그리자. 이미지 출처(https://tinkerbellbass.tistory.com/40)
+스프링 MVC를 사용하기 위한 기본 설정 과정은 다음과 같다. 1. web.xml에 DispatcherServlet 설정 2. web.xml에 캐릭터 인코딩 처리를 위한 필터 설정 3. 스프링 MVC 설정 A. HandlerMapping, HandlerAdapter (= mvc:annotation-driven) B. ViewResolver 설정"/>
 <meta name="twitter:site" content="@example"/>
 
         <meta property="og:title" content="MVC 설정과 작동 원리" />
-<meta property="og:description" content="이 포스트에서는 스프링 MVC의 작동 방식과 스프링 환경 설정 요소 web.xml root-context.xml servlet-context.xml를 정리합니다. 이 구성은 기본 템플릿 환경요소이며 사용자 수준에 맞게 환경설정을 구성할 수 있습니다. 먼저 Spring MVC의 큰 그림을 그리자. 이미지 출처(https://tinkerbellbass.tistory.com/40)
-스프링 MVC를 사용하기 위한 기본 설정 과정은 다음과 같다. 1. web.xml에 DispatcherServlet 설정 2. web.xml에 캐릭터 인코딩 처리를 위한 필터 설정 3. 스프링 MVC 설정 A. HandlerMapping, HandlerAdapter (= mvc:annotation-driven) B. ViewResolver 설정
-web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 톰켓이 최초 구동될 때 web." />
+<meta property="og:description" content="이 포스트에서는 스프링 MVC의 작동 방식과 스프링 환경 설정 요소 web.xml root-context.xml servlet-context.xml를 정리합니다. 이 구성은 스프링 프로젝트 생성시 기본 템플릿 환경요소이며 사용자 수준에 맞게 환경설정을 구성할 수 있습니다. 먼저 Spring MVC의 큰 그림을 그리자. 이미지 출처(https://tinkerbellbass.tistory.com/40)
+스프링 MVC를 사용하기 위한 기본 설정 과정은 다음과 같다. 1. web.xml에 DispatcherServlet 설정 2. web.xml에 캐릭터 인코딩 처리를 위한 필터 설정 3. 스프링 MVC 설정 A. HandlerMapping, HandlerAdapter (= mvc:annotation-driven) B. ViewResolver 설정" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/post/spring_mvc_environment/" /><meta property="article:published_time" content="2019-03-29T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2019-03-29T00:00:00&#43;00:00"/>
@@ -72,14 +69,13 @@ web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 �
         <meta property="og:image:height" content="512">
         
 <meta itemprop="name" content="MVC 설정과 작동 원리">
-<meta itemprop="description" content="이 포스트에서는 스프링 MVC의 작동 방식과 스프링 환경 설정 요소 web.xml root-context.xml servlet-context.xml를 정리합니다. 이 구성은 기본 템플릿 환경요소이며 사용자 수준에 맞게 환경설정을 구성할 수 있습니다. 먼저 Spring MVC의 큰 그림을 그리자. 이미지 출처(https://tinkerbellbass.tistory.com/40)
-스프링 MVC를 사용하기 위한 기본 설정 과정은 다음과 같다. 1. web.xml에 DispatcherServlet 설정 2. web.xml에 캐릭터 인코딩 처리를 위한 필터 설정 3. 스프링 MVC 설정 A. HandlerMapping, HandlerAdapter (= mvc:annotation-driven) B. ViewResolver 설정
-web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 톰켓이 최초 구동될 때 web.">
+<meta itemprop="description" content="이 포스트에서는 스프링 MVC의 작동 방식과 스프링 환경 설정 요소 web.xml root-context.xml servlet-context.xml를 정리합니다. 이 구성은 스프링 프로젝트 생성시 기본 템플릿 환경요소이며 사용자 수준에 맞게 환경설정을 구성할 수 있습니다. 먼저 Spring MVC의 큰 그림을 그리자. 이미지 출처(https://tinkerbellbass.tistory.com/40)
+스프링 MVC를 사용하기 위한 기본 설정 과정은 다음과 같다. 1. web.xml에 DispatcherServlet 설정 2. web.xml에 캐릭터 인코딩 처리를 위한 필터 설정 3. 스프링 MVC 설정 A. HandlerMapping, HandlerAdapter (= mvc:annotation-driven) B. ViewResolver 설정">
 
 
 <meta itemprop="datePublished" content="2019-03-29T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-03-29T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="370">
+<meta itemprop="wordCount" content="373">
 
 
 
@@ -258,11 +254,11 @@ web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 �
                 
                         <article class="mini-post">
                             <header>
-                                <h3><a href="/post/etc_index/">Contents Summary</a></h3>
+                                <h3><a href="/post/a_index/">Contents Summary</a></h3>
                                 
                                 <time class="published" datetime=
-                                    '2019-06-03'>
-                                    June 3, 2019</time>
+                                    '2019-06-19'>
+                                    June 19, 2019</time>
                             </header>
                             
 
@@ -434,7 +430,7 @@ web.xml 이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 �
     
 
 <p><pre style="word-wrap: break-word;white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-break:break-all;">
-이 포스트에서는 스프링 MVC의 작동 방식과 스프링 환경 설정 요소 web.xml root-context.xml servlet-context.xml를 정리합니다. 이 구성은 기본 템플릿 환경요소이며 사용자 수준에 맞게 환경설정을 구성할 수 있습니다.
+이 포스트에서는 스프링 MVC의 작동 방식과 스프링 환경 설정 요소 <b>web.xml root-context.xml servlet-context.xml</b>를 정리합니다. 이 구성은 스프링 프로젝트 생성시 기본 템플릿 환경요소이며 사용자 수준에 맞게 환경설정을 구성할 수 있습니다.
 <br>
 <strong>먼저 Spring MVC의 큰 그림을 그리자.</strong>
 <img src='https://user-images.githubusercontent.com/38998522/55763927-2ac1ef80-5aa4-11e9-99b1-9c01263fb0c9.jpg'/>
@@ -647,11 +643,11 @@ url과 관련된 controller나, @(어노테이션), ViewResolver, Interceptor, M
           <article class="mini-post">
             <header>
               <h3>
-                <a href="/post/etc_index/">Contents Summary</a>
+                <a href="/post/a_index/">Contents Summary</a>
               </h3>
               
-              <time class="published" datetime='2019-06-03'>
-                June 3, 2019
+              <time class="published" datetime='2019-06-19'>
+                June 19, 2019
               </time>
             </header>
             
@@ -747,7 +743,7 @@ url과 관련된 controller나, @(어노테이션), ViewResolver, Interceptor, M
             <header>
               
                 <a href="/categories/book/">Book</a>
-                <span style="float:right;">3</span>
+                <span style="float:right;">1</span>
               
             </header>
           </article>
