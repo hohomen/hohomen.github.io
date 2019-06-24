@@ -19,13 +19,13 @@
       <guid>/post/spring_security/</guid>
       <description>스프링 시큐리티의 인증과정을 살펴보자. 위의 그림을 보며 이해하면 길을 잃지 않을 것이다.
 1.Received the Http Request
-스프링 시큐리티는 연속된 필터(필터에 대해서는 다음에 정리해 보도록 하자)들을 갖고 있다. 그래서 request가 왔을 때 request는 인증 혹은 인가를 목적으로 이 필터들을 통과한다.
+스프링 시큐리티는 연속된 필터(필터에 대해서는 다음에 정리해 보도록 하자)들을 갖고 있다. 그래서 request가 왔을 때 이 request는 인증 혹은 인가를 목적으로 이 필터들을 통과한다.
 2.요청 정보를 통해 AuthenticationToken 을 생성.
 Authentication과 관련된 Filter에 authentication request가 들어오면 필터는 request로부터 username과 password를 추출한다. 그 다음 추출한 사용자 정보를 갖고 Authentication 객체를 생성한다. 만약 추출한 정보가 username과 password일 경우에는 이것을 이용해 UsernamePasswordAuthenticationToken(Authentication의 구현체) 객체를 생성한다.</description>
     </item>
     
     <item>
-      <title>REST 기본과 Controller</title>
+      <title>REST 기본과 REST Controller</title>
       <link>/post/spring_rest/</link>
       <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>
       

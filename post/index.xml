@@ -17,8 +17,8 @@
       <pubDate>Wed, 19 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/a_index/</guid>
-      <description>단순한 복붙 No! 이해 한 만큼만 직접 작성한다.  Book Review  자바 객체 지향의 원리와 이해  ETC  (ant) build.xml 작성법  Spring  Spring Security 인증 구조 REST 기본과 Controller MVC 설정과 작동 원리 MVC CONTROLLER 스프링 DI(Dependency Injection)
-  XML  XML 기본 XML 특수 기호 XML 네임스페이스  JavaScript  ajax(jQuery) 정리 및 실전 코드 분석 ajax(XMLHttpRequest) 함수(JavaScript Basic) 객체(JavaScript Basic) 배열(JavaScript Basic) 기본 문법(Javascript Basic) HTML에서 JavaScript Load  CSS  Bootstrap grid system CSS 기본 CSS 박스모델   li  a { color: #4374D9; border-bottom: none!</description>
+      <description>컨텐츠들은 해당 내용을 학습하며 정리 목적으로 작성하였습니다.  ETC  (Ant) build.xml 작성법  Spring  Spring Security 인증 구조 REST 기본과 REST Controller MVC 설정과 작동 원리 MVC CONTROLLER 스프링 DI(Dependency Injection)
+  XML  XML 기본 XML 특수 기호 XML 네임스페이스 DTD 문서 제작 기본  JavaScript  ajax(jQuery) 정리 및 실전 코드 분석 ajax(XMLHttpRequest) 함수(JavaScript Basic) 객체(JavaScript Basic) 배열(JavaScript Basic) 기본 문법(Javascript Basic) HTML에서 JavaScript Load Link  CSS  Bootstrap grid system CSS 기본 CSS 박스모델   li  a { color: #4374D9; border-bottom: none!</description>
     </item>
     
     <item>
@@ -29,13 +29,13 @@
       <guid>/post/spring_security/</guid>
       <description>스프링 시큐리티의 인증과정을 살펴보자. 위의 그림을 보며 이해하면 길을 잃지 않을 것이다.
 1.Received the Http Request
-스프링 시큐리티는 연속된 필터(필터에 대해서는 다음에 정리해 보도록 하자)들을 갖고 있다. 그래서 request가 왔을 때 request는 인증 혹은 인가를 목적으로 이 필터들을 통과한다.
+스프링 시큐리티는 연속된 필터(필터에 대해서는 다음에 정리해 보도록 하자)들을 갖고 있다. 그래서 request가 왔을 때 이 request는 인증 혹은 인가를 목적으로 이 필터들을 통과한다.
 2.요청 정보를 통해 AuthenticationToken 을 생성.
 Authentication과 관련된 Filter에 authentication request가 들어오면 필터는 request로부터 username과 password를 추출한다. 그 다음 추출한 사용자 정보를 갖고 Authentication 객체를 생성한다. 만약 추출한 정보가 username과 password일 경우에는 이것을 이용해 UsernamePasswordAuthenticationToken(Authentication의 구현체) 객체를 생성한다.</description>
     </item>
     
     <item>
-      <title>REST 기본과 Controller</title>
+      <title>REST 기본과 REST Controller</title>
       <link>/post/spring_rest/</link>
       <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>
       
@@ -96,6 +96,17 @@ REST API -외부에서 위와 같은 방식으로 특정 URI를 통해서 사용
     </item>
     
     <item>
+      <title>좋은 POST들</title>
+      <link>/post/javascript_link/</link>
+      <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/javascript_link/</guid>
+      <description> 자바스크립트 비동기 처리와 콜백 함수
+ 자바스크립트 Promise 쉽게 이해하기
+   li  a { color: #4374D9; border-bottom: none!important; }  </description>
+    </item>
+    
+    <item>
       <title>(ant) build.xml 작성법</title>
       <link>/post/etc_build/</link>
       <pubDate>Sat, 02 Mar 2019 00:00:00 +0000</pubDate>
@@ -112,8 +123,10 @@ REST API -외부에서 위와 같은 방식으로 특정 URI를 통해서 사용
       
       <guid>/post/css_bootstrap_grid/</guid>
       <description>(부트스트랩으로 디자인하라 - 양용석(로드북)의 내용을 참조하였습니다.)
-부트스트랩은 그리드 시스템을 이용하여 레이아웃(배치)을 잡습니다. 그리드(격자)grid는 총 12열로 구성되어 있으며, 클래스 선택자를 기반으로 화면의 레이아웃을 잡아주는 역활을 합니다. 특징1 모든 그리드는 중첩될 수 있는데 하나의 그리드 내부에 또 하나의 그리드를 만들 수 있습니다. 내부에 만들어진 그리드는 또 다시 12개의 그리드가 생성됩니다. 
-&amp;lt;div class=&amp;quot;col-md-8&amp;quot;&amp;gt; .col-md-8 &amp;lt;div class=&amp;quot;row&amp;quot;&amp;gt; &amp;lt;div class=&amp;quot;col-md-4 pad10&amp;quot;&amp;gt; 내부 12개 그리드 중 4개 .col-md-4 &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;quot;col-md-8 pad10&amp;quot;&amp;gt; 내부 12개 그리드 중 8개 .</description>
+개인 학습 정리를 위해 작성했던 글입니다.
+책의 이미지까지 첨부하지는 않았습니다.
+이 내용에 대한 설명은 https://getbootstrap.com/docs/4.0/layout/grid/이곳에 이미지와 함께 잘 설명되어 있는 것 같습니다.
+부트스트랩은 그리드 시스템을 이용하여 레이아웃(배치)을 잡습니다. 그리드(격자)grid는 총 12열로 구성되어 있으며, 클래스 선택자를 기반으로 화면의 레이아웃을 잡아주는 역활을 합니다. 특징1 모든 그리드는 중첩될 수 있는데 하나의 그리드 내부에 또 하나의 그리드를 만들 수 있습니다. 내부에 만들어진 그리드는 또 다시 12개의 그리드가 생성됩니다.</description>
     </item>
     
     <item>
@@ -210,6 +223,15 @@ ex) 표현 문자 &amp;lt; 개체 참조명 &amp;amp;lt; 어원 less then 표현
       <guid>/post/xml_namespace/</guid>
       <description>네임스페이스의 개념과 사용 XML에서 태그를 자유롭게 정의할 수 있다는 점은 장점이지만, 중복 태그가 생길 수 있는 문제가 있다. 중복 태그로 빋어질 수 있는 이름 충돌을 해결하기 위해 등장한 개념이 네임스페이스이다. 네임 스페이스는 각 요소명과 속성명을 정확히 인식할 수 있는 개념을 제공한다.
 네임스페이스 선언 1.기본 네임스페이스 선언 어떤 요소에 대하여 xmlns 속성을 사용해서 네임스페이스를 선언한 경우, 그 요소 내용 중 네임스페이스 접두사를 붙이지 않고 기술한 하위child 요소에도 자동으로 상위parent 요소에서 선언한 네임스페이스를 적용한다.</description>
+    </item>
+    
+    <item>
+      <title>DTD 문서 제작 기본</title>
+      <link>/post/xml_dtd/</link>
+      <pubDate>Wed, 30 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/xml_dtd/</guid>
+      <description>Well-formed Document(정형식 문서)와 Valid Document(유효한) XML 문서 |정형식 문서|유효한 문서| 정형식 문서| Well-formed Document(정형식 문서)는 흔히 말하는 XML 문서에 속한다. XML 문법과 규칙에 맞게 만들어진 오류가 없는 문서이다. Valid Document(유효한 문서) XML 문서를 표준화할 목적으로, 문서 형태 정의(DTD)에 따라 만든 XML문서. DTD(Document Type Definition)는 문서를 형태를 정의하는 문서를 말한다. XML 문서의 구조를 명시적으로 선언하며, XML 문서가 잘 만들어진 유효한 문서인지 확인하는 역할을 한다. 1. 작성한 문서를 이해하는 데 도움.(문서 가독성) 2.</description>
     </item>
     
     <item>

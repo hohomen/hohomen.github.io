@@ -31,6 +31,17 @@
     </item>
     
     <item>
+      <title>좋은 POST들</title>
+      <link>/post/javascript_link/</link>
+      <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/javascript_link/</guid>
+      <description> 자바스크립트 비동기 처리와 콜백 함수
+ 자바스크립트 Promise 쉽게 이해하기
+   li  a { color: #4374D9; border-bottom: none!important; }  </description>
+    </item>
+    
+    <item>
       <title>HTML에서 JavaScript Load</title>
       <link>/post/javascript_load/</link>
       <pubDate>Wed, 20 Feb 2019 00:00:00 +0000</pubDate>

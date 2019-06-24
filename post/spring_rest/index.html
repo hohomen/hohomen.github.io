@@ -11,8 +11,8 @@
              "@id": "/"
         },
         "articleSection" : "post",
-        "name" : "REST 기본과 Controller",
-        "headline" : "REST 기본과 Controller",
+        "name" : "REST 기본과 REST Controller",
+        "headline" : "REST 기본과 REST Controller",
         "description" : "이 포스트에서는 간단히 REST를 정리하고 REST Controller에 대해서 정리합니다.
 프론트엔드(client)에서의 REST 처리는 AJAX(JQUERY) 정리 및 실전 코드 분석에 정리하였습니다.
 REST에 대한 자세한 개념 정리는 그런 REST API로 괜찮은가에서 이해할 수 있습니다.
@@ -35,7 +35,7 @@ REST API -외부에서 위와 같은 방식으로 특정 URI를 통해서 사용
     </script>
         
             
-                <title>REST 기본과 Controller</title>
+                <title>REST 기본과 REST Controller</title>
             
         
 
@@ -55,7 +55,7 @@ REST API -외부에서 위와 같은 방식으로 특정 URI를 통해서 사용
         
 
         <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="REST 기본과 Controller"/>
+<meta name="twitter:title" content="REST 기본과 REST Controller"/>
 <meta name="twitter:description" content="이 포스트에서는 간단히 REST를 정리하고 REST Controller에 대해서 정리합니다.
 프론트엔드(client)에서의 REST 처리는 AJAX(JQUERY) 정리 및 실전 코드 분석에 정리하였습니다.
 REST에 대한 자세한 개념 정리는 그런 REST API로 괜찮은가에서 이해할 수 있습니다.
@@ -64,7 +64,7 @@ REST(Representational state transfer)
 REST API -외부에서 위와 같은 방식으로 특정 URI를 통해서 사용자가 원하는 정보를 제공하는 방식. -최근에 Open API에서 많이 사용되면서 REST 방식으로 제공되는 외부 연결 URI를 REST API라고 하고, REST 방식의 서비스 제공이 가능한 것을 &lsquo;Restful&rsquo; 하다고 표현합니다."/>
 <meta name="twitter:site" content="@example"/>
 
-        <meta property="og:title" content="REST 기본과 Controller" />
+        <meta property="og:title" content="REST 기본과 REST Controller" />
 <meta property="og:description" content="이 포스트에서는 간단히 REST를 정리하고 REST Controller에 대해서 정리합니다.
 프론트엔드(client)에서의 REST 처리는 AJAX(JQUERY) 정리 및 실전 코드 분석에 정리하였습니다.
 REST에 대한 자세한 개념 정리는 그런 REST API로 괜찮은가에서 이해할 수 있습니다.
@@ -80,7 +80,7 @@ REST API -외부에서 위와 같은 방식으로 특정 URI를 통해서 사용
         <meta property="og:image:width" content="512">
         <meta property="og:image:height" content="512">
         
-<meta itemprop="name" content="REST 기본과 Controller">
+<meta itemprop="name" content="REST 기본과 REST Controller">
 <meta itemprop="description" content="이 포스트에서는 간단히 REST를 정리하고 REST Controller에 대해서 정리합니다.
 프론트엔드(client)에서의 REST 처리는 AJAX(JQUERY) 정리 및 실전 코드 분석에 정리하였습니다.
 REST에 대한 자세한 개념 정리는 그런 REST API로 괜찮은가에서 이해할 수 있습니다.
@@ -157,12 +157,6 @@ REST API -외부에서 위와 같은 방식으로 특정 URI를 통해서 사용
                 </li>
             
                 <li>
-                    <a href="/book/">
-                            <i class="fa fa-newspaper-o">&nbsp;</i>Book
-                    </a>
-                </li>
-            
-                <li>
                     <a href="/project/">
                             <i class="fa fa-list">&nbsp;</i>Project
                     </a>
@@ -229,14 +223,6 @@ REST API -외부에서 위와 같은 방식으로 특정 URI를 통해서 사용
                     </li>
                 
                     <li>
-                        <a href="/book/">
-                            <h3>
-                                <i class="fa fa-newspaper-o">&nbsp;</i>Book
-                            </h3>
-                        </a>
-                    </li>
-                
-                    <li>
                         <a href="/project/">
                             <h3>
                                 <i class="fa fa-list">&nbsp;</i>Project
@@ -294,7 +280,7 @@ REST API -외부에서 위와 같은 방식으로 특정 URI를 통해서 사용
                 
                         <article class="mini-post">
                             <header>
-                                <h3><a href="/post/spring_rest/">REST 기본과 Controller</a></h3>
+                                <h3><a href="/post/spring_rest/">REST 기본과 REST Controller</a></h3>
                                 
                                 <time class="published" datetime=
                                     '2019-05-20'>
@@ -387,7 +373,7 @@ REST API -외부에서 위와 같은 방식으로 특정 URI를 통해서 사용
   <header>
     <div class="title">
         
-            <h1><a href="/post/spring_rest/">REST 기본과 Controller</a></h1>
+            <h1><a href="/post/spring_rest/">REST 기본과 REST Controller</a></h1>
             
         
         
@@ -705,7 +691,7 @@ public @ResponseBody ProductVO doJSON(){
           <article class="mini-post">
             <header>
               <h3>
-                <a href="/post/spring_rest/">REST 기본과 Controller</a>
+                <a href="/post/spring_rest/">REST 기본과 REST Controller</a>
               </h3>
               
               <time class="published" datetime='2019-05-20'>
@@ -776,17 +762,6 @@ public @ResponseBody ProductVO doJSON(){
           <article>
             <header>
               
-                <a href="/categories/book/">Book</a>
-                <span style="float:right;">1</span>
-              
-            </header>
-          </article>
-        </p>
-        
-        <p>
-          <article>
-            <header>
-              
                 <a href="/categories/css/">CSS</a>
                 <span style="float:right;">3</span>
               
@@ -799,7 +774,7 @@ public @ResponseBody ProductVO doJSON(){
             <header>
               
                 <a href="/categories/javascript/">JavaScript</a>
-                <span style="float:right;">7</span>
+                <span style="float:right;">8</span>
               
             </header>
           </article>
@@ -821,7 +796,7 @@ public @ResponseBody ProductVO doJSON(){
             <header>
               
                 <a href="/categories/xml/">XML</a>
-                <span style="float:right;">3</span>
+                <span style="float:right;">4</span>
               
             </header>
           </article>

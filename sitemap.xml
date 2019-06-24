@@ -43,6 +43,11 @@
   </url>
   
   <url>
+    <loc>/post/javascript_link/</loc>
+    <lastmod>2019-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/etc_build/</loc>
     <lastmod>2019-03-02T00:00:00+00:00</lastmod>
   </url>
@@ -108,8 +113,8 @@
   </url>
   
   <url>
-    <loc>/book/java_spring/</loc>
-    <lastmod>2019-02-02T00:00:00+00:00</lastmod>
+    <loc>/post/xml_dtd/</loc>
+    <lastmod>2019-01-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -128,18 +133,6 @@
   </url>
   
   <url>
-    <loc>/book/</loc>
-    <lastmod>2019-02-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/book/</loc>
-    <lastmod>2019-02-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/categories/css/</loc>
     <lastmod>2019-02-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -147,7 +140,7 @@
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2019-02-02T00:00:00+00:00</lastmod>
+    <lastmod>2019-02-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
