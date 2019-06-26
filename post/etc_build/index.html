@@ -13,8 +13,9 @@
         "articleSection" : "post",
         "name" : "(ant) build.xml 작성법",
         "headline" : "(ant) build.xml 작성법",
-        "description" : "가끔 학습용으로 Ant를 사용해야하는 일이 있다. build.xml 작성법을 익힌다면 해석하는 데에도 무리가 없을 것이다.
-지금부터 이 문장을 처음부터 만들어 나가봅시다. &lt;?xml version=&quot;1.0&quot;&gt; &lt;project name=&quot;dms&quot; default=&quot;compile&quot; basedir=&quot;.&quot;&gt; &lt;property name=&quot;build.dir&quot; location=&quot;build&quot;/&gt; &lt;property name=&quot;build.prod.dir&quot; location=&quot;${build.dir}/prod&quot;/&gt; &lt;property name=&quot;build.test.dir&quot; location=&quot;${build.dir}/test&quot;/&gt; &lt;property name=&quot;doc.dir&quot; location=&quot;doc&quot;/&gt; &lt;property name=&quot;index.dir&quot; location=&quot;index&quot;/&gt; &lt;property name=&quot;src.dir&quot; location=&quot;src&quot;/&gt; &lt;property name=&quot;test.dir&quot; location=&quot;test&quot;/&gt; &lt;property name=&quot;vendor.lib.dir&quot; location=&quot;vendor/lib&quot;/&gt; &lt;path id=&quot;project.classpath&quot;&gt; &lt;pathelement location=&quot;${build.prod.dir}&quot; /&gt; &lt;pathelement location=&quot;${build.test.dir}&quot; /&gt; &lt;fileset dir=&quot;${vendor.lib.dir}&quot;&gt; &lt;include name=&quot;*.jar&quot;/&gt; &lt;/fileset&gt; &lt;/path&gt; &lt;target name=&quot;prepare&quot;&gt; &lt;mkdir dir=&quot;${build.prod.dir}&quot; /&gt; &lt;mkdir dir=&quot;${build.",
+        "description" : "자바로 배우는 핵심 자료구조와 알고리즘의 책에서는 Ant를 사용한다.
+이를 잘 사용하기 위해 build.xml 작성법을 정리해 보았다.
+지금부터 이 문장을 처음부터 만들어 나가봅시다. &lt;?xml version=&quot;1.0&quot;&gt; &lt;project name=&quot;dms&quot; default=&quot;compile&quot; basedir=&quot;.&quot;&gt; &lt;property name=&quot;build.dir&quot; location=&quot;build&quot;/&gt; &lt;property name=&quot;build.prod.dir&quot; location=&quot;${build.dir}/prod&quot;/&gt; &lt;property name=&quot;build.test.dir&quot; location=&quot;${build.dir}/test&quot;/&gt; &lt;property name=&quot;doc.dir&quot; location=&quot;doc&quot;/&gt; &lt;property name=&quot;index.dir&quot; location=&quot;index&quot;/&gt; &lt;property name=&quot;src.dir&quot; location=&quot;src&quot;/&gt; &lt;property name=&quot;test.dir&quot; location=&quot;test&quot;/&gt; &lt;property name=&quot;vendor.lib.dir&quot; location=&quot;vendor/lib&quot;/&gt; &lt;path id=&quot;project.classpath&quot;&gt; &lt;pathelement location=&quot;${build.prod.dir}&quot; /&gt; &lt;pathelement location=&quot;${build.test.dir}&quot; /&gt; &lt;fileset dir=&quot;${vendor.lib.dir}&quot;&gt; &lt;include name=&quot;*.jar&quot;/&gt; &lt;/fileset&gt; &lt;/path&gt; &lt;target name=&quot;prepare&quot;&gt; &lt;mkdir dir=&quot;${build.",
         "inLanguage" : "en",
         "author" : "",
         "creator" : "",
@@ -25,7 +26,7 @@
         "datePublished": "2019-03-02 00:00:00 &#43;0000 UTC",
         "dateModified" : "2019-03-02 00:00:00 &#43;0000 UTC",
         "url" : "/post/etc_build/",
-        "wordCount" : "421",
+        "wordCount" : "423",
         "keywords" : [ "Blog" ]
     }
     </script>
@@ -52,13 +53,15 @@
 
         <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="(ant) build.xml 작성법"/>
-<meta name="twitter:description" content="가끔 학습용으로 Ant를 사용해야하는 일이 있다. build.xml 작성법을 익힌다면 해석하는 데에도 무리가 없을 것이다.
-지금부터 이 문장을 처음부터 만들어 나가봅시다. &lt;?xml version=&quot;1.0&quot;&gt; &lt;project name=&quot;dms&quot; default=&quot;compile&quot; basedir=&quot;.&quot;&gt; &lt;property name=&quot;build.dir&quot; location=&quot;build&quot;/&gt; &lt;property name=&quot;build.prod.dir&quot; location=&quot;${build.dir}/prod&quot;/&gt; &lt;property name=&quot;build.test.dir&quot; location=&quot;${build.dir}/test&quot;/&gt; &lt;property name=&quot;doc.dir&quot; location=&quot;doc&quot;/&gt; &lt;property name=&quot;index.dir&quot; location=&quot;index&quot;/&gt; &lt;property name=&quot;src.dir&quot; location=&quot;src&quot;/&gt; &lt;property name=&quot;test.dir&quot; location=&quot;test&quot;/&gt; &lt;property name=&quot;vendor.lib.dir&quot; location=&quot;vendor/lib&quot;/&gt; &lt;path id=&quot;project.classpath&quot;&gt; &lt;pathelement location=&quot;${build.prod.dir}&quot; /&gt; &lt;pathelement location=&quot;${build.test.dir}&quot; /&gt; &lt;fileset dir=&quot;${vendor.lib.dir}&quot;&gt; &lt;include name=&quot;*.jar&quot;/&gt; &lt;/fileset&gt; &lt;/path&gt; &lt;target name=&quot;prepare&quot;&gt; &lt;mkdir dir=&quot;${build.prod.dir}&quot; /&gt; &lt;mkdir dir=&quot;${build."/>
+<meta name="twitter:description" content="자바로 배우는 핵심 자료구조와 알고리즘의 책에서는 Ant를 사용한다.
+이를 잘 사용하기 위해 build.xml 작성법을 정리해 보았다.
+지금부터 이 문장을 처음부터 만들어 나가봅시다. &lt;?xml version=&quot;1.0&quot;&gt; &lt;project name=&quot;dms&quot; default=&quot;compile&quot; basedir=&quot;.&quot;&gt; &lt;property name=&quot;build.dir&quot; location=&quot;build&quot;/&gt; &lt;property name=&quot;build.prod.dir&quot; location=&quot;${build.dir}/prod&quot;/&gt; &lt;property name=&quot;build.test.dir&quot; location=&quot;${build.dir}/test&quot;/&gt; &lt;property name=&quot;doc.dir&quot; location=&quot;doc&quot;/&gt; &lt;property name=&quot;index.dir&quot; location=&quot;index&quot;/&gt; &lt;property name=&quot;src.dir&quot; location=&quot;src&quot;/&gt; &lt;property name=&quot;test.dir&quot; location=&quot;test&quot;/&gt; &lt;property name=&quot;vendor.lib.dir&quot; location=&quot;vendor/lib&quot;/&gt; &lt;path id=&quot;project.classpath&quot;&gt; &lt;pathelement location=&quot;${build.prod.dir}&quot; /&gt; &lt;pathelement location=&quot;${build.test.dir}&quot; /&gt; &lt;fileset dir=&quot;${vendor.lib.dir}&quot;&gt; &lt;include name=&quot;*.jar&quot;/&gt; &lt;/fileset&gt; &lt;/path&gt; &lt;target name=&quot;prepare&quot;&gt; &lt;mkdir dir=&quot;${build."/>
 <meta name="twitter:site" content="@example"/>
 
         <meta property="og:title" content="(ant) build.xml 작성법" />
-<meta property="og:description" content="가끔 학습용으로 Ant를 사용해야하는 일이 있다. build.xml 작성법을 익힌다면 해석하는 데에도 무리가 없을 것이다.
-지금부터 이 문장을 처음부터 만들어 나가봅시다. &lt;?xml version=&quot;1.0&quot;&gt; &lt;project name=&quot;dms&quot; default=&quot;compile&quot; basedir=&quot;.&quot;&gt; &lt;property name=&quot;build.dir&quot; location=&quot;build&quot;/&gt; &lt;property name=&quot;build.prod.dir&quot; location=&quot;${build.dir}/prod&quot;/&gt; &lt;property name=&quot;build.test.dir&quot; location=&quot;${build.dir}/test&quot;/&gt; &lt;property name=&quot;doc.dir&quot; location=&quot;doc&quot;/&gt; &lt;property name=&quot;index.dir&quot; location=&quot;index&quot;/&gt; &lt;property name=&quot;src.dir&quot; location=&quot;src&quot;/&gt; &lt;property name=&quot;test.dir&quot; location=&quot;test&quot;/&gt; &lt;property name=&quot;vendor.lib.dir&quot; location=&quot;vendor/lib&quot;/&gt; &lt;path id=&quot;project.classpath&quot;&gt; &lt;pathelement location=&quot;${build.prod.dir}&quot; /&gt; &lt;pathelement location=&quot;${build.test.dir}&quot; /&gt; &lt;fileset dir=&quot;${vendor.lib.dir}&quot;&gt; &lt;include name=&quot;*.jar&quot;/&gt; &lt;/fileset&gt; &lt;/path&gt; &lt;target name=&quot;prepare&quot;&gt; &lt;mkdir dir=&quot;${build.prod.dir}&quot; /&gt; &lt;mkdir dir=&quot;${build." />
+<meta property="og:description" content="자바로 배우는 핵심 자료구조와 알고리즘의 책에서는 Ant를 사용한다.
+이를 잘 사용하기 위해 build.xml 작성법을 정리해 보았다.
+지금부터 이 문장을 처음부터 만들어 나가봅시다. &lt;?xml version=&quot;1.0&quot;&gt; &lt;project name=&quot;dms&quot; default=&quot;compile&quot; basedir=&quot;.&quot;&gt; &lt;property name=&quot;build.dir&quot; location=&quot;build&quot;/&gt; &lt;property name=&quot;build.prod.dir&quot; location=&quot;${build.dir}/prod&quot;/&gt; &lt;property name=&quot;build.test.dir&quot; location=&quot;${build.dir}/test&quot;/&gt; &lt;property name=&quot;doc.dir&quot; location=&quot;doc&quot;/&gt; &lt;property name=&quot;index.dir&quot; location=&quot;index&quot;/&gt; &lt;property name=&quot;src.dir&quot; location=&quot;src&quot;/&gt; &lt;property name=&quot;test.dir&quot; location=&quot;test&quot;/&gt; &lt;property name=&quot;vendor.lib.dir&quot; location=&quot;vendor/lib&quot;/&gt; &lt;path id=&quot;project.classpath&quot;&gt; &lt;pathelement location=&quot;${build.prod.dir}&quot; /&gt; &lt;pathelement location=&quot;${build.test.dir}&quot; /&gt; &lt;fileset dir=&quot;${vendor.lib.dir}&quot;&gt; &lt;include name=&quot;*.jar&quot;/&gt; &lt;/fileset&gt; &lt;/path&gt; &lt;target name=&quot;prepare&quot;&gt; &lt;mkdir dir=&quot;${build." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/post/etc_build/" /><meta property="article:published_time" content="2019-03-02T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2019-03-02T00:00:00&#43;00:00"/>
@@ -69,13 +72,14 @@
         <meta property="og:image:height" content="512">
         
 <meta itemprop="name" content="(ant) build.xml 작성법">
-<meta itemprop="description" content="가끔 학습용으로 Ant를 사용해야하는 일이 있다. build.xml 작성법을 익힌다면 해석하는 데에도 무리가 없을 것이다.
-지금부터 이 문장을 처음부터 만들어 나가봅시다. &lt;?xml version=&quot;1.0&quot;&gt; &lt;project name=&quot;dms&quot; default=&quot;compile&quot; basedir=&quot;.&quot;&gt; &lt;property name=&quot;build.dir&quot; location=&quot;build&quot;/&gt; &lt;property name=&quot;build.prod.dir&quot; location=&quot;${build.dir}/prod&quot;/&gt; &lt;property name=&quot;build.test.dir&quot; location=&quot;${build.dir}/test&quot;/&gt; &lt;property name=&quot;doc.dir&quot; location=&quot;doc&quot;/&gt; &lt;property name=&quot;index.dir&quot; location=&quot;index&quot;/&gt; &lt;property name=&quot;src.dir&quot; location=&quot;src&quot;/&gt; &lt;property name=&quot;test.dir&quot; location=&quot;test&quot;/&gt; &lt;property name=&quot;vendor.lib.dir&quot; location=&quot;vendor/lib&quot;/&gt; &lt;path id=&quot;project.classpath&quot;&gt; &lt;pathelement location=&quot;${build.prod.dir}&quot; /&gt; &lt;pathelement location=&quot;${build.test.dir}&quot; /&gt; &lt;fileset dir=&quot;${vendor.lib.dir}&quot;&gt; &lt;include name=&quot;*.jar&quot;/&gt; &lt;/fileset&gt; &lt;/path&gt; &lt;target name=&quot;prepare&quot;&gt; &lt;mkdir dir=&quot;${build.prod.dir}&quot; /&gt; &lt;mkdir dir=&quot;${build.">
+<meta itemprop="description" content="자바로 배우는 핵심 자료구조와 알고리즘의 책에서는 Ant를 사용한다.
+이를 잘 사용하기 위해 build.xml 작성법을 정리해 보았다.
+지금부터 이 문장을 처음부터 만들어 나가봅시다. &lt;?xml version=&quot;1.0&quot;&gt; &lt;project name=&quot;dms&quot; default=&quot;compile&quot; basedir=&quot;.&quot;&gt; &lt;property name=&quot;build.dir&quot; location=&quot;build&quot;/&gt; &lt;property name=&quot;build.prod.dir&quot; location=&quot;${build.dir}/prod&quot;/&gt; &lt;property name=&quot;build.test.dir&quot; location=&quot;${build.dir}/test&quot;/&gt; &lt;property name=&quot;doc.dir&quot; location=&quot;doc&quot;/&gt; &lt;property name=&quot;index.dir&quot; location=&quot;index&quot;/&gt; &lt;property name=&quot;src.dir&quot; location=&quot;src&quot;/&gt; &lt;property name=&quot;test.dir&quot; location=&quot;test&quot;/&gt; &lt;property name=&quot;vendor.lib.dir&quot; location=&quot;vendor/lib&quot;/&gt; &lt;path id=&quot;project.classpath&quot;&gt; &lt;pathelement location=&quot;${build.prod.dir}&quot; /&gt; &lt;pathelement location=&quot;${build.test.dir}&quot; /&gt; &lt;fileset dir=&quot;${vendor.lib.dir}&quot;&gt; &lt;include name=&quot;*.jar&quot;/&gt; &lt;/fileset&gt; &lt;/path&gt; &lt;target name=&quot;prepare&quot;&gt; &lt;mkdir dir=&quot;${build.">
 
 
 <meta itemprop="datePublished" content="2019-03-02T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-03-02T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="421">
+<meta itemprop="wordCount" content="423">
 
 
 
@@ -415,7 +419,8 @@
   <div id="content">
     
 
-<p>가끔 학습용으로 Ant를 사용해야하는 일이 있다. build.xml 작성법을 익힌다면 해석하는 데에도 무리가 없을 것이다.<br><br></p>
+<p>자바로 배우는 핵심 자료구조와 알고리즘의 책에서는 Ant를 사용한다.<br>
+이를 잘 사용하기 위해 build.xml 작성법을 정리해 보았다.<br></p>
 
 <h3 id="지금부터-이-문장을-처음부터-만들어-나가봅시다">지금부터 이 문장을 처음부터 만들어 나가봅시다.</h3>
 
