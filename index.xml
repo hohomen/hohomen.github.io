@@ -17,7 +17,7 @@
       <pubDate>Wed, 19 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/a_index/</guid>
-      <description>Project  Cafe de Cultura (Spring Project) Docking (JSP Project)  study log 학과 과정을 마치면서 얻었던 교훈은 요약, 기록의 중요성이다.
+      <description>Project  Cafe de Cultura (Spring Project) Docking (JSP Project)  study log 기억은 기록을 이길 수 없다.
 Spring  Spring Security 인증 구조 REST 기본과 REST Controller MVC CONTROLLER MVC 설정과 작동 원리 스프링 DI(Dependency Injection)
   XML  XML 기본 XML 특수 기호 XML 네임스페이스 DTD 문서 제작 기본  JavaScript  ajax(jQuery) 정리 및 코드 분석 ajax(XMLHttpRequest) 함수(JavaScript Basic) 객체(JavaScript Basic) 배열(JavaScript Basic) 기본 문법(Javascript Basic) HTML에서 JavaScript Load 좋은 POST들  CSS  Bootstrap grid system CSS 기본 CSS 박스모델  ETC  (Ant) build.</description>
     </item>
@@ -104,6 +104,7 @@ REST API -외부에서 위와 같은 방식으로 특정 URI를 통해서 사용
       <guid>/post/javascript_link/</guid>
       <description> 자바스크립트 비동기 처리와 콜백 함수
  자바스크립트 Promise 쉽게 이해하기
+ 자바스크립트 정규표현식
    li  a { color: #4374D9; border-bottom: none!important; }  </description>
     </item>
     
@@ -125,7 +126,7 @@ REST API -외부에서 위와 같은 방식으로 특정 URI를 통해서 사용
       
       <guid>/about/</guid>
       <description> 성격 : 긍정적, 열정적
- 학습하는 것을 좋아해 개발자를 꿈꾸고 있다.
+ 학습하는 것을 좋아해서 개발자를 꿈꾸고 있다.
  Information Name : 최동호
 Email : donystack@gmail.com
 Github : https://github.com/hohomen
