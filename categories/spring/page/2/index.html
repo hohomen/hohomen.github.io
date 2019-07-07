@@ -348,17 +348,17 @@ if (!doNotTrack) {
   <p><pre style="word-wrap: break-word;white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-break:break-all;">
 이 포스트에서는 스프링 MVC의 작동 방식과 스프링 환경 설정 요소 <b>web.xml root-context.xml servlet-context.xml</b>를 정리합니다. 이 구성은 스프링 프로젝트 생성시 기본 템플릿 환경요소이며 사용자 수준에 맞게 환경설정을 구성할 수 있습니다.
 <br>
-<strong>먼저 Spring MVC의 큰 그림을 그리자.</strong>
+<strong>먼저 Spring MVC의 큰 그림을 그려보면.</strong>
 <img src='https://user-images.githubusercontent.com/38998522/55763927-2ac1ef80-5aa4-11e9-99b1-9c01263fb0c9.jpg'/>
 이미지 출처(<a href="https://tinkerbellbass.tistory.com/40">https://tinkerbellbass.tistory.com/40</a>)<br>
-<h2>스프링 MVC를 사용하기 위한 기본 설정 과정은 다음과 같다.</h2>
+<h2>스프링 MVC를 사용하기 위한 기본 설정 과정은 다음과 같습니다.</h2>
 1. web.xml에 DispatcherServlet 설정
 2. web.xml에 캐릭터 인코딩 처리를 위한 필터 설정
 3. 스프링 MVC 설정
  A. HandlerMapping, HandlerAdapter (= <a href="mvc:annotation-driven">mvc:annotation-driven</a>)
  B. ViewResolver 설정<br>
 <strong>web.xml</strong>
-이 파일은 WAS(Web Application Server)가 최초 구동될 때, 즉 톰켓이 최초 구동될 때 web.xml&hellip;</pre></p>
+이 파일은 WAS(Web Application Server)가 최초 구동될 때,&hellip;</pre></p>
   <footer>
     <ul class="actions">
       <li><a href="/post/spring_mvc_environment/" class="button big">Continue Reading</a></li>
@@ -416,10 +416,10 @@ if (!doNotTrack) {
   
   <pre style="word-wrap: break-word;white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-break:break-all;">
 
-스프링 MVC를 이용한 웹 개발의 핵심인 컨트롤러의 구현 방법을 살펴보자.
+스프링 MVC를 이용한 웹 개발의 핵심인 컨트롤러의 구현 방법을 정리합니다.
 <br>
 
-<strong>컨트롤러 구현 과정은 다음과 같다.</strong>
+<strong>컨트롤러 구현 과정은 다음과 같습니다.</strong>
 1. @Controller 애노테이션을 클래스에 적용한다.
 2. @ReaquestMapping 애노테이션을 이용해서 처리한 요청 경로를 지정한다.
 3. 웹 브라우저의 요청을 처리할 메서드를 구현하고, 뷰 이름을 리턴한다.
